@@ -2,16 +2,16 @@
 org-dotemacs/
 org-dotemacs/**
 
+
 # default dir and files
 elpa/
 elpa/**
+
 emacs-desktop
 **.lock
 places
 recentf
 *~
-**~
-*.*~
-*/**~
+
 auto-save-list/
 auto-save-list/**
