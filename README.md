@@ -1,4 +1,5 @@
-# emacs
+# Emacsti
+
 Custom configurations for Emacs turning it bello!
 
 ### Install
@@ -28,12 +29,26 @@ fi
 emacs --daemon --chdir=./.emacs.d
 ```
 
+**optionally** you can create aliases 
+
+```bash
+alias emacsx="emacsclient -c -n"
+alias emacst="emacsclient -c -t"
+alias emacsc="emacsclient -e '(kill-emacs)'"
+```
+
 #### Download and install
 
 **It will download and create a symbolic link to ~/.emacs.d/.emacs
 
 ```bash
-git clone https://github.com/Malnati/emacs.git ~ &&\
-git clone https://github.com/vapniks/org-dotemacs.git ~/.emacs.d/org-dotemacs &&\
-ln -s ~/.emacs.d/.emacs ~/.emacs
+git clone https://github.com/Malnati/emacsti.git ~/.emacsti &&\
+git clone https://github.com/vapniks/org-dotemacs.git ~/.emacsti/.emacs.d/org-dotemacs &&\
+ln -s ~/.emacsti/.emacs.d/init.el ~/.emacs
+ln -s ~/.emacsti/.emacs.d/ ~/.emacs.d
 ```
+
+#### Use
+
+**Start a new terminal or ```source ~/.bachrc``` and call ```emacsclient -c -n``` or just ```emacs```
+
