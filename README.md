@@ -25,16 +25,21 @@ fi
 ```bash
 #!/bin/sh
 
+# Enironment valiables for using emacs as a server
+export ALTERNATE_EDITOR=""
+export EDITOR='emacsclient -create-frame --alternate-editor="" -t' # $EDITOR opens in terminal
+export VISUAL='emacsclient -create-frame --alternate-editor="" -n' # $VISUAL opens in GUI mode
+
+# Emacs client
+alias emacsx='emacsclient -create-frame --alternate-editor="" -n'
+alias emacst='emacsclient -create-frame --alternate-editor="" -t'
+alias emacsc="emacsclient --eval \"(progn (setq kill-emacs-hook \'nil) (kill-emacs))\""
+
+# Stopping emacs daemon
+emacsclient --eval "(progn (setq kill-emacs-hook 'nil) (kill-emacs))"
+
 # Starts emacs as service by this user
 emacs --daemon --chdir=./.emacs.d
-```
-
-It`s **optionally** to create aliases 
-
-```bash
-alias emacsx="emacsclient -c -n"
-alias emacst="emacsclient -c -t"
-alias emacsc="emacsclient -e '(kill-emacs)'"
 ```
 
 #### Download and install
