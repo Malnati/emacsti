@@ -1,0 +1,27 @@
+
+* Menu
+
+* Custom Code
+#+BEGIN_SRC emacs-lisp
+(message "block mal-custom-menu-block...")
+(let ((menu '("Custom Mal"
+              ["Undo (C-z)" undo]
+              ["Redo (C-S-z)" redo]
+              ["Expand region (C-c +)" er/expand-region]
+              ["Duplicate line or region" mal-fn-duplicate-line-or-region]
+              ("Org-mode Brain"
+                ["Capture to Brain (C-c c)" org-capture]
+               )
+              )))
+  (if (fboundp 'add-submenu)
+      (add-submenu nil menu)
+    (require 'easymenu)
+    (easy-menu-define andrews-menu global-map "Malnati's Personal Menu" menu)
+    (easy-menu-add andrews-menu global-map)))
+(message "block loaded!")
+#+END_SRC
+
+#+RESULTS:
+: block loaded!
+
+

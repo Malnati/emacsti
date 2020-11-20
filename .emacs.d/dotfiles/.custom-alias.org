@@ -1,0 +1,21 @@
+
+* Alias
+
+* Custom Code
+#+BEGIN_SRC emacs-lisp
+ ; replace text
+ (defalias 'mal-rs 'replace-string)
+ (defalias 'mal-rr 'replace-regexp)
+ ; elisp eval
+ (defalias 'mal-eb 'eval-buffer)
+ (defalias 'mal-er 'eval-region)
+ ; make all "yes or no" prompts show "y or n" instead
+ (fset 'yes-or-no-p 'y-or-n-p) 
+ ; open dotfiles 
+ (defalias 'mal-dotemacs '(mal-switch-to-dotemacs nil))
+#+END_SRC
+
+#+RESULTS:
+: mal-dotemacs
+
+

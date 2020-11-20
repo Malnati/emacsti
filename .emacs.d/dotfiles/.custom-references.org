@@ -1,0 +1,36 @@
+ #~/.dotfiles/emacs/dotemacs/.custom-references.org
+ * Org customizations
+** org-agenda-category-icon-alist 
+[[https://mrblog.nl/emacs/config.html][The item lists can be made a whole lot more attractive by attaching some icons based on the category an items belongs to. The category assignment itself is done by setting the CATEGORY property explicitly on the item or on the file.]]
+#+BEGIN_SRC emacs-lisp
+
+        '(
+          ("Afspraak"      "~/dat/org/images/stock_new-meeting.png" nil nil :ascent center)
+          ("Blogging"      "~/dat/org/images/edit.png" nil nil :ascent center)
+          ("Cobra"         "~/dat/org/images/car.png" nil nil :ascent center)
+          ("DVD"           "~/dat/org/images/media-cdrom.png" nil nil :ascent center)
+          ("Emacs"         "~/dat/org/images/emacs.png" nil nil :ascent center)
+          ("Finance"       "~/dat/org/images/finance.png" nil nil :ascent center)
+          ("Habitat"       "~/dat/org/images/house.png" nil nil :ascent center)
+          ("Habit"         "~/dat/org/images/stock_task-recurring.png" nil nil :ascent center)
+          ("Hobbies"       "~/dat/org/images/hobbies.png" nil nil :ascent center)
+          ("Partners"      "~/dat/org/images/partners.png" nil nil :ascent center)
+          ("Personal"      "~/dat/org/images/personal.png" nil nil :ascent center)
+          ("Task"          "~/dat/org/images/stock_todo.png" nil nil :ascent center)
+          ("Org"           "~/dat/org/images/org-mode-unicorn.png" nil nil :ascent center)
+          ("Statusnet"     "~/dat/org/images/statusnet.png" nil nil :ascent center)
+          ("Systeem"       "~/dat/org/images/systeembeheer.png" nil nil :ascent center)
+          ("Wordpress"     "~/dat/org/images/wordpress.png" nil nil :ascent center)
+  ))
+#+END_SRC
+  :LOGBOOK:
+  CLOCK: [2019-06-18 Tue 16:13]--[2019-06-18 Tue 16:13] =>  0:00
+  :END:
+  [[file:~/.dotfiles/emacs/dotemacs.org::*Custom%20Packages%20and%20dependencies][Custom Packages and dependencies]]
+
+* Other entry for testing it 
+  :LOGBOOK:
+  CLOCK: [2019-06-18 Tue 16:19]--[2019-06-18 Tue 16:19] =>  0:00
+  :END:
+  [[file:~/.dotfiles/emacs/dotemacs/.custom-references.org]]
+

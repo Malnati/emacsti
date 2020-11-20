@@ -1,0 +1,149 @@
+#+TITLE: My custom functions for using dotfilies over org-dotemacs
+* Functions
+
+- provide → A elisp package usually has (provide 'symbol_name) at the end. When this code is evaluated, emacs will add the symbol name to the features list.
+- require → When the code (require 'symbol_name) is called, emacs checks if that symbol name is already in the features list. If not, load it. (emacs will guess a file name based on the symbol name. Or, the require function may specify a file name in the 2nd argument.)
+Ref: [[http://ergoemacs.org/emacs/elisp_feature_name.html][Ergoemacs]]
+-  A function for C-u 5 M-x gnus-group-list-all-groups. Ref: [[https://github.com/redguardtoo/mastering-emacs-in-one-year-guide/blob/master/gnus-guide-en.org#why-optional][By Chen Bin]]
+
+* Custom Code
+#+BEGIN_SRC emacs-lisp
+(message "Evaluating custom functions block...")
+
+;;----------------------------------------------
+;; Defining sync commands for versioning
+;;----------------------------------------------
+
+(defun mal-fn-syncdotfiles ()
+  "Run sync.sh silently."
+  (interactive)
+  (save-window-excursion 
+    (async-shell-command (concat "sh " mal-var-dotfile-sync)))
+  )
+
+(defun mal-fn-switch-to-buffer (inputFile)
+  "Switch to a buffer visiting file FILENAME, 
+      creating one if none already exists."
+  (interactive)
+  (progn 
+    (split-window-below)
+    (switch-to-buffer (find-file inputFile))
+    (goto-char 1)
+    )					;progn
+  )  ;defun mal-fn-switch-to-buffer
+
+(defun mal-fn-switch-to-var (dotfile)
+  (interactive)
+  (message "Evaluating mal-fn-switch-to-var(...)")
+  (if (file-exists-p dotfile) 
+      (progn 
+        (message "File exists! ")
+        (mal-fn-switch-to-buffer dotfile)
+        (goto-char 1)
+	)				;progn
+    )
+  (message (concat dotfile " not found! You have to verify the dotemacsfile variable defined in to .emacs file."))
+  ) 
+
+(defun xah-copy-line-or-region ()
+  "Copy current line, or text selection.
+       When called repeatedly, append copy subsequent lines.
+       When `universal-argument' is called first, copy whole buffer (respects `narrow-to-region').
+       URL `http://ergoemacs.org/emacs/emacs_copy_cut_current_line.html'
+       Version 2018-09-10"
+  (interactive)
+  (if current-prefix-arg
+      (progn
+	(copy-region-as-kill (point-min) (point-max)))
+    (if (use-region-p)
+	(progn
+	  (copy-region-as-kill (region-beginning) (region-end)))
+      (if (eq last-command this-command)
+	  (if (eobp)
+	      (progn )
+	    (progn
+	      (kill-append "\n" nil)
+	      (kill-append
+	       (buffer-substring-no-properties (line-beginning-position) (line-end-position))
+	       nil)
+	      (progn
+		(end-of-line)
+		(forward-char))))
+	(if (eobp)
+	    (if (eq (char-before) 10 )
+		(progn )
+	      (progn
+		(copy-region-as-kill (line-beginning-position) (line-end-position))
+		(end-of-line)))
+	  (progn
+	    (copy-region-as-kill (line-beginning-position) (line-end-position))
+	    (end-of-line)
+	    (forward-char)))))))
+    (message "Function xah-copy-line-or-region evaluated!")
+
+(defun mal-fn-duplicate-line-or-region (&optional n)
+  "Duplicate current line, or region if active.
+       With argument N, make N copies.
+       With negative N, comment out original line and use the absolute value."
+  (interactive "*p")
+  (let ((use-region (use-region-p)))
+    (save-excursion
+      (let ((text (if use-region ;Get region if active, otherwise line
+		      (buffer-substring (region-beginning) (region-end))
+		    (prog1 (thing-at-point 'line)
+		      (end-of-line)
+		      (if (< 0 (forward-line 1)) ;Go to beginning of next line, or make a new one
+			  (newline))))))
+	(dotimes (i (abs (or n 1))) ;Insert N times, or once if not specified
+	  (insert text))))
+    (if use-region nil ;Only if we're working with a line (not a region)
+      (let ((pos (- (point) (line-beginning-position)))) ;Save column
+	(if (> 0 n)	       ;Comment out original with negative arg
+	    (comment-region (line-beginning-position) (line-end-position)))
+	(forward-line 1)
+	(forward-char pos)))))
+    (message "Function mal-fn-duplicate-line-or-region evaluated!")
+
+(defun transform-square-brackets-to-round-ones(string-to-transform)
+  "Transforms [ into ( and ] into ), other chars left unchanged."
+  (concat 
+   (mapcar #'(lambda (c) (if (equal c ?[) ?\( (if (equal c ?]) ?\) c))) string-to-transform))
+  )
+
+(defun xah-fill-or-unfill ()
+  "Reformat current paragraph or region to `fill-column', like `fill-paragraph' or “unfill”.
+    When there is a text selection, act on the selection, else, act on a text block separated by blank lines.
+    URL `http://ergoemacs.org/emacs/modernization_fill-paragraph.html'
+    Version 2017-01-08"
+  (interactive)
+  ;; This command symbol has a property “'compact-p”, the possible values are t and nil. This property is used to easily determine whether to compact or uncompact, when this command is called again
+  (let ( ($compact-p
+	  (if (eq last-command this-command)
+	      (get this-command 'compact-p)
+	    (> (- (line-end-position) (line-beginning-position)) fill-column)))
+	 (deactivate-mark nil)
+	 ($blanks-regex "\n[ \t]*\n")
+	 $p1 $p2
+	 )
+    (if (use-region-p)
+	(progn (setq $p1 (region-beginning))
+	       (setq $p2 (region-end)))
+      (save-excursion
+	(if (re-search-backward $blanks-regex nil "NOERROR")
+	    (progn (re-search-forward $blanks-regex)
+		   (setq $p1 (point)))
+	  (setq $p1 (point)))
+	(if (re-search-forward $blanks-regex nil "NOERROR")
+	    (progn (re-search-backward $blanks-regex)
+		   (setq $p2 (point)))
+	  (setq $p2 (point)))))
+    (if $compact-p
+	(fill-region $p1 $p2)
+      (let ((fill-column most-positive-fixnum ))
+	(fill-region $p1 $p2)))
+    (put this-command 'compact-p (not $compact-p))))
+
+#+END_SRC
+
+#+RESULTS:
+: xah-fill-or-unfill

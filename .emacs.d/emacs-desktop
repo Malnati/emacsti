@@ -1,0 +1,43 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Thu Nov 19 20:16:40 2020
+;; Desktop file format version 208
+;; Emacs version 26.3
+
+;; Global section:
+(setq desktop-saved-frameset [frameset 1 (24502 64728 689498 37000) (desktop . "208") "malnati@ctrl" nil nil ((((minibuffer . t) (foreground-color . "#f6f3e8") (tool-bar-position . top) (right-fringe . 1) (left-fringe . 1) (tool-bar-lines . 1) (right-divider-width . 1) (bottom-divider-width . 0) (background-color . "gray7") (display-type . mono) (background-mode . dark) (cursor-color . "gray25") (font . "tty") (height . 9) (width . 10) (modeline . t) (unsplittable) (menu-bar-lines . 1) (frameset--id . "F186-A346-1E02-C740") (frameset--mini t)) ((min-height . 4) (min-width . 10) (min-height-ignore . 2) (min-width-ignore . 2) (min-height-safe . 1) (min-width-safe . 2) (min-pixel-height . 4) (min-pixel-width . 10) (min-pixel-height-ignore . 2) (min-pixel-width-ignore . 2) (min-pixel-height-safe . 1) (min-pixel-width-safe . 2)) leaf (pixel-width . 10) (pixel-height . 8) (total-width . 10) (total-height . 8) (normal-height . 1.0) (normal-width . 1.0) (buffer "*scratch*" (selected . t) (hscroll . 0) (fringes 0 0 nil) (margins nil) (scroll-bars nil 0 t nil 0 t) (vscroll . 0) (dedicated) (point . 146) (start . 1))))])
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring '("mal-var-dotemacslib" "lib not found!" "/home/mal/" "org-dotemacs" "org-dotmacs" "zoom"))
+(setq regexp-search-ring nil)
+(setq register-alist nil)
+(setq file-name-history '("/home/malnati/.emacs.d/dotfiles/dotemacs.org" "/home/malnati/.emacs"))
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 208
+  "/home/malnati/.emacs.d/dotfiles/dotemacs.org"
+  "dotemacs.org"
+  'org-mode
+  '(visual-line-mode org-beamer-mode)
+  3585
+  '(nil nil)
+  nil
+  nil
+  '((buffer-display-time 24502 64682 871757 776000) (buffer-file-coding-system . undecided-unix) (truncate-lines))
+  '((mark-ring nil)))
+
+(desktop-create-buffer 208
+  "/home/malnati/.emacs"
+  ".emacs"
+  'emacs-lisp-mode
+  '(visual-line-mode eldoc-mode)
+  10290
+  '(1811 nil)
+  nil
+  nil
+  '((buffer-display-time 24502 64321 600844 238000) (buffer-file-coding-system . utf-8-unix) (truncate-lines))
+  '((mark-ring (1518 10689 1522 1660 9812 9831 9812 4485 4244 6601 7073 2523 2596 2516 2517 11682))))
+

@@ -1,0 +1,48 @@
+#+TITLE: Malnati's Faces Dotemacs 
+#+AUTHOR: Ricardo Malnati
+#+STARTUP: indent
+#+STARTUP: hidestars
+#+TODO: TODO CHECK AVOID
+#+LANGUAGE: en
+
+* Custom Faces
+Here is the block to custom faces refered.
+#+BEGIN_SRC emacs-lisp
+
+(message "Evaluating in .custom-faces.org ...")
+
+(custom-set-faces
+ '(default 
+           ((t (:inherit nil :stipple nil :background "gray7" :foreground "#f6f3e8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 86 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))
+	   )
+  ) ; default
+ '(beacon-fallback-background ((t (:background "dim gray"))))
+ '(button ((t (:background "#333333" :foreground "white"))))
+ '(cursor ((t (:background "gray25" :foreground "white"))))
+ '(highlight ((t (:background "gray5" :foreground "#ffffff" :underline "dim gray"))))
+ '(hl-line ((t (:background "black" :foreground "gainsboro"))))
+ '(isearch ((t (:background "dark orange" :foreground "black"))))
+ '(lazy-highlight ((t (:background "dark orange" :foreground "black"))))
+ '(line-number ((t (:inherit (shadow default) :foreground "gray15"))))
+ '(line-number-current-line ((t (:foreground "dark orange"))))
+ '(match ((t (:background "orange" :foreground "black"))))
+ '(mode-line ((t (:background "black" :foreground "gainsboro"))))
+ '(mode-line-emphasis ((t (:background "black" :foreground "yellow" :weight bold))))
+ '(mode-line-highlight ((t (:background "black" :foreground "yellow" :box (:line-width 2 :color "gold" :style released-button)))))
+ '(mode-line-inactive ((t (:inherit default :background "#444444" :foreground "gray10"))))
+ '(package-status-incompat ((t (:foreground "red"))))
+ '(query-replace ((t (:background "dark orange" :foreground "black"))))
+ '(rectangle-preview ((t (:inherit region :background "steel blue" :foreground "black"))))
+ '(show-paren-match ((t (:background "dark orange" :foreground "black"))))
+ '(show-paren-mismatch ((t (:background "red" :foreground "yellow"))))
+ '(strokes-char ((t (:background "gray2"))))
+ '(tooltip ((t (:background "black" :foreground "dark olive green"))))
+ '(tty-menu-disabled-face ((t (:background "black" :foreground "lightgray"))))
+ '(tty-menu-enabled-face ((t (:background "black" :foreground "yellow" :weight bold))))
+ '(window-divider-first-pixel ((t (:foreground "gray10")))))
+#+END_SRC
+
+#+RESULTS:
+
+
+
