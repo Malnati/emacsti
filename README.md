@@ -5,7 +5,7 @@ Custom configurations for Emacs turning it bello!
 
 #### Setup
 
-==It's better performance if you run as service and isolate your custom setup too.==
+**It's better performance if you run as service and isolate your custom setup too.**
 
 **Add to ~/.bashrc**
 
@@ -19,7 +19,7 @@ if [ -f ~/.bash_emacs ]; then
 fi
 ```
 
-**Create this file ==~/.bash_emacs== with content below.**
+**Create this file ~/.bash_emacs with content below.**
 
 ```bash
 #!/bin/sh
@@ -29,6 +29,8 @@ emacs --daemon --chdir=./.emacs.d
 ```
 
 #### Download and install
+
+**It will download and create a symbolic link to ~/.emacs.d/.emacs
 
 ```bash
 git clone https://github.com/Malnati/emacs.git ~ &&\
