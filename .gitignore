@@ -1,5 +1,8 @@
+# other git repo reference
 org-dotemacs/
 org-dotemacs/**
+
+# default dir and files
 elpa/
 elpa/**
 emacs-desktop
