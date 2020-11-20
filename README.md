@@ -49,8 +49,10 @@ emacs --daemon --chdir=./.emacs.d
 ```bash
 git clone https://github.com/Malnati/emacsti.git ~/.emacsti &&\
 git clone https://github.com/vapniks/org-dotemacs.git ~/.emacsti/.emacs.d/org-dotemacs &&\
-ln -s ~/.emacsti/init.el ~/.emacs
-ln -s ~/.emacsti/.emacs.d/ ~/.emacs.d
+ln -s ~/.emacsti/init.el ~/.emacs &&\
+ln -s ~/.emacsti/.emacs.d/ ~/.emacs.d &&\
+emacs --daemon --chdir=./.emacs.d &&\
+emacsclient -c -n
 ```
 
 #### Use
