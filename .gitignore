@@ -8,10 +8,9 @@ elpa/
 elpa/**
 
 emacs-desktop
-**.lock
+*.lock
 places
 recentf
-*~
 
 auto-save-list/
 auto-save-list/**
