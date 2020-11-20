@@ -6,4 +6,9 @@ emacs-desktop
 **.lock
 places
 recentf
+*~
 **~
+*.*~
+*/**~
+auto-save-list/
+auto-save-list/**
