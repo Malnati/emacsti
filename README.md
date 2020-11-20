@@ -23,23 +23,28 @@ fi
 **Create this file ~/.bash_emacs with content below.**
 
 ```bash
-#!/bin/sh
-
-# Enironment valiables for using emacs as a server
-export ALTERNATE_EDITOR=""
-export EDITOR='emacsclient -create-frame --alternate-editor="" -t' # $EDITOR opens in terminal
-export VISUAL='emacsclient -create-frame --alternate-editor="" -n' # $VISUAL opens in GUI mode
-
-# Emacs client
-alias emacsx='emacsclient -create-frame --alternate-editor="" -n'
-alias emacst='emacsclient -create-frame --alternate-editor="" -t'
-alias emacsc="emacsclient --eval \"(progn (setq kill-emacs-hook \'nil) (kill-emacs))\""
-
-# Stopping emacs daemon
-emacsclient --eval "(progn (setq kill-emacs-hook 'nil) (kill-emacs))"
-
-# Starts emacs as service by this user
-emacs --daemon --chdir=./.emacs.d
+#!/bin/sh                                                                                                                                                                                                  
+                                                                                                                                                                                                            # Enironment valiables for using emacs as a server                                                                                                                                                         
+export ALTERNATE_EDITOR=""                                                                                                                                                                                 
+export EDITOR='emacsclient -create-frame --alternate-editor="" -t' # $EDITOR opens in terminal                                                                                                             
+export VISUAL='emacsclient -create-frame --alternate-editor="" -n' # $VISUAL opens in GUI mode                                                                                                             
+                                                                                                                                                                                                            
+# Emacs client                                                                                                                                                                                             
+alias emacsx='emacsclient -create-frame --alternate-editor="" -n'                                                                                                                                          
+alias emacst='emacsclient -create-frame --alternate-editor="" -t'                                                                                                                                          
+alias emacsc="emacsclient --eval \"(progn (setq kill-emacs-hook \'nil) (kill-emacs))\""                                                                                                                    
+                                                                                                                                                                                                            
+# Start the emacs daemon if not already running.                                                                                                                                                           
+daemon_running=`ps aux | grep "[e]macs --daemon"`                                                                                                                                                          
+if [[ $daemon_running ]]; then                                                                                                                                                                             
+    echo "Emacs daemon already running."                                                                                                                                                                   
+else                                                                                                                                                                                                       
+    echo "Emacs daemon not running. Starting it."                                                                                                                                                          
+    emacs --daemon                                                                                                                                                                                         
+fi                                                                                                                                                                                                         
+                                                                                                                                                                                                            
+# Stopping emacs daemon                                                                                                                                                                                    
+emacsclient --eval "(progn (setq kill-emacs-hook 'nil) (kill-emacs))" 
 ```
 
 #### Download and install
