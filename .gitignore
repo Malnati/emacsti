@@ -1,0 +1,9 @@
+org-dotemacs/
+org-dotemacs/**
+elpa/
+elpa/**
+emacs-desktop
+**.lock
+places
+recentf
+**~
