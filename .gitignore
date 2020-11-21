@@ -1,16 +1,58 @@
 # other git repo reference
+org-dotemacs
 org-dotemacs/
 org-dotemacs/**
 
-
-# default dir and files
-elpa/
-elpa/**
-
+# -*- mode: gitignore; -*-
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+auto-save-list/
+auto-save-list/**
+tramp
+.\#*
 emacs-desktop
 *.lock
 places
 recentf
 
-auto-save-list/
-auto-save-list/**
+# Org-mode
+.org-id-locations
+*_archive
+
+# flymake-mode
+#*_flymake.*
+
+# eshell files
+#/eshell/history
+#/eshell/lastdir
+
+# elpa packages
+/elpa/
+elpa/
+elpa/**
+
+# reftex files
+#*.rel
+
+# AUCTeX auto folder
+#/auto/
+
+# cask packages
+#.cask/
+#dist/
+
+# Flycheck
+#flycheck_*.el
+
+# server auth directory
+#/server/
+
+# projectiles files
+#.projectile
+
+# directory configuration
+#.dir-locals.el
