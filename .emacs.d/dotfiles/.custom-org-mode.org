@@ -48,6 +48,4 @@
  '(org-startup-with-inline-images t)
 )
 #+END_SRC
-
 #+RESULTS:
-

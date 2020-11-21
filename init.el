@@ -19,17 +19,12 @@
 ;;--------------------------------------------------------------------
 ;; Custom defined variables
 ;;--------------------------------------------------------------------
-
 (setq mal-var-homedir             "~/"                                            )
 (message (concat "Eval global var mal-var-homedir                  → " mal-var-homedir            ))
 
 (setq mal-var-emacsdir            (concat mal-var-homedir  ".emacs.d/"                        ))
 (message (concat "Eval global var mal-var-emacsdir                 → " mal-var-emacsdir           ))
 
-(setq mal-var-emacs-backupdir     (concat mal-var-emacsdir "backups"                          ))
-(message (concat "Eval global var mal-var-emacs-backupdir          → " mal-var-emacs-backupdir    ))
-
-;; git clone https://github.com/vapniks/org-dotemacs.git ~/.emacs.d/org-dotemacs
 (setq mal-var-dotemacslib         (concat mal-var-emacsdir "org-dotemacs/org-dotemacs.el"                  ))
 (message (concat "Eval global var mal-var-dotemacslib              → " mal-var-dotemacslib        ))
 
@@ -39,38 +34,8 @@
 (setq mal-var-dotemacsfile        (concat mal-var-dotemacsdir  "dotemacs.org"                 ))
 (message (concat "Eval global var mal-var-dotemacsfile             → " mal-var-dotemacsfile       ))
 
-(setq mal-var-dotemacsfile-alias       (concat mal-var-dotemacsdir ".custom-alias.org"           ))
-(message (concat "Eval global var mal-var-dotemacsfile-alias       → " mal-var-dotemacsfile-alias      ))
-
-(setq mal-var-dotemacsfile-archives    (concat mal-var-dotemacsdir ".custom-archives.org"        ))
-(message (concat "Eval global var mal-var-dotemacsfile-archives    → " mal-var-dotemacsfile-archives ))
-
-(setq mal-var-dotemacsfile-faces       (concat mal-var-dotemacsdir ".custom-faces.org"           ))
-(message (concat "Eval global var mal-var-dotemacsfile-faces       → " mal-var-dotemacsfile-faces      ))
-
-(setq mal-var-dotemacsfile-functions   (concat mal-var-dotemacsdir ".custom-functions.org"           ))
-(message (concat "Eval global var mal-var-dotemacsfile-functions   → " mal-var-dotemacsfile-functions  ))
-
-(setq mal-var-dotemacsfile-inbox       (concat mal-var-dotemacsdir ".custom-inbox.org"           ))
-(message (concat "Eval global var mal-var-dotemacsfile-inbox       → " mal-var-dotemacsfile-inbox      ))
-
 (setq mal-var-dotemacsfile-index       (concat mal-var-dotemacsdir ".custom-index.org"           ))
 (message (concat "Eval global var mal-var-dotemacsfile-index       → " mal-var-dotemacsfile-index      ))
-
-(setq mal-var-dotemacsfile-keybindings (concat mal-var-dotemacsdir ".custom-keybindings.org"     ))
-(message (concat "Eval global var mal-var-dotemacsfile-keybindings → " mal-var-dotemacsfile-keybindings))
-
-(setq mal-var-dotemacsfile-menu        (concat mal-var-dotemacsdir ".custom-menu.org"            ))
-(message (concat "Eval global var mal-var-dotemacsfile-menu        → " mal-var-dotemacsfile-menu       ))
-
-(setq mal-var-dotemacsfile-org-mode        (concat mal-var-dotemacsdir ".custom-org-mode.org"        ))
-(message (concat "Eval global var mal-var-dotemacsfile-org-mode    → " mal-var-dotemacsfile-org-mode   ))
-
-(setq mal-var-dotemacsfile-references  (concat mal-var-dotemacsdir ".custom-references.org"      ))
-(message (concat "Eval global var mal-var-dotemacsfile-references  → " mal-var-dotemacsfile-references))
-
-(setq mal-var-dotemacsfile-notes       (concat mal-var-dotemacsdir ".notes.org"                  ))
-(message (concat "Eval global var mal-var-dotemacsfile-notes       → " mal-var-dotemacsfile-notes ))
 
 (message "\nAll of custom variables loaded!")
 
@@ -109,6 +74,7 @@
 ;;--------------------------------------------------------------------
 ;; Loading org-dotemacs
 ;;--------------------------------------------------------------------
+;; git clone https://github.com/vapniks/org-dotemacs.git ~/.emacs.d/org-dotemacs
 (if (file-exists-p mal-var-dotemacslib)
     (load-file mal-var-dotemacslib)
   (message (concat mal-var-dotemacslib " > Lib not found! You have to verify the dotemacslib variable defined in to .emacs file."))
