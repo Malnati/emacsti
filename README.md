@@ -25,7 +25,7 @@ fi
 ```bash
 #!/bin/sh                                                                                                                                                                                                  
                                                                                                                                                                                                             # Enironment valiables for using emacs as a server                                                                                                                                                         
-export ALTERNATE_EDITOR=""                                                                                                                                                                                 
+export ALTERNATE_EDITOR=""
 export EDITOR='emacsclient -create-frame --alternate-editor="" -t' # $EDITOR opens in terminal                                                                                                             
 export VISUAL='emacsclient -create-frame --alternate-editor="" -n' # $VISUAL opens in GUI mode                                                                                                             
                                                                                                                                                                                                             
@@ -40,7 +40,7 @@ if [[ $daemon_running ]]; then
     echo "Emacs daemon already running."                                                                                                                                                                   
 else                                                                                                                                                                                                       
     echo "Emacs daemon not running. Starting it."                                                                                                                                                          
-    emacs --daemon                                                                                                                                                                                         
+    #emacs --daemon                                                                                                                                                                                         
 fi                                                                                                                                                                                                         
                                                                                                                                                                                                             
 # Stopping emacs daemon                                                                                                                                                                                    
