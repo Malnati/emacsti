@@ -19,23 +19,23 @@
 ;;--------------------------------------------------------------------
 ;; Custom defined variables
 ;;--------------------------------------------------------------------
-(setq mal-var-homedir             "~/"                                            )
-(message (concat "Eval global var mal-var-homedir                  → " mal-var-homedir            ))
+(setq emacsti-homedir             "~/"                                            )
+(message (concat "Eval global var emacsti-homedir                  → " emacsti-homedir            ))
 
-(setq mal-var-emacsdir            (concat mal-var-homedir  ".emacs.d/"                        ))
-(message (concat "Eval global var mal-var-emacsdir                 → " mal-var-emacsdir           ))
+(setq emacsti-emacsdir            (concat emacsti-homedir  ".emacs.d/"                        ))
+(message (concat "Eval global var emacsti-emacsdir                 → " emacsti-emacsdir           ))
 
-(setq mal-var-dotemacslib         (concat mal-var-emacsdir "org-dotemacs/org-dotemacs.el"                  ))
-(message (concat "Eval global var mal-var-dotemacslib              → " mal-var-dotemacslib        ))
+(setq emacsti-dotemacslib         (concat emacsti-emacsdir "org-dotemacs/org-dotemacs.el"                  ))
+(message (concat "Eval global var emacsti-dotemacslib              → " emacsti-dotemacslib        ))
 
-(setq mal-var-dotemacsdir         (concat mal-var-emacsdir "dotfiles/"                        ))
-(message (concat "Eval global var mal-var-dotemacsdir              → " mal-var-dotemacsdir        ))
+(setq emacsti-dotemacsdir         (concat emacsti-emacsdir "dotfiles/"                        ))
+(message (concat "Eval global var emacsti-dotemacsdir              → " emacsti-dotemacsdir        ))
 
-(setq mal-var-dotemacsfile        (concat mal-var-dotemacsdir  "dotemacs.org"                 ))
-(message (concat "Eval global var mal-var-dotemacsfile             → " mal-var-dotemacsfile       ))
+(setq emacsti-dotemacsfile        (concat emacsti-dotemacsdir  "dotemacs.org"                 ))
+(message (concat "Eval global var emacsti-dotemacsfile             → " emacsti-dotemacsfile       ))
 
-(setq mal-var-dotemacsfile-index       (concat mal-var-dotemacsdir ".custom-index.org"           ))
-(message (concat "Eval global var mal-var-dotemacsfile-index       → " mal-var-dotemacsfile-index      ))
+(setq emacsti-dotemacsfile-index       (concat emacsti-dotemacsdir ".custom-index.org"           ))
+(message (concat "Eval global var emacsti-dotemacsfile-index       → " emacsti-dotemacsfile-index      ))
 
 (message "\nAll of custom variables loaded!")
 
@@ -75,17 +75,17 @@
 ;; Loading org-dotemacs
 ;;--------------------------------------------------------------------
 ;; git clone https://github.com/vapniks/org-dotemacs.git ~/.emacs.d/org-dotemacs
-(if (file-exists-p mal-var-dotemacslib)
-    (load-file mal-var-dotemacslib)
-  (message (concat mal-var-dotemacslib " > Lib not found! You have to verify the dotemacslib variable defined in to .emacs file."))
+(if (file-exists-p emacsti-dotemacslib)
+    (load-file emacsti-dotemacslib)
+  (message (concat emacsti-dotemacslib " > Lib not found! You have to verify the dotemacslib variable defined in to .emacs file."))
 )
-(message "Variable mal-var-dotemacslib loaded!")
+(message "Variable emacsti-dotemacslib loaded!")
 (require 'org-dotemacs)
 (setq dotemacs-mode t)
 (message "")
-(if (file-exists-p mal-var-dotemacsfile-index)
-    (org-dotemacs-load-file nil mal-var-dotemacsfile-index)
-  (message (concat mal-var-dotemacsfile-index " > File not found! You have to verify the dotemacsfile variable defined in to .emacs file."))
+(if (file-exists-p emacsti-dotemacsfile-index)
+    (org-dotemacs-load-file nil emacsti-dotemacsfile-index)
+  (message (concat emacsti-dotemacsfile-index " > File not found! You have to verify the dotemacsfile variable defined in to .emacs file."))
 )
 (message "All done!")
 

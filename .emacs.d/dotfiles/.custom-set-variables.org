@@ -1,3 +1,10 @@
+#+TITLE: Malnati's Faces Dotemacs 
+#+AUTHOR: Ricardo Malnati
+#+STARTUP: indent
+#+STARTUP: hidestars
+#+TODO: TODO CHECK AVOID
+#+LANGUAGE: en
+
 * Custom Set Variables
 
 
@@ -5,10 +12,10 @@
 
 #+BEGIN_SRC emacs-lisp
 
-(message "\n\n\n It's the org-dotemacs index loading... ")
+(message "\n It's the org-dotemacs set varialbles loading... ")
 
-(setq mal-var-emacs-backupdir     (concat mal-var-emacsdir "backups"                          ))
-(message (concat "Eval global var mal-var-emacs-backupdir          → " mal-var-emacs-backupdir    ))
+(setq emacsti-emacs-backupdir     (concat emacsti-emacsdir "backups"                          ))
+(message (concat "Eval global var emacsti-emacs-backupdir          → " emacsti-emacs-backupdir    ))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -63,7 +70,7 @@
  '(org-ascii-caption-above t)
  '(org-completion-use-ido t)
  '(org-confirm-babel-evaluate nil)
- '(org-default-notes-file (concat org-directory mal-var-dotemacsfile-notes))
+ '(org-default-notes-file (concat org-directory emacsti-dotemacsfile-notes))
  '(org-dotemacs-dependency-inheritance t)
  '(org-dotemacs-exclude-todo "AVOID")
  '(org-hide-block-startup t)
@@ -106,7 +113,7 @@
  '(doom-themes-visual-bell-config) ;; Enable flashing mode-line on errors
  )
 
-(message "\n The org-dotemacs index loaded! ")
+(message "\n The org-dotemacs set variables loaded! ")
 
 #+END_SRC
 
