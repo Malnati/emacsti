@@ -4,53 +4,58 @@
 
 #+BEGIN_SRC emacs-lisp
 
-;;--------------------------------------------------------------------
-;; Loading org-dotemacs
-;;--------------------------------------------------------------------
-(message "\n\n\n It's the org-dotemacs index loading... \n")
+  ;;--------------------------------------------------------------------
+  ;; Loading org-dotemacs
+  ;;--------------------------------------------------------------------
+  (message "\n\n\n It's the org-dotemacs index loading... \n")
 
-(setq mal-var-dotemacsfile-alias       (concat mal-var-dotemacsdir ".custom-alias.org"           ))
-(message (concat "Eval global var mal-var-dotemacsfile-alias       → " mal-var-dotemacsfile-alias      ))
+  ;; (setq mal-var-dotemacsfile-alias       (concat mal-var-dotemacsdir ".custom-alias.org"           ))
+  ;; (message (concat "Eval global var mal-var-dotemacsfile-alias       → " mal-var-dotemacsfile-alias      ))
 
-(setq mal-var-dotemacsfile-archives    (concat mal-var-dotemacsdir ".custom-archives.org"        ))
-(message (concat "Eval global var mal-var-dotemacsfile-archives    → " mal-var-dotemacsfile-archives ))
+  ;; (setq mal-var-dotemacsfile-archives    (concat mal-var-dotemacsdir ".custom-archives.org"        ))
+  ;; (message (concat "Eval global var mal-var-dotemacsfile-archives    → " mal-var-dotemacsfile-archives ))
 
-(setq mal-var-dotemacsfile-faces       (concat mal-var-dotemacsdir ".custom-faces.org"           ))
-(message (concat "Eval global var mal-var-dotemacsfile-faces       → " mal-var-dotemacsfile-faces      ))
+  ;; (setq mal-var-dotemacsfile-functions   (concat mal-var-dotemacsdir ".custom-functions.org"           ))
+  ;; (message (concat "Eval global var mal-var-dotemacsfile-functions   → " mal-var-dotemacsfile-functions  ))
 
-(setq mal-var-dotemacsfile-functions   (concat mal-var-dotemacsdir ".custom-functions.org"           ))
-(message (concat "Eval global var mal-var-dotemacsfile-functions   → " mal-var-dotemacsfile-functions  ))
+  ;; (setq mal-var-dotemacsfile-inbox       (concat mal-var-dotemacsdir ".custom-inbox.org"           ))
+  ;; (message (concat "Eval global var mal-var-dotemacsfile-inbox       → " mal-var-dotemacsfile-inbox      ))
 
-(setq mal-var-dotemacsfile-inbox       (concat mal-var-dotemacsdir ".custom-inbox.org"           ))
-(message (concat "Eval global var mal-var-dotemacsfile-inbox       → " mal-var-dotemacsfile-inbox      ))
+  ;; (setq mal-var-dotemacsfile-keybindings (concat mal-var-dotemacsdir ".custom-keybindings.org"     ))
+  ;; (message (concat "Eval global var mal-var-dotemacsfile-keybindings → " mal-var-dotemacsfile-keybindings))
 
-(setq mal-var-dotemacsfile-keybindings (concat mal-var-dotemacsdir ".custom-keybindings.org"     ))
-(message (concat "Eval global var mal-var-dotemacsfile-keybindings → " mal-var-dotemacsfile-keybindings))
+  ;; (setq mal-var-dotemacsfile-menu        (concat mal-var-dotemacsdir ".custom-menu.org"            ))
+  ;; (message (concat "Eval global var mal-var-dotemacsfile-menu        → " mal-var-dotemacsfile-menu       ))
 
-(setq mal-var-dotemacsfile-menu        (concat mal-var-dotemacsdir ".custom-menu.org"            ))
-(message (concat "Eval global var mal-var-dotemacsfile-menu        → " mal-var-dotemacsfile-menu       ))
+  ;; (setq mal-var-dotemacsfile-org-mode        (concat mal-var-dotemacsdir ".custom-org-mode.org"        ))
+  ;; (message (concat "Eval global var mal-var-dotemacsfile-org-mode    → " mal-var-dotemacsfile-org-mode   ))
 
-(setq mal-var-dotemacsfile-org-mode        (concat mal-var-dotemacsdir ".custom-org-mode.org"        ))
-(message (concat "Eval global var mal-var-dotemacsfile-org-mode    → " mal-var-dotemacsfile-org-mode   ))
+  ;; (setq mal-var-dotemacsfile-references  (concat mal-var-dotemacsdir ".custom-references.org"      ))
+  ;; (message (concat "Eval global var mal-var-dotemacsfile-references  → " mal-var-dotemacsfile-references))
 
-(setq mal-var-dotemacsfile-references  (concat mal-var-dotemacsdir ".custom-references.org"      ))
-(message (concat "Eval global var mal-var-dotemacsfile-references  → " mal-var-dotemacsfile-references))
+  ;; (setq mal-var-dotemacsfile-notes       (concat mal-var-dotemacsdir ".notes.org"                  ))
+  ;; (message (concat "Eval global var mal-var-dotemacsfile-notes       → " mal-var-dotemacsfile-notes ))
 
-(setq mal-var-dotemacsfile-notes       (concat mal-var-dotemacsdir ".notes.org"                  ))
-(message (concat "Eval global var mal-var-dotemacsfile-notes       → " mal-var-dotemacsfile-notes ))
+  (setq mal-var-dotemacsfile-custom-set 
+  (concat mal-var-dotemacsdir ".custom-set-variables.org"))
 
-(setq mal-var-dotemacsfile-custom-set 
-(concat mal-var-dotemacsdir ".custom-set-variables.org"))
+  (message (concat "Eval global var mal-var-dotemacsfile-custom-set       → " 
+  mal-var-dotemacsfile-custom-set))
 
-(message (concat "Eval global var mal-var-dotemacsfile-custom-set       → " 
-mal-var-dotemacsfile-custom-set))
+  (if (file-exists-p mal-var-dotemacsfile-custom-set)
+      (org-dotemacs-load-file nil mal-var-dotemacsfile-custom-set)
+    (message (concat mal-var-dotemacsfile-custom-set " > File not found! You have to verify the dotemacsfile variable defined in to ~/.emacs.d/dotfiles/.custom-index.org file."))
+  )
 
-(if (file-exists-p mal-var-dotemacsfile-custom-set)
-    (org-dotemacs-load-file nil mal-var-dotemacsfile-custom-set)
-  (message (concat mal-var-dotemacsfile-custom-set " > File not found! You have to verify the dotemacsfile variable defined in to ~/.emacs.d/dotfiles/.custom-index.org file."))
-)
+  (setq mal-var-dotemacsfile-faces       (concat mal-var-dotemacsdir ".custom-faces.org"           ))
+  (message (concat "Eval global var mal-var-dotemacsfile-faces       → " mal-var-dotemacsfile-faces      ))
 
-(message "\n The org-dotemacs index loaded! ")
+  (if (file-exists-p mal-var-dotemacsfile-faces)
+      (org-dotemacs-load-file nil mal-var-dotemacsfile-faces)
+    (message (concat mal-var-dotemacsfile-faces " > File not found! You have to verify the dotemacsfile variable defined in to ~/.emacs.d/dotfiles/.custom-faces.org file."))
+  )
+
+  (message "\n The org-dotemacs index loaded! ")
 
 #+END_SRC
 
