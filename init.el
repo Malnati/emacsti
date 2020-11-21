@@ -113,7 +113,6 @@
  '(fringe-mode (quote (1 . 1)) nil (fringe))
  '(fset (quote yes-or-no-p) t)
  '(global-display-line-numbers-mode t)
- '(global-hl-line-mode t)
  '(global-hl-line-sticky-flag t)
  '(global-set-key [3 100] t)
  '(global-visual-line-mode t)
@@ -131,53 +130,44 @@
  '(list-command-history-max 2048)
  '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1) ((control)))))
  '(muse-project-alist nil)
- '(org-agenda-files
-   (quote
-    (mal-var-dotemacsfile-alias mal-var-dotemacsfile-archives mal-var-dotemacsfile-faces mal-var-dotemacsfile-inbox mal-var-dotemacsfile-index mal-var-dotemacsfile-keybindings mal-var-dotemacsfile-menu mal-var-dotemacsfile-mode mal-var-dotemacsfile-references)))
  '(org-ascii-caption-above t)
- '(org-capture-templates
-   (quote
-    (("M" "Malnati's master template for storing stuffs." entry
-      (file  "~/.emacs.d/agenda/notes.org") 
-      "" :jump-to-captured t :empty-lines 1 :empty-lines-before 1 :empty-lines-after 1 :immediate-finish 1 :clock-in 1)
-     ("D" "Dotfiles references." entry
-      (file mal-var-dotemacsfile-references)
-      "" :jump-to-captured t :empty-lines 1 :empty-lines-before 1 :empty-lines-after 1 :immediate-finish 1 :clock-in 1))))
  '(org-completion-use-ido t)
  '(org-confirm-babel-evaluate nil)
- '(org-default-notes-file (concat org-directory mal-var-dotemacsfile-notes)) 
+ '(org-default-notes-file (concat org-directory mal-var-dotemacsfile-notes))
  '(org-dotemacs-dependency-inheritance t)
  '(org-dotemacs-exclude-todo "AVOID")
  '(org-hide-block-startup t)
  '(org-html-html5-fancy nil)
  '(org-mode t)
-;; '(org-plantuml-jar-path "mal-var-emacsdir" "/plantuml.jar")
  '(org-refile-allow-creating-parent-nodes (quote confirm))
  '(org-refile-targets (quote ((org-agenda-files :level . 3))))
  '(org-refile-use-outline-path (quote file))
-;; '(org-reveal-root "file://mal-var-emacsdir.emacs.d/reveal.js")
  '(org-startup-folded t)
  '(org-startup-with-beamer-mode t)
  '(org-startup-with-inline-images t)
  '(package-archives
    (quote
-    (("marmalade" . "http://marmalade-repo.org/packages/")
+    (
+     ("marmalade"     . "http://marmalade-repo.org/packages/")
      ("marmalade-sec" . "https://marmalade-repo.org/packages/")
-     ("elpa" . "http://elpa.gnu.org/packages/")
-     ("elpa-sec" . "https://elpa.gnu.org/packages/")
-     ("melpa" . "http://melpa.org/packages/")
-     ("melpa-sec" . "https://melpa.org/packages/"))))
+     ("elpa"          . "http://elpa.gnu.org/packages/")
+     ("elpa-sec"      . "https://elpa.gnu.org/packages/")
+     ("melpa"         . "http://melpa.org/packages/")
+     ("melpa-sec"     . "https://melpa.org/packages/")
+    )
+   )
+  )
  '(package-enable-at-startup t)
  '(package-selected-packages
    (quote
-    (hydra company-lsp company helm-descbinds helm org org-gnome org-dotemacs org-web-tools org-ref org-re-reveal org-presie org-projectile-helm org-projectile org-pomodoro org-pdfview org-page org-mime org-make-toc org-linkany org-index org-edna org-elisp-help org-kanban org-dp org-beautify-theme org-alert plantuml-mode flycheck-plantuml ox-reveal org-re-reveal-ref oer-reveal graphviz-dot-mode ob-dar magit magithub zoom)))
+    (lsp-javacomp lsp-java ## hydra company-lsp company helm-descbinds helm org org-gnome org-dotemacs org-web-tools org-ref org-re-reveal org-presie org-projectile-helm org-projectile org-pomodoro org-pdfview org-page org-mime org-make-toc org-linkany org-index org-edna org-elisp-help org-kanban org-dp org-beautify-theme org-alert plantuml-mode flycheck-plantuml ox-reveal org-re-reveal-ref oer-reveal graphviz-dot-mode ob-dar magit magithub zoom doom-themes)))
  '(pending-delete-mode t)
  '(recentf-mode 1)
  '(rectangle-preview t)
  '(save-place-mode t)
  '(setq-default indent-tabs-mode)
  '(show-paren-mode t)
- '(subword-mode t)
+;; '(subword-mode t)
  '(term-buffer-maximum-size 8192)
  '(term-char-mode-buffer-read-only nil)
  '(tool-bar-mode t)
@@ -196,7 +186,12 @@
  '(x-stretch-cursor t)
  '(yank-menu-length 32)
  '(zoom-mode t)
+ '(doom-themes-enable-bold t)      ; if nil, bold is universally disabled
+ '(doom-themes-enable-italic t)    ; if nil, italics is universally disabled
+ '(load-theme 'doom-city-lights t)
+ '(doom-themes-visual-bell-config) ;; Enable flashing mode-line on errors
  )
+;;
 (message "All packages initilized and selected!")
 
 ;;--------------------------------------------------------------------
@@ -210,43 +205,12 @@
 (require 'org-dotemacs)
 (setq dotemacs-mode t)
 (message "")
-(if (file-exists-p mal-var-dotemacsfile)
-    (org-dotemacs-load-file nil mal-var-dotemacsfile)
-  (message (concat mal-var-dotemacsfile " > File not found! You have to verify the dotemacsfile variable defined in to .emacs file."))
+(if (file-exists-p mal-var-dotemacsfile-index)
+    (org-dotemacs-load-file nil mal-var-dotemacsfile-index)
+  (message (concat mal-var-dotemacsfile-index " > File not found! You have to verify the dotemacsfile variable defined in to .emacs file."))
 )
 (message "All done!")
 
 ;;--------------------------------------------------------------------
 ;; End .emacs code
 ;;--------------------------------------------------------------------
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(default ((t (:inherit nil :stipple nil :background "gray7" :foreground "#f6f3e8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 102 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
- '(beacon-fallback-background ((t (:background "dim gray"))))
- '(button ((t (:background "#333333" :foreground "white"))))
- '(cursor ((t (:background "gray25" :foreground "white"))))
- '(highlight ((t (:background "gray5" :foreground "#ffffff" :underline "dim gray"))))
- '(hl-line ((t (:background "black" :foreground "gainsboro"))))
- '(isearch ((t (:background "dark orange" :foreground "black"))))
- '(lazy-highlight ((t (:background "dark orange" :foreground "black"))))
- '(line-number ((t (:inherit (shadow default) :foreground "gray15"))))
- '(line-number-current-line ((t (:foreground "dark orange"))))
- '(match ((t (:background "orange" :foreground "black"))))
- '(mode-line ((t (:background "black" :foreground "gainsboro"))))
- '(mode-line-emphasis ((t (:background "black" :foreground "yellow" :weight bold))))
- '(mode-line-highlight ((t (:background "black" :foreground "yellow" :box (:line-width 2 :color "gold" :style released-button)))))
- '(mode-line-inactive ((t (:inherit default :background "#444444" :foreground "gray10"))))
- '(package-status-incompat ((t (:foreground "red"))))
- '(query-replace ((t (:background "dark orange" :foreground "black"))))
- '(rectangle-preview ((t (:inherit region :background "steel blue" :foreground "black"))))
- '(show-paren-match ((t (:background "dark orange" :foreground "black"))))
- '(show-paren-mismatch ((t (:background "red" :foreground "yellow"))))
- '(strokes-char ((t (:background "gray2"))))
- '(tooltip ((t (:background "black" :foreground "dark olive green"))))
- '(tty-menu-disabled-face ((t (:background "black" :foreground "lightgray"))))
- '(tty-menu-enabled-face ((t (:background "black" :foreground "yellow" :weight bold))))
- '(window-divider-first-pixel ((t (:foreground "gray10")))))
-
