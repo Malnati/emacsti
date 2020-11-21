@@ -18,6 +18,7 @@ emacs-desktop
 *.lock
 places
 recentf
+network-security.data
 
 # Org-mode
 .org-id-locations
