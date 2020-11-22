@@ -45,6 +45,9 @@ tree ~/.config/systemd/user/
 **It will download and create a symbolic link to ~/.emacs.d/.emacs**
 
 ```bash
+sudo apt-get install emacs -y &&\
+sudo apt-get install elpa-projectile -y &&\
+sudo apt-get install tree -y &&\
 git clone https://github.com/Malnati/emacsti.git ~/.emacsti &&\
 git clone https://github.com/vapniks/org-dotemacs.git ~/.emacsti/.emacs.d/org-dotemacs &&\
 ln -s ~/.emacsti/init.el ~/.emacs &&\
