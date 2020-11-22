@@ -14,7 +14,7 @@
 
 (message "\n It's the org-dotemacs set varialbles loading... ")
 
-(setq emacsti-emacs-backupdir     (concat emacsti-emacsdir "backups"                          ))
+(setq emacsti-emacs-backupdir     (concat emacsti-emacsdir "backups"                        a  ))
 (message (concat "Eval global var emacsti-emacs-backupdir          → " emacsti-emacs-backupdir    ))
 
 (custom-set-variables
@@ -111,6 +111,10 @@
  '(doom-themes-enable-italic t)    ; if nil, italics is universally disabled
  '(load-theme 'doom-city-lights t)
  '(doom-themes-visual-bell-config) ;; Enable flashing mode-line on errors
+;;(require 'projectile)
+ '(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+ '(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+ '(projectile-mode +1)
  )
 
 (message "\n The org-dotemacs set variables loaded! ")
