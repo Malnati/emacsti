@@ -34,7 +34,7 @@ alias emacsx='emacsclient -create-frame --alternate-editor="" -n'
 alias emacst='emacsclient -create-frame --alternate-editor="" -t'                                                                                                                                          
 alias emacsc="emacsclient --eval \"(progn (setq kill-emacs-hook \'nil) (kill-emacs))\""                                                                                                                    
                                                                                                                                                                                                             
-# Stats the emacs daemon.                                                                                                                                                           
+# Stats the emacs daemon.                                                                                                                                                             
 ps aux | grep "[e]macs --daemon"                                                                                                                                                          
 systemctl --user status emacs.service
 tree ~/.config/systemd/user/
@@ -46,6 +46,7 @@ tree ~/.config/systemd/user/
 
 ```bash
 sudo apt-get install emacs -y &&\
+sudo apt-get install gnome-tweak-tool -y &&\
 sudo apt-get install elpa-projectile -y &&\
 sudo apt-get install tree -y &&\
 git clone https://github.com/Malnati/emacsti.git ~/.emacsti &&\
@@ -53,7 +54,10 @@ git clone https://github.com/vapniks/org-dotemacs.git ~/.emacsti/.emacs.d/org-do
 ln -s ~/.emacsti/init.el ~/.emacs &&\
 ln -s ~/.emacsti/.emacs.d/ ~/.emacs.d &&\
 mkdir -p ~/.config/systemd/user/ &&\
-ln -s ~/.emacsti/emacs.service ~/.config/systemd/user/emacs.service
+ln -s ~/.emacsti/emacs.service ~/.config/systemd/user/emacs.service &&\
+systemctl --user start emacs.service &&\
+systemctl --user status emacs.service
+
 ```
 
 #### Use
