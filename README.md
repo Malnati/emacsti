@@ -34,17 +34,10 @@ alias emacsx='emacsclient -create-frame --alternate-editor="" -n'
 alias emacst='emacsclient -create-frame --alternate-editor="" -t'                                                                                                                                          
 alias emacsc="emacsclient --eval \"(progn (setq kill-emacs-hook \'nil) (kill-emacs))\""                                                                                                                    
                                                                                                                                                                                                             
-# Start the emacs daemon if not already running.                                                                                                                                                           
-daemon_running=`ps aux | grep "[e]macs --daemon"`                                                                                                                                                          
-if [[ $daemon_running ]]; then                                                                                                                                                                             
-    echo "Emacs daemon already running."                                                                                                                                                                   
-else                                                                                                                                                                                                       
-    echo "Emacs daemon not running. Starting it."                                                                                                                                                          
-    #emacs --daemon                                                                                                                                                                                         
-fi                                                                                                                                                                                                         
-                                                                                                                                                                                                            
-# Stopping emacs daemon                                                                                                                                                                                    
-emacsclient --eval "(progn (setq kill-emacs-hook 'nil) (kill-emacs))" 
+# Stats the emacs daemon.                                                                                                                                                           
+ps aux | grep "[e]macs --daemon"                                                                                                                                                          
+systemctl --user status emacs.service
+tree ~/.config/systemd/user/
 ```
 
 #### Download and install
@@ -56,11 +49,12 @@ git clone https://github.com/Malnati/emacsti.git ~/.emacsti &&\
 git clone https://github.com/vapniks/org-dotemacs.git ~/.emacsti/.emacs.d/org-dotemacs &&\
 ln -s ~/.emacsti/init.el ~/.emacs &&\
 ln -s ~/.emacsti/.emacs.d/ ~/.emacs.d &&\
-emacs --daemon --chdir=./.emacs.d &&\
-emacsclient -c -n
+mkdir -p ~/.config/systemd/user/ &&\
+ln -s ~/.emacsti/emacs.service ~/.config/systemd/user/emacs.service
 ```
 
 #### Use
 
-**Start a new terminal or ```source ~/.bachrc``` and call ```emacsclient -c -n``` or just ```emacs```
+Start a new terminal and type ```emacst``` or ```emacsx``` for open an Emacsti in a new X window. 
+
 
