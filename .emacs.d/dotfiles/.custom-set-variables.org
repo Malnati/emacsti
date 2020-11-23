@@ -9,51 +9,72 @@
 
 #+BEGIN_SRC emacs-lisp
 
-         (message "\n It's the org-dotemacs set varialbles loading... \n")
+        (message "\n It's the org-dotemacs set varialbles loading... \n")
 
-         (custom-set-variables
-           (message "\n Custom set for which-key mode loading... \n") 
-           ;; WHICH-KEY custom-set-variables was added by Custom.
-           ;;
-           ;; which-key is a minor mode for Emacs that displays the key bindings 
-           ;; following your currently entered incomplete command (a prefix) in a popup. 
-           ;; For example, after enabling the minor mode if you enter C-x and wait 
-           ;; for the default of 1 second the minibuffer will expand with all of the 
-           ;; available key bindings that follow C-x (or as many as space allows given 
-           ;; your settings). This includes prefixes like C-x 8 which are shown in a 
-           ;; different face. Screenshots of what the popup will look like are included 
-           ;; below. which-key started as a rewrite of guide-key-mode, but the feature 
-           ;; sets have diverged to a certain extent.
-           ;;
-           ;; https://github.com/justbur/emacs-which-key
-           ;;(require 'which-key)
-           (which-key-mode t)
-           (message "Which key mode ON.") 
+        (message "\nCustom set for which-key mode loading... \n") 
+        (custom-set-variables
+          ;; WHICH-KEY custom-set-variables was added by Custom.
+          ;;
+          ;; which-key is a minor mode for Emacs that displays the key bindings 
+          ;; following your currently entered incomplete command (a prefix) in a popup. 
+          ;; For example, after enabling the minor mode if you enter C-x and wait 
+          ;; for the default of 1 second the minibuffer will expand with all of the 
+          ;; available key bindings that follow C-x (or as many as space allows given 
+          ;; your settings). This includes prefixes like C-x 8 which are shown in a 
+          ;; different face. Screenshots of what the popup will look like are included 
+          ;; below. which-key started as a rewrite of guide-key-mode, but the feature 
+          ;; sets have diverged to a certain extent.
+          ;;
+          ;; https://github.com/justbur/emacs-which-key
+          '(which-key-mode t)
+        ); custom-set-variables
+        (message "Which key mode ON.") 
+
+        (custom-set-variables
            ;; Side Window Right then Bottom
            ;; This is a combination of the previous two choices. It will try to use the 
            ;; right side, but if there is no room it will switch to using the bottom, 
            ;; which is usually easier to fit keys into. This setting can be helpful if 
            ;; the size of the Emacs frame changes frequently, which might be the case 
            ;; if you are using a dynamic/tiling window manager.
-           (which-key-setup-side-window-right-bottom)
-           (message "Which key window right or bottom ON.") 
-           (message "\n Custom set for which-key done! \n")
-         )
+           '(which-key-setup-side-window-right-bottom)
+         ); custom-set-variables
+         (message "Which key window right or bottom ON.") 
+         (message "\nCustom set for which-key mode done! \n") 
 
+         (message "\nCustom set for deleting on selection loading...\n")
          (custom-set-variables
-           (message "\n Basic edit custom setup loading... \n") 
+           ;; Delete Selection on Insert
+           ;; Apr 12, 2013 | Editing • Bozhidar Batsov
+           ;; It most text editors if you select a piece of text and 
+           ;; press any key (that’s not bound to some command) the selection 
+           ;; would be replaced by the character bound to the key (or 
+           ;; deleted if you press Backspace). In Emacs things look 
+           ;; differently - by default typed text is just inserted at point, 
+           ;; regardless of any selection.
+           ;; Of course, there is a way to change this: (delete-selection-mode +1)
+           ;; Now when transient-mark-mode is also enabled (it is enabled by 
+           ;; default since Emacs 23) any typed text replaces the selection 
+           ;; if the selection is active.
+           ;; https://emacsredux.com/blog/2013/04/12/delete-selection-on-insert/
+           '(delete-selection-mode +1)
+         ); custom-set-variables
+         (message "delete-selection-mode ON!")
+         (message "\nCustom set for deleting on selection done!\n")
 
+         ;; (message "Basic edit custom setup loading... \n") 
+         ;; (custom-set-variables
 
-           (message "\n Custom set for which-key done! \n")
-         )
-        (message "\n Basic edit custom setup done! ")
+         ;; ); custom-set-variables
+         ;; (message "Custom set for which-key done! \n")
+         ;; (message "Basic edit custom setup done! ")
+
          ;; (setq emacsti-emacs-backupdir (concat emacsti-emacsdir "backups"))
          ;; (message (concat "Eval global var emacsti-emacs-backupdir          → " emacsti-emacs-backupdir))
          ;; '(save-place-mode t)
          ;; '(desktop-save-mode t)
          ;; '(icomplete-mode t)
          ;; '(org-mode t)
-
          ;; '(pending-delete-mode t)
          ;; '(recentf-mode 1)
          ;; '(show-paren-mode t)   
@@ -122,8 +143,6 @@
          ;; '(load-theme 'doom-city-lights t)
          ;; '(doom-themes-visual-bell-config) ;; Enable flashing mode-line on errors
          ;; (require 'projectile)
-
-
 
 #+END_SRC
 
