@@ -37,7 +37,9 @@
    '(term-char-mode-buffer-read-only nil)
    '(zoom-mode t)
    '(projectile-mode +1)
+   (which-key-mode)
 
+   (Which-key-setup-side-window-right)
    '(auto-save-interval 100)
    '(auto-save-visited-file-name t)
    '(beacon-color "gold")

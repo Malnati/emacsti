@@ -51,7 +51,6 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
-
  '(package-archives
    (quote
     (("marmalade" . "http://marmalade-repo.org/packages/")
@@ -63,8 +62,7 @@
  '(package-enable-at-startup t)
  '(package-selected-packages
    (quote
-    (projectile lsp-javacomp lsp-java ## hydra company-lsp company helm-descbinds helm org org-gnome org-dotemacs org-web-tools org-ref org-re-reveal org-presie org-projectile-helm org-projectile org-pomodoro org-pdfview org-page org-mime org-make-toc org-linkany org-index org-edna org-elisp-help org-kanban org-dp org-beautify-theme org-alert plantuml-mode flycheck-plantuml ox-reveal org-re-reveal-ref oer-reveal graphviz-dot-mode ob-dar magit magithub zoom doom-themes)))
-)
+    (which-key projectile lsp-javacomp lsp-java ## hydra company-lsp company helm-descbinds helm org org-gnome org-dotemacs org-web-tools org-ref org-re-reveal org-presie org-projectile-helm org-projectile org-pomodoro org-pdfview org-page org-mime org-make-toc org-linkany org-index org-edna org-elisp-help org-kanban org-dp org-beautify-theme org-alert plantuml-mode flycheck-plantuml ox-reveal org-re-reveal-ref oer-reveal graphviz-dot-mode ob-dar magit magithub zoom doom-themes))))
 ;;
 (message "All packages initilized and selected!")
 
@@ -89,3 +87,33 @@
 ;;--------------------------------------------------------------------
 ;; End .emacs code
 ;;--------------------------------------------------------------------
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :stipple nil :background "gray7" :foreground "#f6f3e8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 86 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))))
+ '(beacon-fallback-background ((t (:background "dim gray"))))
+ '(button ((t (:background "#333333" :foreground "white"))))
+ '(cursor ((t (:background "gray25" :foreground "white"))))
+ '(highlight ((t (:background "gray5" :foreground "#ffffff" :underline "dim gray"))))
+ '(hl-line ((t (:background "black" :foreground "gainsboro"))))
+ '(isearch ((t (:background "dark orange" :foreground "black"))))
+ '(lazy-highlight ((t (:background "dark orange" :foreground "black"))))
+ '(line-number ((t (:inherit (shadow default) :foreground "gray15"))))
+ '(line-number-current-line ((t (:foreground "dark orange"))))
+ '(match ((t (:background "orange" :foreground "black"))))
+ '(mode-line ((t (:background "black" :foreground "gainsboro"))))
+ '(mode-line-emphasis ((t (:background "black" :foreground "yellow" :weight bold))))
+ '(mode-line-highlight ((t (:background "black" :foreground "yellow" :box (:line-width 2 :color "gold" :style released-button)))))
+ '(mode-line-inactive ((t (:inherit default :background "#444444" :foreground "gray10"))))
+ '(package-status-incompat ((t (:foreground "red"))))
+ '(query-replace ((t (:background "dark orange" :foreground "black"))))
+ '(rectangle-preview ((t (:inherit region :background "steel blue" :foreground "black"))))
+ '(show-paren-match ((t (:background "dark orange" :foreground "black"))))
+ '(show-paren-mismatch ((t (:background "red" :foreground "yellow"))))
+ '(strokes-char ((t (:background "gray2"))))
+ '(tooltip ((t (:background "black" :foreground "dark olive green"))))
+ '(tty-menu-disabled-face ((t (:background "black" :foreground "lightgray"))))
+ '(tty-menu-enabled-face ((t (:background "black" :foreground "yellow" :weight bold))))
+ '(window-divider-first-pixel ((t (:foreground "gray10")))))
