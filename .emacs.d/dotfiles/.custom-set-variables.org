@@ -82,8 +82,15 @@
      ); custom-set-variables
      (message "global-company-mode mode globally ON!")
      (message "global-company-mode custom setup done! ")    
-     
-     
+
+     (message "aggressive-indent custom setup loading... \n") 
+     (custom-set-variables
+       (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
+       (add-hook 'css-mode-hook #'aggressive-indent-mode)
+     ); custom-set-variables
+     (message "aggressive-indent for elip and CSS ON!")
+     (message "aggressive-indent custom setup done! ")     
+
      ;; (message "Basic edit custom setup loading... \n") 
      ;; (custom-set-variables
 
