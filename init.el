@@ -58,6 +58,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(add-hook (quote after-init-hook) t)
  '(beacon-color "gold")
  '(beacon-fallback-background ((t (:background "dim gray"))))
  '(beacon-mode t)
@@ -77,9 +78,10 @@
  '(package-enable-at-startup t)
  '(package-selected-packages
    (quote
-    (yasnippet lsp-ui flycheck which-key projectile lsp-javacomp lsp-java ## hydra company-lsp company helm-descbinds helm org org-gnome org-dotemacs org-web-tools org-ref org-re-reveal org-presie org-projectile-helm org-projectile org-pomodoro org-pdfview org-page org-mime org-make-toc org-linkany org-index org-edna org-elisp-help org-kanban org-dp org-beautify-theme org-alert plantuml-mode flycheck-plantuml ox-reveal org-re-reveal-ref oer-reveal graphviz-dot-mode ob-dar magit magithub zoom doom-themes)))
+    (helm-company yasnippet lsp-ui flycheck which-key projectile lsp-javacomp lsp-java ## hydra company-lsp company helm-descbinds helm org org-gnome org-dotemacs org-web-tools org-ref org-re-reveal org-presie org-projectile-helm org-projectile org-pomodoro org-pdfview org-page org-mime org-make-toc org-linkany org-index org-edna org-elisp-help org-kanban org-dp org-beautify-theme org-alert plantuml-mode flycheck-plantuml ox-reveal org-re-reveal-ref oer-reveal graphviz-dot-mode ob-dar magit magithub zoom doom-themes)))
  '(which-key-mode t)
- '(which-key-setup-side-window-right-bottom nil))
+ '(which-key-setup-side-window-right-bottom nil)
+ '(yas-global-mode nil))
 ;;
 (message "All packages initilized and selected!")
 

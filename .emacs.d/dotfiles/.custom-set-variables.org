@@ -75,7 +75,15 @@
      ); custom-set-variables
      (message "Yasnippet mode globally ON!")
      (message "Yasnippet custom setup done! ")
-    
+
+     (message "global-company-mode custom setup loading... \n") 
+     (custom-set-variables
+       '(add-hook 'after-init-hook 'global-company-mode)
+     ); custom-set-variables
+     (message "global-company-mode mode globally ON!")
+     (message "global-company-mode custom setup done! ")    
+     
+     
      ;; (message "Basic edit custom setup loading... \n") 
      ;; (custom-set-variables
 
@@ -161,8 +169,7 @@
 #+END_SRC
 
 #+RESULTS:
-: 
-:  The org-dotemacs set variables loaded! 
+| global-company-mode | debian-ispell-set-default-dictionary | debian-ispell-set-startup-menu | x-wm-set-size-hint | table--make-cell-map |
 
 
 
