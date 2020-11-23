@@ -40,16 +40,20 @@
            (message "\n Custom set for which-key done! \n")
          )
 
-        (message "\n The org-dotemacs set variables loaded! ")
+         (custom-set-variables
+           (message "\n Basic edit custom setup loading... \n") 
+
+
+           (message "\n Custom set for which-key done! \n")
+         )
+        (message "\n Basic edit custom setup done! ")
          ;; (setq emacsti-emacs-backupdir (concat emacsti-emacsdir "backups"))
          ;; (message (concat "Eval global var emacsti-emacs-backupdir          → " emacsti-emacs-backupdir))
-         ;; '(beacon-mode t)
          ;; '(save-place-mode t)
          ;; '(desktop-save-mode t)
-         ;; '(global-visual-line-mode t
          ;; '(icomplete-mode t)
          ;; '(org-mode t)
-         ;; '(org-startup-with-beamer-mode t)
+
          ;; '(pending-delete-mode t)
          ;; '(recentf-mode 1)
          ;; '(show-paren-mode t)   
@@ -59,10 +63,9 @@
          ;; '(projectile-mode +1)
          ;; '(auto-save-interval 100)
          ;; '(auto-save-visited-file-name t)
-         ;; '(beacon-color "gold")
          ;; '(command-history-hook nil)
          ;; '(completions-file-versions-kept 9992)
-         ;; '(custom-enabled-themes (quote (wombat)))
+         ;; 
          ;; '(delete-auto-save-files nil)
          ;; '(delete-by-moving-to-trash t)
          ;; '(desktop-base-file-name "emacs-desktop")

@@ -9,37 +9,214 @@
 Here is the block to custom faces refered.
 #+BEGIN_SRC emacs-lisp
 
-  (message "Evaluating in .custom-faces.org ...")
+  (message "\n Evaluating in .custom-faces.org ...\n")
+  (custom-set-variables
+   '(custom-enabled-themes 
+      (quote (wombat))
+    ); custom-enabled-themes
+   ); custom-set-variables
+  (message "Got custom-enabled-themes for wombat!")
+
+  (custom-set-variables
+   '(beacon-mode t)
+  ); custom-set-variables
+  (message "Got beacon-mode ON!")
+
+  (custom-set-variables
+   '(global-visual-line-mode t)
+  ); custom-set-variables
+  (message "Got global-visual-line-mode ON!")
+
+  (custom-set-variables
+   '(org-startup-with-beamer-mode t)
+  ); custom-set-variables
+  (message "Got org-startup-with-beamer-mode ON!")
+
+  (custom-set-variables
+   '(beacon-color "gold")
+  ); custom-set-variables
+  (message "Got beacon-color gold!")
+
+  (custom-set-variables
+   '(beacon-fallback-background 
+      ((t (:background "dim gray")))
+    ); beacon-fallback-background 
+  ); custom-set-variables
+  (message "Got beacon-fallback-background to dim gray!")
+
   (custom-set-faces
    '(default 
-             ((t (:inherit nil :stipple nil :background "gray7" :foreground "#f6f3e8" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 86 :width normal :foundry "PfEd" :family "DejaVu Sans Mono"))
-             )
-    ) ; default
-   ;; '(beacon-fallback-background ((t (:background "dim gray"))))
-   ;; '(button ((t (:background "#333333" :foreground "white"))))
-   ;; '(cursor ((t (:background "gray25" :foreground "white"))))
-   ;; '(highlight ((t (:background "gray5" :foreground "#ffffff" :underline "dim gray"))))
-   ;; '(hl-line ((t (:background "black" :foreground "gainsboro"))))
-   ;; '(isearch ((t (:background "dark orange" :foreground "black"))))
-   ;; '(lazy-highlight ((t (:background "dark orange" :foreground "black"))))
-   ;; '(line-number ((t (:inherit (shadow default) :foreground "gray15"))))
-   ;; '(line-number-current-line ((t (:foreground "dark orange"))))
-   ;; '(match ((t (:background "orange" :foreground "black"))))
-   ;; '(mode-line ((t (:background "black" :foreground "gainsboro"))))
-   ;; '(mode-line-emphasis ((t (:background "black" :foreground "yellow" :weight bold))))
-   ;; '(mode-line-highlight ((t (:background "black" :foreground "yellow" :box (:line-width 2 :color "gold" :style released-button)))))
-   ;; '(mode-line-inactive ((t (:inherit default :background "#444444" :foreground "gray10"))))
-   ;; '(package-status-incompat ((t (:foreground "red"))))
-   ;; '(query-replace ((t (:background "dark orange" :foreground "black"))))
-   ;; '(rectangle-preview ((t (:inherit region :background "steel blue" :foreground "black"))))
-   ;; '(show-paren-match ((t (:background "dark orange" :foreground "black"))))
-   ;; '(show-paren-mismatch ((t (:background "red" :foreground "yellow"))))
-   ;; '(strokes-char ((t (:background "gray2"))))
-   ;; '(tooltip ((t (:background "black" :foreground "dark olive green"))))
-   ;; '(tty-menu-disabled-face ((t (:background "black" :foreground "lightgray"))))
-   ;; '(tty-menu-enabled-face ((t (:background "black" :foreground "yellow" :weight bold))))
-   ;; '(window-divider-first-pixel ((t (:foreground "gray10"))))
-)
+             ((t (:inherit nil 
+                  :stipple nil 
+                  :background "gray7" 
+                  :foreground "#f6f3e8" 
+                  :inverse-video nil 
+                  :box nil 
+                  :strike-through nil 
+                  :overline nil 
+                  :underline nil 
+                  :slant normal 
+                  :weight normal 
+                  :height 86 
+                  :width normal 
+                  :foundry "PfEd" 
+                  :family "DejaVu Sans Mono")
+              ))
+
+    ); default
+   ); custom-set-faces
+  (message "Got custom font attributes for DejaVu Sans Mono!")
+
+  (custom-set-faces
+   '(button 
+      ((t (:background "#333333" :foreground "white")))
+    ); button
+   ); custom-set-faces
+  (message "Got button to #333333 with white foregroung!")
+
+  (custom-set-faces
+   '(cursor 
+      ((t (:background "gray25" :foreground "white")))
+    ); cursor
+   ); custom-set-faces
+  (message "Got cursor to gray25 with white foregroung!")
+
+  (custom-set-faces
+   '(highlight 
+      ((t (:background "gray5" :foreground "#ffffff" :underline "dim gray")))
+    ); highlight
+   ); custom-set-faces
+  (message "Got highlight to gray5 with #ffffff foregroung and underline dim gray!")
+
+  (custom-set-faces
+   '(hl-line 
+      ((t (:background "black" :foreground "gainsboro")))
+    ); hl-line
+   ); custom-set-faces
+  (message "Got hl-line to black with gainsboro foregroung!")
+
+  (custom-set-faces
+   '(isearch 
+      ((t (:background "dark orange" :foreground "black")))
+    ); isearch
+   ); custom-set-faces
+  (message "Got isearch dark orange and black foregroung!")
+
+  (custom-set-faces
+   '(lazy-highlight ((t (:background "dark orange" :foreground "black")))
+    ); lazy-highlight
+   ); custom-set-faces
+  (message "Got lazy-highlight dark orange and black foregroung!")
+
+  (custom-set-faces
+   '(line-number ((t (:inherit (shadow default) :foreground "gray15")))
+    ); line-number
+   ); custom-set-faces
+  (message "Got line-number inherit (shadow default) and foreground gray15!")
+
+  (custom-set-faces
+   '(line-number-current-line ((t (:foreground "dark orange")))
+    ); line-number-current-line
+   ); custom-set-faces
+  (message "Got line-number-current-line foreground dark orange!")
+
+  (custom-set-faces
+   '(match ((t (:background "orange" :foreground "black")))
+    ); match 
+   ); custom-set-faces
+  (message "Got line-number-current-line background orange and foreground black!")
+
+  (custom-set-faces
+   '(mode-line ((t (:background "black" :foreground "gainsboro")))
+    ); mode-line 
+   ); custom-set-faces
+  (message "Got mode-line background black and foreground gainsboro!")
+
+  (custom-set-faces
+   '(mode-line-emphasis ((t (:background "black" :foreground "yellow" :weight bold)))
+    ); mode-line-emphasis 
+   ); custom-set-faces
+  (message "Got mode-line-emphasis background black and foreground yellow!")
+
+  (custom-set-faces
+   '(mode-line-highlight 
+      ((t (:background "black" 
+           :foreground "yellow" 
+           :box 
+             (:line-width 2 
+              :color "gold" 
+              :style released-button))))
+    ); mode-line-highlight 
+   ); custom-set-faces
+  (message "Got mode-line-highlight background black and foreground yellow!")
+
+  (custom-set-faces
+   '(mode-line-inactive ((t (:inherit default :background "#444444" :foreground "gray10")))
+    ); mode-line-inactive
+   ); custom-set-faces
+  (message "Got mode-line-highlight background #444444 and foreground gray10!")
+
+  (custom-set-faces
+   '(package-status-incompat ((t (:foreground "red")))
+    ); package-status-incompat 
+   ); custom-set-faces
+  (message "Got mode-line-inactive foreground red!")
+
+  (custom-set-faces
+   '(query-replace ((t (:background "dark orange" :foreground "black")))
+    ); query-replace
+   ); custom-set-faces
+  (message "Got query-replace background dark orange foreground black!")
+
+  (custom-set-faces
+   '(rectangle-preview ((t (:inherit region :background "steel blue" :foreground "black")))
+    ); rectangle-preview 
+   ); custom-set-faces
+  (message "Got query-replace background stel blue and foreground black!")
+
+  (custom-set-faces
+   '(show-paren-match ((t (:background "dark orange" :foreground "black")))
+    ); show-paren-match
+   ); custom-set-faces
+  (message "Got show-paren-match background dark orange and foreground black!")
+
+  (custom-set-faces
+   '(show-paren-mismatch ((t (:background "red" :foreground "yellow")))
+    ); show-paren-mismatch
+   ); custom-set-faces
+  (message "Got show-paren-mismatch background red and foreground yellow!")
+
+  (custom-set-faces
+   '(strokes-char ((t (:background "gray2")))
+    ); strokes-char
+   ); custom-set-faces
+  (message "Got strokes-char background gray2!")
+
+  (custom-set-faces
+   '(tooltip ((t (:background "black" :foreground "dark olive green")))
+    ); tooltip
+   ); custom-set-faces
+  (message "Got tooltip background black and foreground dark olive green!")
+
+  (custom-set-faces
+   '(tty-menu-disabled-face ((t (:background "black" :foreground "lightgray")))
+    ); tty-menu-disabled-face
+   ); custom-set-faces
+  (message "Got tty-menu-disabled-face background black and foreground lightgray!")
+
+  (custom-set-faces
+   '(tty-menu-enabled-face ((t (:background "black" :foreground "yellow" :weight bold)))
+    ); tty-menu-enabled-face
+   ); custom-set-faces
+  (message "Got tty-menu-enabled-face background black and yellow!")
+
+  (custom-set-faces
+   '(window-divider-first-pixel ((t (:foreground "gray10")))
+    ); window-divider-first-pixel
+   ); custom-set-faces
+  (message "Got window-divider-first-pixel foreground gray10!")
+
+  (message "\n .custom-faces.org done!\n")
 #+END_SRC
 
 #+RESULTS:
