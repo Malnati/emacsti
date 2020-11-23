@@ -5,119 +5,122 @@
 #+TODO: TODO CHECK AVOID
 #+LANGUAGE: en
 
-* Custom Set Variables
-
-
 * Custom Code
 
 #+BEGIN_SRC emacs-lisp
 
-   (message "\n It's the org-dotemacs set varialbles loading... ")
+         (message "\n It's the org-dotemacs set varialbles loading... \n")
 
-   (setq emacsti-emacs-backupdir (concat emacsti-emacsdir "backups"))
-   (message (concat "Eval global var emacsti-emacs-backupdir          → " emacsti-emacs-backupdir))
+         (custom-set-variables
+           (message "\n Custom set for which-key mode loading... \n") 
+           ;; WHICH-KEY custom-set-variables was added by Custom.
+           ;;
+           ;; which-key is a minor mode for Emacs that displays the key bindings 
+           ;; following your currently entered incomplete command (a prefix) in a popup. 
+           ;; For example, after enabling the minor mode if you enter C-x and wait 
+           ;; for the default of 1 second the minibuffer will expand with all of the 
+           ;; available key bindings that follow C-x (or as many as space allows given 
+           ;; your settings). This includes prefixes like C-x 8 which are shown in a 
+           ;; different face. Screenshots of what the popup will look like are included 
+           ;; below. which-key started as a rewrite of guide-key-mode, but the feature 
+           ;; sets have diverged to a certain extent.
+           ;;
+           ;; https://github.com/justbur/emacs-which-key
+           ;;(require 'which-key)
+           (which-key-mode t)
+           (message "Which key mode ON.") 
+           ;; Side Window Right then Bottom
+           ;; This is a combination of the previous two choices. It will try to use the 
+           ;; right side, but if there is no room it will switch to using the bottom, 
+           ;; which is usually easier to fit keys into. This setting can be helpful if 
+           ;; the size of the Emacs frame changes frequently, which might be the case 
+           ;; if you are using a dynamic/tiling window manager.
+           (which-key-setup-side-window-right-bottom)
+           (message "Which key window right or bottom ON.") 
+           (message "\n Custom set for which-key done! \n")
+         )
 
-   (tool-bar-mode -1)
-   '(beacon-mode t)
-   (column-number-mode t)
-   '(save-place-mode t)
-   '(desktop-save-mode t)
-   '(fringe-mode (quote (1 . 0.5)) nil (fringe))
-   '(global-display-line-numbers-mode t)
-   '(global-visual-line-mode t
-   '(icomplete-mode t)
-   '(org-mode t)
-   '(org-startup-with-beamer-mode t)
-   '(pending-delete-mode t)
-   '(recentf-mode 1)
-   '(show-paren-mode t)   
-   '(window-divider-mode t)
-   '(setq-default indent-tabs-mode)
-   '(tool-bar-mode t)
-   '(term-char-mode-buffer-read-only nil)
-   '(zoom-mode t)
-   '(projectile-mode +1)
-   (which-key-mode)
+        (message "\n The org-dotemacs set variables loaded! ")
+         ;; (setq emacsti-emacs-backupdir (concat emacsti-emacsdir "backups"))
+         ;; (message (concat "Eval global var emacsti-emacs-backupdir          → " emacsti-emacs-backupdir))
+         ;; '(beacon-mode t)
+         ;; '(save-place-mode t)
+         ;; '(desktop-save-mode t)
+         ;; '(global-visual-line-mode t
+         ;; '(icomplete-mode t)
+         ;; '(org-mode t)
+         ;; '(org-startup-with-beamer-mode t)
+         ;; '(pending-delete-mode t)
+         ;; '(recentf-mode 1)
+         ;; '(show-paren-mode t)   
+         ;; '(setq-default indent-tabs-mode)
+         ;; '(term-char-mode-buffer-read-only nil)
+         ;; '(zoom-mode t)
+         ;; '(projectile-mode +1)
+         ;; '(auto-save-interval 100)
+         ;; '(auto-save-visited-file-name t)
+         ;; '(beacon-color "gold")
+         ;; '(command-history-hook nil)
+         ;; '(completions-file-versions-kept 9992)
+         ;; '(custom-enabled-themes (quote (wombat)))
+         ;; '(delete-auto-save-files nil)
+         ;; '(delete-by-moving-to-trash t)
+         ;; '(desktop-base-file-name "emacs-desktop")
+         ;; '(desktop-save t)
+         ;; '(expand-region t)
+         ;; '(fset (quote yes-or-no-p) t)
+         ;; '(global-hl-line-sticky-flag t)
+         ;; '(global-set-key [3 100] t))
+         ;; '(history-length 2048)
+         ;; '(hl-line-sticky-flag nil)
+         ;; '(indicate-empty-lines t)
+       ;;  '(inhibit-startup-buffer-menu nil)
+         ;; '(initial-buffer-choice t)
+         ;; '(initial-frame-alist
+         ;;   (quote
+         ;;    ((tool-bar-position . none)
+         ;;     (bottom-divider-width . 1)
+         ;;     (right-divider-width . 1))))
+         ;; '(list-command-history-max 2048)
+         ;; '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1) ((control)))))
+      ;;   '(muse-project-alist nil)
+         ;; '(org-ascii-caption-above t)	      
+      ;;   '(org-completion-use-ido t)
+         ;; '(org-confirm-babel-evaluate nil)
+         ;; '(org-dotemacs-dependency-inheritance t)
+         ;; '(org-dotemacs-exclude-todo "AVOID")
+      ;;   '(org-hide-block-startup t)
+         ;; '(org-html-html5-fancy nil)
+         ;; '(org-refile-allow-creating-parent-nodes (quote confirm))
+         ;; '(org-refile-targets (quote ((org-agenda-files :level . 3))))
+         ;; '(org-refile-use-outline-path (quote file))
+      ;;   '(org-startup-folded t)
+         ;; '(org-startup-with-inline-images t)
+         ;; '(rectangle-preview t)
+         ;; '(term-buffer-maximum-size 8192)
+         ;; '(tooltip-reuse-hidden-frame t)
+         ;; '(undo-ask-before-discard t)
+         ;; '(undo-limit 9999999999999999)
+         ;; '(undo-outer-limit 99999999999999999)
+         ;; '(undo-strong-limit 9999999999999999)
+         ;; '(user-full-name "Ricardo Malnati")
+         ;; '(user-mail-address "ricardomalnati@gmail.com")
+         ;; '(x-gtk-show-hidden-files t)
+         ;; '(x-stretch-cursor t)
+         ;; '(yank-menu-length 32)
+         ;; '(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+         ;; '(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
-   (Which-key-setup-side-window-right)
-   '(auto-save-interval 100)
-   '(auto-save-visited-file-name t)
-   '(beacon-color "gold")
-   '(buffers-menu-buffer-name-length 64)
-   '(buffers-menu-max-size 32)
-   '(buffers-menu-show-directories t)
-   '(command-history-hook nil)
-   '(completions-file-versions-kept 9992)
-   '(custom-enabled-themes (quote (wombat)))
-   '(default-frame-alist
-      (quote
-       ((tool-bar-position . none)
-        (bottom-divider-width . 1)
-        (right-divider-width . 1))))
-   '(delete-auto-save-files nil)
-   '(delete-by-moving-to-trash t)
-   '(desktop-base-file-name "emacs-desktop")
-   '(desktop-save t)
-   '(display-buffer-reuse-frames t)
-   '(display-line-numbers t)
-   '(doc-view-continuous t)
-   '(expand-region t)
-   '(fset (quote yes-or-no-p) t)
-   '(global-hl-line-sticky-flag t)
-   '(global-set-key [3 100] t))
-   '(history-length 2048)
-   '(hl-line-sticky-flag nil)
-   '(indicate-empty-lines t)
-   '(inhibit-startup-buffer-menu nil)
-   '(initial-buffer-choice t)
-   '(initial-frame-alist
-     (quote
-      ((tool-bar-position . none)
-       (bottom-divider-width . 1)
-       (right-divider-width . 1))))
-   '(list-command-history-max 2048)
-   '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1) ((control)))))
-   '(muse-project-alist nil)
-   '(org-ascii-caption-above t)
-   '(org-completion-use-ido t)
-   '(org-confirm-babel-evaluate nil)
-   '(org-dotemacs-dependency-inheritance t)
-   '(org-dotemacs-exclude-todo "AVOID")
-   '(org-hide-block-startup t)
-   '(org-html-html5-fancy nil)
-   '(org-refile-allow-creating-parent-nodes (quote confirm))
-   '(org-refile-targets (quote ((org-agenda-files :level . 3))))
-   '(org-refile-use-outline-path (quote file))
-   '(org-startup-folded t)
-   '(org-startup-with-inline-images t)
-   '(rectangle-preview t)
-   '(term-buffer-maximum-size 8192)
-   '(tool-bar-position (quote top))
-   '(tooltip-reuse-hidden-frame t)
-   '(undo-ask-before-discard t)
-   '(undo-limit 9999999999999999)
-   '(undo-outer-limit 99999999999999999)
-   '(undo-strong-limit 9999999999999999)
-   '(user-full-name "Ricardo Malnati")
-   '(user-mail-address "ricardomalnati@gmail.com")
-   '(window-divider-default-bottom-width 1)
-   '(window-divider-default-right-width 1)
-   '(x-gtk-show-hidden-files t)
-   '(x-stretch-cursor t)
-   '(yank-menu-length 32)
-   '(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-   '(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+        ;; '(org-default-notes-file (concat org-directory emacsti-dotemacsfile-notes))
+        ;; '(subword-mode t)
 
-  ;; '(org-default-notes-file (concat org-directory emacsti-dotemacsfile-notes))
-  ;; '(subword-mode t)
+         ;; '(doom-themes-enable-bold t)      ; if nil, bold is universally disabled
+         ;; '(doom-themes-enable-italic t)    ; if nil, italics is universally disabled
+         ;; '(load-theme 'doom-city-lights t)
+         ;; '(doom-themes-visual-bell-config) ;; Enable flashing mode-line on errors
+         ;; (require 'projectile)
 
-   ;; '(doom-themes-enable-bold t)      ; if nil, bold is universally disabled
-   ;; '(doom-themes-enable-italic t)    ; if nil, italics is universally disabled
-   ;; '(load-theme 'doom-city-lights t)
-   ;; '(doom-themes-visual-bell-config) ;; Enable flashing mode-line on errors
-   ;; (require 'projectile)
 
-  (message "\n The org-dotemacs set variables loaded! ")
 
 #+END_SRC
 
