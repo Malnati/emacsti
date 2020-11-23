@@ -33,7 +33,10 @@ export VISUAL='emacsclient -create-frame --alternate-editor="" -n' # $VISUAL ope
 alias emacsx='emacsclient -create-frame --alternate-editor="" -n'                                                                                                                                          
 alias emacst='emacsclient -create-frame --alternate-editor="" -t'                                                                                                                                          
 alias emacsc="emacsclient --eval \"(progn (setq kill-emacs-hook \'nil) (kill-emacs))\""                                                                                                                    
-                                                                                                                                                                                                            
+alias emacsdaemonstart='systemctl --user status emacs.service'
+alias emacsdaemonstop='systemctl --user stop emacs.service && ps aux | grep "[e]macs --daemon"'
+alias emacsdaemonstatus='systemctl --user status emacs.service && ps aux | grep "[e]macs --daemon"'
+
 # Stats the emacs daemon.                                                                                                                                                             
 ps aux | grep "[e]macs --daemon"                                                                                                                                                          
 systemctl --user status emacs.service
