@@ -14,16 +14,12 @@
 
 (message "\n It's the org-dotemacs set varialbles loading... ")
 
-(setq emacsti-emacs-backupdir (concat emacsti-emacsdir "backups" ))
-(message (concat "Eval global var emacsti-emacs-backupdir          → " emacsti-emacs-backupdir    ))
+(setq emacsti-emacs-backupdir (concat emacsti-emacsdir "backups"))
+(message (concat "Eval global var emacsti-emacs-backupdir          → " emacsti-emacs-backupdir))
 
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(tool-bar-mode -1)
- '(auto-save-interval 100)
+(tool-bar-mode -1)
+(auto-save-interval 100)
+
  '(auto-save-visited-file-name t)
  '(beacon-color "gold")
  '(beacon-mode t)
@@ -46,10 +42,15 @@
  '(desktop-save-mode t)
  '(display-buffer-reuse-frames t)
  '(display-line-numbers t)
- '(doc-view-continuous t)
- '(expand-region t)
- '(fringe-mode (quote (1 . 1)) nil (fringe))
- '(fset (quote yes-or-no-p) t)
+ '(doc-view-c                       '(fset (quote yes-or-no-p) t)
+
+
+(custom-set-variables
+ ;; custom-set-var
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+
  '(global-display-line-numbers-mode t)
  '(global-hl-line-sticky-flag t)
  '(global-set-key [3 100] t)
