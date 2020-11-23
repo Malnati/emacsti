@@ -63,6 +63,7 @@
  '(beacon-mode t)
  '(custom-enabled-themes (quote (wombat)))
  '(delete-selection-mode 1)
+ '(global-flycheck-mode nil)
  '(global-visual-line-mode t)
  '(org-startup-with-beamer-mode t)
  '(package-archives
@@ -76,7 +77,7 @@
  '(package-enable-at-startup t)
  '(package-selected-packages
    (quote
-    (flycheck which-key projectile lsp-javacomp lsp-java ## hydra company-lsp company helm-descbinds helm org org-gnome org-dotemacs org-web-tools org-ref org-re-reveal org-presie org-projectile-helm org-projectile org-pomodoro org-pdfview org-page org-mime org-make-toc org-linkany org-index org-edna org-elisp-help org-kanban org-dp org-beautify-theme org-alert plantuml-mode flycheck-plantuml ox-reveal org-re-reveal-ref oer-reveal graphviz-dot-mode ob-dar magit magithub zoom doom-themes)))
+    (lsp-ui flycheck which-key projectile lsp-javacomp lsp-java ## hydra company-lsp company helm-descbinds helm org org-gnome org-dotemacs org-web-tools org-ref org-re-reveal org-presie org-projectile-helm org-projectile org-pomodoro org-pdfview org-page org-mime org-make-toc org-linkany org-index org-edna org-elisp-help org-kanban org-dp org-beautify-theme org-alert plantuml-mode flycheck-plantuml ox-reveal org-re-reveal-ref oer-reveal graphviz-dot-mode ob-dar magit magithub zoom doom-themes)))
  '(which-key-mode t)
  '(which-key-setup-side-window-right-bottom nil))
 ;;

@@ -9,140 +9,147 @@
 
 #+BEGIN_SRC emacs-lisp
 
-        (message "\n It's the org-dotemacs set varialbles loading... \n")
+    (message "\n It's the org-dotemacs set varialbles loading... \n")
 
-        (message "\nCustom set for which-key mode loading... \n") 
-        (custom-set-variables
-          ;; WHICH-KEY custom-set-variables was added by Custom.
-          ;;
-          ;; which-key is a minor mode for Emacs that displays the key bindings 
-          ;; following your currently entered incomplete command (a prefix) in a popup. 
-          ;; For example, after enabling the minor mode if you enter C-x and wait 
-          ;; for the default of 1 second the minibuffer will expand with all of the 
-          ;; available key bindings that follow C-x (or as many as space allows given 
-          ;; your settings). This includes prefixes like C-x 8 which are shown in a 
-          ;; different face. Screenshots of what the popup will look like are included 
-          ;; below. which-key started as a rewrite of guide-key-mode, but the feature 
-          ;; sets have diverged to a certain extent.
-          ;;
-          ;; https://github.com/justbur/emacs-which-key
-          '(which-key-mode t)
-        ); custom-set-variables
-        (message "Which key mode ON.") 
+    (message "\nCustom set for which-key mode loading... \n") 
+    (custom-set-variables
+      ;; WHICH-KEY custom-set-variables was added by Custom.
+      ;;
+      ;; which-key is a minor mode for Emacs that displays the key bindings 
+      ;; following your currently entered incomplete command (a prefix) in a popup. 
+      ;; For example, after enabling the minor mode if you enter C-x and wait 
+      ;; for the default of 1 second the minibuffer will expand with all of the 
+      ;; available key bindings that follow C-x (or as many as space allows given 
+      ;; your settings). This includes prefixes like C-x 8 which are shown in a 
+      ;; different face. Screenshots of what the popup will look like are included 
+      ;; below. which-key started as a rewrite of guide-key-mode, but the feature 
+      ;; sets have diverged to a certain extent.
+      ;;
+      ;; https://github.com/justbur/emacs-which-key
+      '(which-key-mode t)
+    ); custom-set-variables
+    (message "Which key mode ON.") 
 
-        (custom-set-variables
-           ;; Side Window Right then Bottom
-           ;; This is a combination of the previous two choices. It will try to use the 
-           ;; right side, but if there is no room it will switch to using the bottom, 
-           ;; which is usually easier to fit keys into. This setting can be helpful if 
-           ;; the size of the Emacs frame changes frequently, which might be the case 
-           ;; if you are using a dynamic/tiling window manager.
-           '(which-key-setup-side-window-right-bottom)
-         ); custom-set-variables
-         (message "Which key window right or bottom ON.") 
-         (message "\nCustom set for which-key mode done! \n") 
+    (custom-set-variables
+       ;; Side Window Right then Bottom
+       ;; This is a combination of the previous two choices. It will try to use the 
+       ;; right side, but if there is no room it will switch to using the bottom, 
+       ;; which is usually easier to fit keys into. This setting can be helpful if 
+       ;; the size of the Emacs frame changes frequently, which might be the case 
+       ;; if you are using a dynamic/tiling window manager.
+       '(which-key-setup-side-window-right-bottom)
+     ); custom-set-variables
+     (message "Which key window right or bottom ON.") 
+     (message "\nCustom set for which-key mode done! \n") 
 
-         (message "\nCustom set for deleting on selection loading...\n")
-         (custom-set-variables
-           ;; Delete Selection on Insert
-           ;; Apr 12, 2013 | Editing • Bozhidar Batsov
-           ;; It most text editors if you select a piece of text and 
-           ;; press any key (that’s not bound to some command) the selection 
-           ;; would be replaced by the character bound to the key (or 
-           ;; deleted if you press Backspace). In Emacs things look 
-           ;; differently - by default typed text is just inserted at point, 
-           ;; regardless of any selection.
-           ;; Of course, there is a way to change this: (delete-selection-mode +1)
-           ;; Now when transient-mark-mode is also enabled (it is enabled by 
-           ;; default since Emacs 23) any typed text replaces the selection 
-           ;; if the selection is active.
-           ;; https://emacsredux.com/blog/2013/04/12/delete-selection-on-insert/
-           '(delete-selection-mode +1)
-         ); custom-set-variables
-         (message "delete-selection-mode ON!")
-         (message "\nCustom set for deleting on selection done!\n")
+     (message "\nCustom set for deleting on selection loading...\n")
+     (custom-set-variables
+       ;; Delete Selection on Insert
+       ;; Apr 12, 2013 | Editing • Bozhidar Batsov
+       ;; It most text editors if you select a piece of text and 
+       ;; press any key (that’s not bound to some command) the selection 
+       ;; would be replaced by the character bound to the key (or 
+       ;; deleted if you press Backspace). In Emacs things look 
+       ;; differently - by default typed text is just inserted at point, 
+       ;; regardless of any selection.
+       ;; Of course, there is a way to change this: (delete-selection-mode +1)
+       ;; Now when transient-mark-mode is also enabled (it is enabled by 
+       ;; default since Emacs 23) any typed text replaces the selection 
+       ;; if the selection is active.
+       ;; https://emacsredux.com/blog/2013/04/12/delete-selection-on-insert/
+       '(delete-selection-mode +1)
+     ); custom-set-variables
+     (message "delete-selection-mode ON!")
+     (message "\nCustom set for deleting on selection done!\n")
 
-         ;; (message "Basic edit custom setup loading... \n") 
-         ;; (custom-set-variables
+     (message "Flycheck custom setup loading... \n") 
+     (custom-set-variables
+       '(global-flycheck-mode)
+     ); custom-set-variables
+     (message "Flycheck mode globally ON! \n")
+     (message "Flycheck custom setup done! ")
+  
+     ;; (message "Basic edit custom setup loading... \n") 
+     ;; (custom-set-variables
 
-         ;; ); custom-set-variables
-         ;; (message "Custom set for which-key done! \n")
-         ;; (message "Basic edit custom setup done! ")
+     ;; ); custom-set-variables
+     ;; (message "Custom set for which-key done! \n")
+     ;; (message "Basic edit custom setup done! ")
 
-         ;; (setq emacsti-emacs-backupdir (concat emacsti-emacsdir "backups"))
-         ;; (message (concat "Eval global var emacsti-emacs-backupdir          → " emacsti-emacs-backupdir))
-         ;; '(save-place-mode t)
-         ;; '(desktop-save-mode t)
-         ;; '(icomplete-mode t)
-         ;; '(org-mode t)
-         ;; '(pending-delete-mode t)
-         ;; '(recentf-mode 1)
-         ;; '(show-paren-mode t)   
-         ;; '(setq-default indent-tabs-mode)
-         ;; '(term-char-mode-buffer-read-only nil)
-         ;; '(zoom-mode t)
-         ;; '(projectile-mode +1)
-         ;; '(auto-save-interval 100)
-         ;; '(auto-save-visited-file-name t)
-         ;; '(command-history-hook nil)
-         ;; '(completions-file-versions-kept 9992)
-         ;; 
-         ;; '(delete-auto-save-files nil)
-         ;; '(delete-by-moving-to-trash t)
-         ;; '(desktop-base-file-name "emacs-desktop")
-         ;; '(desktop-save t)
-         ;; '(expand-region t)
-         ;; '(fset (quote yes-or-no-p) t)
-         ;; '(global-hl-line-sticky-flag t)
-         ;; '(global-set-key [3 100] t))
-         ;; '(history-length 2048)
-         ;; '(hl-line-sticky-flag nil)
-         ;; '(indicate-empty-lines t)
-       ;;  '(inhibit-startup-buffer-menu nil)
-         ;; '(initial-buffer-choice t)
-         ;; '(initial-frame-alist
-         ;;   (quote
-         ;;    ((tool-bar-position . none)
-         ;;     (bottom-divider-width . 1)
-         ;;     (right-divider-width . 1))))
-         ;; '(list-command-history-max 2048)
-         ;; '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1) ((control)))))
-      ;;   '(muse-project-alist nil)
-         ;; '(org-ascii-caption-above t)	      
-      ;;   '(org-completion-use-ido t)
-         ;; '(org-confirm-babel-evaluate nil)
-         ;; '(org-dotemacs-dependency-inheritance t)
-         ;; '(org-dotemacs-exclude-todo "AVOID")
-      ;;   '(org-hide-block-startup t)
-         ;; '(org-html-html5-fancy nil)
-         ;; '(org-refile-allow-creating-parent-nodes (quote confirm))
-         ;; '(org-refile-targets (quote ((org-agenda-files :level . 3))))
-         ;; '(org-refile-use-outline-path (quote file))
-      ;;   '(org-startup-folded t)
-         ;; '(org-startup-with-inline-images t)
-         ;; '(rectangle-preview t)
-         ;; '(term-buffer-maximum-size 8192)
-         ;; '(tooltip-reuse-hidden-frame t)
-         ;; '(undo-ask-before-discard t)
-         ;; '(undo-limit 9999999999999999)
-         ;; '(undo-outer-limit 99999999999999999)
-         ;; '(undo-strong-limit 9999999999999999)
-         ;; '(user-full-name "Ricardo Malnati")
-         ;; '(user-mail-address "ricardomalnati@gmail.com")
-         ;; '(x-gtk-show-hidden-files t)
-         ;; '(x-stretch-cursor t)
-         ;; '(yank-menu-length 32)
-         ;; '(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-         ;; '(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+     ;; (setq emacsti-emacs-backupdir (concat emacsti-emacsdir "backups"))
+     ;; (message (concat "Eval global var emacsti-emacs-backupdir          → " emacsti-emacs-backupdir))
+     ;; '(save-place-mode t)
+     ;; '(desktop-save-mode t)
+     ;; '(icomplete-mode t)
+     ;; '(org-mode t)
+     ;; '(pending-delete-mode t)
+     ;; '(recentf-mode 1)
+     ;; '(show-paren-mode t)   
+     ;; '(setq-default indent-tabs-mode)
+     ;; '(term-char-mode-buffer-read-only nil)
+     ;; '(zoom-mode t)
+     ;; '(projectile-mode +1)
+     ;; '(auto-save-interval 100)
+     ;; '(auto-save-visited-file-name t)
+     ;; '(command-history-hook nil)
+     ;; '(completions-file-versions-kept 9992)
+     ;; 
+     ;; '(delete-auto-save-files nil)
+     ;; '(delete-by-moving-to-trash t)
+     ;; '(desktop-base-file-name "emacs-desktop")
+     ;; '(desktop-save t)
+     ;; '(expand-region t)
+     ;; '(fset (quote yes-or-no-p) t)
+     ;; '(global-hl-line-sticky-flag t)
+     ;; '(global-set-key [3 100] t))
+     ;; '(history-length 2048)
+     ;; '(hl-line-sticky-flag nil)
+     ;; '(indicate-empty-lines t)
+   ;;  '(inhibit-startup-buffer-menu nil)
+     ;; '(initial-buffer-choice t)
+     ;; '(initial-frame-alist
+     ;;   (quote
+     ;;    ((tool-bar-position . none)
+     ;;     (bottom-divider-width . 1)
+     ;;     (right-divider-width . 1))))
+     ;; '(list-command-history-max 2048)
+     ;; '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1) ((control)))))
+  ;;   '(muse-project-alist nil)
+     ;; '(org-ascii-caption-above t)	      
+  ;;   '(org-completion-use-ido t)
+     ;; '(org-confirm-babel-evaluate nil)
+     ;; '(org-dotemacs-dependency-inheritance t)
+     ;; '(org-dotemacs-exclude-todo "AVOID")
+  ;;   '(org-hide-block-startup t)
+     ;; '(org-html-html5-fancy nil)
+     ;; '(org-refile-allow-creating-parent-nodes (quote confirm))
+     ;; '(org-refile-targets (quote ((org-agenda-files :level . 3))))
+     ;; '(org-refile-use-outline-path (quote file))
+  ;;   '(org-startup-folded t)
+     ;; '(org-startup-with-inline-images t)
+     ;; '(rectangle-preview t)
+     ;; '(term-buffer-maximum-size 8192)
+     ;; '(tooltip-reuse-hidden-frame t)
+     ;; '(undo-ask-before-discard t)
+     ;; '(undo-limit 9999999999999999)
+     ;; '(undo-outer-limit 99999999999999999)
+     ;; '(undo-strong-limit 9999999999999999)
+     ;; '(user-full-name "Ricardo Malnati")
+     ;; '(user-mail-address "ricardomalnati@gmail.com")
+     ;; '(x-gtk-show-hidden-files t)
+     ;; '(x-stretch-cursor t)
+     ;; '(yank-menu-length 32)
+     ;; '(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+     ;; '(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 
-        ;; '(org-default-notes-file (concat org-directory emacsti-dotemacsfile-notes))
-        ;; '(subword-mode t)
+    ;; '(org-default-notes-file (concat org-directory emacsti-dotemacsfile-notes))
+    ;; '(subword-mode t)
 
-         ;; '(doom-themes-enable-bold t)      ; if nil, bold is universally disabled
-         ;; '(doom-themes-enable-italic t)    ; if nil, italics is universally disabled
-         ;; '(load-theme 'doom-city-lights t)
-         ;; '(doom-themes-visual-bell-config) ;; Enable flashing mode-line on errors
-         ;; (require 'projectile)
+     ;; '(doom-themes-enable-bold t)      ; if nil, bold is universally disabled
+     ;; '(doom-themes-enable-italic t)    ; if nil, italics is universally disabled
+     ;; '(load-theme 'doom-city-lights t)
+     ;; '(doom-themes-visual-bell-config) ;; Enable flashing mode-line on errors
+     ;; (require 'projectile)
 
 #+END_SRC
 
