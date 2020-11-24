@@ -53,7 +53,8 @@ elpa/**
 #/server/
 
 # projectiles files
-#.projectile
+*projectile*
+projectile-bookmarks.eld
 
 # directory configuration
 #.dir-locals.el
