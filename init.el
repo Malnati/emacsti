@@ -131,7 +131,7 @@
 (message "window-divider-default-bottom-width ON!")
 (setq window-divider-default-right-width 1)
 (message "window-divider-default-right-width ON!")
-(fset (quote yes-or-no-p) t)
+;;(fset (quote yes-or-no-p) t)
 (message "yes-or-no-p ON!")
 (save-place-mode t)
 (message "save-place-mode ON!")
@@ -182,7 +182,7 @@
 (message "projectile-mode ON!")
 (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-(setq projectile-project-search-path '("~/projects/" "~/git/" "~/github/" "~/gitlab/"))
+;; (setq projectile-project-search-path '("~/projects/" "~/git/" "~/github/" "~/gitlab/"))
 (setq projectile-sort-order 'recentf)
 
 (add-hook 'after-init-hook 'global-company-mode)
