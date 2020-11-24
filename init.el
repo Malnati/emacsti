@@ -133,7 +133,7 @@
 (message "Removed tool bar!")
 (column-number-mode t)
 (message "Showing colunm number!")
-;; https://emacsredux.com/blog/2015/01/18/customizing-the-fringes/
+;; https://emacsredux.com/blog/2015/01/18/cus
 ;; make both fringes 12 pixels
 (fringe-mode 12)
 (message "Fringes sized to 12px!")
