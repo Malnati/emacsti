@@ -56,11 +56,17 @@ git clone https://github.com/Malnati/emacsti.git ~/.emacsti &&\
 git clone https://github.com/vapniks/org-dotemacs.git ~/.emacsti/.emacs.d/org-dotemacs &&\
 ln -s ~/.emacsti/init.el ~/.emacs &&\
 ln -s ~/.emacsti/.emacs.d/ ~/.emacs.d &&\
+```
+
+#### As Service
+
+**Use it only if you know what you are doing!**
+
+```bash
 mkdir -p ~/.config/systemd/user/ &&\
 ln -s ~/.emacsti/emacs.service ~/.config/systemd/user/emacs.service &&\
 systemctl --user start emacs.service &&\
 systemctl --user status emacs.service
-
 ```
 
 #### Use
