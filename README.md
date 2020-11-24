@@ -54,6 +54,7 @@ sudo apt-get install elpa-projectile -y &&\
 sudo apt-get install tree -y &&\
 git clone https://github.com/Malnati/emacsti.git ~/.emacsti &&\
 git clone https://github.com/vapniks/org-dotemacs.git ~/.emacsti/.emacs.d/org-dotemacs &&\
+git clone https://github.com/jwiegley/use-package.git ~/.emacsti/.emacs.d &&\
 ln -s ~/.emacsti/init.el ~/.emacs &&\
 ln -s ~/.emacsti/.emacs.d/ ~/.emacs.d 
 ```
