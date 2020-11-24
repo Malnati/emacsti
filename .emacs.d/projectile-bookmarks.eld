@@ -1,1 +1,1 @@
-nil
+("~/github/demo/" "~/.emacsti/")

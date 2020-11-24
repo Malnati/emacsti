@@ -178,12 +178,6 @@
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (setq projectile-project-search-path '("~/projects/" "~/git/" "~/github/" "~/gitlab/"))
 (setq projectile-sort-order 'recentf)
-(projectile-register-project-type 'npm '("package.json")
-                                  :project-file "package.json"
-				  :compile "npm install"
-				  :test "npm test"
-				  :run "npm start"
-				  :test-suffix ".spec")
 
 (add-hook 'after-init-hook 'global-company-mode)
 (message "global-company-mode mode globally ON!")
