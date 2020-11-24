@@ -74,13 +74,6 @@
        (message "Yasnippet mode globally ON!")
        (message "Yasnippet custom setup done!\n ")
 
-       (message "\nCustom setup for global-company-mode loading...")
-       (custom-set-variables
-         '(add-hook 'after-init-hook 'global-company-mode)
-       ); custom-set-variables
-       (message "global-company-mode mode globally ON!")
-       (message "Custom setup for global-company-mode done!\n ")    
-
        (message "\nCustom setup for aggressive-indent loading... \n") 
        (custom-set-variables
          (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
