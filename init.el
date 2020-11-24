@@ -6,11 +6,7 @@
 ;; just comment it out by adding a semicolon to the start of the line.
 ;; You may delete these explanatory
 ;;
-(message "Starting for evaluating .emacs file!")
-;;--------------------------------------------------------------------
-;; Troubleshooting
-;;--------------------------------------------------------------------
-;; (byte-recompile-directory "~/.emacs.d/" 0 t)
+(message "Starting for evaluating .init.el file!")
 
 ;;--------------------------------------------------------------------
 ;; 
@@ -84,13 +80,44 @@
  '(package-enable-at-startup t)
  '(package-selected-packages
    (quote
-    (nord-theme all-the-icons-ivy-rich all-the-icons-ivy all-the-icons-ibuffer all-the-icons-gnus all-the-icons-dired neotree aggressive-indent helm-company yasnippet lsp-ui flycheck which-key projectile lsp-javacomp lsp-java ## hydra company-lsp company helm-descbinds helm org org-gnome org-dotemacs org-web-tools org-ref org-re-reveal org-presie org-projectile-helm org-projectile org-pomodoro org-pdfview org-page org-mime org-make-toc org-linkany org-index org-edna org-elisp-help org-kanban org-dp org-beautify-theme org-alert plantuml-mode flycheck-plantuml ox-reveal org-re-reveal-ref oer-reveal graphviz-dot-mode ob-dar magit magithub zoom)))
+    (nord-theme neotree aggressive-indent yasnippet flycheck which-key projectile hydra company  helm org org-gnome org-dotemacs org-web-tools org-ref org-re-reveal org-presie org-projectile-helm org-projectile org-pomodoro org-pdfview org-page org-mime org-make-toc org-linkany org-index org-edna org-elisp-help org-kanban org-dp org-beautify-theme org-alert)))
  '(which-key-mode t)
- '(which-key-setup-side-window-right-bottom nil)
- '(yas-global-mode nil))
+ '(which-key-setup-side-window-right-bottom t)
+ '(yas-global-mode t))
 ;;
 (message "All packages initilized and selected!")
 
+;; This is only needed once, near the top of the file
+;; (eval-when-compile
+;;   ;; Following line is not needed if use-package.el is in ~/.emacs.d
+;;   (add-to-list 'load-path "~/.emacs.d/use-package")
+;;   (require 'use-package))
+
+;; (use-package nord-theme
+;;   :ensure t)
+;; (use-package neotree
+;;   :ensure t)
+;; (use-package aggressive-indent
+;;   :ensure t)
+;; (use-package helm-company
+;;   :ensure t)
+;; (use-package yasnippet
+;;   :ensure t)
+;; (use-package flycheck
+;;   :ensure t)
+;; (use-package which-key
+;;   :ensure t)
+;; (use-package projectile
+;;   :ensure t)
+;; (use-package hydra
+;;   :ensure t)
+;; (use-package company
+;;   :ensure t)
+;; (use-package helm
+;;   :ensure t)
+;; (use-package org
+;;   :ensure t)
+ 
 ;; Frame, window, toolbar, menu custom-set-variables was added by Custom.
 (message "\n Custom set for Frame, window, toolbar, menu loading... \n")
 ;; remove scroll bar
@@ -187,7 +214,7 @@
 
 (add-hook 'after-init-hook 'global-company-mode)
 (message "global-company-mode mode globally ON!")
-(global-flycheck-mode t)
+;;(global-flycheck-mode t)
 (message "Flycheck mode globally ON!")
 (setq tab-always-indent 'complete)
 (message "tab-always-indent 'complete!")
@@ -196,31 +223,24 @@
 (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
 (load-theme 'nord t)
 
-(message "\n Custom set for Frame, window, toolbar, menu done! \n")
 ;;--------------------------------------------------------------------
 ;; Loading org-dotemacs
 ;;--------------------------------------------------------------------
 ;; git clone https://github.com/vapniks/org-dotemacs.git ~/.emacs.d/org-dotemacs
-(if (file-exists-p emacsti-dotemacslib)
-    (load-file emacsti-dotemacslib)
-  (message (concat emacsti-dotemacslib " > Lib not found! You have to verify the dotemacslib variable defined in to .emacs file."))
-  )
-(message "Variable emacsti-dotemacslib loaded!")
-(require 'org-dotemacs)
-(setq dotemacs-mode t)
-(message "")
-(if (file-exists-p emacsti-dotemacsfile-index)
-    (org-dotemacs-load-file nil emacsti-dotemacsfile-index)
-  (message (concat emacsti-dotemacsfile-index " > File not found! You have to verify the dotemacsfile variable defined in to .emacs file."))
-)
-(message "All done!")
+;; (if (file-exists-p emacsti-dotemacslib)
+;;     (load-file emacsti-dotemacslib)
+;;   (message (concat emacsti-dotemacslib " > Lib not found! You have to verify the dotemacslib variable defined in to .emacs file."))
+;;   )
+;; (message "Variable emacsti-dotemacslib loaded!")
+;; (require 'org-dotemacs)
+;; (setq dotemacs-mode t)
+;; (message "")
+;; (if (file-exists-p emacsti-dotemacsfile-index)
+;;     (org-dotemacs-load-file nil emacsti-dotemacsfile-index)
+;;   (message (concat emacsti-dotemacsfile-index " > File not found! You have to verify the dotemacsfile variable defined in to .emacs file."))
+;; )
+;; (message "All done!")
 
 ;;--------------------------------------------------------------------
 ;; End .emacs code
 ;;--------------------------------------------------------------------
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
