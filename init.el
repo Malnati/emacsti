@@ -116,11 +116,6 @@
 (message "Buffers menu sized to 32!")
 (setq buffers-menu-show-directories t)
 (message "Buffers menu show directories ON!")
-;; (setq default-frame-alist
-;;    (quote
-;;          ((tool-bar-position . none)
-;;           (bottom-divider-width . 1)
-;;           (right-divider-width . 1))))
 (setq doc-view-continuous t)
 (message "doc-view-continuous ON!")
 (setq display-buffer-reuse-frames t)
@@ -148,7 +143,6 @@
 (message "command-history-hook OFF!")
 (setq completions-file-versions-kept 9992)
 (message "completions-file-versions-kept 9992!")
-
 (setq history-length 2048)
 (message "history-length 2048!")
 (setq initial-buffer-choice t)
