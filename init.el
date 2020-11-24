@@ -186,6 +186,7 @@
 				  :test-suffix ".spec")
 
 (add-hook 'after-init-hook 'global-company-mode)
+(message "global-company-mode mode globally ON!")
 
 (message "\n Custom set for Frame, window, toolbar, menu done! \n")
 ;;--------------------------------------------------------------------
