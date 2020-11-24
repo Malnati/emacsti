@@ -11,7 +11,7 @@
 
 (message "\n It's the org-dotemacs set varialbles loading... \n")
 
-(message "\nCustom set for which-key mode loading... \n") 
+(message "\nCustom set for which-key mode loading...") 
 (custom-set-variables
         ;; WHICH-KEY custom-set-variables was added by Custom.
         ;;
@@ -29,7 +29,6 @@
         '(which-key-mode t)
       ); custom-set-variables
       (message "Which key mode ON.") 
-
       (custom-set-variables
          ;; Side Window Right then Bottom
          ;; This is a combination of the previous two choices. It will try to use the 
@@ -40,9 +39,8 @@
          '(which-key-setup-side-window-right-bottom)
        ); custom-set-variables
        (message "Which key window right or bottom ON.") 
-       (message "\nCustom set for which-key mode done! \n") 
-
-       (message "\nCustom set for deleting on selection loading...\n")
+       (message "Custom set for which-key mode done!") 
+       (message "Custom set for deleting on selection loading...")
        (custom-set-variables
          ;; Delete Selection on Insert
          ;; Apr 12, 2013 | Editing • Bozhidar Batsov
@@ -60,39 +58,38 @@
          '(delete-selection-mode +1)
        ); custom-set-variables
        (message "delete-selection-mode ON!")
-       (message "\nCustom set for deleting on selection done!\n")
+       (message "Custom set for deleting on selection done!\n")
 
        (message "\nFlycheck custom setup loading...\n") 
        (custom-set-variables
          '(global-flycheck-mode)
        ); custom-set-variables
        (message "Flycheck mode globally ON!")
-       (message "\nFlycheck custom setup done!\n")
+       (message "Flycheck custom setup done!\n")
 
-       (message "Yasnippet custom setup loading... \n") 
+       (message "\nYasnippet custom setup loading... \n") 
        (custom-set-variables
          '(yas-global-mode)
        ); custom-set-variables
        (message "Yasnippet mode globally ON!")
-       (message "Yasnippet custom setup done! ")
+       (message "Yasnippet custom setup done!\n ")
 
-       (message "global-company-mode custom setup loading... \n")
+       (message "\nCustom setup for global-company-mode loading...")
        (custom-set-variables
          '(add-hook 'after-init-hook 'global-company-mode)
        ); custom-set-variables
        (message "global-company-mode mode globally ON!")
-       (message "global-company-mode custom setup done! ")    
+       (message "Custom setup for global-company-mode done!\n ")    
 
-       (message "aggressive-indent custom setup loading... \n") 
+       (message "\nCustom setup for aggressive-indent loading... \n") 
        (custom-set-variables
          (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
          (add-hook 'css-mode-hook #'aggressive-indent-mode)
        ); custom-set-variables
        (message "aggressive-indent for elip and CSS ON!")
-       (message "aggressive-indent custom setup done! ")     
+       (message "Custom setup for aggressive-indent done!\n")     
 
-       (message "Saving custom setup loading... \n") 
-
+       (message "\nDesktop save custom setup loading...") 
        (setq emacsti-emacs-backupdir (concat emacsti-emacsdir "backups"))
        (message (concat "Eval global var emacsti-emacs-backupdir          → " emacsti-emacs-backupdir))
        (custom-set-variables
@@ -100,23 +97,7 @@
         '(desktop-base-file-name "emacs-desktop")
         '(desktop-save t)
        ); custom-set-variables
-       ;; (message "Custom set for which-key done! \n")
-       (message "Saving custom setup done! ")
-
-       ;; (message "Basic edit custom setup loading... \n") 
-       ;; (custom-set-variables
-
-       ;; ); custom-set-variables
-       ;; (message "Custom set for which-key done! \n")
-       ;; (message "Basic edit custom setup done! ")
-
-
-       ;; '(projectile-mode +1)
-       ;; '(global-hl-line-sticky-flag t)
-       ;; '(hl-line-sticky-flag nil)
-       ;; '(indicate-empty-lines t)
-
-       ;; '(mouse-wheel-scroll-amount (quote (3 ((shift) . 1) ((control)))))
+       (message "Desktop save custom setup done!\n")
 
        ;; '(org-mode t)
        ;; '(org-ascii-caption-above t)	      
@@ -130,10 +111,11 @@
        ;; '(org-refile-use-outline-path (quote file))
        ;; '(org-startup-folded t)
        ;; '(org-startup-with-inline-images t)
+       ;; '(org-default-notes-file (concat org-directory emacsti-dotemacsfile-notes))
+
+       ;; '(projectile-mode +1)
        ;; '(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
        ;; '(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-      ;; '(org-default-notes-file (concat org-directory emacsti-dotemacsfile-notes))
-
        #+END_SRC
 
 #+RESULTS:
