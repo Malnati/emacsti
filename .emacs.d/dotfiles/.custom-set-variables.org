@@ -113,9 +113,7 @@
        ;; '(org-startup-with-inline-images t)
        ;; '(org-default-notes-file (concat org-directory emacsti-dotemacsfile-notes))
 
-       ;; '(projectile-mode +1)
-       ;; '(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-       ;; '(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+
        #+END_SRC
 
 #+RESULTS:

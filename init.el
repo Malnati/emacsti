@@ -171,7 +171,19 @@
 (message "x-gtk-show-hidden-files ON!")
 (setq yank-menu-length 32)
 (message "yank-menu-length 32!")
-
+;; https://docs.projectile.mx/projectile/usage.html
+(projectile-mode +1)
+(message "projectile-mode ON!")
+(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+(setq projectile-project-search-path '("~/projects/" "~/git/" "~/github/" "~/gitlab/"))
+(setq projectile-sort-order 'recentf)
+(projectile-register-project-type 'npm '("package.json")
+                                  :project-file "package.json"
+				  :compile "npm install"
+				  :test "npm test"
+				  :run "npm start"
+				  :test-suffix ".spec")
 (message "\n Custom set for Frame, window, toolbar, menu done! \n")
 ;;--------------------------------------------------------------------
 ;; Loading org-dotemacs
