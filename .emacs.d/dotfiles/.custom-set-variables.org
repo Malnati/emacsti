@@ -60,13 +60,6 @@
        (message "delete-selection-mode ON!")
        (message "Custom set for deleting on selection done!\n")
 
-       (message "\nFlycheck custom setup loading...\n") 
-       (custom-set-variables
-         '(global-flycheck-mode)
-       ); custom-set-variables
-       (message "Flycheck mode globally ON!")
-       (message "Flycheck custom setup done!\n")
-
        (message "\nYasnippet custom setup loading... \n") 
        (custom-set-variables
          '(yas-global-mode)

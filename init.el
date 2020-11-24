@@ -188,6 +188,10 @@
 (add-hook 'after-init-hook 'global-company-mode)
 (message "global-company-mode mode globally ON!")
 
+(global-flycheck-mode t)
+(message "Flycheck mode globally ON!")
+
+
 ;; https://github.com/arcticicestudio/nord-emacs
 (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
 (load-theme 'nord t)
