@@ -62,7 +62,7 @@
  '(beacon-color "gold")
  '(beacon-fallback-background ((t (:background "dim gray"))))
  '(beacon-mode t)
- '(custom-enabled-themes (quote (wombat)))
+ ;; '(custom-enabled-themes (quote (wombat)))
  '(delete-selection-mode 1)
  '(global-flycheck-mode nil)
  '(global-visual-line-mode t)
@@ -181,6 +181,8 @@
 
 (add-hook 'after-init-hook 'global-company-mode)
 (message "global-company-mode mode globally ON!")
+
+
 
 (message "\n Custom set for Frame, window, toolbar, menu done! \n")
 ;;--------------------------------------------------------------------
