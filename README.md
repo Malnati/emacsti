@@ -55,7 +55,7 @@ sudo apt-get install tree -y &&\
 git clone https://github.com/Malnati/emacsti.git ~/.emacsti &&\
 git clone https://github.com/vapniks/org-dotemacs.git ~/.emacsti/.emacs.d/org-dotemacs &&\
 ln -s ~/.emacsti/init.el ~/.emacs &&\
-ln -s ~/.emacsti/.emacs.d/ ~/.emacs.d &&\
+ln -s ~/.emacsti/.emacs.d/ ~/.emacs.d 
 ```
 
 #### As Service
