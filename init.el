@@ -184,10 +184,13 @@
 (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
 (setq projectile-project-search-path '("~/projects/" "~/git/" "~/github/" "~/gitlab/"))
 (setq projectile-sort-order 'recentf)
+
 (add-hook 'after-init-hook 'global-company-mode)
 (message "global-company-mode mode globally ON!")
 (global-flycheck-mode t)
 (message "Flycheck mode globally ON!")
+(setq tab-always-indent 'complete)
+(message "tab-always-indent 'complete!")
 
 ;; https://github.com/arcticicestudio/nord-emacs
 (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
