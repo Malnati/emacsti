@@ -54,13 +54,13 @@
     (message (concat emacsti-dotemacsfile-custom-set " > File not found! You have to verify the dotemacsfile variable defined for custom set variables in to ~/.emacs.d/dotfiles/.custom-index.org file."))
   )
 
-  (setq emacsti-dotemacsfile-faces       (concat emacsti-dotemacsdir ".custom-faces.org"           ))
-  (message (concat "Eval global var emacsti-dotemacsfile-faces       → " emacsti-dotemacsfile-faces      ))
+  ;; (setq emacsti-dotemacsfile-faces       (concat emacsti-dotemacsdir ".custom-faces.org"           ))
+  ;; (message (concat "Eval global var emacsti-dotemacsfile-faces       → " emacsti-dotemacsfile-faces      ))
 
-  (if (file-exists-p emacsti-dotemacsfile-faces)
-      (org-dotemacs-load-file nil emacsti-dotemacsfile-faces)
-    (message (concat emacsti-dotemacsfile-faces " > File not found! You have to verify the dotemacsfile variable defined for faces in to ~/.emacs.d/dotfiles/.custom-index.org file."))
-  )
+  ;; (if (file-exists-p emacsti-dotemacsfile-faces)
+  ;;     (org-dotemacs-load-file nil emacsti-dotemacsfile-faces)
+  ;;   (message (concat emacsti-dotemacsfile-faces " > File not found! You have to verify the dotemacsfile variable defined for faces in to ~/.emacs.d/dotfiles/.custom-index.org file."))
+  ;; )
 
   (message "\n The org-dotemacs index loaded! \n")
 

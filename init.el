@@ -59,11 +59,17 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(add-hook (quote after-init-hook) t)
+ '(aggressive-indent-mode nil t)
  '(beacon-color "gold")
  '(beacon-fallback-background ((t (:background "dim gray"))))
  '(beacon-mode t)
- ;; '(custom-enabled-themes (quote (wombat)))
+ '(custom-safe-themes
+   (quote
+    ("37768a79b479684b0756dec7c0fc7652082910c37d8863c35b702db3f16000f8" default)))
  '(delete-selection-mode 1)
+ '(desktop-base-file-name "emacs-desktop")
+ '(desktop-save t)
+ '(desktop-save-mode t)
  '(global-flycheck-mode nil)
  '(global-visual-line-mode t)
  '(org-startup-with-beamer-mode t)
@@ -78,7 +84,7 @@
  '(package-enable-at-startup t)
  '(package-selected-packages
    (quote
-    (aggressive-indent helm-company yasnippet lsp-ui flycheck which-key projectile lsp-javacomp lsp-java ## hydra company-lsp company helm-descbinds helm org org-gnome org-dotemacs org-web-tools org-ref org-re-reveal org-presie org-projectile-helm org-projectile org-pomodoro org-pdfview org-page org-mime org-make-toc org-linkany org-index org-edna org-elisp-help org-kanban org-dp org-beautify-theme org-alert plantuml-mode flycheck-plantuml ox-reveal org-re-reveal-ref oer-reveal graphviz-dot-mode ob-dar magit magithub zoom doom-themes)))
+    (nord-theme all-the-icons-ivy-rich all-the-icons-ivy all-the-icons-ibuffer all-the-icons-gnus all-the-icons-dired neotree aggressive-indent helm-company yasnippet lsp-ui flycheck which-key projectile lsp-javacomp lsp-java ## hydra company-lsp company helm-descbinds helm org org-gnome org-dotemacs org-web-tools org-ref org-re-reveal org-presie org-projectile-helm org-projectile org-pomodoro org-pdfview org-page org-mime org-make-toc org-linkany org-index org-edna org-elisp-help org-kanban org-dp org-beautify-theme org-alert plantuml-mode flycheck-plantuml ox-reveal org-re-reveal-ref oer-reveal graphviz-dot-mode ob-dar magit magithub zoom doom-themes)))
  '(which-key-mode t)
  '(which-key-setup-side-window-right-bottom nil)
  '(yas-global-mode nil))
@@ -182,7 +188,9 @@
 (add-hook 'after-init-hook 'global-company-mode)
 (message "global-company-mode mode globally ON!")
 
-
+;; https://github.com/arcticicestudio/nord-emacs
+(add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
+(load-theme 'nord t)
 
 (message "\n Custom set for Frame, window, toolbar, menu done! \n")
 ;;--------------------------------------------------------------------
@@ -206,3 +214,9 @@
 ;;--------------------------------------------------------------------
 ;; End .emacs code
 ;;--------------------------------------------------------------------
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
