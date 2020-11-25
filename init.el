@@ -42,9 +42,6 @@
 (require 'package)
 (package-initialize)
 
-;;(fset (quote yes-or-no-p) t)
-;;(message "yes-or-no-p ON!")
-
 (setq user-full-name "Ricardo Malnati")
 (message "user-full-name Ricardo Malnati!")
 (setq user-mail-address "ricardomalnati@gmail.com")
@@ -63,5 +60,17 @@
 (load-file "~/.emacsti/customaggressivemodeindent.el")
 (load-file "~/.emacsti/customtheme.el")
 
-(eval-buffer)
 
+(defun duplicate-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank)
+)
+(global-set-key (kbd "C-d") 'duplicate-line)
+
+(fset (quote yes-or-no-p) t)
+(message "yes-or-no-p ON!")
