@@ -58,6 +58,8 @@
 ;;(load-file "~/.emacsti/customflycheck.el")
 (load-file "~/.emacsti/customcompany.el")
 (load-file "~/.emacsti/customaggressivemodeindent.el")
+(load-file "~/.emacsti/custommc.el")
+
 (load-file "~/.emacsti/customtheme.el")
 
 (defun duplicate-line()
@@ -69,7 +71,18 @@
   (next-line 1)
   (yank)
 )
-(global-set-key (kbd "C-d") 'duplicate-line)
+(global-set-key (kbd "C-c d") 'duplicate-line)
+
+
+(defun copy-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+)
+(global-set-key (kbd "C-c c") 'copy-line)
 
 (fset (quote yes-or-no-p) t)
 (message "yes-or-no-p ON!")
