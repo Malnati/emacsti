@@ -59,8 +59,7 @@ sudo apt-get install tree -y
 
 ```bash
 git clone https://github.com/Malnati/emacsti.git ~/.emacsti &&\
-ln -s ~/.emacsti/init.el ~/.emacs &&\
-ln -s ~/.emacsti/.emacs.d/ ~/.emacs.d 
+ln -s ~/.emacsti/init.el ~/.emacs 
 ```
 
 #### Use
