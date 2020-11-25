@@ -38,7 +38,7 @@ alias emacst='emacsclient -create-frame --alternate-editor="" -t'
 alias emacsc="emacsclient --eval \"(progn (setq kill-emacs-hook \'nil) (kill-emacs))\""
 alias emacsdaemonstart='emacs --deamon'
 alias emacsdaemonstop='ps aux | grep "[e]macs --daemon" && echo "use sudo kill -9 <PID>"'
-alias emacsdaemonstatus='ps aux | grep "[e]macs --daemon" && tree ~/.config/systemd/user'
+alias emacsdaemonstatus='ps aux | grep "[e]macs --daemon"'
 
 # Stats the emacs daemon.                                                                                                                                                             
 emacsdaemonstatus
@@ -61,17 +61,6 @@ sudo apt-get install tree -y
 git clone https://github.com/Malnati/emacsti.git ~/.emacsti &&\
 ln -s ~/.emacsti/init.el ~/.emacs &&\
 ln -s ~/.emacsti/.emacs.d/ ~/.emacs.d 
-```
-
-#### As Service
-
-**Use it only if you know what you are doing!**
-
-```bash
-mkdir -p ~/.config/systemd/user/ &&\
-ln -s ~/.emacsti/emacs.service ~/.config/systemd/user/emacs.service &&\
-systemctl --user start emacs.service &&\
-systemctl --user status emacs.service
 ```
 
 #### Use
