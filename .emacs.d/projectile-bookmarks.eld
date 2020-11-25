@@ -1,1 +1,2 @@
-("~/.emacsti/" "~/.emacs.d/use-package/" "~/.emacs.d/themes/" "~/.emacs.d/snippets/" "~/.emacs.d/org-dotemacs/" "~/.emacs.d/elpa/" "~/.emacs.d/dotfiles/" "~/.emacs.d/auto-save-list/")
+("~/.emacsti/")
+
