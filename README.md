@@ -23,38 +23,42 @@ fi
 **Create this file ~/.bash_emacs with content below.**
 
 ```bash
-#!/bin/sh                                                                                                                                                                                                  
-                                                                                                                                                                                                            # Enironment valiables for using emacs as a server                                                                                                                                                         
+#!/bin/sh
+
+# Enironment valiables for using emacs as a server
+
 export ALTERNATE_EDITOR=""
-export EDITOR='emacsclient -create-frame --alternate-editor="" -t' # $EDITOR opens in terminal                                                                                                             
-export VISUAL='emacsclient -create-frame --alternate-editor="" -n' # $VISUAL opens in GUI mode                                                                                                             
-                                                                                                                                                                                                            
-# Emacs client                                                                                                                                                                                             
-alias emacsx='emacsclient -create-frame --alternate-editor="" -n'                                                                                                                                          
-alias emacst='emacsclient -create-frame --alternate-editor="" -t'                                                                                                                                          
-alias emacsc="emacsclient --eval \"(progn (setq kill-emacs-hook \'nil) (kill-emacs))\""                                                                                                                    
-alias emacsdaemonstart='systemctl --user status emacs.service'
-alias emacsdaemonstop='systemctl --user stop emacs.service && ps aux | grep "[e]macs --daemon"'
-alias emacsdaemonstatus='systemctl --user status emacs.service && ps aux | grep "[e]macs --daemon"'
+export EDITOR='emacsclient -create-frame --alternate-editor="" -t' # $EDITOR opens in terminal
+export VISUAL='emacsclient -create-frame --alternate-editor="" -n' # $VISUAL opens in GUI mode
+
+# Emacs client
+
+alias emacsx='emacsclient -create-frame --alternate-editor="" -n'
+alias emacst='emacsclient -create-frame --alternate-editor="" -t'
+alias emacsc="emacsclient --eval \"(progn (setq kill-emacs-hook \'nil) (kill-emacs))\""
+alias emacsdaemonstart='emacs --deamon'
+alias emacsdaemonstop='ps aux | grep "[e]macs --daemon" && echo "use sudo kill -9 <PID>"'
+alias emacsdaemonstatus='ps aux | grep "[e]macs --daemon" && tree ~/.config/systemd/user'
 
 # Stats the emacs daemon.                                                                                                                                                             
-ps aux | grep "[e]macs --daemon"                                                                                                                                                          
-systemctl --user status emacs.service
-tree ~/.config/systemd/user/
+emacsdaemonstatus
 ```
 
 #### Download and install
 
-**It will download and create a symbolic link to ~/.emacs.d/.emacs**
+**Basic tools just in case...**
 
 ```bash
 sudo apt-get install emacs -y &&\
 sudo apt-get install gnome-tweak-tool -y &&\
 sudo apt-get install elpa-projectile -y &&\
-sudo apt-get install tree -y &&\
+sudo apt-get install tree -y 
+```
+
+**It will download and create a symbolic link to ~/.emacs.d/.emacs**
+
+```bash
 git clone https://github.com/Malnati/emacsti.git ~/.emacsti &&\
-git clone https://github.com/vapniks/org-dotemacs.git ~/.emacsti/.emacs.d/org-dotemacs &&\
-git clone https://github.com/jwiegley/use-package.git ~/.emacsti/.emacs.d &&\
 ln -s ~/.emacsti/init.el ~/.emacs &&\
 ln -s ~/.emacsti/.emacs.d/ ~/.emacs.d 
 ```
