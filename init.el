@@ -65,3 +65,5 @@
 (message "Flycheck mode globally ON!")
 
 (load-file "~/.emacsti/customtheme.el")
+
+(load-file "~/.emacsti/customflycheck.el")
