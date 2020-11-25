@@ -63,3 +63,5 @@
 (load-file "~/.emacsti/customaggressivemodeindent.el")
 (load-file "~/.emacsti/customtheme.el")
 
+(eval-buffer)
+
