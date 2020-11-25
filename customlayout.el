@@ -64,6 +64,9 @@
 (setq buffers-menu-show-directories t)
 (message "→ Buffers menu show directories ON!")
 
+(global-visual-line-mode t)
+
+(setq org-startup-with-beamer-mode t)
  ;; '(beacon-color "gold")
  ;; '(beacon-fallback-background ((t (:background "dim gray"))))
  ;; '(beacon-mode t)

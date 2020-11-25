@@ -37,6 +37,7 @@
 
 (load-file "~/.emacsti/customlayout.el")
 (load-file "~/.emacsti/customsave.el")
+(load-file "~/.emacsti/custombehavior.el")
 
 ;;--------------------------------------------------------------------
 ;; Loading packages
@@ -50,12 +51,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(add-hook (quote after-init-hook) t)
  '(aggressive-indent-mode nil t)
- '(delete-selection-mode 1)
  '(global-flycheck-mode nil)
- '(global-visual-line-mode t)
- '(org-startup-with-beamer-mode t)
  '(package-archives
    (quote
     (("marmalade" . "http://marmalade-repo.org/packages/")
@@ -71,24 +68,13 @@
  '(which-key-mode t)
  '(which-key-setup-side-window-right-bottom t)
  '(yas-global-mode t))
-;;
-
-(setq doc-view-continuous t)
-(message "doc-view-continuous ON!")
 ;;(fset (quote yes-or-no-p) t)
 ;;(message "yes-or-no-p ON!")
-(setq delete-auto-save-files nil)
-(message "delete-auto-save-files OFF!")
-(setq delete-by-moving-to-trash t)
-(message "delete-by-moving-to-trash ON!")
-(setq initial-buffer-choice t)
-(message "initial-buffer-choice ON!")
+
 (setq user-full-name "Ricardo Malnati")
 (message "user-full-name Ricardo Malnati!")
 (setq user-mail-address "ricardomalnati@gmail.com")
 (message "user-mail-address ricardomalnati@gmail.com!")
-(setq x-gtk-show-hidden-files t)
-(message "x-gtk-show-hidden-files ON!")
 
 (load-file "~/.emacsti/customprojectile.el")
 
@@ -96,29 +82,5 @@
 (message "global-company-mode mode globally ON!")
 ;;(global-flycheck-mode t)
 (message "Flycheck mode globally ON!")
-(setq tab-always-indent 'complete)
-(message "tab-always-indent 'complete!")
 
 (load-file "~/.emacsti/customtheme.el")
-
-;;--------------------------------------------------------------------
-;; Loading org-dotemacs
-;;--------------------------------------------------------------------
-;; git clone https://github.com/vapniks/org-dotemacs.git ~/.emacs.d/org-dotemacs
-;; (if (file-exists-p emacsti-dotemacslib)
-;;     (load-file emacsti-dotemacslib)
-;;   (message (concat emacsti-dotemacslib " > Lib not found! You have to verify the dotemacslib variable defined in to .emacs file."))
-;;   )
-;; (message "Variable emacsti-dotemacslib loaded!")
-;; (require 'org-dotemacs)
-;; (setq dotemacs-mode t)
-;; (message "")
-;; (if (file-exists-p emacsti-dotemacsfile-index)
-;;     (org-dotemacs-load-file nil emacsti-dotemacsfile-index)
-;;   (message (concat emacsti-dotemacsfile-index " > File not found! You have to verify the dotemacsfile variable defined in to .emacs file."))
-;; )
-;; (message "All done!")
-
-;;--------------------------------------------------------------------
-;; End .emacs code
-;;--------------------------------------------------------------------
