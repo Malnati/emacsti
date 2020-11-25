@@ -38,6 +38,7 @@
 (load-file "~/.emacsti/customlayout.el")
 (load-file "~/.emacsti/customsave.el")
 (load-file "~/.emacsti/custombehavior.el")
+(load-file "~/.emacsti/customwhichkey.el")
 
 ;;--------------------------------------------------------------------
 ;; Loading packages
