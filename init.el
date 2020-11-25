@@ -60,7 +60,6 @@
 (load-file "~/.emacsti/customaggressivemodeindent.el")
 (load-file "~/.emacsti/customtheme.el")
 
-
 (defun duplicate-line()
   (interactive)
   (move-beginning-of-line 1)
