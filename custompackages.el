@@ -1,6 +1,4 @@
-
 (custom-set-variables
- '(aggressive-indent-mode nil t)
  '(package-archives
    (quote
     (("marmalade" . "http://marmalade-repo.org/packages/")
@@ -12,5 +10,5 @@
  '(package-enable-at-startup t)
  '(package-selected-packages
    (quote
-    (aggressive-indent yasnippet hydra company helm)))
- '(yas-global-mode t))
+    (hydra helm flycheck))))
+

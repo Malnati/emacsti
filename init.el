@@ -35,19 +35,12 @@
 (message
  (concat "emacsti-dotemacsfile-index → " emacsti-dotemacsfile-index))
 
-(load-file "~/.emacsti/customlayout.el")
-(load-file "~/.emacsti/customsave.el")
-(load-file "~/.emacsti/custombehavior.el")
-(load-file "~/.emacsti/customwhichkey.el")
-
 ;;--------------------------------------------------------------------
 ;; Loading packages
 ;;--------------------------------------------------------------------
 (message "\nLoading packages...")
 (require 'package)
 (package-initialize)
-
-(load-file "~/.emacsti/custompackages.el")
 
 ;;(fset (quote yes-or-no-p) t)
 ;;(message "yes-or-no-p ON!")
@@ -57,13 +50,16 @@
 (setq user-mail-address "ricardomalnati@gmail.com")
 (message "user-mail-address ricardomalnati@gmail.com!")
 
+(load-file "~/.emacsti/custompackages.el")
+
+(load-file "~/.emacsti/customlayout.el")
+(load-file "~/.emacsti/customsave.el")
+(load-file "~/.emacsti/custombehavior.el")
+(load-file "~/.emacsti/customwhichkey.el")
+
 (load-file "~/.emacsti/customprojectile.el")
-
-(add-hook 'after-init-hook 'global-company-mode)
-(message "global-company-mode mode globally ON!")
-;;(global-flycheck-mode t)
-(message "Flycheck mode globally ON!")
-
+;;(load-file "~/.emacsti/customflycheck.el")
+(load-file "~/.emacsti/customcompany.el")
+(load-file "~/.emacsti/customaggressivemodeindent.el")
 (load-file "~/.emacsti/customtheme.el")
 
-(load-file "~/.emacsti/customflycheck.el")

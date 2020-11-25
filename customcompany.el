@@ -1,3 +1,4 @@
+(add-to-list 'load-path "~/.emacsti/dependencies/company-mode/")
+(require 'company)
 
-(add-to-list 'load-path "~/.emacsti/dependencies/flycheck/")
-(require 'flycheck)
+(add-hook 'after-init-hook 'global-company-mode)
