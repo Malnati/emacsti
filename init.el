@@ -89,13 +89,8 @@
 (message "user-mail-address ricardomalnati@gmail.com!")
 (setq x-gtk-show-hidden-files t)
 (message "x-gtk-show-hidden-files ON!")
-;; https://docs.projectile.mx/projectile/usage.html
-(projectile-mode +1)
-(message "projectile-mode ON!")
-(define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
-(define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-(setq projectile-project-search-path '("~/.emacs.d/"))
-(setq projectile-sort-order 'recentf)
+
+(load-file "~/.emacsti/customprojectile.el")
 
 (add-hook 'after-init-hook 'global-company-mode)
 (message "global-company-mode mode globally ON!")
@@ -104,9 +99,7 @@
 (setq tab-always-indent 'complete)
 (message "tab-always-indent 'complete!")
 
-;; https://github.com/arcticicestudio/nord-emacs
-(add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
-(load-theme 'nord t)
+(load-file "~/.emacsti/customtheme.el")
 
 ;;--------------------------------------------------------------------
 ;; Loading org-dotemacs
