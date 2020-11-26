@@ -3,8 +3,12 @@
 /custom*
 /custom.*
 /custom.el*
+/custom.el
 *custom*
 custom*
+custom.el
+*custom.el
+*custom.el*
 
 *~
 \#*\#
