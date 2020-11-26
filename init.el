@@ -22,6 +22,10 @@
 (load-file "~/.emacsti/save.el")
 (load-file "~/.emacsti/behavior.el")
 
-(load-file "~/.emacsti/custom.el")
+(progn
+ '(when (file-exists-p "~/.emacsti/custom.el")
+    (load-file "~/.emacsti/custom.el")))
+
+
 
 
