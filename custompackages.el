@@ -10,5 +10,5 @@
  '(package-enable-at-startup t)
  '(package-selected-packages
    (quote
-    (hydra helm flycheck))))
+    (hydra helm))))
 

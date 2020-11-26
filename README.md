@@ -46,13 +46,20 @@ emacsdaemonstatus
 
 #### Download and install
 
-**Basic tools just in case...**
+**Basic tools just for Debian linux distros and derivated...**
 
 ```bash
 sudo apt-get install emacs -y &&\
 sudo apt-get install gnome-tweak-tool -y &&\
-sudo apt-get install elpa-projectile -y &&\
-sudo apt-get install tree -y 
+sudo apt-get install elpa-projectile elpa-flycheck flycheck-doc -y
+```
+
+**Basic tools just for OSX...**
+
+```bash
+sudo apt-get install emacs -y &&\
+sudo apt-get install gnome-tweak-tool -y &&\
+sudo apt-get install elpa-projectile elpa-flycheck flycheck-doc -y
 ```
 
 **It will download and create a symbolic link to ~/.emacs.d/.emacs**
