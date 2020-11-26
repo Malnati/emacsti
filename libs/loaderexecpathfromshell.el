@@ -1,5 +1,5 @@
 ;; https://github.com/purcell/exec-path-from-shell
-(add-to-list 'load-path "~/.emacsti/dependencies/exec-path-from-shell-1.12")
+(add-to-list 'load-path "~/.emacsti/libs/exec-path-from-shell-1.12")
 
 (custom-set-variables
  '(when (memq window-system '(mac ns x))

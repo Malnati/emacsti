@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/.emacsti/dependencies/emacs-which-key/")
+(add-to-list 'load-path "~/.emacsti/libs/emacs-which-key/")
 (require 'which-key)
 (which-key-mode t)
 (message "→ which-key-mode ON!")
