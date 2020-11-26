@@ -28,20 +28,15 @@ fi
 # Enironment valiables for using emacs as a server
 
 export ALTERNATE_EDITOR=""
-export EDITOR='emacsclient -create-frame --alternate-editor="" -t' # $EDITOR opens in terminal
-export VISUAL='emacsclient -create-frame --alternate-editor="" -n' # $VISUAL opens in GUI mode
+export EDITOR='emacs -nw' # $EDITOR opens in terminal
+export VISUAL='emacs' # $VISUAL opens in GUI mode
 
 # Emacs client
 
-alias emacsx='emacsclient -create-frame --alternate-editor="" -n'
-alias emacst='emacsclient -create-frame --alternate-editor="" -t'
-alias emacsc="emacsclient --eval \"(progn (setq kill-emacs-hook \'nil) (kill-emacs))\""
-alias emacsdaemonstart='emacs --deamon'
-alias emacsdaemonstop='ps aux | grep "[e]macs --daemon" && echo "use sudo kill -9 <PID>"'
-alias emacsdaemonstatus='ps aux | grep "[e]macs --daemon"'
-
-# Stats the emacs daemon.                                                                                                                                                             
-emacsdaemonstatus
+alias emacsx='emacs'
+alias emacst='emacs -nw'
+alias emacsdaemon='emacs --deamon'
+alias emacstatus='ps aux | grep "[e]macs --daemon" && echo "use sudo kill -9 <PID>"' 
 ```
 
 #### Download and install
