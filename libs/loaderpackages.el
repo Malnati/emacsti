@@ -1,3 +1,6 @@
+(require 'package)
+(package-initialize)
+
 (custom-set-variables
  '(package-archives
    (quote

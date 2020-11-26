@@ -1,4 +1,4 @@
-(add-to-list 'load-path "~/.emacsti/dependencies/aggressive-indent-mode/")
+(add-to-list 'load-path "~/.emacsti/libs/aggressive-indent-mode/")
 
 (require 'aggressive-indent)
 

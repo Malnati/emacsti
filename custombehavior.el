@@ -18,3 +18,28 @@
 
 (setq delete-selection-mode 1)
 (message "→ completedelete-selection-mode ON!")
+
+(defun duplicate-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank)
+)
+(global-set-key (kbd "C-c d") 'duplicate-line)
+
+
+(defun copy-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+)
+(global-set-key (kbd "C-c c") 'copy-line)
+
+(fset (quote yes-or-no-p) t)
+(message "yes-or-no-p ON!")
