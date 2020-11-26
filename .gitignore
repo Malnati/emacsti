@@ -1,16 +1,11 @@
 # custom files
+**/custom*
 /custom*
 /custom.*
 /custom.el*
 *custom*
 custom*
 
-# other git repo reference
-org-dotemacs
-org-dotemacs/
-org-dotemacs/**
-
-# -*- mode: gitignore; -*-
 *~
 \#*\#
 /.emacs.desktop
@@ -35,8 +30,8 @@ network-security.data
 #*_flymake.*
 
 # eshell files
-#/eshell/history
-#/eshell/lastdir
+/eshell/history
+/eshell/lastdir
 
 # elpa packages
 /elpa/
@@ -44,26 +39,26 @@ elpa/
 elpa/**
 
 # reftex files
-#*.rel
+*.rel
 
 # AUCTeX auto folder
-#/auto/
+/auto/
 
 # cask packages
-#.cask/
-#dist/
+.cask/
+dist/
 
 # Flycheck
-#flycheck_*.el
+flycheck_*.el
 
 # server auth directory
-#/server/
+/server/
 
 # projectiles files
-#*projectile*
-#projectile-bookmarks.eld
+*projectile*
+projectile-bookmarks.eld
 
 # directory configuration
-#.dir-locals.el
+.dir-locals.el
 .emacs.d
-*.emacs.*
+.emacs.*
