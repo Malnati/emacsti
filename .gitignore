@@ -1,5 +1,9 @@
 # custom files
+/custom*
+/custom.*
 /custom.el*
+*custom*
+custom*
 
 # other git repo reference
 org-dotemacs
