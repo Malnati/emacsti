@@ -1,1 +1,0 @@
-("~/.emacsti/" "~/git/tek/api/" "~/git/tek/api/src/" "~/git/tek/api/public/" "~/git/tek/api/node_modules/" "~/git/tek/api/.git/")
