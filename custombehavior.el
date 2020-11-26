@@ -43,3 +43,9 @@
 
 (fset (quote yes-or-no-p) t)
 (message "yes-or-no-p ON!")
+
+(setq projectile-project-search-path '("~/git/tek/api/"))
+(message "→ projectile search path ~/git/tek/api/")
+(setq projectile-project-search-path '("~/git/tek/mobile/"))
+(message "→ projectile search path ~/git/tek/mobile/")
+
