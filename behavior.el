@@ -62,5 +62,9 @@
 
 (global-set-key [(control shift up)]  'move-line-up)
 (message "C-Shift-up for moving line up!")
+
 (global-set-key [(control shift down)]  'move-line-down)
 (message "C-Shift-down for moving line down!")
+
+(fset (quote yes-or-no-p) t)
+(message "yes-or-no-p ON!")
