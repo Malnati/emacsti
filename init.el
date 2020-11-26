@@ -18,7 +18,14 @@
 (load-file "~/.emacsti/libs/loadernordtheme.el")
 (load-file "~/.emacsti/libs/loadermultiplecursors.el")
 
-(load-file "~/.emacsti/customlayout.el")
-(load-file "~/.emacsti/customsave.el")
-(load-file "~/.emacsti/custombehavior.el")
+(load-file "~/.emacsti/layout.el")
+(load-file "~/.emacsti/save.el")
+(load-file "~/.emacsti/behavior.el")
+
+(progn
+ '(when (file-exists-p "~/.emacsti/custom.el")
+    (load-file "~/.emacsti/custom.el")))
+
+
+
 

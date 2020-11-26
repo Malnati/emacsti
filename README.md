@@ -66,4 +66,11 @@ ln -s ~/.emacsti/init.el ~/.emacs
 
 Start a new terminal and type ```emacst``` or ```emacsx``` for open an Emacsti in a new X window. 
 
+Add your projects paths to ~/.emacsti/custom.el as below.
+
+```elisp
+;; Example
+(setq projectile-project-search-path '("~/projects/"))
+(message "→ projectile search path ~/projects/")
+```
 
