@@ -46,7 +46,7 @@ alias emacstatus='ps aux | grep "[e]macs --daemon" && echo "use sudo kill -9 <PI
 ```bash
 sudo apt-get install emacs -y &&\
 sudo apt-get install gnome-tweak-tool -y &&\
-sudo apt-get install elpa-projectile elpa-flycheck flycheck-doc -y
+sudo apt-get install elpa-projectile elpa-flycheck flycheck-doc elpa-yasnippet-snippets -y
 ```
 
 **Basic tools just for OSX...**
