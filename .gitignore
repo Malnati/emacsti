@@ -1,5 +1,3 @@
-# custom files
-custom.el
 
 *~
 \#*\#
@@ -57,3 +55,6 @@ projectile-bookmarks.eld
 .dir-locals.el
 .emacs.d
 .emacs.*
+
+# custom files
+custom.el
