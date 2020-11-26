@@ -26,7 +26,3 @@
 (progn
  '(when (file-exists-p "~/.emacsti/custom.el")
     (load-file "~/.emacsti/custom.el")))
-
-
-
-
