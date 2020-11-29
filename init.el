@@ -18,6 +18,7 @@
 (load-file "~/.emacsti/libs/loadernordtheme.el")
 (load-file "~/.emacsti/libs/loadermultiplecursors.el")
 (load-file "~/.emacsti/libs/loaderyasnippet.el")
+(load-file "~/.emacsti/libs/loaderexpandregion.el")
 
 (load-file "~/.emacsti/layout.el")
 (load-file "~/.emacsti/save.el")
