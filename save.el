@@ -1,5 +1,9 @@
+;;
 (setq make-backup-files -1)
 (message "→ make-backup-files #file# OFF!")
+
+(global-auto-revert-mode t)
+(message "→ global-auto-revert-mode ON!")
 
 (setq backup-directory-alist
       '(("" . "~/.emacs.d/backup")))
