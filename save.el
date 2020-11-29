@@ -1,12 +1,43 @@
+(setq make-backup-files -1)
+(message "→ make-backup-files #file# OFF!")
+
+(setq backup-directory-alist
+      '(("" . "~/.emacs.d/backup")))
+(message "→ backup-directory-alist #file# to \"~/.emacs.d/backup\" !")
+
+(setq auto-save-default t)
+(message "→ auto-save-default file~ ON!")
+
+(setq auto-save-file-name-transforms
+      `((".*" , "~/.emacs.d/backup" t)))
+(message "→ auto-save-file-name-transforms file~ to \"~/.emacs.d/backup\" !")
+
+(setq auto-save-interval 100)f
+(message "→ auto-save-interval 100!")
+
+(setq auto-save-visited-file-name t)
+(message "→ auto-save-visited-file-name ON!")
+
+(setq auto-save-interval 100)
+(message "→ auto-save-interval 100!")
+
+(setq auto-save-visited-file-name t)
+(message "→ auto-save-visited-file-name ON!")
+
+;; store All Backup And Autosave files in the tmp dir
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
+
 
 (save-place-mode t)
 (message "→ save-place-mode ON!")
+
 (recentf-mode 1)
 (message "→ recentf-mode ON!")
-(setq auto-save-interval 100)
-(message "→ auto-save-interval 100!")
-(setq auto-save-visited-file-name t)
-(message "→ auto-save-visited-file-name ON!")
+
 (setq command-history-hook nil)
 (message "→ command-history-hook OFF!")
 (setq completions-file-versions-kept 9992)

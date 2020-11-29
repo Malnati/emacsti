@@ -68,3 +68,4 @@
 
 (fset (quote yes-or-no-p) t)
 (message "yes-or-no-p ON!")
+
