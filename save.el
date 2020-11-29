@@ -1,5 +1,5 @@
-(setq make-backup-files t)
-(message "→ make-backup-files #file# ON!")
+(setq make-backup-files -1)
+(message "→ make-backup-files #file# OFF!")
 
 (setq backup-directory-alist
       '(("" . "~/.emacs.d/backup")))
