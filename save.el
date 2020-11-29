@@ -12,7 +12,7 @@
       `((".*" , "~/.emacs.d/backup" t)))
 (message "→ auto-save-file-name-transforms file~ to \"~/.emacs.d/backup\" !")
 
-(setq auto-save-interval 100)f
+(setq auto-save-interval 100)
 (message "→ auto-save-interval 100!")
 
 (setq auto-save-visited-file-name t)
@@ -23,14 +23,6 @@
 
 (setq auto-save-visited-file-name t)
 (message "→ auto-save-visited-file-name ON!")
-
-;; store All Backup And Autosave files in the tmp dir
-(setq backup-directory-alist
-      `((".*" . ,temporary-file-directory)))
-(setq auto-save-file-name-transforms
-      `((".*" ,temporary-file-directory t)))
-
-
 
 (save-place-mode t)
 (message "→ save-place-mode ON!")
