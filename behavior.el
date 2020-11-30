@@ -68,5 +68,6 @@
 (message "→ C-Shift-down for moving line down!")
 
 (fset (quote yes-or-no-p) t)
-(message "→ yes-or-no-p ON!")
+(message "→ 
+yes-or-no-p ON!")
 
