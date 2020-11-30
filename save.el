@@ -1,4 +1,3 @@
-;;
 (setq make-backup-files -1)
 (message "→ make-backup-files #file# OFF!")
 
@@ -16,14 +15,8 @@
       `((".*" , "~/.emacs.d/backup" t)))
 (message "→ auto-save-file-name-transforms file~ to \"~/.emacs.d/backup\" !")
 
-(setq auto-save-interval 100)
-(message "→ auto-save-interval 100!")
-
-(setq auto-save-visited-file-name t)
-(message "→ auto-save-visited-file-name ON!")
-
-(setq auto-save-interval 100)
-(message "→ auto-save-interval 100!")
+(setq auto-save-interval 10)
+(message "→ auto-save-interval each 10 charracters changed!")
 
 (setq auto-save-visited-file-name t)
 (message "→ auto-save-visited-file-name ON!")

@@ -29,7 +29,7 @@
   (yank)
 )
 (global-set-key (kbd "C-c d") 'duplicate-line)
-(message "C-c d for duplicating lines!")
+(message "→ C-c d for duplicating lines!")
 
 (defun copy-line()
   (interactive)
@@ -40,10 +40,11 @@
   (next-line 1)
 )
 (global-set-key (kbd "C-c c") 'copy-line)
-(message "C-c c for copying lines!")
+(message "→ C-c c for copying lines!")
+
 
 (fset (quote yes-or-no-p) t)
-(message "yes-or-no-p ON!")
+(message "→ yes-or-no-p ON!")
 
 (defun move-line-up ()
   "Move up the current line."
@@ -61,11 +62,12 @@
   (indent-according-to-mode))
 
 (global-set-key [(control shift up)]  'move-line-up)
-(message "C-Shift-up for moving line up!")
+(message "→ C-Shift-up for moving line up!")
 
 (global-set-key [(control shift down)]  'move-line-down)
-(message "C-Shift-down for moving line down!")
+(message "→ C-Shift-down for moving line down!")
 
 (fset (quote yes-or-no-p) t)
-(message "yes-or-no-p ON!")
+(message "→ 
+yes-or-no-p ON!")
 
