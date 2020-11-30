@@ -3,3 +3,7 @@
 (require 'expand-region)
 
 (global-set-key (kbd "C-=") 'er/expand-region)
+(message "→ C-= for expanding selection!")
+
+(global-set-key (kbd "M-=") 'er/mark-inside-pairs)
+(message "→ M-= for selecting content inside pairs!")
