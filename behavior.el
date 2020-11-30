@@ -16,7 +16,7 @@
 (setq tab-always-indent 'complete)
 (message "→ tab-always-indent 'complete!")
 
-(setq delete-selection-mode 1)
+(delete-selection-mode 1)
 (message "→ completedelete-selection-mode ON!")
 
 (defun duplicate-line()
