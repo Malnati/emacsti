@@ -96,3 +96,5 @@
 (global-set-key (kbd "C-c e")  'eval-line)
 (message "→ C-c l for eval-line!")
 
+;; references
+;; http://ergoemacs.org/emacs/emacs_region.html
