@@ -19,6 +19,9 @@
 (delete-selection-mode 1)
 (message "→ completedelete-selection-mode ON!")
 
+(fset (quote yes-or-no-p) t)
+(message "→ yes-or-no-p ON!")
+
 (defun duplicate-line()
   (interactive)
   (move-beginning-of-line 1)
@@ -41,7 +44,6 @@
 )
 (global-set-key (kbd "C-c c") 'copy-line)
 (message "→ C-c c for copying lines!")
-
 
 (fset (quote yes-or-no-p) t)
 (message "→ yes-or-no-p ON!")
@@ -67,7 +69,30 @@
 (global-set-key [(control shift down)]  'move-line-down)
 (message "→ C-Shift-down for moving line down!")
 
-(fset (quote yes-or-no-p) t)
-(message "→ 
-yes-or-no-p ON!")
+(defun select-line ()
+  "Select current line."
+  (interactive)
+  (let (p1 p2)
+    (setq p1 (line-beginning-position))
+    (setq p2 (line-end-position))
+    (goto-char p1)
+    (push-mark p2)
+    (setq mark-active t)))
+
+(global-set-key (kbd "C-c l")  'select-line)
+(message "→ C-c l for select-line!")
+
+(defun eval-line ()
+  "Select current line."
+  (interactive)
+  (let (p1 p2)
+    (setq p1 (line-beginning-position))
+    (setq p2 (line-end-position))
+    (goto-char p1)
+    (push-mark p2)
+    (setq mark-active t)
+    (eval-region p1 p2)))
+
+(global-set-key (kbd "C-c e")  'eval-line)
+(message "→ C-c l for eval-line!")
 
