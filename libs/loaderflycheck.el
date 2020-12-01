@@ -1,4 +1,5 @@
 (add-to-list 'load-path "~/.emacsti/libs/flycheck/")
 (require 'flycheck)
 
-(setq global-flycheck-mode nil)
+(flycheck-mode t)
+(setq global-flycheck-mode t)
