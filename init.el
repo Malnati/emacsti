@@ -4,7 +4,7 @@
 (message "Starting for evaluating .init.el file!")
 
 (load-file "~/.emacsti/libs/loaderpackages.el")
-(load-file "~/.emacsti/libs/loadernordtheme.el")
+(load-file "~/.emacsti/libs/loadersolarizedemacs.el")
 (load-file "~/.emacsti/libs/loaderpowerline.el")
 (load-file "~/.emacsti/libs/loaderwhichkey.el")
 (load-file "~/.emacsti/libs/loaderprojectile.el")
@@ -12,6 +12,9 @@
 (load-file "~/.emacsti/libs/loaderflycheckcolormodeline.el")
 (load-file "~/.emacsti/libs/loaderpostip.el")
 (load-file "~/.emacsti/libs/loaderflycheckpostip.el")
+(load-file "~/.emacsti/libs/loaderflycheckstatusemoji.el")
+(load-file "~/.emacsti/libs/loaderflycheckinline.el")
+(load-file "~/.emacsti/libs/loaderquickpeek.el")
 (load-file "~/.emacsti/libs/loaderexecpathfromshell.el")
 (load-file "~/.emacsti/libs/loadercompany.el")
 (load-file "~/.emacsti/libs/loaderaggressiveindent.el")
