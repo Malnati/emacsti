@@ -98,3 +98,12 @@
 
 ;; references
 ;; http://ergoemacs.org/emacs/emacs_region.html
+
+
+;; You can also edit plain js, jsx, css, scss, xml files.
+(add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.rjsx\\'" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.json\\'" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.ts\\'" . javascript-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx\\'" . javascript-mode))
