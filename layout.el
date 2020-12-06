@@ -35,8 +35,8 @@
 (fringe-mode 8)
 (message "→ Fringes sized to 8px!")
 
-(set-face-background 'fringe "brightcyan")
-(message "→ Fringes background\"brightcyan\"!")
+;; (set-face-background 'fringe "brightcyan")
+;; (message "→ Fringes background\"brightcyan\"!")
 
 (set-face-foreground 'fringe "orange")
 (message "→ Fringes foreground\"orange\"!")
