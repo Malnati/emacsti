@@ -41,7 +41,6 @@
 (set-face-foreground 'fringe "orange")
 (message "→ Fringes foreground\"orange\"!")
 
-
 (setq buffers-menu-buffer-name-length 64)
 (message "→ Buffers menu lenght sized to 64!")
 
