@@ -15,6 +15,15 @@
       `((".*" , "~/.emacs.d/backup" t)))
 (message "→ auto-save-file-name-transforms file~ to \"~/.emacs.d/backup\" !")
 
+(setq delete-auto-save-files nil)
+(message "→ delete-auto-save-files OFF!")
+
+(setq delete-by-moving-to-trash t)
+(message "→ delete-by-moving-to-trash ON!")
+
+(setq auto-save-visited-file-name t)
+(message "→ auto-save-visited-file-name ON!")
+
 (setq auto-save-interval 10)
 (message "→ auto-save-interval each 10 charracters changed!")
 
@@ -27,21 +36,29 @@
 (recentf-mode 1)
 (message "→ recentf-mode ON!")
 
-(setq command-history-hook nil)
-(message "→ command-history-hook OFF!")
+(setq command-history-hook t)
+(message "→ command-history-hook ON!")
+
 (setq completions-file-versions-kept 9992)
 (message "→ completions-file-versions-kept 9992!")
+
 (setq history-length 2048)
 (message "→ history-length 2048!")
+
 (setq list-command-history-max 2048)
 (message "→ list-command-history-max 2048!")
+
 (setq undo-ask-before-discard t)
 (message "→ undo-ask-before-discard ON!")
+
 (setq undo-limit 9999999999999999)
 (message "→ undo-limit 9999999999999999!")
+
 (setq undo-outer-limit 99999999999999999)
 (message "→ undo-outer-limit 99999999999999999!")
+
 (setq undo-strong-limit 9999999999999999)
 (message "→ undo-strong-limit 9999999999999999!")
-(setq yank-menu-length 32)
-(message "→ yank-menu-length 32!")
+
+(setq yank-menu-length 9999)
+(message "→ yank-menu-length 9999!")
