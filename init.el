@@ -8,9 +8,7 @@
 (load-file "~/.emacsti/layout.el")
 (load-file "~/.emacsti/save.el")
 (load-file "~/.emacsti/behavior.el")
-
-(progn
-    (load-file "~/.emacsti/custom.el"))
+(load-file "~/.emacsti/custom.el")
 
 (provide 'init)
 ;;; init.el ends here
