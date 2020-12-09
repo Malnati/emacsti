@@ -63,9 +63,6 @@
 (setq yank-menu-length 9999)
 (message "→ yank-menu-length 9999!")
 
-;;(when (eq major-mode 'org-mode)
-;;  (shell-command-to-string (format "your-script-name %s" buffer-file-name))))
-;; 
 (defun emacsti-commit-after-save ()
        "Commit this buffer to git after save it."
        (interactive)
