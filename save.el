@@ -64,10 +64,9 @@
 (message "→ yank-menu-length 9999!")
 
 (defun emacsti-commit-after-save ()
-       "Commit this buffer to git after save it."
+       "Commit all buffers to git after save C-x C-s."
        (interactive)
        (shell-command-to-string
-	"git add . && git commit -m \"Auto-commited by emacsti-commit-after-save\"")
+	      "git add . && git commit -m \"Auto-commited by emacsti-commit-after-save\"")
        (message "Exceuted → Auto-commited by emacsti-commit-after-save"))
 (add-hook 'after-save-hook #'emacsti-commit-after-save)
-  
