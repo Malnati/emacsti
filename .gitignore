@@ -48,7 +48,7 @@ flycheck_*.el
 /server/
 
 # projectiles files
-#*projectile*
+*projectile*
 projectile-bookmarks.eld
 
 # directory configuration
