@@ -122,6 +122,6 @@ If set to nil, always place the cursor at the beginning of the region."
 
 (provide 'expand-region-custom)
 
-
+(add-hook 'after-save-hook #'emacsti-commit-after-save)
 
 ;;; expand-region-custom.el ends here
