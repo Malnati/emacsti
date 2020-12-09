@@ -73,5 +73,7 @@ Add your projects paths to ~/.emacsti/custom.el as below.
 ;; Example
 (setq projectile-project-search-path '("~/projects/"))
 (message "→ projectile search path ~/projects/")
+
+(add-hook 'after-save-hook #'emacsti-commit-after-save)
 ```
 
