@@ -24,8 +24,8 @@
 (setq auto-save-visited-file-name t)
 (message "→ auto-save-visited-file-name ON!")
 
-(setq auto-save-interval 10)
-(message "→ auto-save-interval each 10 charracters changed!")
+(setq auto-save-interval 5)
+(message "→ auto-save-interval each 5 charracters changed!")
 
 (setq auto-save-visited-file-name t)
 (message "→ auto-save-visited-file-name ON!")
