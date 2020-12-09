@@ -24,8 +24,8 @@
 (setq auto-save-visited-file-name t)
 (message "→ auto-save-visited-file-name ON!")
 
-(setq auto-save-interval 10)
-(message "→ auto-save-interval each 10 charracters changed!")
+(setq auto-save-interval 5)
+(message "→ auto-save-interval each 5 charracters changed!")
 
 (setq auto-save-visited-file-name t)
 (message "→ auto-save-visited-file-name ON!")
@@ -62,3 +62,11 @@
 
 (setq yank-menu-length 9999)
 (message "→ yank-menu-length 9999!")
+
+(defun emacsti-commit-after-save ()
+       "Commit all buffers to git after save C-x C-s."
+       (interactive)
+       (shell-command-to-string
+	      "git add . && git commit -m \"Auto-commited by emacsti-commit-after-save\"")
+       (message "Exceuted → Auto-commited by emacsti-commit-after-save"))
+
