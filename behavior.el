@@ -97,4 +97,3 @@
 ;; (add-to-list 'auto-mode-alist '("\\.json\\'" . javascript-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.ts\\'" . javascript-mode))
 ;; (add-to-list 'auto-mode-alist '("\\.tsx\\'" . javascript-mode))
-;; 
