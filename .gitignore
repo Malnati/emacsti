@@ -56,5 +56,3 @@ projectile-bookmarks.eld
 .emacs.d
 .emacs.*
 
-# custom files
-custom.el
