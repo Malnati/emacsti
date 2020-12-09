@@ -10,8 +10,7 @@
 (load-file "~/.emacsti/behavior.el")
 
 (progn
-    (load-file "~/.emacsti/custom.el")
- )
+    (load-file "~/.emacsti/custom.el"))
 
 (provide 'init)
 ;;; init.el ends here
