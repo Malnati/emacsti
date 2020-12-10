@@ -60,8 +60,7 @@ TODO
 
 
 ```bash
-wget https://github.com/Malnati/emacsti/blob/main/install.sh
-. ./install.sh
+wget https://github.com/Malnati/emacsti/blob/main/install.sh && . ./install.sh
 ```
 
 #### Use
