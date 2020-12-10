@@ -1,4 +1,4 @@
-
+*custom.el
 *~
 \#*\#
 /.emacs.desktop
@@ -56,5 +56,12 @@ projectile-bookmarks.eld
 .emacs.d
 .emacs.*
 
-# custom files
+# custom
+*custom*
+*custom.el
+custom.*
+/custom.el
 custom.el
+custom
+**/custom.*
+*/custom**.el
