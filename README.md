@@ -56,11 +56,12 @@ sudo apt-get install elpa-projectile elpa-flycheck flycheck-doc elpa-yasnippet-s
 TODO
 ```
 
-**It will download and create a symbolic link to ~/.emacs.d/.emacs**
+**It will download and create symbolic links**
+
 
 ```bash
-git clone https://github.com/Malnati/emacsti.git ~/.emacsti && \
-ln -s ~/.emacsti/init.el ~/.emacs 
+wget https://github.com/Malnati/emacsti/blob/main/install.sh
+. ./install.sh
 ```
 
 #### Use
