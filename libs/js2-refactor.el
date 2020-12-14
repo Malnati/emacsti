@@ -1,0 +1,5 @@
+(add-to-list 'load-path "~/.emacsti/libs/js2-refactor.el-0.8.0/")
+(require 'js2-refactor)
+(add-hook 'js2-mode-hook #'js2-refactor-mode)
+(js2r-add-keybindings-with-prefix "C-c C-r")
+(define-key js2-mode-map (kbd "C-k") #'js2r-kill)

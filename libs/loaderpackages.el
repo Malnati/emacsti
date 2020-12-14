@@ -1,20 +1,6 @@
 (require 'package)
 (package-initialize)
 
-(custom-set-variables
- '(package-archives
-   (quote
-    (("marmalade"     . "http://marmalade-repo.org/packages/")
-     ("marmalade-sec" . "https://marmalade-repo.org/packages/")
-     ("elpa"          . "http://elpa.gnu.org/packages/")
-     ("elpa-sec"      . "https://elpa.gnu.org/packages/")
-     ("melpa"         . "http://melpa.org/packages/")
-     ("melpa-sec"     . "https://melpa.org/packages/"))))
- '(package-enable-at-startup t)
- '(package-selected-packages
-   (quote
-    (hydra helm yasnippet-snippets))))
-
 (load-file "~/.emacsti/libs/execpathfromshell.el")
 (load-file "~/.emacsti/libs/solarizedemacs.el")
 (load-file "~/.emacsti/libs/powerline.el")
@@ -23,6 +9,18 @@
 (load-file "~/.emacsti/libs/whichkey.el")
 (load-file "~/.emacsti/libs/projectile.el")
 (load-file "~/.emacsti/libs/company.el")
+(load-file "~/.emacsti/libs/indent-guide.el")
+(load-file "~/.emacsti/libs/yasnippet.el")
+;; Starting block for Javascript support
+(load-file "~/.emacsti/libs/js2-mode.el")
+(load-file "~/.emacsti/libs/s.el")
+(load-file "~/.emacsti/libs/dash.el")
+(load-file "~/.emacsti/libs/js2-refactor.el")
+(load-file "~/.emacsti/libs/xref-js2.el")
+(load-file "~/.emacsti/libs/json-snatcher-1.0.0.el")
+(load-file "~/.emacsti/libs/json-reformat-0.0.6.el")
+(load-file "~/.emacsti/libs/json-mode.el")
+
 ;; (load-file "~/.emacsti/libs/postip.el")
 ;; (load-file "~/.emacsti/libs/quickpeek.el")
 ;; (load-file "~/.emacsti/libs/flycheck.el")
@@ -31,7 +29,7 @@
 ;; (load-file "~/.emacsti/libs/flycheckstatusemoji.el")
 ;; (load-file "~/.emacsti/libs/flycheckinline.el")
 ;; (load-file "~/.emacsti/libs/aggressiveindent.el")
-;; (load-file "~/.emacsti/libs/yasnippet.el")
+
 ;; (load-file "~/.emacsti/libs/webmode.el")
 ;; (load-file "~/.emacsti/libs/typescript.el")
 ;; (load-file "~/.emacsti/libs/rjsxmode.el")

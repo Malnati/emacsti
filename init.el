@@ -11,4 +11,3 @@
 (load-file "~/.emacsti/custom.el")
 
 (provide 'init)
-;;; init.el ends here
