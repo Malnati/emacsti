@@ -16,7 +16,10 @@
 (use-package multiple-cursors
   :ensure t
   :config
-  (global-set-key (kbd "C-c m") 'mc/mark-next-like-this))
+  (define-prefix-command 'mc)
+  (global-set-key (kbd "C-c m") 'mc)
+  (define-key mc (kbd "a") 'mc/mark-all-like-this)
+  (define-key mc (kbd "n") 'mc/mark-next-like-this))
 
 ;;(use-package ivy)
 
