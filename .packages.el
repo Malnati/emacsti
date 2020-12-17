@@ -35,7 +35,11 @@
 (use-package which-key
   :ensure t
   :config
-  ;; This is a combination of the previous two choices. It will try to use the right side, but if there is no room it will switch to using the bottom, which is usually easier to fit keys into. This setting can be helpful if the size of the Emacs frame changes frequently, which might be the case if you are using a dynamic/tiling window manager.
+  ;; This is a combination of the previous two choices. It will try to use the
+  ;; right side, but if there is no room it will switch to using the bottom, which
+  ;; is usually easier to fit keys into. This setting can be helpful if the size of 
+  ;; the Emacs frame changes frequently, which might be the case if you are using a
+  ;; dynamic/tiling window manager.
   (which-key-setup-side-window-right-bottom)
   (which-key-mode))
 
