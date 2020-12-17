@@ -19,7 +19,8 @@
   (define-prefix-command 'mc)
   (global-set-key (kbd "C-c m") 'mc)
   (define-key mc (kbd "a") 'mc/mark-all-like-this)
-  (define-key mc (kbd "n") 'mc/mark-next-like-this))
+  (define-key mc (kbd "n") 'mc/mark-next-like-this)
+  (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click))
 
 ;;(use-package ivy)
 
