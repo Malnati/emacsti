@@ -1,17 +1,20 @@
 (require 'package)
 (add-to-list 'package-archives '("melpa" . "https://stable.melpa.org/packages/") t)
-(add-to-list 'package-archives '("elpa" . "https://stable.elpa.org/packages/") t)
+;; (add-to-list 'package-archives '("elpa" . "https://stable.elpa.org/packages/") t)
 (package-initialize)
 (package-refresh-contents)
 
-(eval-when-compile
+(unless (package-installed-p 'use-package)  
   (add-to-list 'load-path "~/.emacs.d/bind-key-2.4.1/")
-  (add-to-list 'load-path "~/.emacs.d/use-package-2.4.1/")
-  (require 'use-package))
+  (add-to-list 'load-path "~/.emacs.d/use-package-2.4.1/"))
 
-(use-package expand-region
-  :ensure t
-  :config (global-set-key (kbd "C-=") 'er/expand-region))
+(require 'use-package)
+
+(unless (package-installed-p 'expand-region)
+    (use-package expand-region
+      :ensure t
+      :config (global-set-key (kbd "C-=") 'er/expand-region)))
+
 
 (use-package multiple-cursors
   :ensure t
