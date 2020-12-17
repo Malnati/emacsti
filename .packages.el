@@ -18,7 +18,7 @@
   :config
   (global-set-key (kbd "C-c m") 'mc/mark-next-like-this))
 
-(use-package ivy)
+;;(use-package ivy)
 
 ;; https://github.com/justbur/emacs-which-key
 

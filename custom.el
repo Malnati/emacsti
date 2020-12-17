@@ -1,21 +1,21 @@
 (setq doc-view-continuous t)
-(message "→ doc-view-continuous ON!")
+;;(message "→ doc-view-continuous ON!")
 
 (setq initial-buffer-choice t)
-(message "→ initial-buffer-choice ON!")
+;;(message "→ initial-buffer-choice ON!")
 
 (setq x-gtk-show-hidden-files t)
-(message "→ x-gtk-show-hidden-files ON!")
+;;(message "→ x-gtk-show-hidden-files ON!")
 
 (setq tab-always-indent 'complete)
-(message "→ tab-always-indent 'complete!")
+;;(message "→ tab-always-indent 'complete!")
 
 (delete-selection-mode 1)
-(message "→ completedelete-selection-mode ON!")
+;;(message "→ completedelete-selection-mode ON!")
 
 (fset 'yes-or-no-p 'y-or-n-p)
 ;;(fset (quote yes-or-no-p) t)
-(message "→ yes-or-no-p ON!")
+;;(message "→ yes-or-no-p ON!")
 
 (defun duplicate-line()
   (interactive)
@@ -27,7 +27,7 @@
   (yank)
 )
 (global-set-key (kbd "C-c d") 'duplicate-line)
-(message "→ C-c d for duplicating lines!")
+;;(message "→ C-c d for duplicating lines!")
 
 (defun copy-line()
   (interactive)
@@ -38,7 +38,7 @@
   (next-line 1)
 )
 (global-set-key (kbd "C-c c") 'copy-line)
-(message "→ C-c c for copying lines!")
+;;(message "→ C-c c for copying lines!")
 
 (defun move-line-up ()
   "Move up the current line."
@@ -48,7 +48,7 @@
   (indent-according-to-mode))
 
 (global-set-key [(control shift up)]  'move-line-up)
-(message "→ C-Shift-up for moving line up!")
+;;(message "→ C-Shift-up for moving line up!")
 
 (defun move-line-down ()
   "Move down the current line."
@@ -59,7 +59,7 @@
   (indent-according-to-mode))
 
 (global-set-key [(control shift down)]  'move-line-down)
-(message "→ C-Shift-down for moving line down!")
+;;(message "→ C-Shift-down for moving line down!")
 
 (defun select-line ()
   "Select current line."
@@ -72,10 +72,10 @@
     (setq mark-active t)))
 
 (global-set-key (kbd "C-c l")  'select-line)
-(message "→ C-c l for select-line!")
+;;(message "→ C-c l for select-line!")
 
 (global-set-key (kbd "C-c m") 'mc/mark-next-like-this)
-(message "→ C-c m for selecting next like this!")
+;;(message "→ C-c m for selecting next like this!")
 
 ;; (defun eval-line ()
 ;;   "Select current line."
@@ -89,7 +89,7 @@
 ;;     (eval-region p1 p2)))
 
 (global-set-key (kbd "C-c e")  'eval-region)
-(message "→ C-c l for eval-region!")
+;;(message "→ C-c l for eval-region!")
 
 ;; references
 ;; http://ergoemacs.org/emacs/emacs_region.html
@@ -135,3 +135,4 @@
 (setq
   user-mail-address "ricardomalnati@gmail.com"
   user-full-name  "Ricardo Malnati")
+(setq vc-follow-symlinks t)
