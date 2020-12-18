@@ -119,3 +119,5 @@
 (global-set-key (kbd "C-+") 'text-scale-increase)
 (global-set-key (kbd "M-+") 'text-scale-decrease)
 
+;; toggle fullscreen
+;; (toggle-frame-fullscreen)
