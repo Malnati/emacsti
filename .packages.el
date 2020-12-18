@@ -1,8 +1,8 @@
 (require 'package)
-(add-to-list 'package-archives '("unstable" . "https://melpa.org/packages/") t)
-(add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/") t)
-(package-initialize)
-(package-refresh-contents)
+;; (add-to-list 'package-archives '("unstable" . "https://melpa.org/packages/") t)
+;; (add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/") t)
+;; (package-initialize)
+;; (package-refresh-contents)
 
 (eval-when-compile
   (add-to-list 'load-path "~/.emacs.d/libs/bind-key-2.4.1/")
@@ -48,13 +48,16 @@
   (add-to-list 'custom-theme-load-path (expand-file-name "~/.emacs.d/themes/"))
   (load-theme 'nord t))
 
+(use-package s
+  :load-path "~/.emacs.d/libs/s-1.12.0/")
+(use-package memoize
+  :load-path "~/.emacs.d/libs/memoize-1.1")
+(use-package dash
+  :load-path "~/.emacs.d/libs/dash-20201215.59")
+
 (use-package spaceline
   :load-path "~/.emacs.d/libs/spaceline-2.0.1/"
   :config
-  (use-package s
-    :load-path "~/.emacs.d/libs/s-1.12.0/")
-  (use-package memoize
-    :load-path "~/.emacs.d/libs/memoize-1.1")
   (use-package powerline
     :load-path "~/.emacs.d/libs/powerline-2.4/")
   (use-package spaceline-config
