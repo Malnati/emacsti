@@ -87,43 +87,33 @@
 
 (use-package spaceline
   :ensure
-  ;; :load-path "~/.emacs.d/libs/spaceline-2.0.1/"
   :after s
   :after memoize 
   :config
   (use-package powerline
-    :ensure
-    ;; :load-path "~/.emacs.d/libs/powerline-2.4/"
-    )
+    :ensure)  
   (use-package spaceline-config
     :config
+    (spaceline-toggle-buffer-modified-on)
+    (spaceline-toggle-line-column-on)
     (spaceline-toggle-minor-modes-off)
     (spaceline-toggle-buffer-encoding-off)
     (spaceline-toggle-buffer-encoding-abbrev-off)
     (setq powerline-default-separator 'rounded)
     (setq spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
-    (spaceline-define-segment line-column
-      "The current line and column numbers."
-      "l:%l c:%2c")
-    (spaceline-define-segment time
-      "The current time."
-      (format-time-string "%H:%M"))
-    (spaceline-define-segment date
-      "The current date."
-      (format-time-string "%h %d"))
+    (spaceline-define-segment line-column "The current line and column numbers." "l:%l c:%2c")
+    (spaceline-define-segment time "The current time." (format-time-string "%H:%M"))
+    (spaceline-define-segment date "The current date." (format-time-string "%h %d"))
     (spaceline-toggle-time-on)
     (spaceline-emacs-theme 'date 'time)
     (use-package all-the-icons
       :ensure
-      ;; :load-path "~/.emacs.d/libs/all-the-icons-4.0.1/"
       :after spaceline)
     (use-package all-the-icons-ibuffer
       :ensure
-      ;; :load-path "~/.emacs.d/libs/all-the-icons-ibuffer-1.3.0"
       :after spaceline)
     (use-package spaceline-all-the-icons
       :ensure
-      ;; :load-path "~/.emacs.d/libs/spaceline-all-the-icons-1.4.0"
       :after spaceline
       :config
       (spaceline-all-the-icons-theme)
