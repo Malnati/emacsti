@@ -57,6 +57,8 @@
 
 (use-package spaceline
   :load-path "~/.emacs.d/libs/spaceline-2.0.1/"
+  :after s
+  :after memoize 
   :config
   (use-package powerline
     :load-path "~/.emacs.d/libs/powerline-2.4/")
