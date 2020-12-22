@@ -1,5 +1,15 @@
+;;   "Location of the package archive."
+(when (memq window-system '(mac ns))
+  (setq package-user-dir "~/.emacs.d/libs/elpa-mswin"))
+(when (eq system-type 'darwin)
+  (setq package-user-dir "~/.emacs.d/libs/elpa-macos"))
+(when (eq system-type 'gnu/linux)
+  (setq package-user-dir "~/.emacs.d/libs/elpa-linux"))
+
 (require 'package)
 (package-initialize)
+
+
 ;; (add-to-list 'package-archives '("unstable" . "https://melpa.org/packages/") t)
 ;; (add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/") t)
 ;; (package-refresh-contents)
