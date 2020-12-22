@@ -1,3 +1,6 @@
+(setq default-directory "~/")
+;; (message "→ default-directory at ~/ !")
+
 (setq doc-view-continuous t)
 ;;(message "→ doc-view-continuous ON!")
 
