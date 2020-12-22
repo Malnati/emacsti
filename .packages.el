@@ -1,18 +1,21 @@
-;;   "Location of the package archive."
-(when (memq window-system '(mac ns))
-  (setq package-user-dir "~/.emacs.d/libs/elpa-mswin"))
-(when (eq system-type 'darwin)
-  (setq package-user-dir "~/.emacs.d/libs/elpa-macos"))
-(when (eq system-type 'gnu/linux)
-  (setq package-user-dir "~/.emacs.d/libs/elpa-linux"))
+;; Location of the package archive.
+ ;; nil for a termcap frame (a character-only terminal),
+ ;; `x' for an Emacs frame that is really an X window,
+ ;; `w32' for an Emacs frame that is a window on MS-Windows display,
+ ;; `ns' for an Emacs frame on a GNUstep or Macintosh Cocoa display,
+ ;; `pc' for a direct-write MS-DOS frame.
+(when (memq window-system '(pc w32))
+  (setq package-user-dir "~/.emacs.d/libs/elpa-mswin")
+  (message "package-user-dir is ~/.emacs.d/libs/elpa-mswin"))
+(when (eq system-type 'ns)
+  (setq package-user-dir "~/.emacs.d/libs/elpa-macos")
+  (message "package-user-dir is ~/.emacs.d/libs/elpa-macos"))
+(when (eq system-type 'ns)
+  (setq package-user-dir "~/.emacs.d/libs/elpa-linux")
+  (message "package-user-dir is ~/.emacs.d/libs/elpa-linux"))
 
 (require 'package)
 (package-initialize)
-
-
-;; (add-to-list 'package-archives '("unstable" . "https://melpa.org/packages/") t)
-;; (add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/") t)
-;; (package-refresh-contents)
 
 (eval-when-compile
   (add-to-list 'load-path "~/.emacs.d/libs/bind-key-2.4.1/")
@@ -178,3 +181,7 @@
 ;; (load-file "~/.emacsti/libs/rjsxmode.el")
 ;; (load-file "~/.emacsti/libs/tide.el")
 ;; (load-file "~/.emacsti/libs/importjs.el")
+
+;; (add-to-list 'package-archives '("unstable" . "https://melpa.org/packages/") t)
+;; (add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/") t)
+;; (package-refresh-contents)
