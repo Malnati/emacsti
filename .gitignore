@@ -26,11 +26,6 @@ network-security.data
 /eshell/history
 /eshell/lastdir
 
-# elpa packages
-/elpa/
-elpa/
-elpa/**
-
 # reftex files
 *.rel
 
