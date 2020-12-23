@@ -4,6 +4,8 @@
 (setq mc/cmds-to-run-for-all
       '(
 	end-of-visual-line
+	next-buffer
+	previous-buffer
 	))
 
 (setq mc/cmds-to-run-once

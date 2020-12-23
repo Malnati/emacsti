@@ -71,6 +71,7 @@
   (global-set-key (kbd "C-c m") 'mc)
   (define-key mc  (kbd "a") 'mc/mark-all-like-this)
   (define-key mc  (kbd "n") 'mc/mark-next-like-this)
+  (define-key mc  (kbd "p") 'mc/mark-previous-like-this)
   (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click))
 
 (use-package hydra
@@ -199,9 +200,37 @@
   (flycheck-mode t)
   (setq global-flycheck-mode t))
 
-(use-package js2-mode)
-(use-package js2-highlight-vars)
+(use-package js2-mode
+  :config
+  (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode))
+  (add-to-list 'auto-mode-alist '("\\.jsx\\'"  . js2-mode))
+  (add-to-list 'auto-mode-alist '("\\.rjsx\\'" . js2-mode)))
+
+;; (use-package js2-highlight-vars
+;;   :config
+;;   (js2-highlight-vars-mode t)
+;;   (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-highlight-vars-mode))
+;;   (add-to-list 'auto-mode-alist '("\\.jsx\\'"  . js2-highlight-vars-mode))
+;;   (add-to-list 'auto-mode-alist '("\\.rjsx\\'" . js2-highlight-vars-mode)))
+
+;; (defvar js2-highlight-vars-local-keymap
+;;   (let ((map (make-sparse-keymap)))
+;;     (define-key map (kbd "M-n")       'js2-highlight-vars-next)
+;;     (define-key map (kbd "C-<down>")  'js2-highlight-vars-next)
+;;     (define-key map (kbd "M-p")       'js2-highlight-vars-prev)
+;;     (define-key map (kbd "C-<up>")    'js2-highlight-vars-prev)
+;;     (define-key map (kbd "M-r")       'js2-highlight-vars-rename)
+;;     map))
+
 (use-package js2-refactor)
+
+;; (use-package highlight-symbol
+;; :config
+;; (add-hook 'prog-mode-hook 'highlight-symbol)
+;; (global-set-key [(control f3)] 'highlight-symbol)
+;; (global-set-key [f3] 'highlight-symbol-next)
+;; (global-set-key [(shift f3)] 'highlight-symbol-prev)
+;; (global-set-key [(meta f3)] 'highlight-symbol-query-replace))
 
 ;; Starting block for Javascript support
 ;; (load-file "~/.emacsti/libs/js2-mode.el")
@@ -209,6 +238,7 @@
 ;; (load-file "~/.emacsti/libs/dash.el")
 ;; (load-file "~/.emacsti/libs/js2-refactor.el")
 ;; (load-file "~/.emacsti/libs/xref-js2.el")
+
 ;; (load-file "~/.emacsti/libs/json-snatcher-1.0.0.el")
 ;; (load-file "~/.emacsti/libs/json-reformat-0.0.6.el")
 ;; (load-file "~/.emacsti/libs/json-mode.el")

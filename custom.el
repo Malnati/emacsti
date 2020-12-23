@@ -80,7 +80,7 @@
 (global-set-key (kbd "C-c l")  'select-line)
 ;;(message "→ C-c l for select-line!")
 
-(global-set-key (kbd "C-c m") 'mc/mark-next-like-this)
+;;(global-set-key (kbd "C-c m") 'mc/mark-next-like-this)
 ;;(message "→ C-c m for selecting next like this!")
 
 ;; (defun eval-line ()
