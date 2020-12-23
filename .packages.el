@@ -40,9 +40,9 @@
 (require 'package)
 (package-initialize)
 
-(add-to-list 'package-archives '("unstable" . "https://melpa.org/packages/") t)
-(add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/") t)
-(package-refresh-contents)
+;; (add-to-list 'package-archives '("unstable" . "https://melpa.org/packages/") t)
+;; (add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/") t)
+;; (package-refresh-contents)
 
 (eval-when-compile
   (add-to-list 'load-path "~/.emacs.d/libs/bind-key-2.4.1/")
@@ -174,7 +174,12 @@
   (drag-stuff-define-keys))
 
 (use-package projectile
-  :ensure)
+  :config
+  (projectile-mode +1)
+  (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
+  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+  (setq projectile-project-search-path '("~/git"))
+  (setq projectile-sort-order 'recentf))
 
 ;; (use-package yasnippet
 ;;   :ensure
