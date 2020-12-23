@@ -178,17 +178,21 @@
   (projectile-mode +1)
   (define-key projectile-mode-map (kbd "s-p") 'projectile-command-map)
   (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-  (setq projectile-project-search-path '("~/git"))
+  (setq projectile-project-search-path '("~/.emacs.d/"))
   (setq projectile-sort-order 'recentf))
 
-;; (use-package yasnippet
-;;   :ensure
-;;   :load-path "~/.emacs.d/yasnippet-snippets-0.23/"
-;;   :config
-;;   (setq yas-snippet-dirs
-;; 	(append yas-snippet-dirs
-;; 		'("~/.emacs.d/yasnippet-snippets-0.23/snippets")))
-;;   (yas-global-mode 1))
+(use-package yasnippet
+  :config
+  (progn
+    (when (member window-system '(pc w32 ms-dos windows-nt cygwin))
+      (setq yas-snippet-dirs
+	    (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-mswin/yasnippet-snippets-20201221.849/snippets")))))
+  (yas-reload-all)
+  (add-hook 'prog-mode-hook #'yas-minor-mode)
+  (yas-global-mode 1))
+
+(use-package yasnippet-snippets
+  :after yasnippet)
 
 ;; Starting block for Javascript support
 ;; (load-file "~/.emacsti/libs/js2-mode.el")

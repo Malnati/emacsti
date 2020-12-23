@@ -20,6 +20,9 @@
 ;;(fset (quote yes-or-no-p) t)
 ;;(message "→ yes-or-no-p ON!")
 
+(global-set-key (kbd "C-z") 'undo)
+;;(message "→ C-z is undo!")
+
 (defun duplicate-line()
   (interactive)
   (move-beginning-of-line 1)
