@@ -194,6 +194,11 @@
 (use-package yasnippet-snippets
   :after yasnippet)
 
+(use-package flycheck
+  :config
+  (flycheck-mode t)
+  (setq global-flycheck-mode t))
+
 ;; Starting block for Javascript support
 ;; (load-file "~/.emacsti/libs/js2-mode.el")
 ;; (load-file "~/.emacsti/libs/s.el")
@@ -206,7 +211,7 @@
 
 ;; (load-file "~/.emacsti/libs/postip.el")
 ;; (load-file "~/.emacsti/libs/quickpeek.el")
-;; (load-file "~/.emacsti/libs/flycheck.el")
+
 ;; (load-file "~/.emacsti/libs/flycheckcolormodeline.el")
 ;; (load-file "~/.emacsti/libs/flycheckpostip.el")
 ;; (load-file "~/.emacsti/libs/flycheckstatusemoji.el")
