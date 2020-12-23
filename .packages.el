@@ -23,20 +23,24 @@
 ;; ‘ns’          for an Emacs frame on a GNUstep or Macintosh Cocoa display,
 
 ;; Location of the package archive.
-(when (memq window-system '(pc w32 ms-dos windows-nt cygwin))
+(when (member window-system
+	       '(pc w32 ms-dos windows-nt cygwin))
   (setq package-user-dir "~/.emacs.d/libs/elpa-mswin")
   (message "package-user-dir is ~/.emacs.d/libs/elpa-mswin"))
-(when (eq system-type '(ns darwin))
+
+(when (member system-type
+	       '(ns darwin))
   (setq package-user-dir "~/.emacs.d/libs/elpa-macos")
   (message "package-user-dir is ~/.emacs.d/libs/elpa-macos"))
-(when (eq system-type '(gnu gnu/linux x))
+
+(when (member system-type '(gnu/linux gnu x))
   (setq package-user-dir "~/.emacs.d/libs/elpa-linux")
   (message "package-user-dir is ~/.emacs.d/libs/elpa-linux"))
 
 (require 'package)
 (package-initialize)
 
-;;(add-to-list 'package-archives '("unstable" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("unstable" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/") t)
 (package-refresh-contents)
 
@@ -45,11 +49,11 @@
   (add-to-list 'load-path "~/.emacs.d/libs/use-package-2.4.1/")
   (require 'use-package))
 
-(when (memq window-system '(mac ns))
+(when (member window-system '(ns darwin))
   (use-package exec-path-from-shell
     :ensure
     ;; :load-path "~/.emacs.d/libs/exec-path-from-shell-1.12/"
-    :if (memq window-system '(mac ns))
+    :if (member window-system '(ns darwin))
     :ensure t
     :config
     (exec-path-from-shell-initialize)))
@@ -205,4 +209,3 @@
 ;; (load-file "~/.emacsti/libs/rjsxmode.el")
 ;; (load-file "~/.emacsti/libs/tide.el")
 ;; (load-file "~/.emacsti/libs/importjs.el")
-
