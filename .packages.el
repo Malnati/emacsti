@@ -199,6 +199,10 @@
   (flycheck-mode t)
   (setq global-flycheck-mode t))
 
+(use-package js2-mode)
+(use-package js2-highlight-vars)
+(use-package js2-refactor)
+
 ;; Starting block for Javascript support
 ;; (load-file "~/.emacsti/libs/js2-mode.el")
 ;; (load-file "~/.emacsti/libs/s.el")
