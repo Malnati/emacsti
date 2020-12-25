@@ -185,6 +185,14 @@
 (use-package yasnippet
   :config
   (progn
+  (yas-reload-all)
+  (add-hook 'prog-mode-hook #'yas-minor-mode)
+  (yas-global-mode 1)))
+
+(use-package yasnippet-snippets
+  :after yasnippet
+  :confif
+    (progn
     (when (member window-system '(pc w32 ms-dos windows-nt cygwin))
       (setq yas-snippet-dirs
 	    (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-mswin/yasnippet-snippets-20201221.849/snippets"))))
@@ -192,13 +200,7 @@
       (setq yas-snippet-dirs
 	    (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-linux/yasnippet-classic-snippets-1.0.2")))
       (setq yas-snippet-dirs
-            (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-linux/snippet-20130210.2315"))))
-  (yas-reload-all)
-  (add-hook 'prog-mode-hook #'yas-minor-mode)
-  (yas-global-mode 1)))
-
-(use-package yasnippet-snippets
-  :after yasnippet)
+            (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-linux/snippet-20130210.2315"))))))
 
 (use-package flycheck
   :config
