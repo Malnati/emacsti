@@ -232,6 +232,13 @@
 (use-package js2-refactor
   :after js2-mode)
 
+(use-package xref-js2
+  :config
+  (progn
+    (define-key js2-mode-map (kbd "M-.") nil)
+    (add-hook 'js2-mode-hook (lambda ()
+			       (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))))
+
 ;; (use-package highlight-symbol
 ;; :config
 ;; (add-hook 'prog-mode-hook 'highlight-symbol)
