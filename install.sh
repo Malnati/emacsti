@@ -1,5 +1,6 @@
 #!/bin/sh
 
+apt-get install silversearcher-ag
 cd ~
 wget https://github.com/Malnati/emacsti/archive/0.0.0-pre-release-1.zip
 sudo chmod +x 0.0.0-pre-release-1.zip
