@@ -209,6 +209,7 @@
 
 (use-package js2-mode
   :config
+  (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
   (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode))
   (add-to-list 'auto-mode-alist '("\\.jsx\\'"  . js2-mode))
   (add-to-list 'auto-mode-alist '("\\.rjsx\\'" . js2-mode)))
