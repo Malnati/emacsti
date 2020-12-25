@@ -192,7 +192,7 @@
 (use-package yasnippet-snippets
   :after yasnippet
   :config
-    (progn
+  (progn
     (when (member window-system '(pc w32 ms-dos windows-nt cygwin))
       (setq yas-snippet-dirs
 	    (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-mswin/yasnippet-snippets-20201221.849/snippets"))))
@@ -232,13 +232,14 @@
 (use-package js2-refactor
   :after js2-mode)
 
+(when (member system-type '(gnu/linux gnu x))
 (use-package xref-js2
   :config
   (progn
     (define-key js2-mode-map (kbd "M-.") nil)
     (add-hook 'js2-mode-hook (lambda ()
 			       (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))))
-
+)
 ;; (use-package highlight-symbol
 ;; :config
 ;; (add-hook 'prog-mode-hook 'highlight-symbol)
