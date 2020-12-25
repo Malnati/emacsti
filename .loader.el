@@ -1,4 +1,4 @@
-;;; package --- init.el
+;;; package --- .loader.el
 ;;; Commentary:
 ;;; Code:
 
