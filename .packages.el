@@ -171,8 +171,12 @@
   :ensure
   ;; :load-path "~/.emacs.d/libs/drag-stuff/"
   :config
+  (progn
   (drag-stuff-global-mode 1)
   (drag-stuff-define-keys))
+  (global-set-key [(shift up)]  'text-scale-increase)
+  (global-set-key [(shift down)]  'text-scale-decrease)
+  )
 
 (use-package projectile
   :config
