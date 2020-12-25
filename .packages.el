@@ -190,7 +190,7 @@
 	    (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-mswin/yasnippet-snippets-20201221.849/snippets"))))
     (when (member system-type '(gnu/linux gnu x))
       (setq yas-snippet-dirs
-	    (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-mswin/yasnippet-snippets-20201221.849/snippets"))))
+	    (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-linux/yasnippet-classic-snippets-1.0.2"))))
     )
   
   (yas-reload-all)
