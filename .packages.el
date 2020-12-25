@@ -192,13 +192,10 @@
       (setq yas-snippet-dirs
 	    (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-linux/yasnippet-classic-snippets-1.0.2")))
       (setq yas-snippet-dirs
-            (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-linux/snippet-20130210.2315")))
-    )
-  
-  
+            (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-linux/snippet-20130210.2315"))))
   (yas-reload-all)
   (add-hook 'prog-mode-hook #'yas-minor-mode)
-  (yas-global-mode 1))
+  (yas-global-mode 1)))
 
 (use-package yasnippet-snippets
   :after yasnippet)
