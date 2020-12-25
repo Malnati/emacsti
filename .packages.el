@@ -241,10 +241,6 @@
 ;; (global-set-key [(meta f3)] 'highlight-symbol-query-replace))
 
 ;; Starting block for Javascript support
-;; (load-file "~/.emacsti/libs/js2-mode.el")
-;; (load-file "~/.emacsti/libs/s.el")
-;; (load-file "~/.emacsti/libs/dash.el")
-;; (load-file "~/.emacsti/libs/js2-refactor.el")
 ;; (load-file "~/.emacsti/libs/xref-js2.el")
 
 ;; (load-file "~/.emacsti/libs/json-snatcher-1.0.0.el")
