@@ -213,6 +213,16 @@
   (add-to-list 'auto-mode-alist '("\\.jsx\\'"  . js2-mode))
   (add-to-list 'auto-mode-alist '("\\.rjsx\\'" . js2-mode)))
 
+(use-package js2-refactor
+  :after js2-mode)
+
+(when (member system-type '(gnu/linux gnu x))
+  (use-package xref-js2
+    :config
+    (progn
+      (define-key js2-mode-map (kbd "M-.") nil)
+      (add-hook 'js2-mode-hook (lambda ()
+				 (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t))))))
 ;; (use-package js2-highlight-vars
 ;;   :config
 ;;   (js2-highlight-vars-mode t)
@@ -228,17 +238,6 @@
 ;;     (define-key map (kbd "C-<up>")    'js2-highlight-vars-prev)
 ;;     (define-key map (kbd "M-r")       'js2-highlight-vars-rename)
 ;;     map))
-
-(use-package js2-refactor
-  :after js2-mode)
-
-(when (member system-type '(gnu/linux gnu x))
-  (use-package xref-js2
-    :config
-    (progn
-      (define-key js2-mode-map (kbd "M-.") nil)
-      (add-hook 'js2-mode-hook (lambda ()
-				 (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t))))))
 
 ;; (use-package highlight-symbol
 ;; :config
