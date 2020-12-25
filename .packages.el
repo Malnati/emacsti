@@ -174,8 +174,12 @@
   (progn
   (drag-stuff-global-mode 1)
   (drag-stuff-define-keys))
-  (global-set-key [(shift up)]  'text-scale-increase)
-  (global-set-key [(shift down)]  'text-scale-decrease)
+  
+  ;; (define-key drag-stuff-mode-map (drag-stuff--kbd 'up) 'drag-stuff-up)
+  ;; (define-key drag-stuff-mode-map (drag-stuff--kbd 'down) 'drag-stuff-down)
+  
+  (global-set-key [(meta up)]  'drag-stuff-up)
+  (global-set-key [(meta down)]  'drag-stuff-down)
   )
 
 (use-package projectile
