@@ -191,7 +191,7 @@
 
 (use-package yasnippet-snippets
   :after yasnippet
-  :confif
+  :config
     (progn
     (when (member window-system '(pc w32 ms-dos windows-nt cygwin))
       (setq yas-snippet-dirs
