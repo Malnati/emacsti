@@ -222,7 +222,6 @@
       (define-key js2-mode-map (kbd "M-.") nil)
       (add-hook 'js2-mode-hook (lambda ()
 				 (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t))))))
-
 ;; (use-package js2-highlight-vars
 ;;   :config
 ;;   (js2-highlight-vars-mode t)
@@ -248,6 +247,7 @@
 ;; (global-set-key [(meta f3)] 'highlight-symbol-query-replace))
 
 ;; Starting block for Javascript support
+;; (load-file "~/.emacsti/libs/xref-js2.el")
 
 ;; (load-file "~/.emacsti/libs/json-snatcher-1.0.0.el")
 ;; (load-file "~/.emacsti/libs/json-reformat-0.0.6.el")
