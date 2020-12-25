@@ -222,7 +222,8 @@
 ;;     (define-key map (kbd "M-r")       'js2-highlight-vars-rename)
 ;;     map))
 
-(use-package js2-refactor)
+(use-package js2-refactor
+  :after js2-mode)
 
 ;; (use-package highlight-symbol
 ;; :config
