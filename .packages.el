@@ -222,7 +222,8 @@
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
 	    (global-set-key (kbd "C-c l") 'lsp)
-	    (add-to-list 'auto-mode-alist '("\\.js\\'"   . lsp-mode))))
+	    ;;(add-to-list 'auto-mode-alist '("\\.js\\'"   . lsp-mode))
+	    ))
 
 (use-package lsp-ui
   :after lsp-mode
