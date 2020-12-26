@@ -305,8 +305,12 @@
       (lsp-ui-peek-show-directory 1)
       ;; enable ‘lsp-ui-peek’
       (lsp-ui-peek-enable 1)
+      ;;enable lsp-ui-doc
       (lsp-ui-doc-enable 1)
-      ;; Customization:
+      ;; Where to display the doc
+      (lsp-ui-doc-position 1)
+      ;; Number of seconds before showing the doc
+      (lsp-ui-doc-delay 0)
       ;;show diagnostics messages in sideline
       (lsp-ui-sideline-show-diagnostics 1)
       ;; show hover messages in sideline
