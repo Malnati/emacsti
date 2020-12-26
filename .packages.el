@@ -303,6 +303,20 @@
     (progn
       (lsp-ui-peek-enable 1)
       (lsp-ui-doc-enable 1)
+      ;; Customization:
+      ;;show diagnostics messages in sideline
+      (lsp-ui-sideline-show-diagnostics 1)
+      ;; show hover messages in sideline
+      (lsp-ui-sideline-show-hover 1)
+      ;; show code actions in sideline
+      (lsp-ui-sideline-show-code-actions 1)
+      ;; When set to 'line' the information will
+      ;; be updated when user changes current line
+      ;; otherwise the information will be updated
+      ;; when user changes current point
+      (lsp-ui-sideline-update-mode 1)
+    lsp-ui-sideline-delay seconds to wait before showing sideline
+
       (define-key lsp (kbd "d") 'lsp-ui-peek-find-definitions)
       (define-key lsp (kbd "r") 'lsp-ui-peek-find-references)
       (define-key lsp (kbd "i") 'lsp-ui-peek-find-implementation)
