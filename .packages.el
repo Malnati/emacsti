@@ -195,7 +195,8 @@
 (use-package helm
   :config
   (progn
-    (global-set-key (kbd "M-x") 'helm-M-x)))
+    (global-set-key (kbd "M-x") 'helm-M-x)
+    (global-set-key (kbd "C-x C-f") #'helm-find-files)))
 
 (use-package js2-mode
   :config
