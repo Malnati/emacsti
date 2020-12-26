@@ -71,7 +71,7 @@
    "git add . && git commit -m \"Auto-commited by emacsti-commit-after-save\"")
   (message "Exceuted → Auto-commited by emacsti-commit-after-save"))
 
-(use-package desktop-save-mode
+(use-package conf-desktop-mode
   :config
   (progn
     ;; use only one desktop
