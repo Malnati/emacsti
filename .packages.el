@@ -213,7 +213,7 @@
       (define-key xref-js2 (kbd "f")   'js2-mode-toggle-hide-functions)
       (define-key xref-js2 (kbd "g")   'xref-revert-buffer)
       (define-key xref-js2 (kbd "j")   'js2-jump-to-definition)
-      (define-key xref-js2 (js2 "n")   'xref-next-line)
+      (define-key xref-js2 (kbd "n")   'xref-next-line)
       (define-key xref-js2 (kbd "N")   'xref-next-group)
       (define-key xref-js2 (kbd "o")   'js2-mode-toggle-element)
       (define-key xref-js2 (kbd "C-o") 'xref-show-location-at-point)
