@@ -212,8 +212,9 @@
 		  company-idle-delay 0.0) ;; default is 0.2
 	        (define-prefix-command 'lsp-mode-keystrokes)
 	        (global-set-key (kbd "C-c j") 'lsp-mode-keystrokes)
+		(define-key lsp-mode-keystrokes (kbd "d") 'lsp-ui-peek-find-definitions))
 		(define-key lsp-mode-keystrokes (kbd "r") 'lsp-ui-peek-find-references)
-		(define-key lsp-mode-keystrokes (kbd "d") 'lsp-ui-peek-find-definitions)))
+  )
 
 (lsp-ui-peek-jump-backward)
 (lsp-ui-peek-jump-forward)
