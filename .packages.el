@@ -233,6 +233,8 @@
 	    (setq lsp-enable-indentation 0)
 	    ;; Enable textDocument/onTypeFormatting integration.
 	    (setq lsp-enable-on-type-formatting 0)
+	    ;; f non-nil, lsp-mode will apply edits suggested by the language server before saving a document.
+	    (setq lsp-before-save-edits 0)
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
