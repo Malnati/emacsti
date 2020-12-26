@@ -315,8 +315,9 @@
       ;; otherwise the information will be updated
       ;; when user changes current point
       (lsp-ui-sideline-update-mode 1)
-    lsp-ui-sideline-delay seconds to wait before showing sideline
-
+      ;;seconds to wait before showing sideline
+      (lsp-ui-sideline-delay 0)
+      ;; keystrokes
       (define-key lsp (kbd "d") 'lsp-ui-peek-find-definitions)
       (define-key lsp (kbd "r") 'lsp-ui-peek-find-references)
       (define-key lsp (kbd "i") 'lsp-ui-peek-find-implementation)
