@@ -225,8 +225,7 @@
 	(define-key js-keys (kbd "k") 'json-nullify-sexp) ;; sexp Replace the at point with null
 	(define-key js-keys (kbd "i") ') ;; Increment the number at point
 	(define-key js-keys (kbd "d") ') ;; Decrement the number at point
-	)
-  )
+	))
 
 ;; Starting block for Javascript support
 ;; (load-file "~/.emacsti/libs/xref-js2.el")
