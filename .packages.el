@@ -96,7 +96,6 @@
   :config
   (add-hook 'after-init-hook 'global-company-mode))
 
-
 (use-package nord-theme
   :ensure
   :config
