@@ -315,7 +315,7 @@
     ;; show hover messages in sideline
     ;; (lsp-ui-sideline-show-hover 1)
     ;; show code actions in sideline
-    (lsp-ui-sideline-show-code-actions)
+    ;; (lsp-ui-sideline-show-code-actions 1)
     ;; When set to 'line' the information will be updated when
     ;; user changes current line otherwise the information will
     ;; be updated when user changes current point
