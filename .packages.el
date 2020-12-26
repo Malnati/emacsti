@@ -119,6 +119,7 @@
   :ensure)
 
 (use-package company-box
+  :after company-mode
   :hook (company-mode . company-box-mode))
 
 ;; (use-package spaceline
