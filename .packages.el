@@ -221,7 +221,10 @@
   )
 
 (use-package lsp-ui
-  :after lsp-mode)
+  :after lsp-mode
+  :config
+  (progn
+    (lsp-ui-peek-enable)))
    
 (use-package helm-lsp
   :after helm
