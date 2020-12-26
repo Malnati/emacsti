@@ -231,6 +231,10 @@
   :hook
   ((js2-mode . lsp)
    (lsp-mode . lsp-enable-which-key-integration))
+  :hook
+  (lsp-mode . (lambda ()
+		(let ((lsp-keymap-prefix "C-c l"))
+		  (lsp-enable-which-key-integration)))
   :commands lsp
   :config (progn
 	    ;; Enable/disable snippet completion support.
@@ -283,9 +287,10 @@
 	    ;; Enable lsp-headerline-breadcrumb-mode.
 	    (setq lsp-headerline-breadcrumb-enable 1)
 	    
-	    (define-prefix-command 'lsp)
-	    (global-set-key (kbd "C-c l") 'lsp)
-	    (global-set-key (kbd "C-c t") 'lsp-keymap-prefix)
+	    ;; (define-prefix-command 'lsp)
+	    ;; (global-set-key (kbd "C-c l") 'lsp)
+	    ;; (global-set-key (kbd "C-c t") 'lsp-command-map)
+	    
 	    ;;(add-to-list 'auto-mode-alist '("\\.js\\'"   . lsp-mode))
 	    ))
 
