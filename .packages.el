@@ -214,6 +214,7 @@
 	        (global-set-key (kbd "C-c j") 'lsp-mode-keystrokes)
 		(define-key lsp-mode-keystrokes (kbd "d") 'lsp-ui-peek-find-definitions))
 		(define-key lsp-mode-keystrokes (kbd "r") 'lsp-ui-peek-find-references)
+		(define-key lsp-mode-keystrokes (kbd "i") 'lsp-ui-peek-find-implementation)
   )
 
 (lsp-ui-peek-jump-backward)
