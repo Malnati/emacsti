@@ -118,6 +118,10 @@
 (use-package all-the-icons-ibuffer
   :ensure)
 
+;; With use-package:
+(use-package company-box
+  :hook (company-mode . company-box-mode))
+
 ;; (use-package spaceline
 ;;   :ensure
 ;;   :after s
