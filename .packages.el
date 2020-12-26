@@ -88,8 +88,11 @@
 (use-package which-key
   :ensure
   :config
-  (which-key-setup-side-window-right-bottom)
-  (which-key-mode))
+  (progn
+    (which-key-setup-side-window-right-bottom)
+    (which-key-mode)
+    (with-eval-after-load 'lsp-mode
+      (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))))
 
 (use-package company
   :ensure
@@ -98,6 +101,14 @@
     ;; default is 0.2
     (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
     (add-hook 'after-init-hook 'global-company-mode)))
+
+(use-package dap-mode)
+
+(use-package treemacs)
+
+(use-package treemacs-projectile
+  :after treemacs
+  :after lsp-mode)
 
 (use-package nord-theme
   :ensure
@@ -457,11 +468,7 @@
 ;; 		 (if (saved-session)
 ;; 			 (session-restore))))))
 
-(use-package treemacs)
 
-(use-package treemacs-projectile
-  :after treemacs
-  :after lsp-mode)
 
 ;; optionally
 ;;(use-package lsp-ui :commands lsp-ui-mode)
@@ -471,9 +478,7 @@
 ;;(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
 ;;(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
 
-;; optionally if you want to use debugger
-(use-package dap-mode)
-;; (use-package dap-LANGUAGE) to load the dap adapter for your language
+
 
 ;; Starting block for Javascript support
 ;; (load-file "~/.emacsti/libs/xref-js2.el")
