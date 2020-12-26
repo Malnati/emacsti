@@ -219,11 +219,10 @@
     (add-to-list 'auto-mode-alist '("\\.json\\'"   . json-mode))
 	(global-set-key (kbd "C-c j") 'js-keys)
 	(define-key js-keys (kbd "f") 'json-mode-beautify) ;; format the region/buffer with json-reformat (https://github.com/gongo/json-reformat)
-	(define-key js-keys (kbd "p") 'json-mode-show-path)
-	(define-key js-keys (kbd "P") 'json-mode-kill-path)
+	(define-key js-keys (kbd "p") 'json-mode-show-path) ;; 
+	(define-key js-keys (kbd "P") 'json-mode-kill-path) ;; 
 	)
   )
-    ;; C-c C-f: 
     ;; C-c C-p: display a path to the object at point with json-snatcher (https://github.com/Sterlingg/json-snatcher)
     ;; C-c P: copy a path to the object at point to the kill ring with json-snatcher (https://github.com/Sterlingg/json-snatcher)
     ;; C-c C-t: Toggle between true and false at point
