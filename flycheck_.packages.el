@@ -131,9 +131,7 @@
     (add-hook 'after-init-hook
 	      '(lambda ()
 		 (if (saved-session)
-		     (if (y-or-n-p "Restore desktop? ")
 			 (session-restore))))))
-  )
 
 (use-package nord-theme
   :ensure
