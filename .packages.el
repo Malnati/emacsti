@@ -210,14 +210,14 @@
   :config (progn
 	    (setq company-minimum-prefix-length 1
 		  company-idle-delay 0.0) ;; default is 0.2
-	        (define-prefix-command 'lsp-mode-keystrokes)
-	        (global-set-key (kbd "C-c j") 'lsp-mode-keystrokes)
-		(define-key lsp-mode-keystrokes (kbd "d") 'lsp-ui-peek-find-definitions))
-		(define-key lsp-mode-keystrokes (kbd "r") 'lsp-ui-peek-find-references)
-		(define-key lsp-mode-keystrokes (kbd "i") 'lsp-ui-peek-find-implementation)
-		(define-key lsp-mode-keystrokes (kbd "w") 'lsp-ui-peek-find-workspace-symbol)
-		(define-key lsp-mode-keystrokes (kbd "<left>") 'lsp-ui-peek-jump-backward)
-		(define-key lsp-mode-keystrokes (kbd "<right>") 'lsp-ui-peek-jump-forward)
+	        (define-prefix-command 'lsp)
+	        (global-set-key (kbd "C-c j") 'lsp)
+		(define-key lsp (kbd "d") 'lsp-ui-peek-find-definitions))
+		(define-key lsp (kbd "r") 'lsp-ui-peek-find-references)
+		(define-key lsp (kbd "i") 'lsp-ui-peek-find-implementation)
+		(define-key lsp (kbd "w") 'lsp-ui-peek-find-workspace-symbol)
+		(define-key lsp (kbd "<left>") 'lsp-ui-peek-jump-backward)
+		(define-key lsp (kbd "<right>") 'lsp-ui-peek-jump-forward)
   )
 
 (use-package lsp-ui
