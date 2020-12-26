@@ -231,6 +231,8 @@
 	    (setq lsp-diagnostics-provider :flycheck)
 	    ;; Indent regions using the file formatting functionality provided by the language server.
 	    (setq lsp-enable-indentation 0)
+	    ;; Enable textDocument/onTypeFormatting integration.
+	    (setq lsp-enable-on-type-formatting 0)
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
