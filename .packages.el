@@ -224,7 +224,6 @@
 	(define-key js-keys (kbd "t") 'json-toggle-boolean) ;; Toggle between true and false at point
 	)
   )
-    ;; C-c C-t: 
     ;; C-c C-k: Replace the sexp at point with null
     ;; C-c C-i: Increment the number at point
     ;; C-c C-d: Decrement the number at point
