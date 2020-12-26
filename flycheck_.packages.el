@@ -326,9 +326,9 @@
 
 
 
-;; (use-package treemacs-projectile
-;;   :config
-;;   (progn ))
+(use-package treemacs-projectile
+  :config
+  (progn ))
 
 (use-package js2-mode
   :config
