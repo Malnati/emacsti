@@ -325,6 +325,7 @@
 (use-package helm-projectile
   :config (progn
 	    (helm-projectile-on)))
+
 (use-package js2-mode
   :config
   (progn
