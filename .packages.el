@@ -251,9 +251,12 @@
 (use-package lsp-mode
     :hook (
             (js2-mode . lsp)
-            ;; if you want which-key integration
             (lsp-mode . lsp-enable-which-key-integration))
-    :commands lsp)
+    :commands lsp
+    :config (progn
+	      (setq company-minimum-prefix-length 1
+		    company-idle-delay 0.0) ;; default is 0.2
+	      ))
 
 ;; optionally
 ;;(use-package lsp-ui :commands lsp-ui-mode)
