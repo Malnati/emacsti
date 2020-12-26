@@ -210,23 +210,25 @@
   :config (progn
 	    (setq company-minimum-prefix-length 1
 		  company-idle-delay 0.0) ;; default is 0.2
-	        (define-prefix-command 'lsp)
-	        (global-set-key (kbd "C-c j") 'lsp)
-		(define-key lsp (kbd "d") 'lsp-ui-peek-find-definitions))
-		(define-key lsp (kbd "r") 'lsp-ui-peek-find-references)
-		(define-key lsp (kbd "i") 'lsp-ui-peek-find-implementation)
-		(define-key lsp (kbd "w") 'lsp-ui-peek-find-workspace-symbol)
-		(define-key lsp (kbd "<left>") 'lsp-ui-peek-jump-backward)
-		(define-key lsp (kbd "<right>") 'lsp-ui-peek-jump-forward)
+	    (define-prefix-command 'lsp)
+	    (global-set-key (kbd "C-c j") 'lsp)
+	    )
+
+  (use-package lsp-ui
+    :after lsp-mode
+    :config
+    (progn
+      (lsp-ui-peek-enable t)
+      (lsp-ui-peek-enable t)
+      (define-key lsp (kbd "d") 'lsp-ui-peek-find-definitions)
+      (define-key lsp (kbd "r") 'lsp-ui-peek-find-references)
+      (define-key lsp (kbd "i") 'lsp-ui-peek-find-implementation)
+      (define-key lsp (kbd "w") 'lsp-ui-peek-find-workspace-symbol)
+      (define-key lsp (kbd "<left>") 'lsp-ui-peek-jump-backward)
+      (define-key lsp (kbd "<right>") 'lsp-ui-peek-jump-forward)
+    )
   )
 
-(use-package lsp-ui
-  :after lsp-mode
-  :config
-  (progn
-    (lsp-ui-peek-enable t)
-    (lsp-ui-peek-enable t)))
-   
 (use-package helm-lsp
   :after helm
   :after lsp-mode
