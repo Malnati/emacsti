@@ -199,6 +199,17 @@
     (global-set-key (kbd "M-x") 'helm-M-x)
     (global-set-key (kbd "C-x C-f") #'helm-find-files)))
 
+(use-package lsp-mode
+  :ensure
+  :hook (
+	 (js2-mode . lsp)
+	 (lsp-mode . lsp-enable-which-key-integration))
+  :commands lsp
+  :config (progn
+	    (setq company-minimum-prefix-length 1
+		  company-idle-delay 0.0) ;; default is 0.2
+	    ))
+
 (use-package helm-lsp
   :after helm
   :config
@@ -279,16 +290,7 @@
     (define-key js2-keys (kbd "d") 'json-decrement-number-at-point) ;; Decrement the number at point
     ))
 
-(use-package lsp-mode
-  :ensure
-  :hook (
-	 (js2-mode . lsp)
-	 (lsp-mode . lsp-enable-which-key-integration))
-  :commands lsp
-  :config (progn
-	    (setq company-minimum-prefix-length 1
-		  company-idle-delay 0.0) ;; default is 0.2
-	    ))
+
 
 ;; optionally
 ;;(use-package lsp-ui :commands lsp-ui-mode)
