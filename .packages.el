@@ -229,6 +229,8 @@
 	    ;; Choose from :auto, :flycheck, :flymake and :none.
 	    ;; Default is :auto which means use :flycheck if present and fallback to :flymake.
 	    (setq lsp-diagnostics-provider :flycheck)
+	    ;; Indent regions using the file formatting functionality provided by the language server.
+	    (setq lsp-enable-indentation 0)
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
