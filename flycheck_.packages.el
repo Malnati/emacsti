@@ -319,9 +319,9 @@
     ;; When set to 'line' the information will be updated when
     ;; user changes current line otherwise the information will
     ;; be updated when user changes current point
-    (lsp-ui-sideline-update-mode 1)
+    ;; (lsp-ui-sideline-update-mode t)
     ;; seconds to wait before showing sideline
-    (lsp-ui-sideline-delay 0)
+    ;; (lsp-ui-sideline-delay 0)
     ;; keystrokes
     (define-key lsp (kbd "d") 'lsp-ui-peek-find-definitions)
     (define-key lsp (kbd "r") 'lsp-ui-peek-find-references)
