@@ -317,10 +317,9 @@
       (lsp-ui-sideline-show-hover 1)
       ;; show code actions in sideline
       (lsp-ui-sideline-show-code-actions 1)
-      ;; When set to 'line' the information will
-      ;; be updated when user changes current line
-      ;; otherwise the information will be updated
-      ;; when user changes current point
+      ;; When set to 'line' the information will be updated when
+      ;; user changes current line otherwise the information will
+      ;; be updated when user changes current point
       (lsp-ui-sideline-update-mode 1)
       ;;seconds to wait before showing sideline
       (lsp-ui-sideline-delay 0)
