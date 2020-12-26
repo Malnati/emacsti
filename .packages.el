@@ -232,12 +232,12 @@
 	    (setq lsp-diagnostics-provider :flycheck)
 	    ;; Indent regions using the file formatting functionality provided by
 	    ;; the language server.
-	    (setq lsp-enable-indentation 0)
+	    (setq lsp-enable-indentation nil)
 	    ;; Enable textDocument/onTypeFormatting integration.
-	    (setq lsp-enable-on-type-formatting 0)
+	    (setq lsp-enable-on-type-formatting nil)
 	    ;; f non-nil, lsp-mode will apply edits suggested by the language server
 	    ;; before saving a document.
-	    (setq lsp-before-save-edits 0)
+	    (setq lsp-before-save-edits nil)
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
