@@ -211,7 +211,10 @@
 				   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t))))))
 
 ;; (load-file "~/.emacsti/libs/json-mode.el")
-
+(use-package json-mode
+  :config
+  (progn
+    ))
 
 ;; Starting block for Javascript support
 ;; (load-file "~/.emacsti/libs/xref-js2.el")
