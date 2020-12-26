@@ -38,6 +38,9 @@
 ;;(set-face-background 'fringe "brightcyan")
 ;;(message "→ Fringes background\"brightcyan\"!")
 
+(set-face-attribute 'default nil :height 110)
+(message "→ Font size 110!")
+
 (set-face-foreground 'fringe "orange")
 (message "→ Fringes foreground\"orange\"!")
 
