@@ -71,8 +71,6 @@
    "git add . && git commit -m \"Auto-commited by emacsti-commit-after-save\"")
   (message "Exceuted → Auto-commited by emacsti-commit-after-save"))
 
-(use-package conf-desktop-mode
-  :config
   (progn
     ;; use only one desktop
     (setq desktop-path '("~/.emacs.d/"))
@@ -108,5 +106,5 @@
 	      '(lambda ()
 		 (if (saved-session)
 		     (if (y-or-n-p "Restore desktop? ")
-			 (session-restore)))))))
+			 (session-restore))))))
 
