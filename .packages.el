@@ -235,7 +235,7 @@
 
 (use-package lsp-mode
   :ensure
-  :init (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
+  :init (define-key lsp-mode-map (kbd "C-c C-l") lsp-command-map)
   :hook
   ((js2-mode . lsp)
    (lsp-mode . lsp-enable-which-key-integration))
