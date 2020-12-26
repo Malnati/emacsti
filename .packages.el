@@ -287,7 +287,7 @@
   :ensure
   :hook
   ( (js2-mode . lsp)
-	 (lsp-mode . lsp-enable-which-key-integration))
+    (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp
   :config (progn
 	    ;; default is 0.2
@@ -296,39 +296,39 @@
 	    (global-set-key (kbd "C-c l") 'lsp))
   )
 
-  (use-package lsp-ui
-    :after lsp-mode
-    :config
-    (progn
-      ;; show the directory of files
-      (lsp-ui-peek-show-directory 1)
-      ;; enable ‘lsp-ui-peek’
-      (lsp-ui-peek-enable 1)
-      ;;enable lsp-ui-doc
-      (lsp-ui-doc-enable 1)
-      ;; Where to display the doc
-      (lsp-ui-doc-position 1)
-      ;; Number of seconds before showing the doc
-      (lsp-ui-doc-delay 0)
-      ;;show diagnostics messages in sideline
-      (lsp-ui-sideline-show-diagnostics 1)
-      ;; show hover messages in sideline
-      (lsp-ui-sideline-show-hover 1)
-      ;; show code actions in sideline
-      (lsp-ui-sideline-show-code-actions 1)
-      ;; When set to 'line' the information will be updated when
-      ;; user changes current line otherwise the information will
-      ;; be updated when user changes current point
-      (lsp-ui-sideline-update-mode 1)
-      ;;seconds to wait before showing sideline
-      (lsp-ui-sideline-delay 0)
-      ;; keystrokes
-      (define-key lsp (kbd "d") 'lsp-ui-peek-find-definitions)
-      (define-key lsp (kbd "r") 'lsp-ui-peek-find-references)
-      (define-key lsp (kbd "i") 'lsp-ui-peek-find-implementation)
-      (define-key lsp (kbd "w") 'lsp-ui-peek-find-workspace-symbol)
-      (define-key lsp (kbd "<left>") 'lsp-ui-peek-jump-backward)
-      (define-key lsp (kbd "<right>") 'lsp-ui-peek-jump-forward)
+(use-package lsp-ui
+  :after lsp-mode
+  :config
+  (progn
+    ;; show the directory of files
+    (lsp-ui-peek-show-directory 1)
+    ;; enable ‘lsp-ui-peek’
+    (lsp-ui-peek-enable 1)
+    ;;enable lsp-ui-doc
+    (lsp-ui-doc-enable 1)
+    ;; Where to display the doc
+    (lsp-ui-doc-position 1)
+    ;; Number of seconds before showing the doc
+    (lsp-ui-doc-delay 0.0)
+    ;;show diagnostics messages in sideline
+    (lsp-ui-sideline-show-diagnostics 1)
+    ;; show hover messages in sideline
+    (lsp-ui-sideline-show-hover 1)
+    ;; show code actions in sideline
+    (lsp-ui-sideline-show-code-actions 1)
+    ;; When set to 'line' the information will be updated when
+    ;; user changes current line otherwise the information will
+    ;; be updated when user changes current point
+    (lsp-ui-sideline-update-mode 1)
+    ;;seconds to wait before showing sideline
+    (lsp-ui-sideline-delay 0)
+    ;; keystrokes
+    (define-key lsp (kbd "d") 'lsp-ui-peek-find-definitions)
+    (define-key lsp (kbd "r") 'lsp-ui-peek-find-references)
+    (define-key lsp (kbd "i") 'lsp-ui-peek-find-implementation)
+    (define-key lsp (kbd "w") 'lsp-ui-peek-find-workspace-symbol)
+    (define-key lsp (kbd "<left>") 'lsp-ui-peek-jump-backward)
+    (define-key lsp (kbd "<right>") 'lsp-ui-peek-jump-forward)
     )
   )
 
