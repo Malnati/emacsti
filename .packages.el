@@ -219,7 +219,7 @@
     (add-to-list 'auto-mode-alist '("\\.json\\'"   . json-mode))
 	(global-set-key (kbd "C-c j") 'js-keys)
 	(define-key js-keys (kbd "f") 'json-reformat-region)
-	(define-key js-keys (kbd "p") 'json-snatcher)
+	(define-key js-keys (kbd "p") 'json-mode-show-path)
 	(define-key js-keys (kbd "P") 'json-snatcher)
 	)
   )
