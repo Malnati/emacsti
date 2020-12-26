@@ -240,6 +240,8 @@
 	    (setq lsp-before-save-edits nil)
 	    ;; Display the symbol's container name in an imenu entry.
 	    (setq lsp-imenu-show-container-name t)
+	    ;;
+	    (setq lsp-imenu-container-name-separator t)
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
