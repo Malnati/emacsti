@@ -309,9 +309,9 @@
     ;; Where to display the doc
     ;; (lsp-ui-doc-position 1)
     ;; Number of seconds before showing the doc
-    (lsp-ui-doc-delay 0.0)
+    ;; (lsp-ui-doc-delay 1)
     ;;show diagnostics messages in sideline
-    (lsp-ui-sideline-show-diagnostics 1)
+    ;; (lsp-ui-sideline-show-diagnostics 1)
     ;; show hover messages in sideline
     (lsp-ui-sideline-show-hover 1)
     ;; show code actions in sideline
