@@ -542,4 +542,4 @@
 ;; (global-set-key [(shift f3)] 'highlight-symbol-prev)
 ;; (global-set-key [(meta f3)] 'highlight-symbol-query-replace))
 
-;;; #.packges.el# ends here
+;;; .packges.el ends here
