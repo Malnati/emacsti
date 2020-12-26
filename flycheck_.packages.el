@@ -204,6 +204,10 @@
   (progn
     (define-key lsp-mode-map [remap xref-find-apropos] #'helm-lsp-workspace-symbol)))
 
+(use-package helm-projectile
+  :config (progn
+	    (helm-projectile-on)))
+
 (use-package treemacs)
 
 ;; (use-package treemacs-projectile
