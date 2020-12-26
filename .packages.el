@@ -213,7 +213,7 @@
   (progn
     ;; (use-package treemacs-all-the-icons
     ;;   )
-    (lsp-treemacs-sync-mode 1)
+    ;; (lsp-treemacs-sync-mode 1)
     ))
 
 
