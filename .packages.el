@@ -208,7 +208,15 @@
   :config (progn
 	    (helm-projectile-on)))
 
-(use-package treemacs)
+(use-package treemacs
+  :config
+  (progn
+    ;; (use-package treemacs-all-the-icons
+    ;;   )
+    (lsp-treemacs-sync-mode 1)
+    ))
+
+
 
 ;; (use-package treemacs-projectile
 ;;   :config
