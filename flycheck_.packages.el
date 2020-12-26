@@ -102,6 +102,9 @@
     (setq desktop-path '("~/.emacs.d/"))
     (setq desktop-dirname "~/.emacs.d/")
     (setq desktop-base-file-name "emacs-desktop")
+    (setq desktop-restore-eager 5)
+    (setq desktop-load-locked-desktop t)
+    (desktop-save-mode +1)
     ;; remove desktop after it's been read
     (add-hook 'desktop-after-read-hook
 	      '(lambda ()
