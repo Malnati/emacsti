@@ -233,9 +233,10 @@
     (global-set-key (kbd "M-x") 'helm-M-x)
     (global-set-key (kbd "C-x C-f") #'helm-find-files)))
 
+(setq lsp-keymap-prefix "C-c C-l")
+
 (use-package lsp-mode
   :ensure
-  :init (define-key lsp-mode-map (kbd "C-c C-l") lsp-command-map)
   :hook
   ((js2-mode . lsp)
    (lsp-mode . lsp-enable-which-key-integration))
