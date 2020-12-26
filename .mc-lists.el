@@ -4,6 +4,7 @@
 (setq mc/cmds-to-run-for-all
       '(
 	beginning-of-visual-line
+	comment-dwim
 	end-of-visual-line
 	next-buffer
 	previous-buffer
