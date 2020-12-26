@@ -285,6 +285,8 @@
 	    
 	    (define-prefix-command 'lsp)
 	    (global-set-key (kbd "C-c l") 'lsp)
+	    (global-set-key (kbd "C-c t") 'lsp)
+	    ;; lsp-keymap-prefix
 	    ;;(add-to-list 'auto-mode-alist '("\\.js\\'"   . lsp-mode))
 	    ))
 
