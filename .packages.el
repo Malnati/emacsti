@@ -459,9 +459,9 @@
 
 (use-package treemacs)
 
-;; (use-package treemacs-projectile
-;;   :config
-;;   (progn ))
+(use-package treemacs-projectile
+  :after treemacs
+  :after lsp-mode)
 
 ;; optionally
 ;;(use-package lsp-ui :commands lsp-ui-mode)
