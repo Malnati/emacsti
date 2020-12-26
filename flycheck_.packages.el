@@ -210,12 +210,14 @@
 	(add-hook 'js2-mode-hook (lambda ()
 				   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t))))))
 
+;; (load-file "~/.emacsti/libs/json-mode.el")
+
+
 ;; Starting block for Javascript support
 ;; (load-file "~/.emacsti/libs/xref-js2.el")
 
 ;; (load-file "~/.emacsti/libs/json-snatcher-1.0.0.el")
 ;; (load-file "~/.emacsti/libs/json-reformat-0.0.6.el")
-;; (load-file "~/.emacsti/libs/json-mode.el")
 
 ;; (load-file "~/.emacsti/libs/postip.el")
 ;; (load-file "~/.emacsti/libs/quickpeek.el")
