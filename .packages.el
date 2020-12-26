@@ -193,7 +193,7 @@
   (setq global-flycheck-mode t))
 
 (use-package helm
-  :straight t)
+  :ensure)
 
 (use-package js2-mode
   :config
