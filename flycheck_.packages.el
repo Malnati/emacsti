@@ -194,8 +194,10 @@
 
 (use-package js2-mode
   :config
+  (progn
+    (define-prefix-command 'js-keys)
   (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
-  (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode)))
+  (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode))))
 
 (use-package js2-refactor
   :after js2-mode)
@@ -215,9 +217,10 @@
   :config
   (progn
     (add-to-list 'auto-mode-alist '("\\.json\\'"   . json-mode))
-    (define-prefix-command 'js-keys)
 	(global-set-key (kbd "C-c j") 'js-keys)
 	(define-key js-keys (kbd "f") 'json-reformat-region)
+	(define-key js-keys (kbd "p") 'json-snatcher)
+	(define-key js-keys (kbd "P") 'json-snatcher)
 	)
   )
     ;; C-c C-f: format the region/buffer with json-reformat (https://github.com/gongo/json-reformat)
