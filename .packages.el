@@ -113,7 +113,6 @@
 (use-package dash
   :ensure)
 
-
 (use-package all-the-icons
   :ensure)
 
