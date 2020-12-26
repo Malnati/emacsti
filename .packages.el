@@ -223,6 +223,8 @@
 	    ;; Display all of the info returned by document/onHover.
 	    ;; If this is nil, eldoc will show only the symbol information.
 	    (setq lsp-eldoc-render-all t)
+	    ;; Enable completion-at-point integration.
+	    (setq lsp-enable-completion-at-point t)
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
