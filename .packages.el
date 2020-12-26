@@ -249,6 +249,7 @@
     ))
 
 (use-package lsp-mode
+  :ensure
     :hook (
             (js2-mode . lsp)
             (lsp-mode . lsp-enable-which-key-integration))
