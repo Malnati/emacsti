@@ -218,7 +218,7 @@
   (progn
     (add-to-list 'auto-mode-alist '("\\.json\\'"   . json-mode))
 	(global-set-key (kbd "C-c j") 'js-keys)
-	(define-key js-keys (kbd "f") 'json-reformat-region)
+	(define-key js-keys (kbd "f") 'json-mode-beautify)
 	(define-key js-keys (kbd "p") 'json-mode-show-path)
 	(define-key js-keys (kbd "P") 'json-mode-kill-path)
 	)
