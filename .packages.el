@@ -243,6 +243,8 @@
 	    ;; Separator string to use to separate the container name from the
 	    ;; symbol while displaying imenu entries.
 	    (setq lsp-imenu-container-name-separator t)
+	    ;;
+	    (setq lsp-imenu-sort-methods t)
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
