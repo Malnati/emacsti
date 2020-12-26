@@ -248,6 +248,8 @@
     (define-key js2-keys (kbd "d") 'json-decrement-number-at-point) ;; Decrement the number at point
     ))
 
+lsp-mode
+
 ;; Starting block for Javascript support
 ;; (load-file "~/.emacsti/libs/xref-js2.el")
 
