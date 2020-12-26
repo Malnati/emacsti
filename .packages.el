@@ -249,6 +249,14 @@
 	    ;; Number of seconds to wait for a response from the language server
 	    ;; before timing out.
 	    (setq lsp-response-timeout 5)
+	    ;;
+	    (setq )
+	    ;;
+	    (setq )
+	    ;;
+	    (setq )
+	    ;;
+	    (setq )
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
