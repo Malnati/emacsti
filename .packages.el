@@ -256,8 +256,9 @@
 	    (setq lsp-server-trace t)
 	    ;; Enable experimental semantic highlighting support
 	    (setq lsp-semantic-highlighting t)
-	    ;; 
-	    (setq )
+	    ;; If non-nil, automatically enable imenu integration when server
+	    ;; provides textDocument/documentSymbol.
+	    (setq lsp-enable-imenu t)
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
