@@ -6,9 +6,9 @@
                          (or (file-name-directory #$) (car load-path))))
 
 
-;;;### (autoloads nil "all-the-icons-ibuffer" "all-the-icons-ibuffer.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from all-the-icons-ibuffer.el
+;;;### (autoloads nil "all-the-icons-ibuffer" "../../../../../../../.emacs.d/libs/elpa-linux/all-the-icons-ibuffer-20201218.356/all-the-icons-ibuffer.el"
+;;;;;;  "74013e5bfae425bcf2bce0768832eab7")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/all-the-icons-ibuffer-20201218.356/all-the-icons-ibuffer.el
 (autoload 'ibuffer-make-column-icon "all-the-icons-ibuffer")
 (autoload 'ibuffer-make-column-size-h "all-the-icons-ibuffer")
 (autoload 'ibuffer-make-column-mode+ "all-the-icons-ibuffer")
@@ -28,8 +28,21 @@ or call the function `all-the-icons-ibuffer-mode'.")
 Display icons for all buffers in ibuffer.
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "all-the-icons-ibuffer"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/all-the-icons-ibuffer-20201218.356/all-the-icons-ibuffer.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/all-the-icons-ibuffer-20201218.356/all-the-icons-ibuffer.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "all-the-icons-ibuffer" '("all-the-icons-ibuffer-" "filename-and-process+" "mode+" "size-h" "icon")))
+
+;;;***
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/libs/elpa-linux/all-the-icons-ibuffer-20201218.356/all-the-icons-ibuffer-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/all-the-icons-ibuffer-20201218.356/all-the-icons-ibuffer.el")
+;;;;;;  (0 0 0 0))
 
 ;;;***
 

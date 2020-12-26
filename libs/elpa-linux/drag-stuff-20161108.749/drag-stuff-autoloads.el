@@ -6,8 +6,9 @@
                          (or (file-name-directory #$) (car load-path))))
 
 
-;;;### (autoloads nil "drag-stuff" "drag-stuff.el" (0 0 0 0))
-;;; Generated autoloads from drag-stuff.el
+;;;### (autoloads nil "drag-stuff" "../../../../../../../.emacs.d/libs/elpa-linux/drag-stuff-20161108.749/drag-stuff.el"
+;;;;;;  "07bb19db860982e860fdedf949faaff9")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/drag-stuff-20161108.749/drag-stuff.el
 
 (autoload 'drag-stuff-up "drag-stuff" "\
 Drag stuff ARG lines up.
@@ -65,12 +66,21 @@ Drag-Stuff mode is enabled in all buffers where
 See `drag-stuff-mode' for more information on Drag-Stuff mode.
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "drag-stuff" "../../../../../../../.emacs.d/libs/elpa-linux/drag-stuff-20161108.749/drag-stuff.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/drag-stuff-20161108.749/drag-stuff.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "drag-stuff" '("drag-stuff-")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil nil ("drag-stuff-pkg.el") (0 0 0 0))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/libs/elpa-linux/drag-stuff-20161108.749/drag-stuff-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/drag-stuff-20161108.749/drag-stuff-pkg.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/drag-stuff-20161108.749/drag-stuff.el")
+;;;;;;  (0 0 0 0))
 
 ;;;***
 

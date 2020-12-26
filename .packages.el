@@ -102,7 +102,8 @@
     (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
     (add-hook 'after-init-hook 'global-company-mode)))
 
-(use-package dap-mode)
+(use-package dap-mode
+  :ensure)
 
 (use-package treemacs)
 

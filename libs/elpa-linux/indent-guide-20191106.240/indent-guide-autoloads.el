@@ -6,8 +6,9 @@
                          (or (file-name-directory #$) (car load-path))))
 
 
-;;;### (autoloads nil "indent-guide" "indent-guide.el" (0 0 0 0))
-;;; Generated autoloads from indent-guide.el
+;;;### (autoloads nil "indent-guide" "../../../../../../../.emacs.d/libs/elpa-linux/indent-guide-20191106.240/indent-guide.el"
+;;;;;;  "0d771cee855b1845524713ea885beebd")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/indent-guide-20191106.240/indent-guide.el
 
 (autoload 'indent-guide-mode "indent-guide" "\
 show vertical lines to guide indentation
@@ -35,8 +36,21 @@ Indent-Guide mode is enabled in all buffers where
 See `indent-guide-mode' for more information on Indent-Guide mode.
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "indent-guide"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/indent-guide-20191106.240/indent-guide.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/indent-guide-20191106.240/indent-guide.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "indent-guide" '("indent-guide-")))
+
+;;;***
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/libs/elpa-linux/indent-guide-20191106.240/indent-guide-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/indent-guide-20191106.240/indent-guide.el")
+;;;;;;  (0 0 0 0))
 
 ;;;***
 

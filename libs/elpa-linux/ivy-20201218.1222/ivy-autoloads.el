@@ -6,15 +6,17 @@
                          (or (file-name-directory #$) (car load-path))))
 
 
-;;;### (autoloads nil "colir" "colir.el" (0 0 0 0))
-;;; Generated autoloads from colir.el
+;;;### (autoloads "actual autoloads are elsewhere" "colir" "../../../../../../../.emacs.d/libs/elpa-linux/ivy-20201218.1222/colir.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/ivy-20201218.1222/colir.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "colir" '("colir-")))
 
 ;;;***
 
-;;;### (autoloads nil "ivy" "ivy.el" (0 0 0 0))
-;;; Generated autoloads from ivy.el
+;;;### (autoloads nil "ivy" "../../../../../../../.emacs.d/libs/elpa-linux/ivy-20201218.1222/ivy.el"
+;;;;;;  "6690a7dc539105463e6a3fdaeb7023e3")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/ivy-20201218.1222/ivy.el
 
 (autoload 'ivy-resume "ivy" "\
 Resume the last completion session, or SESSION if non-nil.
@@ -146,19 +148,33 @@ Switch to one of the window views stored by `ivy-push-view'.
 Switch to another buffer in another window.
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "ivy" "../../../../../../../.emacs.d/libs/elpa-linux/ivy-20201218.1222/ivy.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/ivy-20201218.1222/ivy.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ivy" '("ivy-" "with-ivy-window")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil "ivy-overlay" "ivy-overlay.el" (0 0 0 0))
-;;; Generated autoloads from ivy-overlay.el
+;;;### (autoloads "actual autoloads are elsewhere" "ivy-overlay"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/ivy-20201218.1222/ivy-overlay.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/ivy-20201218.1222/ivy-overlay.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "ivy-overlay" '("ivy-")))
 
 ;;;***
 
-;;;### (autoloads nil nil ("elpa.el" "ivy-faces.el" "ivy-pkg.el")
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/libs/elpa-linux/ivy-20201218.1222/colir.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/ivy-20201218.1222/elpa.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/ivy-20201218.1222/ivy-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/ivy-20201218.1222/ivy-faces.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/ivy-20201218.1222/ivy-overlay.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/ivy-20201218.1222/ivy-pkg.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/ivy-20201218.1222/ivy.el")
 ;;;;;;  (0 0 0 0))
 
 ;;;***

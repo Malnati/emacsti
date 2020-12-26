@@ -6,16 +6,18 @@
                          (or (file-name-directory #$) (car load-path))))
 
 
-;;;### (autoloads nil "mc-cycle-cursors" "mc-cycle-cursors.el" (0
-;;;;;;  0 0 0))
-;;; Generated autoloads from mc-cycle-cursors.el
+;;;### (autoloads "actual autoloads are elsewhere" "mc-cycle-cursors"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-cycle-cursors.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-cycle-cursors.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "mc-cycle-cursors" '("mc/")))
 
 ;;;***
 
-;;;### (autoloads nil "mc-edit-lines" "mc-edit-lines.el" (0 0 0 0))
-;;; Generated autoloads from mc-edit-lines.el
+;;;### (autoloads nil "mc-edit-lines" "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-edit-lines.el"
+;;;;;;  "6c9ca469b86ca3f125e17855b380ed8a")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-edit-lines.el
 
 (autoload 'mc/edit-lines "mc-edit-lines" "\
 Add one cursor to each line of the active region.
@@ -40,14 +42,21 @@ Add one cursor to the end of each line in the active region.
 Add one cursor to the beginning of each line in the active region.
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "mc-edit-lines"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-edit-lines.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-edit-lines.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "mc-edit-lines" '("mc/edit-lines-empty-lines")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil "mc-hide-unmatched-lines-mode" "mc-hide-unmatched-lines-mode.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from mc-hide-unmatched-lines-mode.el
+;;;### (autoloads nil "mc-hide-unmatched-lines-mode" "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-hide-unmatched-lines-mode.el"
+;;;;;;  "a152bf12db4ae7706004def13290ef03")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-hide-unmatched-lines-mode.el
 
 (autoload 'mc-hide-unmatched-lines-mode "mc-hide-unmatched-lines-mode" "\
 Minor mode when enabled hides all lines where no cursors (and
@@ -57,13 +66,21 @@ still edit lines while you are in mc-hide-unmatched-lines
 mode. To leave this mode press <return> or \"C-g\"
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "mc-hide-unmatched-lines-mode"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-hide-unmatched-lines-mode.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-hide-unmatched-lines-mode.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "mc-hide-unmatched-lines-mode" '("hum/")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil "mc-mark-more" "mc-mark-more.el" (0 0 0 0))
-;;; Generated autoloads from mc-mark-more.el
+;;;### (autoloads nil "mc-mark-more" "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-mark-more.el"
+;;;;;;  "0098e7bd6bbae32d40415ff17fd29de0")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-mark-more.el
 
 (autoload 'mc/mark-next-like-this "mc-mark-more" "\
 Find and mark the next part of the buffer matching the currently active region
@@ -256,13 +273,21 @@ already there.
 Mark the tag we're in and its pair for renaming.
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "mc-mark-more"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-mark-more.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-mark-more.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "mc-mark-more" '("mc/" "mc--")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil "mc-mark-pop" "mc-mark-pop.el" (0 0 0 0))
-;;; Generated autoloads from mc-mark-pop.el
+;;;### (autoloads nil "mc-mark-pop" "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-mark-pop.el"
+;;;;;;  "d6ca90158891ee1716fda33be322cacd")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-mark-pop.el
 
 (autoload 'mc/mark-pop "mc-mark-pop" "\
 Add a cursor at the current point, pop off mark ring and jump
@@ -272,9 +297,9 @@ to the popped mark.
 
 ;;;***
 
-;;;### (autoloads nil "mc-separate-operations" "mc-separate-operations.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from mc-separate-operations.el
+;;;### (autoloads nil "mc-separate-operations" "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-separate-operations.el"
+;;;;;;  "3ea8cbae02575e8b41594de0294bfc03")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-separate-operations.el
 
 (autoload 'mc/insert-numbers "mc-separate-operations" "\
 Insert increasing numbers for each cursor, starting at
@@ -309,27 +334,41 @@ Might not behave as intended if more than one cursors are on the same line.
 Aligns all cursors with whitespace like `mc/vertical-align' does
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "mc-separate-operations"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-separate-operations.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-separate-operations.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "mc-separate-operations" '("mc/insert-numbers-default" "mc--")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil "multiple-cursors-core" "multiple-cursors-core.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from multiple-cursors-core.el
+;;;### (autoloads nil "multiple-cursors-core" "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/multiple-cursors-core.el"
+;;;;;;  "e453d0ba3d6f51cf05efee516a151e8b")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/multiple-cursors-core.el
 
 (autoload 'multiple-cursors-mode "multiple-cursors-core" "\
 Mode while multiple cursors are active.
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "multiple-cursors-core"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/multiple-cursors-core.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/multiple-cursors-core.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "multiple-cursors-core" '("multiple-cursors-mode" "unsupported-cmd" "deactivate-cursor-after-undo" "activate-cursor-for-undo")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil "rectangular-region-mode" "rectangular-region-mode.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from rectangular-region-mode.el
+;;;### (autoloads nil "rectangular-region-mode" "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/rectangular-region-mode.el"
+;;;;;;  "26bb3393c7feea07b835e4b3cc010d9d")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/rectangular-region-mode.el
 
 (autoload 'set-rectangular-region-anchor "rectangular-region-mode" "\
 Anchors the rectangular region at point.
@@ -343,12 +382,29 @@ an exceedingly quick way of adding multiple cursors to multiple lines.
 A mode for creating a rectangular region to edit
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "rectangular-region-mode"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/rectangular-region-mode.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/rectangular-region-mode.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "rectangular-region-mode" '("rectangular-region-mode" "rrm/")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil nil ("multiple-cursors-pkg.el" "multiple-cursors.el")
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-cycle-cursors.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-edit-lines.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-hide-unmatched-lines-mode.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-mark-more.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-mark-pop.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/mc-separate-operations.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/multiple-cursors-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/multiple-cursors-core.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/multiple-cursors-pkg.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/multiple-cursors.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/multiple-cursors-20201215.1559/rectangular-region-mode.el")
 ;;;;;;  (0 0 0 0))
 
 ;;;***
