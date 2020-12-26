@@ -15,5 +15,6 @@
 	drag-stuff-right
 	duplicate-line
 	eval-region
+	helm-M-x
 	lsp-ui-doc--handle-mouse-movement
 	))
