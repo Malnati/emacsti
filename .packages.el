@@ -225,6 +225,10 @@
 	    (setq lsp-eldoc-render-all t)
 	    ;; Enable completion-at-point integration.
 	    (setq lsp-enable-completion-at-point t)
+	    ;; Specifies which package to use for diagnostics.
+	    ;; Choose from :auto, :flycheck, :flymake and :none.
+	    ;; Default is :auto which means use :flycheck if present and fallback to :flymake.
+	    (setq lsp-diagnostics-provider :flycheck)
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
