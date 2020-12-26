@@ -198,9 +198,16 @@
     (global-set-key (kbd "M-x") 'helm-M-x)
     (global-set-key (kbd "C-x C-f") #'helm-find-files)))
 
+(use-package helm-lsp
+  :config
+  (progn
+    (define-key lsp-mode-map [remap xref-find-apropos] #'helm-lsp-workspace-symbol)))
+
 (use-package treemacs)
 
-
+;; (use-package treemacs-projectile
+;;   :config
+;;   (progn ))
 
 (use-package js2-mode
   :config
