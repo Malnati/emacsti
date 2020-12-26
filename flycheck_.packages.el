@@ -243,7 +243,7 @@
     (global-set-key [(meta up)]   'drag-stuff-up)
     (global-set-key [(meta down)] 'drag-stuff-down)))
 
-;;(use-package treemacs)
+
 
 (use-package projectile
   :config
@@ -321,6 +321,8 @@
 (use-package helm-projectile
   :config (progn
 	    (helm-projectile-on)))
+
+;;(use-package treemacs)
 
 ;; (use-package treemacs-projectile
 ;;   :config
