@@ -195,9 +195,9 @@
 (use-package js2-mode
   :config
   (progn
-    (define-prefix-command 'js-keys)
-  (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
-  (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode))))
+    (define-prefix-command 'js2-keys)
+    (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
+    (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode))))
 
 (use-package js2-refactor
   :after js2-mode)
@@ -217,15 +217,15 @@
   :config
   (progn
     (add-to-list 'auto-mode-alist '("\\.json\\'"   . json-mode))
-	(global-set-key (kbd "C-c j") 'js-keys)
-	(define-key js-keys (kbd "f") 'json-mode-beautify) ;; format the region/buffer with json-reformat (https://github.com/gongo/json-reformat)
-	(define-key js-keys (kbd "p") 'json-mode-show-path) ;; display a path to the object at point with json-snatcher (https://github.com/Sterlingg/json-snatcher)
-	(define-key js-keys (kbd "P") 'json-mode-kill-path) ;; copy a path to the object at point to the kill ring with json-snatcher (https://github.com/Sterlingg/json-snatcher)
-	(define-key js-keys (kbd "t") 'json-toggle-boolean) ;; Toggle between true and false at point
-	(define-key js-keys (kbd "k") 'json-nullify-sexp) ;; sexp Replace the at point with null
-	(define-key js-keys (kbd "i") 'json-increment-number-at-point) ;; Increment the number at point
-	(define-key js-keys (kbd "d") 'json-decrement-number-at-point) ;; Decrement the number at point
-	))
+    (global-set-key (kbd "C-c j") 'js2-keys)
+    (define-key js2-keys (kbd "f") 'json-mode-beautify) ;; format the region/buffer with json-reformat (https://github.com/gongo/json-reformat)
+    (define-key js2-keys (kbd "p") 'json-mode-show-path) ;; display a path to the object at point with json-snatcher (https://github.com/Sterlingg/json-snatcher)
+    (define-key js2-keys (kbd "P") 'json-mode-kill-path) ;; copy a path to the object at point to the kill ring with json-snatcher (https://github.com/Sterlingg/json-snatcher)
+    (define-key js2-keys (kbd "t") 'json-toggle-boolean) ;; Toggle between true and false at point
+    (define-key js2-keys (kbd "k") 'json-nullify-sexp) ;; sexp Replace the at point with null
+    (define-key js2-keys (kbd "i") 'json-increment-number-at-point) ;; Increment the number at point
+    (define-key js2-keys (kbd "d") 'json-decrement-number-at-point) ;; Decrement the number at point
+    ))
 
 ;; Starting block for Javascript support
 ;; (load-file "~/.emacsti/libs/xref-js2.el")
