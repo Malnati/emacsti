@@ -11,6 +11,7 @@
 
 (setq mc/cmds-to-run-once
       '(
+	drag-stuff-right
 	duplicate-line
 	eval-region
 	))
