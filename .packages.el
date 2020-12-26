@@ -249,8 +249,8 @@
 	    ;; Number of seconds to wait for a response from the language server
 	    ;; before timing out.
 	    (setq lsp-response-timeout 5)
-	    ;;
-	    (setq )
+	    ;; 
+	    (setq lsp-enable-file-watchers t)
 	    ;;
 	    (setq )
 	    ;;
