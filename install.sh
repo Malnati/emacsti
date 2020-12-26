@@ -1,6 +1,8 @@
 #!/bin/sh
 
-apt-get install silversearcher-ag
+sudo apt-get install silversearcher-ag
+sudo npm i -g -y typescript-language-server typescript
+
 cd ~
 wget https://github.com/Malnati/emacsti/archive/0.0.0-pre-release-1.zip
 sudo chmod +x 0.0.0-pre-release-1.zip
