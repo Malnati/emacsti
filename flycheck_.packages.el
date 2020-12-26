@@ -220,7 +220,7 @@
 	(global-set-key (kbd "C-c j") 'js-keys)
 	(define-key js-keys (kbd "f") 'json-reformat-region)
 	(define-key js-keys (kbd "p") 'json-mode-show-path)
-	(define-key js-keys (kbd "P") 'json-snatcher)
+	(define-key js-keys (kbd "P") 'json-mode-kill-path)
 	)
   )
     ;; C-c C-f: format the region/buffer with json-reformat (https://github.com/gongo/json-reformat)
