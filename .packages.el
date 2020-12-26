@@ -212,6 +212,7 @@
 
 (use-package helm-lsp
   :after helm
+  :after lsp-mode
   :config
   (progn
     (define-key lsp-mode-map [remap xref-find-apropos] #'helm-lsp-workspace-symbol)))
@@ -221,12 +222,7 @@
 	    (helm-projectile-on)))
 
 (use-package treemacs
-  :config
-  (progn
-    ;; (use-package treemacs-all-the-icons
-    ;;   )
-    ;; (lsp-treemacs-sync-mode 1)
-    ))
+  :after lsp-mode)
 
 
 
