@@ -283,8 +283,9 @@
 	    (setq lsp-enable-text-document-color 1)
 	    ;; Enable lsp-headerline-breadcrumb-mode.
 	    (setq lsp-headerline-breadcrumb-enable 1)
-	    (with-eval-after-load 'lsp-mode
-	      (mapc #'lsp-flycheck-add-mode '(js2-mode)))))
+	    ;; (with-eval-after-load 'lsp-mode
+	    ;;   (mapc #'lsp-flycheck-add-mode '(js2-mode)))
+	    ))
 
 (use-package lsp-ui
   :after lsp-mode
