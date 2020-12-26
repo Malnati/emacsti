@@ -192,6 +192,8 @@
   (flycheck-mode t)
   (setq global-flycheck-mode t))
 
+(use-package helm :straight t)
+
 (use-package js2-mode
   :config
   (progn
@@ -250,14 +252,14 @@
 
 (use-package lsp-mode
   :ensure
-    :hook (
-            (js2-mode . lsp)
-            (lsp-mode . lsp-enable-which-key-integration))
-    :commands lsp
-    :config (progn
-	      (setq company-minimum-prefix-length 1
-		    company-idle-delay 0.0) ;; default is 0.2
-	      ))
+  :hook (
+	 (js2-mode . lsp)
+	 (lsp-mode . lsp-enable-which-key-integration))
+  :commands lsp
+  :config (progn
+	    (setq company-minimum-prefix-length 1
+		  company-idle-delay 0.0) ;; default is 0.2
+	    ))
 
 ;; optionally
 ;;(use-package lsp-ui :commands lsp-ui-mode)
