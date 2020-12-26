@@ -210,7 +210,9 @@
   :config (progn
 	    (setq company-minimum-prefix-length 1
 		  company-idle-delay 0.0) ;; default is 0.2
-	    ))
+	        (define-prefix-command 'lsp-mode-keystrokes)
+	        (global-set-key (kbd "C-c j") 'lsp-mode-keystrokes)
+		(define-key lsp-mode-keystrokes (kbd "f") 'lsp-mode-keystrokes)))
 
 (use-package lsp-ui
   :after lsp-mode)
