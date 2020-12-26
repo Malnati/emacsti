@@ -212,8 +212,8 @@
 		  company-idle-delay 0.0) ;; default is 0.2
 	    ))
 
-   (use-package lsp-ui
- :after lsp-mode)
+(use-package lsp-ui
+  :after lsp-mode)
    
 (use-package helm-lsp
   :after helm
@@ -281,13 +281,20 @@
   (progn
     (add-to-list 'auto-mode-alist '("\\.json\\'"   . json-mode))
     (global-set-key (kbd "C-c j") 'js2-keys)
-    (define-key js2-keys (kbd "f") 'json-mode-beautify) ;; format the region/buffer with json-reformat (https://github.com/gongo/json-reformat)
-    (define-key js2-keys (kbd "p") 'json-mode-show-path) ;; display a path to the object at point with json-snatcher (https://github.com/Sterlingg/json-snatcher)
-    (define-key js2-keys (kbd "P") 'json-mode-kill-path) ;; copy a path to the object at point to the kill ring with json-snatcher (https://github.com/Sterlingg/json-snatcher)
-    (define-key js2-keys (kbd "t") 'json-toggle-boolean) ;; Toggle between true and false at point
-    (define-key js2-keys (kbd "k") 'json-nullify-sexp) ;; sexp Replace the at point with null
-    (define-key js2-keys (kbd "i") 'json-increment-number-at-point) ;; Increment the number at point
-    (define-key js2-keys (kbd "d") 'json-decrement-number-at-point) ;; Decrement the number at point
+    ;; format the region/buffer with json-reformat (https://github.com/gongo/json-reformat)
+    (define-key js2-keys (kbd "f") 'json-mode-beautify)
+    ;; display a path to the object at point with json-snatcher (https://github.com/Sterlingg/json-snatcher)
+    (define-key js2-keys (kbd "p") 'json-mode-show-path)
+    ;; copy a path to the object at point to the kill ring with json-snatcher (https://github.com/Sterlingg/json-snatcher)
+    (define-key js2-keys (kbd "P") 'json-mode-kill-path)
+    ;; Toggle between true and false at point
+    (define-key js2-keys (kbd "t") 'json-toggle-boolean)
+    ;; sexp Replace the at point with null
+    (define-key js2-keys (kbd "k") 'json-nullify-sexp)
+    ;; Increment the number at point
+    (define-key js2-keys (kbd "i") 'json-increment-number-at-point)
+    ;; Decrement the number at point
+    (define-key js2-keys (kbd "d") 'json-decrement-number-at-point)
     ))
 
 
