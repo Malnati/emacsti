@@ -94,7 +94,10 @@
 (use-package company
   :ensure
   :config
-  (add-hook 'after-init-hook 'global-company-mode))
+  (progn 
+    ;; default is 0.2
+    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
+    (add-hook 'after-init-hook 'global-company-mode)))
 
 (use-package nord-theme
   :ensure
@@ -120,6 +123,7 @@
 
 (use-package company-box
   :after company-mode
+  :after lsp-mode
   :hook (company-mode . company-box-mode)
   :config
   (progn
@@ -267,8 +271,7 @@
 	    (setq lsp-enable-text-document-color 1)
 	    ;; Enable lsp-headerline-breadcrumb-mode.
 	    (setq lsp-headerline-breadcrumb-enable 1)
-	    ;; default is 0.2
-	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
+	    
 	    (define-prefix-command 'lsp)
 	    (global-set-key (kbd "C-c l") 'lsp)
 	    ;;(add-to-list 'auto-mode-alist '("\\.js\\'"   . lsp-mode))
