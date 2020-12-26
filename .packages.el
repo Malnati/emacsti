@@ -246,6 +246,9 @@
 	    ;; How to sort the imenu items. The value is a list of kind, name
 	    ;; or position. Priorities are determined by the index of the element.
 	    (setq lsp-imenu-sort-methods 1)
+	    ;; Number of seconds to wait for a response from the language server
+	    ;; before timing out.
+	    (setq lsp-response-timeout 5)
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
