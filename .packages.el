@@ -161,6 +161,8 @@
     (global-set-key [(meta up)]   'drag-stuff-up)
     (global-set-key [(meta down)] 'drag-stuff-down)))
 
+(use-package treemacs)
+
 (use-package projectile
   :config
   (progn
@@ -221,8 +223,7 @@
   :config (progn
 	    (helm-projectile-on)))
 
-(use-package treemacs
-  :after lsp-mode)
+
 
 
 
