@@ -282,8 +282,7 @@
 	    (setq lsp-enable-text-document-color 1)
 	    ;; Enable lsp-headerline-breadcrumb-mode.
 	    (setq lsp-headerline-breadcrumb-enable 1)
-	    
-
+	    ;; Keystrokes
 	    (setq lsp-keymap-prefix "C-c t")
 	    ;; (global-set-key (kbd "C-c t") 'lsp-command-map)
 	    ))
