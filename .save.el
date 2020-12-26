@@ -72,6 +72,7 @@
   (message "Exceuted → Auto-commited by emacsti-commit-after-save"))
 
 ;; desktop-auto-save-timeout
+
 (progn
   ;; use only one desktop
   (setq desktop-path '("~/.emacs.d/"))

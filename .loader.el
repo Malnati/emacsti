@@ -6,3 +6,4 @@
 (load-file "~/.emacs.d/.faces.el")
 (load-file "~/.emacs.d/.save.el")
 (load-file "~/.emacs.d/.custom.el")
+(session-restore)
