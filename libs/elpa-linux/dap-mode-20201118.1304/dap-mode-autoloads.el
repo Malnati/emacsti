@@ -6,83 +6,103 @@
                          (or (file-name-directory #$) (car load-path))))
 
 
-;;;### (autoloads nil "dap-chrome" "dap-chrome.el" (0 0 0 0))
-;;; Generated autoloads from dap-chrome.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-chrome" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-chrome.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-chrome.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-chrome" '("dap-chrome-")))
 
 ;;;***
 
-;;;### (autoloads nil "dap-cpptools" "dap-cpptools.el" (0 0 0 0))
-;;; Generated autoloads from dap-cpptools.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-cpptools"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-cpptools.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-cpptools.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-cpptools" '("dap-cpptools-")))
 
 ;;;***
 
-;;;### (autoloads nil "dap-edge" "dap-edge.el" (0 0 0 0))
-;;; Generated autoloads from dap-edge.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-edge" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-edge.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-edge.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-edge" '("dap-edge-")))
 
 ;;;***
 
-;;;### (autoloads nil "dap-elixir" "dap-elixir.el" (0 0 0 0))
-;;; Generated autoloads from dap-elixir.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-elixir" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-elixir.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-elixir.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-elixir" '("dap-elixir--populate-start-file-args")))
 
 ;;;***
 
-;;;### (autoloads nil "dap-firefox" "dap-firefox.el" (0 0 0 0))
-;;; Generated autoloads from dap-firefox.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-firefox"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-firefox.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-firefox.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-firefox" '("dap-firefox-")))
 
 ;;;***
 
-;;;### (autoloads nil "dap-gdb-lldb" "dap-gdb-lldb.el" (0 0 0 0))
-;;; Generated autoloads from dap-gdb-lldb.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-gdb-lldb"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-gdb-lldb.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-gdb-lldb.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-gdb-lldb" '("dap-gdb-lldb-")))
 
 ;;;***
 
-;;;### (autoloads nil "dap-go" "dap-go.el" (0 0 0 0))
-;;; Generated autoloads from dap-go.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-go" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-go.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-go.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-go" '("dap-go-")))
 
 ;;;***
 
-;;;### (autoloads nil "dap-hydra" "dap-hydra.el" (0 0 0 0))
-;;; Generated autoloads from dap-hydra.el
+;;;### (autoloads nil "dap-hydra" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-hydra.el"
+;;;;;;  "4ecb86103346ead1e65f1ef7a0f7a115")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-hydra.el
 
 (autoload 'dap-hydra "dap-hydra" "\
 Run `dap-hydra/body'.
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "dap-hydra" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-hydra.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-hydra.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-hydra" '("dap-hydra")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil "dap-launch" "dap-launch.el" (0 0 0 0))
-;;; Generated autoloads from dap-launch.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-launch" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-launch.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-launch.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-launch" '("dap-launch-")))
 
 ;;;***
 
-;;;### (autoloads nil "dap-lldb" "dap-lldb.el" (0 0 0 0))
-;;; Generated autoloads from dap-lldb.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-lldb" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-lldb.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-lldb.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-lldb" '("dap-lldb-")))
 
 ;;;***
 
-;;;### (autoloads nil "dap-mode" "dap-mode.el" (0 0 0 0))
-;;; Generated autoloads from dap-mode.el
+;;;### (autoloads nil "dap-mode" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-mode.el"
+;;;;;;  "830f370cad558222b8804238addf6ea8")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-mode.el
 
 (autoload 'dap-debug "dap-mode" "\
 Run debug configuration DEBUG-ARGS.
@@ -121,13 +141,20 @@ or call the function `dap-auto-configure-mode'.")
 Auto configure dap minor mode.
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "dap-mode" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-mode.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-mode.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-mode" '("dap-")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil "dap-mouse" "dap-mouse.el" (0 0 0 0))
-;;; Generated autoloads from dap-mouse.el
+;;;### (autoloads nil "dap-mouse" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-mouse.el"
+;;;;;;  "5e76eeb5bbf0ba10c5deb38b31acd59b")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-mouse.el
 
 (defvar dap-tooltip-mode nil "\
 Non-nil if Dap-Tooltip mode is enabled.
@@ -143,62 +170,78 @@ or call the function `dap-tooltip-mode'.")
 Toggle the display of GUD tooltips.
 
 \(fn &optional ARG)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "dap-mouse" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-mouse.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-mouse.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-mouse" '("dap-")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil "dap-netcore" "dap-netcore.el" (0 0 0 0))
-;;; Generated autoloads from dap-netcore.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-netcore"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-netcore.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-netcore.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-netcore" '("dap-netcore-")))
 
 ;;;***
 
-;;;### (autoloads nil "dap-node" "dap-node.el" (0 0 0 0))
-;;; Generated autoloads from dap-node.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-node" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-node.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-node.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-node" '("dap-node-")))
 
 ;;;***
 
-;;;### (autoloads nil "dap-overlays" "dap-overlays.el" (0 0 0 0))
-;;; Generated autoloads from dap-overlays.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-overlays"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-overlays.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-overlays.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-overlays" '("dap-overlays-")))
 
 ;;;***
 
-;;;### (autoloads nil "dap-php" "dap-php.el" (0 0 0 0))
-;;; Generated autoloads from dap-php.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-php" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-php.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-php.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-php" '("dap-php-")))
 
 ;;;***
 
-;;;### (autoloads nil "dap-pwsh" "dap-pwsh.el" (0 0 0 0))
-;;; Generated autoloads from dap-pwsh.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-pwsh" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-pwsh.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-pwsh.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-pwsh" '("dap-pwsh-")))
 
 ;;;***
 
-;;;### (autoloads nil "dap-python" "dap-python.el" (0 0 0 0))
-;;; Generated autoloads from dap-python.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-python" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-python.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-python.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-python" '("dap-python-")))
 
 ;;;***
 
-;;;### (autoloads nil "dap-ruby" "dap-ruby.el" (0 0 0 0))
-;;; Generated autoloads from dap-ruby.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-ruby" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-ruby.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-ruby.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-ruby" '("dap-ruby-")))
 
 ;;;***
 
-;;;### (autoloads nil "dap-ui" "dap-ui.el" (0 0 0 0))
-;;; Generated autoloads from dap-ui.el
+;;;### (autoloads nil "dap-ui" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-ui.el"
+;;;;;;  "80c7bc040b1101c993edfe339b0b9e87")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-ui.el
 
 (defvar dap-ui-mode nil "\
 Non-nil if Dap-Ui mode is enabled.
@@ -261,38 +304,79 @@ This could be used to evaluate JavaScript in a browser, to
 evaluate python in the context of the debugee, ....
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "dap-ui" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-ui.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-ui.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-ui" '("dap-")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil "dap-utils" "dap-utils.el" (0 0 0 0))
-;;; Generated autoloads from dap-utils.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-utils" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-utils.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-utils.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-utils" '("dap-utils-")))
 
 ;;;***
 
-;;;### (autoloads nil "dap-variables" "dap-variables.el" (0 0 0 0))
-;;; Generated autoloads from dap-variables.el
+;;;### (autoloads "actual autoloads are elsewhere" "dap-variables"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-variables.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-variables.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dap-variables" '("dap-variables-")))
 
 ;;;***
 
-;;;### (autoloads nil "dapui" "dapui.el" (0 0 0 0))
-;;; Generated autoloads from dapui.el
+;;;### (autoloads nil "dapui" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dapui.el"
+;;;;;;  "3f2946ed3d0e62760020eb808d21bc4c")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dapui.el
 
 (autoload 'dapui-loaded-sources "dapui" "\
 
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "dapui" "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dapui.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dapui.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "dapui" '("dapui-")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil nil ("dap-mode-pkg.el") (0 0 0 0))
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-chrome.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-cpptools.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-edge.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-elixir.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-firefox.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-gdb-lldb.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-go.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-hydra.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-launch.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-lldb.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-mode-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-mode-pkg.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-mode.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-mouse.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-netcore.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-node.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-overlays.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-php.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-pwsh.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-python.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-ruby.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-ui.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-utils.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dap-variables.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/dap-mode-20201118.1304/dapui.el")
+;;;;;;  (0 0 0 0))
 
 ;;;***
 

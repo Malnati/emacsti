@@ -6,8 +6,9 @@
                          (or (file-name-directory #$) (car load-path))))
 
 
-;;;### (autoloads nil "treemacs" "treemacs.el" (0 0 0 0))
-;;; Generated autoloads from treemacs.el
+;;;### (autoloads nil "treemacs" "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs.el"
+;;;;;;  "4585123637e24fa0ab4844081b1b825e")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs.el
 
 (autoload 'treemacs-version "treemacs" "\
 Return the `treemacs-version'.
@@ -79,22 +80,29 @@ If the project is already registered with treemacs just move point to its root.
 An error message is displayed if the current buffer is not part of any project.
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs" "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs" '("treemacs-version")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil "treemacs-async" "treemacs-async.el" (0 0 0
-;;;;;;  0))
-;;; Generated autoloads from treemacs-async.el
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-async"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-async.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-async.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-async" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-bookmarks" "treemacs-bookmarks.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from treemacs-bookmarks.el
+;;;### (autoloads nil "treemacs-bookmarks" "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-bookmarks.el"
+;;;;;;  "f939dfdf1afce77cb1ba6932533c2cc3")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-bookmarks.el
 
 (autoload 'treemacs-bookmark "treemacs-bookmarks" "\
 Find a bookmark in treemacs.
@@ -118,93 +126,111 @@ additionally also save the tag's position.  A tag can only be bookmarked if the
 treemacs node is pointing to a valid buffer position.
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-bookmarks"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-bookmarks.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-bookmarks.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-bookmarks" '("treemacs--")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil "treemacs-compatibility" "treemacs-compatibility.el"
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-compatibility"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-compatibility.el"
 ;;;;;;  (0 0 0 0))
-;;; Generated autoloads from treemacs-compatibility.el
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-compatibility.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-compatibility" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-core-utils" "treemacs-core-utils.el"
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-core-utils"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-core-utils.el"
 ;;;;;;  (0 0 0 0))
-;;; Generated autoloads from treemacs-core-utils.el
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-core-utils.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-core-utils" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-customization" "treemacs-customization.el"
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-customization"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-customization.el"
 ;;;;;;  (0 0 0 0))
-;;; Generated autoloads from treemacs-customization.el
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-customization.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-customization" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-diagnostics" "treemacs-diagnostics.el"
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-diagnostics"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-diagnostics.el"
 ;;;;;;  (0 0 0 0))
-;;; Generated autoloads from treemacs-diagnostics.el
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-diagnostics.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-diagnostics" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-dom" "treemacs-dom.el" (0 0 0 0))
-;;; Generated autoloads from treemacs-dom.el
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-dom"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-dom.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-dom.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-dom" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-extensions" "treemacs-extensions.el"
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-extensions"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-extensions.el"
 ;;;;;;  (0 0 0 0))
-;;; Generated autoloads from treemacs-extensions.el
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-extensions.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-extensions" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-filewatch-mode" "treemacs-filewatch-mode.el"
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-filewatch-mode"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-filewatch-mode.el"
 ;;;;;;  (0 0 0 0))
-;;; Generated autoloads from treemacs-filewatch-mode.el
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-filewatch-mode.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-filewatch-mode" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-follow-mode" "treemacs-follow-mode.el"
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-follow-mode"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-follow-mode.el"
 ;;;;;;  (0 0 0 0))
-;;; Generated autoloads from treemacs-follow-mode.el
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-follow-mode.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-follow-mode" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-fringe-indicator" "treemacs-fringe-indicator.el"
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-fringe-indicator"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-fringe-indicator.el"
 ;;;;;;  (0 0 0 0))
-;;; Generated autoloads from treemacs-fringe-indicator.el
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-fringe-indicator.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-fringe-indicator" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-header-line" "treemacs-header-line.el"
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-header-line"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-header-line.el"
 ;;;;;;  (0 0 0 0))
-;;; Generated autoloads from treemacs-header-line.el
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-header-line.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-header-line" '("treemacs-header-buttons-format")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-icons" "treemacs-icons.el" (0 0 0
-;;;;;;  0))
-;;; Generated autoloads from treemacs-icons.el
+;;;### (autoloads nil "treemacs-icons" "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-icons.el"
+;;;;;;  "b9e37454cd9c37847302579fdfbfb961")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-icons.el
 
 (autoload 'treemacs-resize-icons "treemacs-icons" "\
 Resize the current theme's icons to the given SIZE.
@@ -247,50 +273,68 @@ be assigned which treemacs icon, for example
   (c++-mode . treemacs-icon-cpp))
 
 \(fn EXTENSIONS MODE-ICON-ALIST)" nil nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-icons"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-icons.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-icons.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-icons" '("treemacs-")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil "treemacs-interface" "treemacs-interface.el"
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-interface"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-interface.el"
 ;;;;;;  (0 0 0 0))
-;;; Generated autoloads from treemacs-interface.el
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-interface.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-interface" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-logging" "treemacs-logging.el" (0
-;;;;;;  0 0 0))
-;;; Generated autoloads from treemacs-logging.el
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-logging"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-logging.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-logging.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-logging" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-macros" "treemacs-macros.el" (0 0
-;;;;;;  0 0))
-;;; Generated autoloads from treemacs-macros.el
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-macros"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-macros.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-macros.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-macros" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-mode" "treemacs-mode.el" (0 0 0 0))
-;;; Generated autoloads from treemacs-mode.el
+;;;### (autoloads nil "treemacs-mode" "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-mode.el"
+;;;;;;  "f2e01d67672d440cde771c15649cc52b")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-mode.el
 
 (autoload 'treemacs-mode "treemacs-mode" "\
 A major mode for displaying the file system in a tree layout.
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-mode"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-mode.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-mode.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-mode" '("treemacs-")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil "treemacs-mouse-interface" "treemacs-mouse-interface.el"
-;;;;;;  (0 0 0 0))
-;;; Generated autoloads from treemacs-mouse-interface.el
+;;;### (autoloads nil "treemacs-mouse-interface" "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-mouse-interface.el"
+;;;;;;  "d02e9aaf4e5fd4d00c467529c1431b55")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-mouse-interface.el
 
 (autoload 'treemacs-node-buffer-and-position "treemacs-mouse-interface" "\
 Return source buffer or list of buffer and position for the current node.
@@ -298,75 +342,120 @@ This information can be used for future display.  Stay in the selected window
 and ignore any prefix argument.
 
 \(fn &optional _)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-mouse-interface"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-mouse-interface.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-mouse-interface.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-mouse-interface" '("treemacs-")))
 
 ;;;***
+
+;;;***
 
-;;;### (autoloads nil "treemacs-persistence" "treemacs-persistence.el"
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-persistence"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-persistence.el"
 ;;;;;;  (0 0 0 0))
-;;; Generated autoloads from treemacs-persistence.el
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-persistence.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-persistence" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-rendering" "treemacs-rendering.el"
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-rendering"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-rendering.el"
 ;;;;;;  (0 0 0 0))
-;;; Generated autoloads from treemacs-rendering.el
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-rendering.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-rendering" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-scope" "treemacs-scope.el" (0 0 0
-;;;;;;  0))
-;;; Generated autoloads from treemacs-scope.el
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-scope"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-scope.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-scope.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-scope" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-tag-follow-mode" "treemacs-tag-follow-mode.el"
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-tag-follow-mode"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-tag-follow-mode.el"
 ;;;;;;  (0 0 0 0))
-;;; Generated autoloads from treemacs-tag-follow-mode.el
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-tag-follow-mode.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-tag-follow-mode" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-tags" "treemacs-tags.el" (0 0 0 0))
-;;; Generated autoloads from treemacs-tags.el
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-tags"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-tags.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-tags.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-tags" '("treemacs--")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-themes" "treemacs-themes.el" (0 0
-;;;;;;  0 0))
-;;; Generated autoloads from treemacs-themes.el
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-themes"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-themes.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-themes.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-themes" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-visuals" "treemacs-visuals.el" (0
-;;;;;;  0 0 0))
-;;; Generated autoloads from treemacs-visuals.el
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-visuals"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-visuals.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-visuals.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-visuals" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil "treemacs-workspaces" "treemacs-workspaces.el"
+;;;### (autoloads "actual autoloads are elsewhere" "treemacs-workspaces"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-workspaces.el"
 ;;;;;;  (0 0 0 0))
-;;; Generated autoloads from treemacs-workspaces.el
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-workspaces.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "treemacs-workspaces" '("treemacs-")))
 
 ;;;***
 
-;;;### (autoloads nil nil ("treemacs-faces.el" "treemacs-pkg.el")
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-async.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-bookmarks.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-compatibility.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-core-utils.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-customization.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-diagnostics.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-dom.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-extensions.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-faces.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-filewatch-mode.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-follow-mode.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-fringe-indicator.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-header-line.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-icons.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-interface.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-logging.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-macros.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-mode.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-mouse-interface.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-persistence.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-pkg.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-rendering.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-scope.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-tag-follow-mode.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-tags.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-themes.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-visuals.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs-workspaces.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/treemacs-20201218.652/treemacs.el")
 ;;;;;;  (0 0 0 0))
 
 ;;;***

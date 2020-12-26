@@ -6,8 +6,9 @@
                          (or (file-name-directory #$) (car load-path))))
 
 
-;;;### (autoloads nil "posframe" "posframe.el" (0 0 0 0))
-;;; Generated autoloads from posframe.el
+;;;### (autoloads nil "posframe" "../../../../../../../.emacs.d/libs/elpa-linux/posframe-20201224.2318/posframe.el"
+;;;;;;  "9c874ee929fe0aa0ba0a6fe10c6b0fd7")
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/posframe-20201224.2318/posframe.el
 
 (autoload 'posframe-workable-p "posframe" "\
 Test posframe workable status.
@@ -146,8 +147,20 @@ Hide all posframe frames.
 Delete all posframe frames and buffers.
 
 \(fn)" t nil)
+
+;;;### (autoloads "actual autoloads are elsewhere" "posframe" "../../../../../../../.emacs.d/libs/elpa-linux/posframe-20201224.2318/posframe.el"
+;;;;;;  (0 0 0 0))
+;;; Generated autoloads from ../../../../../../../.emacs.d/libs/elpa-linux/posframe-20201224.2318/posframe.el
 
 (if (fboundp 'register-definition-prefixes) (register-definition-prefixes "posframe" '("posframe-")))
+
+;;;***
+
+;;;***
+
+;;;### (autoloads nil nil ("../../../../../../../.emacs.d/libs/elpa-linux/posframe-20201224.2318/posframe-autoloads.el"
+;;;;;;  "../../../../../../../.emacs.d/libs/elpa-linux/posframe-20201224.2318/posframe.el")
+;;;;;;  (0 0 0 0))
 
 ;;;***
 

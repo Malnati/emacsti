@@ -89,7 +89,7 @@
   :ensure
   :config
   (progn
-    (which-key-setup-side-window-right-bottom)
+    ;;(which-key-setup-side-window-right-bottom)
     (which-key-mode)
     (with-eval-after-load 'lsp-mode
       (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))))
