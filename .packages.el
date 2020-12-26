@@ -211,6 +211,7 @@
 				   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t))))))
 
 (use-package json-mode
+  :after js2-mode
   :config
   (progn
     (add-to-list 'auto-mode-alist '("\\.json\\'"   . json-mode))
