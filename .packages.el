@@ -218,6 +218,7 @@
    (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp
   :config (progn
+	    ;; Enable/disable snippet completion support.
 	    (setq lsp-enable-snippet t)
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
