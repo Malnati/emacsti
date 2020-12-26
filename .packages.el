@@ -259,14 +259,14 @@
 	    ;; If non-nil, automatically enable imenu integration when server
 	    ;; provides textDocument/documentSymbol.
 	    (setq lsp-enable-imenu t)
-	    ;;
-	    (setq 1)
-	    ;;
-	    (setq 1)
-	    ;;
-	    (setq 1)
-	    ;;
-	    (setq 1)
+	    ;; Auto activate signature when trigger conditions are meet.
+	    (setq lsp-signature-auto-activate 1)
+	    ;; Include signature documentation in signature help.
+	    (setq lsp-signature-render-documentation 1)
+	    ;; Enable textDocument/documentColor when server supports it.
+	    (setq lsp-enable-text-document-color 1)
+	    ;; Enable lsp-headerline-breadcrumb-mode.
+	    (setq lsp-headerline-breadcrumb-enable 1)
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
