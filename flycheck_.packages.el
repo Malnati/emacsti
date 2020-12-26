@@ -24,12 +24,12 @@
 
 ;; Location of the package archive.
 (when (member window-system
-	       '(pc w32 ms-dos windows-nt cygwin))
+	      '(pc w32 ms-dos windows-nt cygwin))
   (setq package-user-dir "~/.emacs.d/libs/elpa-mswin")
   (message "package-user-dir is ~/.emacs.d/libs/elpa-mswin"))
 
 (when (member system-type
-	       '(ns darwin))
+	      '(ns darwin))
   (setq package-user-dir "~/.emacs.d/libs/elpa-macos")
   (message "package-user-dir is ~/.emacs.d/libs/elpa-macos"))
 
@@ -111,39 +111,40 @@
 (use-package dash
   :ensure)
 
-;; (use-package spaceline
-;;   :ensure
-;;   :after s
-;;   :after memoize
-;;   :config
-;;   (use-package powerline
-;;     :ensure)
-;;   (use-package spaceline-config
-;;     :config
-;;     (spaceline-toggle-buffer-modified-on)
-;;     (spaceline-toggle-line-column-on)
-;;     (spaceline-toggle-minor-modes-off)
-;;     (spaceline-toggle-buffer-encoding-off)
-;;     (spaceline-toggle-buffer-encoding-abbrev-off)
-;;     (setq powerline-default-separator 'rounded)
-;;     (setq spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
-;;     (spaceline-define-segment line-column "The current line and column numbers." "l:%l c:%2c")
-;;     (spaceline-define-segment time "The current time." (format-time-string "%H:%M"))
-;;     (spaceline-define-segment date "The current date." (format-time-string "%h %d"))
-;;     (spaceline-toggle-time-on)
-;;     (spaceline-emacs-theme 'date 'time)
-;;     (use-package all-the-icons
-;;       :ensure
-;;       :after spaceline)
-;;     (use-package all-the-icons-ibuffer
-;;       :ensure
-;;       :after spaceline)
-;;     (use-package spaceline-all-the-icons
-;;       :ensure
-;;       :after spaceline
-;;       :config
-;;       (spaceline-all-the-icons-theme)
-;;       (spaceline-all-the-icons--setup-git-ahead))))
+
+(use-package all-the-icons
+  :ensure)
+
+(use-package all-the-icons-ibuffer
+  :ensure)
+
+(use-package spaceline
+  :ensure
+  :after s
+  :after memoize
+  :config
+  (use-package powerline
+    :ensure)
+  (use-package spaceline-config
+    :config
+    (spaceline-toggle-buffer-modified-on)
+    (spaceline-toggle-line-column-on)
+    (spaceline-toggle-minor-modes-off)
+    (spaceline-toggle-buffer-encoding-off)
+    (spaceline-toggle-buffer-encoding-abbrev-off)
+    (setq powerline-default-separator 'rounded)
+    (setq spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
+    (spaceline-define-segment line-column "The current line and column numbers." "l:%l c:%2c")
+    (spaceline-define-segment time "The current time." (format-time-string "%H:%M"))
+    (spaceline-define-segment date "The current date." (format-time-string "%h %d"))
+    (spaceline-toggle-time-on)
+    (spaceline-emacs-theme 'date 'time)
+    (use-package spaceline-all-the-icons
+      :ensure
+      :after spaceline
+      :config
+      (spaceline-all-the-icons-theme)
+      (spaceline-all-the-icons--setup-git-ahead))))
 
 (use-package indent-guide
   :ensure
@@ -155,24 +156,24 @@
   :ensure
   :config
   (progn
-  (drag-stuff-global-mode 1)
-  (drag-stuff-define-keys)
-  (global-set-key [(meta up)]   'drag-stuff-up)
-  (global-set-key [(meta down)] 'drag-stuff-down)))
+    (drag-stuff-global-mode 1)
+    (drag-stuff-define-keys)
+    (global-set-key [(meta up)]   'drag-stuff-up)
+    (global-set-key [(meta down)] 'drag-stuff-down)))
 
 (use-package projectile
   :config
   (progn
-  (projectile-mode +1)
-  (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-  (setq projectile-sort-order 'recentf)))
+    (projectile-mode +1)
+    (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+    (setq projectile-sort-order 'recentf)))
 
 (use-package yasnippet
   :config
   (progn
-  (yas-reload-all)
-  (add-hook 'prog-mode-hook #'yas-minor-mode)
-  (yas-global-mode 1)))
+    (yas-reload-all)
+    (add-hook 'prog-mode-hook #'yas-minor-mode)
+    (yas-global-mode 1)))
 
 (use-package yasnippet-snippets
   :after yasnippet
