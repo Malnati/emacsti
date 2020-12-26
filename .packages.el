@@ -301,6 +301,9 @@
     :after lsp-mode
     :config
     (progn
+      ;; show the directory of files
+      (lsp-ui-peek-show-directory 1)
+      ;; enable ‘lsp-ui-peek’
       (lsp-ui-peek-enable 1)
       (lsp-ui-doc-enable 1)
       ;; Customization:
