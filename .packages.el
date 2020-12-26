@@ -215,6 +215,7 @@
 		(define-key lsp-mode-keystrokes (kbd "d") 'lsp-ui-peek-find-definitions))
 		(define-key lsp-mode-keystrokes (kbd "r") 'lsp-ui-peek-find-references)
 		(define-key lsp-mode-keystrokes (kbd "i") 'lsp-ui-peek-find-implementation)
+		(define-key lsp-mode-keystrokes (kbd "w") 'lsp-ui-peek-find-workspace-symbol)
   )
 
 (lsp-ui-peek-jump-backward)
