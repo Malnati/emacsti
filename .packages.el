@@ -286,28 +286,28 @@
 (use-package lsp-mode
   :ensure
   :hook
-  ( (js2-mode . lsp)
-    (lsp-mode . lsp-enable-which-key-integration))
+  ((js2-mode . lsp)
+   (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp
   :config (progn
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
-	    (global-set-key (kbd "C-c l") 'lsp))
-  )
+	    (global-set-key (kbd "C-c l") 'lsp)
+	    (add-to-list 'auto-mode-alist '("\\.js\\'"   . lsp-mode))))
 
 (use-package lsp-ui
   :after lsp-mode
   :config
   (progn
     ;; show the directory of files
-    (lsp-ui-peek-show-directory 1)
+    ;; (lsp-ui-peek-show-directory 1)
     ;; enable ‘lsp-ui-peek’
     (lsp-ui-peek-enable 1)
     ;;enable lsp-ui-doc
     (lsp-ui-doc-enable 1)
     ;; Where to display the doc
-    (lsp-ui-doc-position 1)
+    ;; (lsp-ui-doc-position 1)
     ;; Number of seconds before showing the doc
     (lsp-ui-doc-delay 0.0)
     ;;show diagnostics messages in sideline
@@ -344,13 +344,6 @@
 (use-package helm-projectile
   :config (progn
 	    (helm-projectile-on)))
-
-;;(use-package treemacs)
-
-;; (use-package treemacs-projectile
-;;   :config
-;;   (progn ))
-
 (use-package js2-mode
   :config
   (progn
@@ -415,6 +408,13 @@
     ))
 
 
+
+
+;;(use-package treemacs)
+
+;; (use-package treemacs-projectile
+;;   :config
+;;   (progn ))
 
 ;; optionally
 ;;(use-package lsp-ui :commands lsp-ui-mode)
