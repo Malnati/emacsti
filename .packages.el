@@ -404,7 +404,7 @@
 ;; 		 (if (saved-session)
 ;; 			 (session-restore))))))
 
-;;(use-package treemacs)
+(use-package treemacs)
 
 ;; (use-package treemacs-projectile
 ;;   :config
