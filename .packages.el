@@ -339,9 +339,6 @@
     ;; (define-key js2-keys (kbd "d") 'json-decrement-number-at-point)
     ))
 
-
-
-
 ;; (use-package spaceline
 ;;   :ensure
 ;;   :after s
