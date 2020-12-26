@@ -238,6 +238,8 @@
 	    ;; f non-nil, lsp-mode will apply edits suggested by the language server
 	    ;; before saving a document.
 	    (setq lsp-before-save-edits nil)
+	    ;; Display the symbol's container name in an imenu entry.
+	    (setq lsp-imenu-show-container-name t)
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
