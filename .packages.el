@@ -212,7 +212,7 @@
 		  company-idle-delay 0.0) ;; default is 0.2
 	        (define-prefix-command 'lsp-mode-keystrokes)
 	        (global-set-key (kbd "C-c j") 'lsp-mode-keystrokes)
-		(define-key lsp-mode-keystrokes (kbd "f") ')))
+		(define-key lsp-mode-keystrokes (kbd "j") ')))
 
 (use-package lsp-ui
   :after lsp-mode)
