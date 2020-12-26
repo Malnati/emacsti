@@ -15,4 +15,5 @@
 	drag-stuff-right
 	duplicate-line
 	eval-region
+	lsp-ui-doc--handle-mouse-movement
 	))
