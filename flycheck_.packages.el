@@ -294,7 +294,8 @@
 		  company-idle-delay 0.0) ;; default is 0.2
 	    (define-prefix-command 'lsp)
 	    (global-set-key (kbd "C-c l") 'lsp)
-	    ))
+	    )
+  )
 
   (use-package lsp-ui
     :after lsp-mode
@@ -316,7 +317,9 @@
   :after lsp-mode
   :config
   (progn
-    (define-key lsp-mode-map [remap xref-find-apropos] #'helm-lsp-workspace-symbol)))
+    (define-key lsp-mode-map
+      [remap xref-find-apropos]
+      #'helm-lsp-workspace-symbol)))
 
 (use-package helm-projectile
   :config (progn
