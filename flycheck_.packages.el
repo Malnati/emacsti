@@ -21,6 +21,7 @@
 ;; ‘w32’         for an Emacs frame that is a window on MS-Windows display,
 ;; ‘pc’          for a direct-write MS-DOS frame.
 ;; ‘ns’          for an Emacs frame on a GNUstep or Macintosh Cocoa display,
+;;; Code:
 
 ;; Location of the package archive.
 (when (member window-system
