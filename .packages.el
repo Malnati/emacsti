@@ -290,11 +290,10 @@
 	 (lsp-mode . lsp-enable-which-key-integration))
   :commands lsp
   :config (progn
-	    (setq company-minimum-prefix-length 1
-		  company-idle-delay 0.0) ;; default is 0.2
+	    ;; default is 0.2
+	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
-	    (global-set-key (kbd "C-c l") 'lsp)
-	    )
+	    (global-set-key (kbd "C-c l") 'lsp))
   )
 
   (use-package lsp-ui
