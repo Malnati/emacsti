@@ -216,8 +216,8 @@
 		(define-key lsp-mode-keystrokes (kbd "r") 'lsp-ui-peek-find-references)
 		(define-key lsp-mode-keystrokes (kbd "i") 'lsp-ui-peek-find-implementation)
 		(define-key lsp-mode-keystrokes (kbd "w") 'lsp-ui-peek-find-workspace-symbol)
-		(define-key lsp-mode-keystrokes (kbd "w") 'lsp-ui-peek-jump-backward)
-		(define-key lsp-mode-keystrokes (kbd "w") 'lsp-ui-peek-jump-forward)
+		(define-key lsp-mode-keystrokes (kbd "<") 'lsp-ui-peek-jump-backward)
+		(define-key lsp-mode-keystrokes (kbd ">") 'lsp-ui-peek-jump-forward)
   )
 
 (use-package lsp-ui
