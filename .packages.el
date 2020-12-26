@@ -243,8 +243,9 @@
 	    ;; Separator string to use to separate the container name from the
 	    ;; symbol while displaying imenu entries.
 	    (setq lsp-imenu-container-name-separator t)
-	    ;;
-	    (setq lsp-imenu-sort-methods t)
+	    ;; How to sort the imenu items. The value is a list of kind, name
+	    ;; or position. Priorities are determined by the index of the element.
+	    (setq lsp-imenu-sort-methods 1)
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
