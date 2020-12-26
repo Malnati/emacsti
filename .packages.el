@@ -160,34 +160,6 @@
 	    (25 . fa_arrows)) ;; TypeParameter
 	  )))
 
-;; (use-package spaceline
-;;   :ensure
-;;   :after s
-;;   :after memoize
-;;   :config
-;;   (use-package powerline
-;;     :ensure)
-;;   (use-package spaceline-config
-;;     :config
-;;     (spaceline-toggle-buffer-modified-on)
-;;     (spaceline-toggle-line-column-on)
-;;     (spaceline-toggle-minor-modes-off)
-;;     (spaceline-toggle-buffer-encoding-off)
-;;     (spaceline-toggle-buffer-encoding-abbrev-off)
-;;     (setq powerline-default-separator 'rounded)
-;;     (setq spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
-;;     (spaceline-define-segment line-column "The current line and column numbers." "l:%l c:%2c")
-;;     (spaceline-define-segment time "The current time." (format-time-string "%H:%M"))
-;;     (spaceline-define-segment date "The current date." (format-time-string "%h %d"))
-;;     (spaceline-toggle-time-on)
-;;     (spaceline-emacs-theme 'date 'time)
-;;     (use-package spaceline-all-the-icons
-;;       :ensure
-;;       :after spaceline
-;;       :config
-;;       (spaceline-all-the-icons-theme)
-;;       (spaceline-all-the-icons--setup-git-ahead))))
-
 (use-package indent-guide
   :ensure
   :config
@@ -368,6 +340,35 @@
     ))
 
 
+
+
+;; (use-package spaceline
+;;   :ensure
+;;   :after s
+;;   :after memoize
+;;   :config
+;;   (use-package powerline
+;;     :ensure)
+;;   (use-package spaceline-config
+;;     :config
+;;     (spaceline-toggle-buffer-modified-on)
+;;     (spaceline-toggle-line-column-on)
+;;     (spaceline-toggle-minor-modes-off)
+;;     (spaceline-toggle-buffer-encoding-off)
+;;     (spaceline-toggle-buffer-encoding-abbrev-off)
+;;     (setq powerline-default-separator 'rounded)
+;;     (setq spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
+;;     (spaceline-define-segment line-column "The current line and column numbers." "l:%l c:%2c")
+;;     (spaceline-define-segment time "The current time." (format-time-string "%H:%M"))
+;;     (spaceline-define-segment date "The current date." (format-time-string "%h %d"))
+;;     (spaceline-toggle-time-on)
+;;     (spaceline-emacs-theme 'date 'time)
+;;     (use-package spaceline-all-the-icons
+;;       :ensure
+;;       :after spaceline
+;;       :config
+;;       (spaceline-all-the-icons-theme)
+;;       (spaceline-all-the-icons--setup-git-ahead))))
 
 ;; (use-package desktop
 ;;   :config
