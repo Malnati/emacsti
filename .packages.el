@@ -283,8 +283,7 @@
 	    ;; Enable lsp-headerline-breadcrumb-mode.
 	    (setq lsp-headerline-breadcrumb-enable 1)
 	    
-	    (define-prefix-command 'lsp)
-	    (global-set-key (kbd "C-c l") 'lsp)
+
 	    (setq lsp-keymap-prefix "C-c t")
 	    ;; (global-set-key (kbd "C-c t") 'lsp-command-map)
 	    ))
@@ -316,6 +315,8 @@
     ;; seconds to wait before showing sideline
     (setq lsp-ui-sideline-delay 0)
     ;; keystrokes
+    	    (define-prefix-command 'lsp)
+	    (global-set-key (kbd "C-C l") 'lsp)
     (define-key lsp (kbd "d") 'lsp-ui-peek-find-definitions)
     (define-key lsp (kbd "r") 'lsp-ui-peek-find-references)
     (define-key lsp (kbd "i") 'lsp-ui-peek-find-implementation)
