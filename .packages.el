@@ -207,6 +207,31 @@
       (define-key js2-mode-map (kbd "M-.") nil)
       (add-hook 'js2-mode-hook (lambda ()
 				 (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t))))))
+
+;; Starting block for Javascript support
+;; (load-file "~/.emacsti/libs/xref-js2.el")
+
+;; (load-file "~/.emacsti/libs/json-snatcher-1.0.0.el")
+;; (load-file "~/.emacsti/libs/json-reformat-0.0.6.el")
+;; (load-file "~/.emacsti/libs/json-mode.el")
+
+;; (load-file "~/.emacsti/libs/postip.el")
+;; (load-file "~/.emacsti/libs/quickpeek.el")
+
+;; (load-file "~/.emacsti/libs/flycheckcolormodeline.el")
+;; (load-file "~/.emacsti/libs/flycheckpostip.el")
+;; (load-file "~/.emacsti/libs/flycheckstatusemoji.el")
+;; (load-file "~/.emacsti/libs/flycheckinline.el")
+;; (load-file "~/.emacsti/libs/aggressiveindent.el")
+
+;; (load-file "~/.emacsti/libs/webmode.el")
+;; (load-file "~/.emacsti/libs/typescript.el")
+;; (load-file "~/.emacsti/libs/rjsxmode.el")
+;; (load-file "~/.emacsti/libs/tide.el")
+;; (load-file "~/.emacsti/libs/importjs.el")
+
+
+
 ;; (use-package js2-highlight-vars
 ;;   :config
 ;;   (js2-highlight-vars-mode t)
@@ -230,25 +255,3 @@
 ;; (global-set-key [f3] 'highlight-symbol-next)
 ;; (global-set-key [(shift f3)] 'highlight-symbol-prev)
 ;; (global-set-key [(meta f3)] 'highlight-symbol-query-replace))
-
-;; Starting block for Javascript support
-;; (load-file "~/.emacsti/libs/xref-js2.el")
-
-;; (load-file "~/.emacsti/libs/json-snatcher-1.0.0.el")
-;; (load-file "~/.emacsti/libs/json-reformat-0.0.6.el")
-;; (load-file "~/.emacsti/libs/json-mode.el")
-
-;; (load-file "~/.emacsti/libs/postip.el")
-;; (load-file "~/.emacsti/libs/quickpeek.el")
-
-;; (load-file "~/.emacsti/libs/flycheckcolormodeline.el")
-;; (load-file "~/.emacsti/libs/flycheckpostip.el")
-;; (load-file "~/.emacsti/libs/flycheckstatusemoji.el")
-;; (load-file "~/.emacsti/libs/flycheckinline.el")
-;; (load-file "~/.emacsti/libs/aggressiveindent.el")
-
-;; (load-file "~/.emacsti/libs/webmode.el")
-;; (load-file "~/.emacsti/libs/typescript.el")
-;; (load-file "~/.emacsti/libs/rjsxmode.el")
-;; (load-file "~/.emacsti/libs/tide.el")
-;; (load-file "~/.emacsti/libs/importjs.el")
