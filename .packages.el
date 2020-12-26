@@ -209,7 +209,7 @@
         (define-prefix-command 'xref-js2)
 	(global-set-key (kbd "C-c x") 'xref-js2)
 	(define-key xref-js2 (kbd "a") 'mc/mark-all-like-this)
-	(define-key map [remap indent-new-comment-line] #'js2-line-break)
+	;; (define-key map [remap indent-new-comment-line] #'js2-line-break)
     ;; (define-key map (kbd "C-c C-e") #'js2-mode-hide-element)
     ;; (define-key map (kbd "C-c C-s") #'js2-mode-show-element)
     ;; (define-key map (kbd "C-c C-a") #'js2-mode-show-all)
