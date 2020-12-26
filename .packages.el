@@ -192,7 +192,10 @@
   (flycheck-mode t)
   (setq global-flycheck-mode t))
 
-(use-package helm)
+(use-package helm
+  :config
+  (progn
+    (global-set-key (kbd "M-x") 'helm-M-x)))
 
 (use-package js2-mode
   :config
