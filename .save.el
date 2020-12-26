@@ -75,7 +75,8 @@
   )
 
 ;; desktop-auto-save-timeout
-
+(use-package desktop
+  :config
 (progn
   ;; use only one desktop
   (setq desktop-path '("~/.emacs.d/"))
@@ -112,4 +113,4 @@
 	       (if (saved-session)
 		   (if (y-or-n-p "Restore desktop? ")
 		       (session-restore))))))
-
+)
