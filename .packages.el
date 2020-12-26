@@ -222,10 +222,12 @@
 	(define-key js-keys (kbd "p") 'json-mode-show-path) ;; display a path to the object at point with json-snatcher (https://github.com/Sterlingg/json-snatcher)
 	(define-key js-keys (kbd "P") 'json-mode-kill-path) ;; copy a path to the object at point to the kill ring with json-snatcher (https://github.com/Sterlingg/json-snatcher)
 	(define-key js-keys (kbd "t") 'json-toggle-boolean) ;; Toggle between true and false at point
+	(define-key js-keys (kbd "k") ') ;; sexp Replace the at point with null
+	(define-key js-keys (kbd "i") ') ;; 
+	(define-key js-keys (kbd "d") ') ;; 
+    ;; C-c C-i: Increment the number at point
 	)
   )
-    ;; C-c C-k: Replace the sexp at point with null
-    ;; C-c C-i: Increment the number at point
     ;; C-c C-d: Decrement the number at point
 
 ;; Starting block for Javascript support
