@@ -228,6 +228,7 @@
 
 (use-package lsp-mode
   :ensure
+  :init (define-key lsp-mode-map (kbd "C-c l") lsp-command-map)
   :hook
   ((js2-mode . lsp)
    (lsp-mode . lsp-enable-which-key-integration))
@@ -283,7 +284,8 @@
 	    ;; Enable lsp-headerline-breadcrumb-mode.
 	    (setq lsp-headerline-breadcrumb-enable 1)
 	    ;; Keystrokes
-	    (setq lsp-keymap-prefix "C-c t")
+	    ;; (setq lsp-keymap-prefix "C-c t")
+	    
 	    ;; (global-set-key (kbd "C-c t") 'lsp-command-map)
 	    ))
 
