@@ -249,13 +249,14 @@
 	    ;; Number of seconds to wait for a response from the language server
 	    ;; before timing out.
 	    (setq lsp-response-timeout 5)
-	    ;; 
+	    ;; If non-nil lsp-mode will watch the files in the workspace if the
+	    ;; server has requested that.
 	    (setq lsp-enable-file-watchers t)
-	    ;;
-	    (setq )
-	    ;;
-	    (setq )
-	    ;;
+	    ;; Request trace mode on the language server.
+	    (setq lsp-server-trace t)
+	    ;; Enable experimental semantic highlighting support
+	    (setq lsp-semantic-highlighting t)
+	    ;; 
 	    (setq )
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
