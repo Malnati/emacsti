@@ -300,8 +300,8 @@
     :after lsp-mode
     :config
     (progn
-      (lsp-ui-peek-enable t)
-      (lsp-ui-peek-enable t)
+      (lsp-ui-peek-enable 1)
+      (lsp-ui-doc-enable 1)
       (define-key lsp (kbd "d") 'lsp-ui-peek-find-definitions)
       (define-key lsp (kbd "r") 'lsp-ui-peek-find-references)
       (define-key lsp (kbd "i") 'lsp-ui-peek-find-implementation)
