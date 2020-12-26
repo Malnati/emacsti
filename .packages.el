@@ -259,6 +259,14 @@
 	    ;; If non-nil, automatically enable imenu integration when server
 	    ;; provides textDocument/documentSymbol.
 	    (setq lsp-enable-imenu t)
+	    ;;
+	    (setq 1)
+	    ;;
+	    (setq 1)
+	    ;;
+	    (setq 1)
+	    ;;
+	    (setq 1)
 	    ;; default is 0.2
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (define-prefix-command 'lsp)
