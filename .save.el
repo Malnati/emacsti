@@ -69,7 +69,10 @@
   (interactive)
   (shell-command-to-string
    "git add . && git commit -m \"Auto-commited by emacsti-commit-after-save\"")
-  (message "Exceuted → Auto-commited by emacsti-commit-after-save"))
+  (message "Exceuted → Auto-commited by emacsti-commit-after-save")
+  (session-save)
+  (message "Exceuted → Auto-session-save by session-save")
+  )
 
 ;; desktop-auto-save-timeout
 
