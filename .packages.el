@@ -206,7 +206,7 @@
     (progn
         (define-prefix-command 'xref-js2)
 	(global-set-key (kbd "C-c x") 'xref-js2)
-	(define-key xref-js2 (kbd "M-.") 'mc/mark-all-like-this)
+	(define-key xref-js2 (kbd "a") 'mc/mark-all-like-this)
 	(add-hook 'js2-mode-hook (lambda ()
 				   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t))))))
 
