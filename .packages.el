@@ -175,8 +175,6 @@
     (global-set-key [(meta up)]   'drag-stuff-up)
     (global-set-key [(meta down)] 'drag-stuff-down)))
 
-
-
 (use-package projectile
   :config
   (progn
