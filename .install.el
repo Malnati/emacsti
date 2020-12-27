@@ -1,4 +1,5 @@
-;;;
+;;; packages --- .install.el
+;;; Commentary:
 ;;; Code:
 
 ;; Location of the package archive.
