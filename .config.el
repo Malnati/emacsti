@@ -133,8 +133,8 @@
   (use-package lsp-mode    
     :hook    ((js2-mode . lsp-mode)
 	      (lsp-mode . lsp-enable-which-key-integration)) 
-:commands lsp  
-:config (progn
+    :commands lsp  
+    :config (progn
 	      ;; Enable/disable snippet completion support.
 	      (setq lsp-enable-snippet t)
 	      ;; Display all of the info returned by document/onHover.
@@ -187,6 +187,7 @@
 	      ;; (with-eval-after-load 'lsp-mode
 	      ;;   (mapc #'lsp-flycheck-add-mode '(js2-mode)))
 	      ))  )
+
 (use-package lsp-ui 
 :after lsp-mode  
 :config (progn
