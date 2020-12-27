@@ -272,7 +272,12 @@
     ;; Toggle between true and false at point
     ;; (define-key js2-keys (kbd "t") 'json-toggle-boolean)
     ;; sexp Replace the at point with null
-    ;; (define-key js2-keys (kbd "k") 'json-nullify-sexp)    ;; Increment the number at point    ;; (define-key js2-keys (kbd "i") 'json-increment-number-at-point)    ;; Decrement the number at point    ;; (define-key js2-keys (kbd "d") 'json-decrement-number-at-point)    ))
+    ;; (define-key js2-keys (kbd "k") 'json-nullify-sexp)
+    ;; Increment the number at point
+    ;; (define-key js2-keys (kbd "i") 'json-increment-number-at-point)
+    ;; Decrement the number at point
+    ;; (define-key js2-keys (kbd "d") 'json-decrement-number-at-point)
+    ))
 
 ;; (use-package spaceline
 ;;  
