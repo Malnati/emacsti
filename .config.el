@@ -211,10 +211,10 @@
 	    (define-key lsp (kbd "<right>") 'lsp-ui-peek-jump-forward)))
 
 (use-package helm-lsp 
-:after helm 
-:after lsp-mode  
-:config (progn
-    (define-key lsp-mode-map      [remap xref-find-apropos]      #'helm-lsp-workspace-symbol)))
+  :after helm 
+  :after lsp-mode  
+  :config (progn
+	    (define-key lsp-mode-map [remap xref-find-apropos] #'helm-lsp-workspace-symbol)))
 
 (use-package helm-projectile  
 :config (progn
