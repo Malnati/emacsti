@@ -25,14 +25,11 @@
 
 (use-package which-key
   :config  (progn
-	     (which-key-mode)
-	     (with-eval-after-load 'lsp-mode
-	       (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))))
+	     (which-key-mode)))
 
 (use-package which-key
   :after lsp-mode
   :config  (progn
-	     (which-key-mode)
 	     (with-eval-after-load 'lsp-mode
 	       (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))))
 
