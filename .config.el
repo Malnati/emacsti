@@ -214,7 +214,6 @@
 :after helm 
 :after lsp-mode  
 :config (progn
-  (progn
     (define-key lsp-mode-map      [remap xref-find-apropos]      #'helm-lsp-workspace-symbol)))
 
 (use-package helm-projectile  
