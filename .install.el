@@ -1,26 +1,3 @@
-;; https://www.gnu.org/software/emacs/manual/html_node/elisp/System-Environment.html
-;; Variable: system-type
-;;
-;; The value of this variable is a symbol indicating the type of
-;;  operating system Emacs is running on. The possible values are:
-;;
-;; ‘aix’           IBM’s AIX.
-;; ‘berkeley-unix’ Berkeley BSD and its variants.
-;; ‘cygwin’        Cygwin, a POSIX layer on top of MS-Windows.
-;; ‘darwin’        Darwin (macOS).
-;; ‘gnu’           The GNU system (using the GNU kernel, which consists of the HURD and Mach).
-;; ‘gnu/linux’     A GNU/Linux system—that is, a variant GNU system, using the Linux kernel.
-;;               (These systems are the ones people often call “Linux”, but actually Linux is just the kernel, not the whole system.)
-;; ‘gnu/kfreebsd’  A GNU (glibc-based) system with a FreeBSD kernel.
-;; ‘hpux’          Hewlett-Packard HPUX operating system.
-;; ‘nacl’          Google Native Client (NaCl) sandboxing system.
-;; ‘ms-dos’        Microsoft’s DOS. Emacs compiled with DJGPP for MS-DOS binds system-type to ms-dos even when you run it on MS-Windows.
-;; ‘usg-unix-v’    AT&T Unix System V.
-;; ‘windows-nt’    Microsoft Windows NT, 9X and later. The value of system-type is always windows-nt, e.g., even on Windows 10.
-;; ‘x’           for an Emacs frame that is really an X window,
-;; ‘w32’         for an Emacs frame that is a window on MS-Windows display,
-;; ‘pc’          for a direct-write MS-DOS frame.
-;; ‘ns’          for an Emacs frame on a GNUstep or Macintosh Cocoa display,
 ;;; Code:
 
 ;; Location of the package archive.
