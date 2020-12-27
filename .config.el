@@ -281,19 +281,14 @@
 
 ;; (use-package spaceline
 ;;  
-;;
-:after s
-;;
-:after memoize
-;; 
-:config (progn
+;; :after s
+;; :after memoize
+;; :config (progn
 
 ;;   (use-package powerline
 ;;    )
 ;;   (use-package spaceline-config
-;;   
-:config (progn
-
+;;   :config (progn
 ;;     (spaceline-toggle-buffer-modified-on)
 ;;     (spaceline-toggle-line-column-on)
 ;;     (spaceline-toggle-minor-modes-off)
