@@ -178,38 +178,37 @@
 	      )))
 
 (use-package lsp-ui 
-:after lsp-mode  
-:config (progn
-  (progn
-    ;; show the directory of files
-    ;; (lsp-ui-peek-show-directory 1)
-    ;; enable ‘lsp-ui-peek’
-    (lsp-ui-peek-enable 1)
-    ;; enable lsp-ui-doc
-    (lsp-ui-doc-enable 1)
-    ;; Where to display the doc
-    (setq lsp-ui-doc-position 1)
-    ;; Number of seconds before showing the doc
-    (setq lsp-ui-doc-delay 1)
-    ;; show diagnostics messages in sideline
-    (setq lsp-ui-sideline-show-diagnostics 1)    ;; show hover messages in sideline
-    (setq lsp-ui-sideline-show-hover 1)    ;; show code actions in sideline
-    (setq lsp-ui-sideline-show-code-actions 1)
-    ;; When set to 'line' the information will be updated when
-    ;; user changes current line otherwise the information will
-    ;; be updated when user changes current point
-    (setq lsp-ui-sideline-update-mode t)
-    ;; seconds to wait before showing sideline
-    (setq lsp-ui-sideline-delay 0)
-    ;; keystrokes
-    (define-prefix-command 'lsp)
-    (global-set-key (kbd "M-l") 'lsp)
-    (define-key lsp (kbd "d") 'lsp-ui-peek-find-definitions)
-    (define-key lsp (kbd "r") 'lsp-ui-peek-find-references)
-    (define-key lsp (kbd "i") 'lsp-ui-peek-find-implementation)
-    (define-key lsp (kbd "w") 'lsp-ui-peek-find-workspace-symbol)
-    (define-key lsp (kbd "<left>") 'lsp-ui-peek-jump-backward)
-    (define-key lsp (kbd "<right>") 'lsp-ui-peek-jump-forward)    )  )
+  :after lsp-mode  
+  :config (progn
+	    ;; show the directory of files
+	    ;; (lsp-ui-peek-show-directory 1)
+	    ;; enable ‘lsp-ui-peek’
+	    (lsp-ui-peek-enable 1)
+	    ;; enable lsp-ui-doc
+	    (lsp-ui-doc-enable 1)
+	    ;; Where to display the doc
+	    (setq lsp-ui-doc-position 1)
+	    ;; Number of seconds before showing the doc
+	    (setq lsp-ui-doc-delay 1)
+	    ;; show diagnostics messages in sideline
+	    (setq lsp-ui-sideline-show-diagnostics 1)
+	    ;; show hover messages in sideline
+	    (setq lsp-ui-sideline-show-hover 1)
+	    ;; show code actions in sideline
+	    (setq lsp-ui-sideline-show-code-actions 1)
+	    ;; When set to 'line' the information will be updated when user changes current line otherwise the information will be updated when user changes current point
+	    (setq lsp-ui-sideline-update-mode t)
+	    ;; seconds to wait before showing sideline
+	    (setq lsp-ui-sideline-delay 0)
+	    ;; keystrokes
+	    (define-prefix-command 'lsp)
+	    (global-set-key (kbd "M-l") 'lsp)
+	    (define-key lsp (kbd "d") 'lsp-ui-peek-find-definitions)
+	    (define-key lsp (kbd "r") 'lsp-ui-peek-find-references)
+	    (define-key lsp (kbd "i") 'lsp-ui-peek-find-implementation)
+	    (define-key lsp (kbd "w") 'lsp-ui-peek-find-workspace-symbol)
+	    (define-key lsp (kbd "<left>") 'lsp-ui-peek-jump-backward)
+	    (define-key lsp (kbd "<right>") 'lsp-ui-peek-jump-forward)))
 
 (use-package helm-lsp 
 :after helm 
