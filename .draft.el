@@ -41,9 +41,9 @@
 (require 'package)
 (package-initialize)
 
-;; (add-to-list 'package-archives '("unstable" . "https://melpa.org/packages/") t)
-;; (add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/") t)
-;; (package-refresh-contents)
+(add-to-list 'package-archives '("unstable" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/") t)
+(package-refresh-contents)
 
 (eval-when-compile
   (add-to-list 'load-path "~/.emacs.d/libs/bind-key-2.4.1/")
