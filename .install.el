@@ -1,3 +1,4 @@
+;;;
 ;;; Code:
 
 ;; Location of the package archive.
