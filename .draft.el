@@ -57,7 +57,7 @@
   :init (add-hook 'js2-mode-hook 'eglot-ensure)
   :config (progn
 	    (add-to-list 'eglot-server-programs
-			 '(js2-mode . ("typescript-language-server" "--stdio")))))
+			 '(js2-mode . ("node" "~/.emacs.d/servers/typescript-language-server/lib/language-server-stdio")))))
 
 
 
