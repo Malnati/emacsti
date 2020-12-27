@@ -53,7 +53,6 @@
 (when (member window-system '(ns darwin))
   (use-package exec-path-from-shell
     :ensure
-    :ensure t
     :config
     (exec-path-from-shell-initialize)))
 
