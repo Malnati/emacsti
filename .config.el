@@ -217,17 +217,14 @@
 	    (define-key lsp-mode-map [remap xref-find-apropos] #'helm-lsp-workspace-symbol)))
 
 (use-package helm-projectile  
-:config (progn
- (progn
-
+  :config (progn
 	    (helm-projectile-on)))
 
 (use-package js2-mode  
-:config (progn
-  (progn
-    (define-prefix-command 'js2-keys)
-    (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
-    (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode))))
+  :config (progn
+	    (define-prefix-command 'js2-keys)
+	    (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
+	    (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode))))
 
 (use-package js2-refactor 
 :after js2-mode)
