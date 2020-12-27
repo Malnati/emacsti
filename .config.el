@@ -197,7 +197,9 @@
     (setq lsp-ui-sideline-show-code-actions 1)
     ;; When set to 'line' the information will be updated when
     ;; user changes current line otherwise the information will
-    ;; be updated when user changes current point    (setq lsp-ui-sideline-update-mode t)    ;; seconds to wait before showing sideline
+    ;; be updated when user changes current point
+    (setq lsp-ui-sideline-update-mode t)
+    ;; seconds to wait before showing sideline
     (setq lsp-ui-sideline-delay 0)
     ;; keystrokes
     (define-prefix-command 'lsp)
