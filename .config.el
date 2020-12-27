@@ -303,20 +303,14 @@
 ;;     (spaceline-emacs-theme 'date 'time)
 ;;     (use-package spaceline-all-the-icons
 ;;      
-;;    
-:after spaceline
-;;     
-:config (progn
-
+;;    :after spaceline
+;;    :config (progn
 ;;       (spaceline-all-the-icons-theme)
 ;;       (spaceline-all-the-icons--setup-git-ahead))))
 
 ;; (use-package desktop
-;; 
-:config (progn
-
+;; :config (progn
 ;;   (progn
-
 ;;     ;; use only one desktop
 ;;     (setq desktop-path '("~/.emacs.d/"))
 ;;     (setq desktop-dirname "~/.emacs.d/")
@@ -355,21 +349,13 @@
 ;; 		 (if (saved-session)
 ;; 			 (session-restore))))))
 
-
-
 ;; optionally
-;;(use-package lsp-ui
-:commands lsp-ui-mode)
+;;(use-package lsp-ui :commands lsp-ui-mode)
 ;; if you are helm user
-;;(use-package helm-lsp
-:commands helm-lsp-workspace-symbol)
+;;(use-package helm-lsp :commands helm-lsp-workspace-symbol)
 ;; if you are ivy user
-;;(use-package lsp-ivy
-:commands lsp-ivy-workspace-symbol)
-;;(use-package lsp-treemacs
-:commands lsp-treemacs-errors-list)
-
-
+;;(use-package lsp-ivy :commands lsp-ivy-workspace-symbol)
+;;(use-package lsp-treemacs :commands lsp-treemacs-errors-list)
 
 ;; Starting block for Javascript support
 ;; (load-file "~/.emacsti/libs/xref-js2.el")
