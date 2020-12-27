@@ -62,7 +62,7 @@
             ;;  `(python-mode . ("pyls" "-v" "--tcp" "--host"
             ;;                   "localhost" "--port" :autoport)))
 	    (add-to-list 'eglot-server-programs
-			 '(foo-mode . ("foo-language-server" "--args")))))
+			 '(js2-mode . ("foo-language-server" "--args")))))
 
 
 
