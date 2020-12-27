@@ -54,12 +54,11 @@
   :ensure)
 
 (use-package eglot
-  :hook ((prog-mode . eglot-ensure)
-         (text-mode . ace-jump-mode))
+  :init' (add-hook 'foo-mode-hook 'eglot-ensure)
   :config (progn
 	    ))
 
-(add-hook 'foo-mode-hook 'eglot-ensure)
+
 
 ;; (use-package spaceline
 ;;   :ensure
