@@ -29,7 +29,6 @@
     
 (use-package company  
 :config (progn
-  (progn
     ;; default is 0.2
     (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
     (add-hook 'after-init-hook 'global-company-mode)))
@@ -45,7 +44,7 @@
 (use-package nord-theme  
 :config (progn
   (add-to-list 'custom-theme-load-path
-	       (expand-file-name "~/.emacs.d/themes/"))  (load-theme 'nord t))
+	       (expand-file-name "~/.emacs.d/themes/"))  (load-theme 'nord t)))
 
 (use-package s )
 
