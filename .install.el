@@ -112,12 +112,7 @@
   :ensure)
 
 (use-package projectile
-  :ensure
-  :config
-  (progn
-    (projectile-mode +1)
-    (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-    (setq projectile-sort-order 'recentf)))
+  :ensure)
 
 (use-package yasnippet
   :ensure
