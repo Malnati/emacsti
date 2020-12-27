@@ -16,7 +16,7 @@
   (define-key mc  (kbd "a") 'mc/mark-all-like-this)
   (define-key mc  (kbd "n") 'mc/mark-next-like-this)
   (define-key mc  (kbd "p") 'mc/mark-previous-like-this)
-  (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click))
+  (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)))
 
 (use-package hydra
  
