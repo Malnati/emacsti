@@ -25,14 +25,14 @@
 :bind ("M-s" . avy-goto-char))
 
 (use-package which-key  
-:config (progn
-  (progn
+:config)
     
-
 (use-package company  
 :config (progn
   (progn
-    ;; default is 0.2    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)    (add-hook 'after-init-hook 'global-company-mode)))
+    ;; default is 0.2
+    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
+    (add-hook 'after-init-hook 'global-company-mode)))
 
 (use-package dap-mode)
 
