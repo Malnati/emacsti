@@ -1,6 +1,5 @@
 (when (member window-system '(ns darwin))
   (use-package exec-path-from-shell
-    :ensure
     :config
     (exec-path-from-shell-initialize)))
 
@@ -184,7 +183,6 @@
   (setq lsp-keymap-prefix "M-l")
 
   (use-package lsp-mode
-    :ensure
     :hook
     ((js2-mode . lsp-mode)
      (lsp-mode . lsp-enable-which-key-integration))
@@ -311,7 +309,6 @@
 
 (when (member system-type '(gnu/linux gnu x))
   (use-package xref-js2
-    :ensure
     :config
     (progn
       (define-prefix-command 'xref-js2)
@@ -369,7 +366,7 @@
 ;;   :after memoize
 ;;   :config
 ;;   (use-package powerline
-;;     :ensure)
+;;)
 ;;   (use-package spaceline-config
 ;;     :config
 ;;     (spaceline-toggle-buffer-modified-on)
@@ -385,7 +382,7 @@
 ;;     (spaceline-toggle-time-on)
 ;;     (spaceline-emacs-theme 'date 'time)
 ;;     (use-package spaceline-all-the-icons
-;;       :ensure
+;;  
 ;;       :after spaceline
 ;;       :config
 ;;       (spaceline-all-the-icons-theme)
