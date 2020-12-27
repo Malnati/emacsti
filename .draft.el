@@ -174,4 +174,4 @@
 ;; (global-set-key [(shift f3)] 'highlight-symbol-prev)
 ;; (global-set-key [(meta f3)] 'highlight-symbol-query-replace))
 
-;;; .packages.el ends here
+;;; .draft.el ends here
