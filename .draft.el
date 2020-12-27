@@ -54,7 +54,7 @@
   :ensure)
 
 (use-package eglot
-  :init (add-hook 'foo-mode-hook 'eglot-ensure)
+  :init (add-hook 'js2-mode-hook 'eglot-ensure)
   :config (progn
 	    ;; (add-to-list 'eglot-server-programs
 	    ;; 		 '(foo-mode . ("foo-language-server" "--args")))
@@ -62,7 +62,8 @@
             ;;  `(python-mode . ("pyls" "-v" "--tcp" "--host"
             ;;                   "localhost" "--port" :autoport)))
 	    (add-to-list 'eglot-server-programs
-			 '(js2-mode . ("javascript-typescript-langserver" "-v" "--tcp" "--host" "localhost" "--port" :autoport)))))
+			 '(js2-mode . ("javascript-typescript-langserver"
+				       "-v" "--tcp" "--host" "localhost" "--port" :autoport)))))
 
 
 
