@@ -58,7 +58,8 @@
 		  '((fa_tag :face font-lock-function-name-face) ;; Function
 		    (fa_cog :face font-lock-variable-name-face) ;; Variable
 		    (fa_cube :face font-lock-constant-face) ;; Feature
-		    (md_color_lens :face font-lock-doc-face))) ;; Face    (setq company-box-icons-yasnippet 'fa_bookmark)
+		    (md_color_lens :face font-lock-doc-face))) ;; Face
+	    (setq company-box-icons-yasnippet 'fa_bookmark)
 	    (setq company-box-icons-lsp
 		  '((1 . fa_text_height) ;; Text
 		    (2 . (fa_tags :face font-lock-function-name-face)) ;; Method
