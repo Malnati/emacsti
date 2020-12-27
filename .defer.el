@@ -1,31 +1,3 @@
-(when (member window-system '(ns darwin))
-  (use-package exec-path-from-shell
-    :config (progn
-	      (exec-path-from-shell-initialize))))
-
-(use-package expand-region 
-  :config (progn
-	    (global-set-key (kbd "C-=") 'er/expand-region)))
-
-(use-package multiple-cursors 
-  :config (progn
-	    (define-prefix-command 'mc)
-	    (global-set-key (kbd "C-c m") 'mc)
-	    (define-key mc  (kbd "a") 'mc/mark-all-like-this)
-	    (define-key mc  (kbd "n") 'mc/mark-next-like-this)
-	    (define-key mc  (kbd "p") 'mc/mark-previous-like-this)
-	    (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)))
-
-(use-package ivy 
-  :after hydra)
-
-(use-package avy
-  :init 
-  :bind ("M-s" . avy-goto-char))
-
-(use-package which-key
-  :config  (progn
-	     (which-key-mode)))
 
 (use-package which-key
   :after lsp-mode
