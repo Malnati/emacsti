@@ -2,32 +2,9 @@
 ;;; Commentary:
 ;;; Code:
 
-;; Location of the package archive.
-(when (member window-system
-	      '(pc w32 ms-dos windows-nt cygwin))
-  (setq package-user-dir "~/.emacs.d/libs/elpa-mswin")
-  (message "package-user-dir is ~/.emacs.d/libs/elpa-mswin"))
-
-(when (member system-type
-	      '(ns darwin))
-  (setq package-user-dir "~/.emacs.d/libs/elpa-macos")
-  (message "package-user-dir is ~/.emacs.d/libs/elpa-macos"))
-
-(when (member system-type '(gnu/linux gnu x))
-  (setq package-user-dir "~/.emacs.d/libs/elpa-linux")
-  (message "package-user-dir is ~/.emacs.d/libs/elpa-linux"))
-
-(require 'package)
-(package-initialize)
-
 (add-to-list 'package-archives '("unstable" . "https://melpa.org/packages/") t)
 (add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/") t)
 (package-refresh-contents)
-
-(eval-when-compile
-  (add-to-list 'load-path "~/.emacs.d/libs/bind-key-2.4.1/")
-  (add-to-list 'load-path "~/.emacs.d/libs/use-package-2.4.1/")
-  (require 'use-package))
 
 (when (member window-system '(ns darwin))
   (use-package exec-path-from-shell
