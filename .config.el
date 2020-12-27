@@ -1,16 +1,16 @@
 (when (member window-system '(ns darwin))
   (use-package exec-path-from-shell
    
-    :config
+    :config (progn
     (exec-path-from-shell-initialize)))
 
 (use-package expand-region
  
-  :config (global-set-key (kbd "C-=") 'er/expand-region))
+  :config (progn (global-set-key (kbd "C-=") 'er/expand-region))
 
 (use-package multiple-cursors
  
-  :config
+  :config (progn
   (define-prefix-command 'mc)
   (global-set-key (kbd "C-c m") 'mc)
   (define-key mc  (kbd "a") 'mc/mark-all-like-this)
@@ -34,7 +34,7 @@
 
 (use-package which-key
  
-  :config
+  :config (progn
   (progn
     ;;(which-key-setup-side-window-right-bottom)
     (which-key-mode)
@@ -43,7 +43,7 @@
 
 (use-package company
  
-  :config
+  :config (progn
   (progn
     ;; default is 0.2
     (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
@@ -60,7 +60,7 @@
 
 (use-package nord-theme
  
-  :config
+  :config (progn
   (add-to-list 'custom-theme-load-path
 	       (expand-file-name "~/.emacs.d/themes/"))
   (load-theme 'nord t))
@@ -85,7 +85,7 @@
   :after company-mode
   :after lsp-mode
   :hook (company-mode . company-box-mode)
-  :config
+  :config (progn
   (progn
     (setq company-box-icons-unknown 'fa_question_circle)
     (setq company-box-icons-elisp
@@ -124,13 +124,13 @@
 
 (use-package indent-guide
  
-  :config
+  :config (progn
   (indent-guide-global-mode)
   (setq indent-guide-char "|"))
 
 (use-package drag-stuff
  
-  :config
+  :config (progn
   (progn
     (drag-stuff-global-mode 1)
     (drag-stuff-define-keys)
@@ -139,7 +139,7 @@
 
 (use-package projectile
  
-  :config
+  :config (progn
   (progn
     (projectile-mode +1)
     (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
@@ -147,7 +147,7 @@
 
 (use-package yasnippet
  
-  :config
+  :config (progn
   (progn
     (yas-reload-all)
     (add-hook 'prog-mode-hook #'yas-minor-mode)
@@ -156,7 +156,7 @@
 (use-package yasnippet-snippets
  
   :after yasnippet
-  :config
+  :config (progn
   (progn
     (when (member window-system '(pc w32 ms-dos windows-nt cygwin))
       (setq yas-snippet-dirs
@@ -169,13 +169,13 @@
 
 (use-package flycheck
  
-  :config
+  :config (progn
   (flycheck-mode t)
   (setq global-flycheck-mode t))
 
 (use-package helm
  
-  :config
+  :config (progn
   (progn
     (global-set-key (kbd "M-x") 'helm-M-x)
     (global-set-key (kbd "C-x C-f") #'helm-find-files)))
@@ -189,7 +189,7 @@
     ((js2-mode . lsp-mode)
      (lsp-mode . lsp-enable-which-key-integration))
     :commands lsp
-    :config (progn
+    :config (progn (progn
 	      ;; Enable/disable snippet completion support.
 	      (setq lsp-enable-snippet t)
 	      ;; Display all of the info returned by document/onHover.
@@ -246,7 +246,7 @@
 (use-package lsp-ui
  
   :after lsp-mode
-  :config
+  :config (progn
   (progn
     ;; show the directory of files
     ;; (lsp-ui-peek-show-directory 1)
@@ -286,7 +286,7 @@
  
   :after helm
   :after lsp-mode
-  :config
+  :config (progn
   (progn
     (define-key lsp-mode-map
       [remap xref-find-apropos]
@@ -294,12 +294,12 @@
 
 (use-package helm-projectile
  
-  :config (progn
+  :config (progn (progn
 	    (helm-projectile-on)))
 
 (use-package js2-mode
  
-  :config
+  :config (progn
   (progn
     (define-prefix-command 'js2-keys)
     (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
@@ -312,7 +312,7 @@
 (when (member system-type '(gnu/linux gnu x))
   (use-package xref-js2
    
-    :config
+    :config (progn
     (progn
       (define-prefix-command 'xref-js2)
       (global-set-key (kbd "C-c x") 'xref-js2)
@@ -343,7 +343,7 @@
 (use-package json-mode
  
   :after js2-mode
-  :config
+  :config (progn
   (progn
     (add-to-list 'auto-mode-alist '("\\.json\\'"   . json-mode))
     (global-set-key (kbd "C-c C-j") 'js2-keys)
@@ -367,11 +367,11 @@
 ;;  
 ;;   :after s
 ;;   :after memoize
-;;   :config
+;;   :config (progn
 ;;   (use-package powerline
 ;;    )
 ;;   (use-package spaceline-config
-;;     :config
+;;     :config (progn
 ;;     (spaceline-toggle-buffer-modified-on)
 ;;     (spaceline-toggle-line-column-on)
 ;;     (spaceline-toggle-minor-modes-off)
@@ -387,12 +387,12 @@
 ;;     (use-package spaceline-all-the-icons
 ;;      
 ;;       :after spaceline
-;;       :config
+;;       :config (progn
 ;;       (spaceline-all-the-icons-theme)
 ;;       (spaceline-all-the-icons--setup-git-ahead))))
 
 ;; (use-package desktop
-;;   :config
+;;   :config (progn
 ;;   (progn
 ;;     ;; use only one desktop
 ;;     (setq desktop-path '("~/.emacs.d/"))
@@ -468,7 +468,7 @@
 
 
 ;; (use-package js2-highlight-vars
-;;   :config
+;;   :config (progn
 ;;   (js2-highlight-vars-mode t)
 ;;   (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-highlight-vars-mode))
 ;;   (add-to-list 'auto-mode-alist '("\\.jsx\\'"  . js2-highlight-vars-mode))
@@ -484,7 +484,7 @@
 ;;     map))
 
 ;; (use-package highlight-symbol
-;; :config
+;; :config (progn
 ;; (add-hook 'prog-mode-hook 'highlight-symbol)
 ;; (global-set-key [(control f3)] 'highlight-symbol)
 ;; (global-set-key [f3] 'highlight-symbol-next)
