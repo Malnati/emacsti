@@ -6,7 +6,7 @@
 
 (use-package expand-region
  
-  :config (progn (global-set-key (kbd "C-=") 'er/expand-region))
+  :config (progn (global-set-key (kbd "C-=") 'er/expand-region)))
 
 (use-package multiple-cursors
  
