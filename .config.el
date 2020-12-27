@@ -1,15 +1,17 @@
 (when (member window-system '(ns darwin))
   (use-package exec-path-from-shell
-    :config  (progn (exec-path-from-shell-initialize)))
+    :ensure
+    :config
+    (exec-path-from-shell-initialize)))
 
 (use-package expand-region
   :ensure
-  :config
-  (progn (global-set-key (kbd "C-=") 'er/expand-region))
+  :config (global-set-key (kbd "C-=") 'er/expand-region))
 
 (use-package multiple-cursors
   :ensure
-  :config(define-prefix-command 'mc)
+  :config
+  (define-prefix-command 'mc)
   (global-set-key (kbd "C-c m") 'mc)
   (define-key mc  (kbd "a") 'mc/mark-all-like-this)
   (define-key mc  (kbd "n") 'mc/mark-next-like-this)
@@ -32,7 +34,8 @@
 
 (use-package which-key
   :ensure
-  :config(progn
+  :config
+  (progn
     ;;(which-key-setup-side-window-right-bottom)
     (which-key-mode)
     (with-eval-after-load 'lsp-mode
@@ -40,7 +43,8 @@
 
 (use-package company
   :ensure
-  :config(progn
+  :config
+  (progn
     ;; default is 0.2
     (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
     (add-hook 'after-init-hook 'global-company-mode)))
@@ -56,7 +60,8 @@
 
 (use-package nord-theme
   :ensure
-  :config(add-to-list 'custom-theme-load-path
+  :config
+  (add-to-list 'custom-theme-load-path
 	       (expand-file-name "~/.emacs.d/themes/"))
   (load-theme 'nord t))
 
@@ -80,7 +85,8 @@
   :after company-mode
   :after lsp-mode
   :hook (company-mode . company-box-mode)
-  :config(progn
+  :config
+  (progn
     (setq company-box-icons-unknown 'fa_question_circle)
     (setq company-box-icons-elisp
 	  '((fa_tag :face font-lock-function-name-face) ;; Function
@@ -118,12 +124,14 @@
 
 (use-package indent-guide
   :ensure
-  :config(indent-guide-global-mode)
+  :config
+  (indent-guide-global-mode)
   (setq indent-guide-char "|"))
 
 (use-package drag-stuff
   :ensure
-  :config(progn
+  :config
+  (progn
     (drag-stuff-global-mode 1)
     (drag-stuff-define-keys)
     (global-set-key [(meta up)]   'drag-stuff-up)
@@ -131,14 +139,16 @@
 
 (use-package projectile
   :ensure
-  :config(progn
+  :config
+  (progn
     (projectile-mode +1)
     (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
     (setq projectile-sort-order 'recentf)))
 
 (use-package yasnippet
   :ensure
-  :config(progn
+  :config
+  (progn
     (yas-reload-all)
     (add-hook 'prog-mode-hook #'yas-minor-mode)
     (yas-global-mode 1)))
@@ -146,7 +156,8 @@
 (use-package yasnippet-snippets
   :ensure
   :after yasnippet
-  :config(progn
+  :config
+  (progn
     (when (member window-system '(pc w32 ms-dos windows-nt cygwin))
       (setq yas-snippet-dirs
 	    (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-mswin/yasnippet-snippets-20201221.849/snippets"))))
@@ -158,12 +169,14 @@
 
 (use-package flycheck
   :ensure
-  :config(flycheck-mode t)
+  :config
+  (flycheck-mode t)
   (setq global-flycheck-mode t))
 
 (use-package helm
   :ensure
-  :config(progn
+  :config
+  (progn
     (global-set-key (kbd "M-x") 'helm-M-x)
     (global-set-key (kbd "C-x C-f") #'helm-find-files)))
 
@@ -171,7 +184,8 @@
   (setq lsp-keymap-prefix "M-l")
 
   (use-package lsp-mode
-    :ho(progn ok
+    :ensure
+    :hook
     ((js2-mode . lsp-mode)
      (lsp-mode . lsp-enable-which-key-integration))
     :commands lsp
@@ -232,7 +246,8 @@
 (use-package lsp-ui
   :ensure
   :after lsp-mode
-  :config(progn
+  :config
+  (progn
     ;; show the directory of files
     ;; (lsp-ui-peek-show-directory 1)
     ;; enable ‘lsp-ui-peek’
@@ -271,7 +286,8 @@
   :ensure
   :after helm
   :after lsp-mode
-  :config(progn
+  :config
+  (progn
     (define-key lsp-mode-map
       [remap xref-find-apropos]
       #'helm-lsp-workspace-symbol)))
@@ -283,7 +299,8 @@
 
 (use-package js2-mode
   :ensure
-  :config(progn
+  :config
+  (progn
     (define-prefix-command 'js2-keys)
     (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
     (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode))))
@@ -294,7 +311,8 @@
 
 (when (member system-type '(gnu/linux gnu x))
   (use-package xref-js2
-    :conf(progn ig
+    :ensure
+    :config
     (progn
       (define-prefix-command 'xref-js2)
       (global-set-key (kbd "C-c x") 'xref-js2)
@@ -325,7 +343,8 @@
 (use-package json-mode
   :ensure
   :after js2-mode
-  :config(progn
+  :config
+  (progn
     (add-to-list 'auto-mode-alist '("\\.json\\'"   . json-mode))
     (global-set-key (kbd "C-c C-j") 'js2-keys)
     ;; format the region/buffer with json-reformat (https://github.com/gongo/json-reformat)
@@ -350,8 +369,8 @@
 ;;   :after memoize
 ;;   :config
 ;;   (use-package powerline
-;;)
-;;   (use-package spaceline-conf(progn ig
+;;     :ensure)
+;;   (use-package spaceline-config
 ;;     :config
 ;;     (spaceline-toggle-buffer-modified-on)
 ;;     (spaceline-toggle-line-column-on)
@@ -366,8 +385,8 @@
 ;;     (spaceline-toggle-time-on)
 ;;     (spaceline-emacs-theme 'date 'time)
 ;;     (use-package spaceline-all-the-icons
-;;  
-;;       :after spaceli(progn ne
+;;       :ensure
+;;       :after spaceline
 ;;       :config
 ;;       (spaceline-all-the-icons-theme)
 ;;       (spaceline-all-the-icons--setup-git-ahead))))
