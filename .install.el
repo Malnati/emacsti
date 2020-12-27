@@ -150,4 +150,4 @@
 (use-package json-mode
   :ensure)
 
-;;; .packages.el ends here
+;;; .install.el ends here
