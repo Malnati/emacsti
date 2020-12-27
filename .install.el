@@ -85,11 +85,7 @@
   :ensure)
 
 (use-package nord-theme
-  :ensure
-  :config
-  (add-to-list 'custom-theme-load-path
-	       (expand-file-name "~/.emacs.d/themes/"))
-  (load-theme 'nord t))
+  :ensure)
 
 (use-package s
   :ensure)
