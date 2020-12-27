@@ -93,7 +93,7 @@
 	    (23 . fa_calendar) ;; Event
 	    (24 . fa_square_o) ;; Operator
 	    (25 . fa_arrows)) ;; TypeParameter
-	  ))
+	  )))
 
 (use-package indent-guide  
 :config (progn
