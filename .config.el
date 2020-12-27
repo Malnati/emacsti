@@ -102,7 +102,6 @@
 
 (use-package drag-stuff  
 :config (progn
-  (progn
     (drag-stuff-global-mode 1)
     (drag-stuff-define-keys)
     (global-set-key [(meta up)]   'drag-stuff-up)
