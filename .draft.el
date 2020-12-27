@@ -53,6 +53,12 @@
 (use-package eglot
   :ensure)
 
+(use-package eglot
+  :config (progn
+	    ))
+
+(add-hook 'foo-mode-hook 'eglot-ensure)
+
 ;; (use-package spaceline
 ;;   :ensure
 ;;   :after s
