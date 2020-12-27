@@ -10,18 +10,6 @@
 
 (use-package company-box 
   :after company-mode 
-  :hook (company-mode . company-box-mode)  
-  :config (progn
-	    (setq company-box-icons-unknown 'fa_question_circle)
-	    (setq company-box-icons-elisp
-		  '((fa_tag :face font-lock-function-name-face) ;; Function
-		    (fa_cog :face font-lock-variable-name-face) ;; Variable
-		    (fa_cube :face font-lock-constant-face) ;; Feature
-		    (md_color_lens :face font-lock-doc-face))) ;; Face
-	    (setq company-box-icons-yasnippet 'fa_bookmark)))
-
-(use-package company-box 
-  :after company-mode 
   :after lsp-mode 
   :hook (company-mode . company-box-mode)  
   :config (progn
