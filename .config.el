@@ -61,11 +61,13 @@
 :after lsp-mode 
 :hook (company-mode . company-box-mode)  
 :config (progn
-    (setq company-box-icons-unknown 'fa_question_circle)    (setq company-box-icons-elisp
+    (setq company-box-icons-unknown 'fa_question_circle)
+    (setq company-box-icons-elisp
 	  '((fa_tag :face font-lock-function-name-face) ;; Function
 	    (fa_cog :face font-lock-variable-name-face) ;; Variable
 	    (fa_cube :face font-lock-constant-face) ;; Feature
-	    (md_color_lens :face font-lock-doc-face))) ;; Face    (setq company-box-icons-yasnippet 'fa_bookmark)    (setq company-box-icons-lsp
+	    (md_color_lens :face font-lock-doc-face))) ;; Face    (setq company-box-icons-yasnippet 'fa_bookmark)
+    (setq company-box-icons-lsp
 	  '((1 . fa_text_height) ;; Text
 	    (2 . (fa_tags :face font-lock-function-name-face)) ;; Method
 	    (3 . (fa_tag :face font-lock-function-name-face)) ;; Function
@@ -95,29 +97,38 @@
 
 (use-package indent-guide  
 :config (progn
-  (indent-guide-global-mode)  (setq indent-guide-char "|")))
+	  (indent-guide-global-mode)
+	  (setq indent-guide-char "|")))
 
 (use-package drag-stuff  
 :config (progn
   (progn
-    (drag-stuff-global-mode 1)    (drag-stuff-define-keys)    (global-set-key [(meta up)]   'drag-stuff-up)    (global-set-key [(meta down)] 'drag-stuff-down)))
+    (drag-stuff-global-mode 1)
+    (drag-stuff-define-keys)
+    (global-set-key [(meta up)]   'drag-stuff-up)
+    (global-set-key [(meta down)] 'drag-stuff-down)))
 
 (use-package projectile  
 :config (progn
   (progn
-    (projectile-mode +1)    (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)    (setq projectile-sort-order 'recentf)))
+    (projectile-mode +1)
+    (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+    (setq projectile-sort-order 'recentf)))
 
 (use-package yasnippet  
 :config (progn
   (progn
-    (yas-reload-all)    (add-hook 'prog-mode-hook #'yas-minor-mode)    (yas-global-mode 1)))
+    (yas-reload-all)
+    (add-hook 'prog-mode-hook #'yas-minor-mode)
+    (yas-global-mode 1)))
 
 (use-package yasnippet-snippets 
 :after yasnippet  
 :config (progn
   (progn
     (when (member window-system '(pc w32 ms-dos windows-nt cygwin))      (setq yas-snippet-dirs
-	    (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-mswin/yasnippet-snippets-20201221.849/snippets"))))    (when (member system-type '(gnu/linux gnu x))      (setq yas-snippet-dirs
+	    (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-mswin/yasnippet-snippets-20201221.849/snippets"))))
+    (when (member system-type '(gnu/linux gnu x))      (setq yas-snippet-dirs
 	    (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-linux/yasnippet-classic-snippets-1.0.2")))      (setq yas-snippet-dirs            (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-linux/snippet-20130210.2315"))))))
 
 (use-package flycheck  
@@ -127,7 +138,8 @@
 (use-package helm  
 :config (progn
   (progn
-    (global-set-key (kbd "M-x") 'helm-M-x)    (global-set-key (kbd "C-x C-f") #'helm-find-files)))
+    (global-set-key (kbd "M-x") 'helm-M-x)
+    (global-set-key (kbd "C-x C-f") #'helm-find-files)))
 
 (progn
   (setq lsp-keymap-prefix "M-l")
@@ -201,7 +213,14 @@
 :after lsp-mode  
 :config (progn
   (progn
-    ;; show the directory of files    ;; (lsp-ui-peek-show-directory 1)    ;; enable ‘lsp-ui-peek’    (lsp-ui-peek-enable 1)    ;; enable lsp-ui-doc    (lsp-ui-doc-enable 1)    ;; Where to display the doc    (setq lsp-ui-doc-position 1)    ;; Number of seconds before showing the doc    (setq lsp-ui-doc-delay 1)    ;; show diagnostics messages in sideline    (setq lsp-ui-sideline-show-diagnostics 1)    ;; show hover messages in sideline    (setq lsp-ui-sideline-show-hover 1)    ;; show code actions in sideline    (setq lsp-ui-sideline-show-code-actions 1)    ;; When set to 'line' the information will be updated when    ;; user changes current line otherwise the information will    ;; be updated when user changes current point    (setq lsp-ui-sideline-update-mode t)    ;; seconds to wait before showing sideline    (setq lsp-ui-sideline-delay 0)    ;; keystrokes    (define-prefix-command 'lsp)    (global-set-key (kbd "M-l") 'lsp)    (define-key lsp (kbd "d") 'lsp-ui-peek-find-definitions)    (define-key lsp (kbd "r") 'lsp-ui-peek-find-references)    (define-key lsp (kbd "i") 'lsp-ui-peek-find-implementation)    (define-key lsp (kbd "w") 'lsp-ui-peek-find-workspace-symbol)    (define-key lsp (kbd "<left>") 'lsp-ui-peek-jump-backward)    (define-key lsp (kbd "<right>") 'lsp-ui-peek-jump-forward)    )  )
+    ;; show the directory of files    ;; (lsp-ui-peek-show-directory 1)    ;; enable ‘lsp-ui-peek’    (lsp-ui-peek-enable 1)    ;; enable lsp-ui-doc    (lsp-ui-doc-enable 1)    ;; Where to display the doc    (setq lsp-ui-doc-position 1)    ;; Number of seconds before showing the doc    (setq lsp-ui-doc-delay 1)    ;; show diagnostics messages in sideline    (setq lsp-ui-sideline-show-diagnostics 1)    ;; show hover messages in sideline    (setq lsp-ui-sideline-show-hover 1)    ;; show code actions in sideline    (setq lsp-ui-sideline-show-code-actions 1)    ;; When set to 'line' the information will be updated when    ;; user changes current line otherwise the information will    ;; be updated when user changes current point    (setq lsp-ui-sideline-update-mode t)    ;; seconds to wait before showing sideline    (setq lsp-ui-sideline-delay 0)    ;; keystrokes    (define-prefix-command 'lsp)
+    (global-set-key (kbd "M-l") 'lsp)
+    (define-key lsp (kbd "d") 'lsp-ui-peek-find-definitions)
+    (define-key lsp (kbd "r") 'lsp-ui-peek-find-references)
+    (define-key lsp (kbd "i") 'lsp-ui-peek-find-implementation)
+    (define-key lsp (kbd "w") 'lsp-ui-peek-find-workspace-symbol)
+    (define-key lsp (kbd "<left>") 'lsp-ui-peek-jump-backward)
+    (define-key lsp (kbd "<right>") 'lsp-ui-peek-jump-forward)    )  )
 
 (use-package helm-lsp 
 :after helm 
@@ -219,7 +238,9 @@
 (use-package js2-mode  
 :config (progn
   (progn
-    (define-prefix-command 'js2-keys)    (add-to-list 'interpreter-mode-alist '("node" . js2-mode))    (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode))))
+    (define-prefix-command 'js2-keys)
+    (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
+    (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode))))
 
 (use-package js2-refactor 
 :after js2-mode)
@@ -234,7 +255,10 @@
 :after js2-mode  
 :config (progn
   (progn
-    (add-to-list 'auto-mode-alist '("\\.json\\'"   . json-mode))    (global-set-key (kbd "C-c C-j") 'js2-keys)    ;; format the region/buffer with json-reformat (https://github.com/gongo/json-reformat)    ;; (define-key js2-keys (kbd "f") 'json-mode-beautify)    ;; display a path to the object at point with json-snatcher (https://github.com/Sterlingg/json-snatcher)    (define-key js2-keys (kbd "p") 'json-mode-show-path)    ;; copy a path to the object at point to the kill ring with json-snatcher (https://github.com/Sterlingg/json-snatcher)    (define-key js2-keys (kbd "P") 'json-mode-kill-path)    ;; Toggle between true and false at point    ;; (define-key js2-keys (kbd "t") 'json-toggle-boolean)    ;; sexp Replace the at point with null    ;; (define-key js2-keys (kbd "k") 'json-nullify-sexp)    ;; Increment the number at point    ;; (define-key js2-keys (kbd "i") 'json-increment-number-at-point)    ;; Decrement the number at point    ;; (define-key js2-keys (kbd "d") 'json-decrement-number-at-point)    ))
+    (add-to-list 'auto-mode-alist '("\\.json\\'"   . json-mode))
+    (global-set-key (kbd "C-c C-j") 'js2-keys)    ;; format the region/buffer with json-reformat (https://github.com/gongo/json-reformat)    ;; (define-key js2-keys (kbd "f") 'json-mode-beautify)    ;; display a path to the object at point with json-snatcher (https://github.com/Sterlingg/json-snatcher)
+    (define-key js2-keys (kbd "p") 'json-mode-show-path)    ;; copy a path to the object at point to the kill ring with json-snatcher (https://github.com/Sterlingg/json-snatcher)
+    (define-key js2-keys (kbd "P") 'json-mode-kill-path)    ;; Toggle between true and false at point    ;; (define-key js2-keys (kbd "t") 'json-toggle-boolean)    ;; sexp Replace the at point with null    ;; (define-key js2-keys (kbd "k") 'json-nullify-sexp)    ;; Increment the number at point    ;; (define-key js2-keys (kbd "i") 'json-increment-number-at-point)    ;; Decrement the number at point    ;; (define-key js2-keys (kbd "d") 'json-decrement-number-at-point)    ))
 
 ;; (use-package spaceline
 ;;  
