@@ -136,4 +136,6 @@
   :config (progn
 	    (define-key lsp-mode-map [remap xref-find-apropos] #'helm-lsp-workspace-symbol)))
 
+(use-package lsp-java
+  :ensure)
 ;;; .defer.el ends here
