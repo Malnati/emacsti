@@ -91,11 +91,11 @@
 	    (23 . fa_calendar) ;; Event
 	    (24 . fa_square_o) ;; Operator
 	    (25 . fa_arrows)) ;; TypeParameter
-	  )))
+	  ))
 
 (use-package indent-guide  
 :config (progn
-  (indent-guide-global-mode)  (setq indent-guide-char "|"))
+  (indent-guide-global-mode)  (setq indent-guide-char "|")))
 
 (use-package drag-stuff  
 :config (progn
