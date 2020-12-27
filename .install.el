@@ -66,9 +66,7 @@
   :ensure)
 
 (use-package ivy
-  :after hydra
-  :ensure
-  )
+  :ensure)
 
 (use-package avy
   :ensure
