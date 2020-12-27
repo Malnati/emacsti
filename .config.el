@@ -29,7 +29,6 @@
   :bind ("M-s" . avy-goto-char))
 
 (use-package which-key
- 
   :config (progn
   (progn
     ;;(which-key-setup-side-window-right-bottom)
