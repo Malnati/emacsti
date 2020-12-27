@@ -119,8 +119,6 @@
 ;; 		 (if (saved-session)
 ;; 			 (session-restore))))))
 
-
-
 ;; optionally
 ;;(use-package lsp-ui :commands lsp-ui-mode)
 ;; if you are helm user
