@@ -380,9 +380,7 @@
 
 
 
-;; (use-package js2-highlight-vars
-;; 
-:config (progn
+;; (use-package js2-highlight-vars :config (progn
 
 ;;   (js2-highlight-vars-mode t)
 ;;   (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-highlight-vars-mode))
