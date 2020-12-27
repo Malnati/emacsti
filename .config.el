@@ -1,107 +1,107 @@
 (when (member window-system '(ns darwin))  (use-package exec-path-from-shell     
-:config (progn
-    (exec-path-from-shell-initialize))))
+					     :config (progn
+						       (exec-path-from-shell-initialize))))
 
 (use-package expand-region 
-:config (progn
- (global-set-key (kbd "C-=") 'er/expand-region)))
+  :config (progn
+	    (global-set-key (kbd "C-=") 'er/expand-region)))
 
 (use-package multiple-cursors 
-:config (progn
-	  (define-prefix-command 'mc)
-	  (global-set-key (kbd "C-c m") 'mc)
-	  (define-key mc  (kbd "a") 'mc/mark-all-like-this)
-	  (define-key mc  (kbd "n") 'mc/mark-next-like-this)
-	  (define-key mc  (kbd "p") 'mc/mark-previous-like-this)
-	  (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)))
+  :config (progn
+	    (define-prefix-command 'mc)
+	    (global-set-key (kbd "C-c m") 'mc)
+	    (define-key mc  (kbd "a") 'mc/mark-all-like-this)
+	    (define-key mc  (kbd "n") 'mc/mark-next-like-this)
+	    (define-key mc  (kbd "p") 'mc/mark-previous-like-this)
+	    (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)))
 
 (use-package ivy 
-:after hydra)
+  :after hydra)
 
 (use-package avy
-:init 
-:bind ("M-s" . avy-goto-char))
+  :init 
+  :bind ("M-s" . avy-goto-char))
 
 ;;TODO config
 (use-package which-key)
-    
+
 (use-package company  
-:config (progn
-    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
-    (add-hook 'after-init-hook 'global-company-mode)))
+  :config (progn
+	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
+	    (add-hook 'after-init-hook 'global-company-mode)))
 
 (use-package treemacs-projectile 
-:after treemacs 
-:after lsp-mode)
+  :after treemacs 
+  :after lsp-mode)
 
 (use-package nord-theme  
-:config (progn
-  (add-to-list 'custom-theme-load-path
-	       (expand-file-name "~/.emacs.d/themes/"))
-  (load-theme 'nord t)))
+  :config (progn
+	    (add-to-list 'custom-theme-load-path
+			 (expand-file-name "~/.emacs.d/themes/"))
+	    (load-theme 'nord t)))
 
 (use-package company-box 
-:after company-mode 
-:after lsp-mode 
-:hook (company-mode . company-box-mode)  
-:config (progn
-    (setq company-box-icons-unknown 'fa_question_circle)
-    (setq company-box-icons-elisp
-	  '((fa_tag :face font-lock-function-name-face) ;; Function
-	    (fa_cog :face font-lock-variable-name-face) ;; Variable
-	    (fa_cube :face font-lock-constant-face) ;; Feature
-	    (md_color_lens :face font-lock-doc-face))) ;; Face    (setq company-box-icons-yasnippet 'fa_bookmark)
-    (setq company-box-icons-lsp
-	  '((1 . fa_text_height) ;; Text
-	    (2 . (fa_tags :face font-lock-function-name-face)) ;; Method
-	    (3 . (fa_tag :face font-lock-function-name-face)) ;; Function
-	    (4 . (fa_tag :face font-lock-function-name-face)) ;; Constructor
-	    (5 . (fa_cog :foreground "#FF9800")) ;; Field
-	    (6 . (fa_cog :foreground "#FF9800")) ;; Variable
-	    (7 . (fa_cube :foreground "#7C4DFF")) ;; Class
-	    (8 . (fa_cube :foreground "#7C4DFF")) ;; Interface
-	    (9 . (fa_cube :foreground "#7C4DFF")) ;; Module
-	    (10 . (fa_cog :foreground "#FF9800")) ;; Property
-	    (11 . md_settings_system_daydream) ;; Unit
-	    (12 . (fa_cog :foreground "#FF9800")) ;; Value
-	    (13 . (md_storage :face font-lock-type-face)) ;; Enum
-	    (14 . (md_closed_caption :foreground "#009688")) ;; Keyword
-	    (15 . md_closed_caption) ;; Snippet
-	    (16 . (md_color_lens :face font-lock-doc-face)) ;; Color
-	    (17 . fa_file_text_o) ;; File
-	    (18 . md_refresh) ;; Reference
-	    (19 . fa_folder_open) ;; Folder
-	    (20 . (md_closed_caption :foreground "#009688")) ;; EnumMember
-	    (21 . (fa_square :face font-lock-constant-face)) ;; Constant
-	    (22 . (fa_cube :face font-lock-type-face)) ;; Struct
-	    (23 . fa_calendar) ;; Event
-	    (24 . fa_square_o) ;; Operator
-	    (25 . fa_arrows)) ;; TypeParameter
-	  )))
+  :after company-mode 
+  :after lsp-mode 
+  :hook (company-mode . company-box-mode)  
+  :config (progn
+	    (setq company-box-icons-unknown 'fa_question_circle)
+	    (setq company-box-icons-elisp
+		  '((fa_tag :face font-lock-function-name-face) ;; Function
+		    (fa_cog :face font-lock-variable-name-face) ;; Variable
+		    (fa_cube :face font-lock-constant-face) ;; Feature
+		    (md_color_lens :face font-lock-doc-face))) ;; Face    (setq company-box-icons-yasnippet 'fa_bookmark)
+	    (setq company-box-icons-lsp
+		  '((1 . fa_text_height) ;; Text
+		    (2 . (fa_tags :face font-lock-function-name-face)) ;; Method
+		    (3 . (fa_tag :face font-lock-function-name-face)) ;; Function
+		    (4 . (fa_tag :face font-lock-function-name-face)) ;; Constructor
+		    (5 . (fa_cog :foreground "#FF9800")) ;; Field
+		    (6 . (fa_cog :foreground "#FF9800")) ;; Variable
+		    (7 . (fa_cube :foreground "#7C4DFF")) ;; Class
+		    (8 . (fa_cube :foreground "#7C4DFF")) ;; Interface
+		    (9 . (fa_cube :foreground "#7C4DFF")) ;; Module
+		    (10 . (fa_cog :foreground "#FF9800")) ;; Property
+		    (11 . md_settings_system_daydream) ;; Unit
+		    (12 . (fa_cog :foreground "#FF9800")) ;; Value
+		    (13 . (md_storage :face font-lock-type-face)) ;; Enum
+		    (14 . (md_closed_caption :foreground "#009688")) ;; Keyword
+		    (15 . md_closed_caption) ;; Snippet
+		    (16 . (md_color_lens :face font-lock-doc-face)) ;; Color
+		    (17 . fa_file_text_o) ;; File
+		    (18 . md_refresh) ;; Reference
+		    (19 . fa_folder_open) ;; Folder
+		    (20 . (md_closed_caption :foreground "#009688")) ;; EnumMember
+		    (21 . (fa_square :face font-lock-constant-face)) ;; Constant
+		    (22 . (fa_cube :face font-lock-type-face)) ;; Struct
+		    (23 . fa_calendar) ;; Event
+		    (24 . fa_square_o) ;; Operator
+		    (25 . fa_arrows)) ;; TypeParameter
+		  )))
 
 (use-package indent-guide  
-:config (progn
-	  (indent-guide-global-mode)
-	  (setq indent-guide-char "|")))
+  :config (progn
+	    (indent-guide-global-mode)
+	    (setq indent-guide-char "|")))
 
 (use-package drag-stuff  
-:config (progn
-    (drag-stuff-global-mode 1)
-    (drag-stuff-define-keys)
-    (global-set-key [(meta up)]   'drag-stuff-up)
-    (global-set-key [(meta down)] 'drag-stuff-down)))
+  :config (progn
+	    (drag-stuff-global-mode 1)
+	    (drag-stuff-define-keys)
+	    (global-set-key [(meta up)]   'drag-stuff-up)
+	    (global-set-key [(meta down)] 'drag-stuff-down)))
 
 (use-package projectile  
-:config (progn
-    (projectile-mode +1)
-    (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-    (setq projectile-sort-order 'recentf)))
+  :config (progn
+	    (projectile-mode +1)
+	    (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
+	    (setq projectile-sort-order 'recentf)))
 
 (use-package yasnippet  
-:config (progn
-    (yas-reload-all)
-    (add-hook 'prog-mode-hook #'yas-minor-mode)
-    (yas-global-mode 1)))
+  :config (progn
+	    (yas-reload-all)
+	    (add-hook 'prog-mode-hook #'yas-minor-mode)
+	    (yas-global-mode 1)))
 ;;aqui
 (use-package yasnippet-snippets 
 :after yasnippet  
