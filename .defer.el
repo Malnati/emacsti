@@ -5,14 +5,6 @@
 	     (with-eval-after-load 'lsp-mode
 	       (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))))
 
-(use-package company  
-  :config (progn
-	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
-	    (add-hook 'after-init-hook 'global-company-mode)))
-
-(use-package treemacs-projectile 
-  :after treemacs)
-
 (use-package treemacs-projectile 
   :after lsp-mode)
 
