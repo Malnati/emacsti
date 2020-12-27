@@ -1,15 +1,15 @@
 (when (member window-system '(ns darwin))
   (use-package exec-path-from-shell
-    :ensure
+   
     :config
     (exec-path-from-shell-initialize)))
 
 (use-package expand-region
-  :ensure
+ 
   :config (global-set-key (kbd "C-=") 'er/expand-region))
 
 (use-package multiple-cursors
-  :ensure
+ 
   :config
   (define-prefix-command 'mc)
   (global-set-key (kbd "C-c m") 'mc)
@@ -19,21 +19,21 @@
   (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click))
 
 (use-package hydra
-  :ensure
+ 
   )
 
 (use-package ivy
   :after hydra
-  :ensure
+ 
   )
 
 (use-package avy
-  :ensure
+ 
   :init
   :bind ("M-s" . avy-goto-char))
 
 (use-package which-key
-  :ensure
+ 
   :config
   (progn
     ;;(which-key-setup-side-window-right-bottom)
@@ -42,46 +42,46 @@
       (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))))
 
 (use-package company
-  :ensure
+ 
   :config
   (progn
     ;; default is 0.2
     (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
     (add-hook 'after-init-hook 'global-company-mode)))
 
-(use-package dap-mode :ensure)
+(use-package dap-mode)
 
-(use-package treemacs :ensure)
+(use-package treemacs)
 
 (use-package treemacs-projectile
-  :ensure
+ 
   :after treemacs
   :after lsp-mode)
 
 (use-package nord-theme
-  :ensure
+ 
   :config
   (add-to-list 'custom-theme-load-path
 	       (expand-file-name "~/.emacs.d/themes/"))
   (load-theme 'nord t))
 
 (use-package s
-  :ensure)
+ )
 
 (use-package memoize
-  :ensure)
+ )
 
 (use-package dash
-  :ensure)
+ )
 
 (use-package all-the-icons
-  :ensure)
+ )
 
 (use-package all-the-icons-ibuffer
-  :ensure)
+ )
 
 (use-package company-box
-  :ensure
+ 
   :after company-mode
   :after lsp-mode
   :hook (company-mode . company-box-mode)
@@ -123,13 +123,13 @@
 	  )))
 
 (use-package indent-guide
-  :ensure
+ 
   :config
   (indent-guide-global-mode)
   (setq indent-guide-char "|"))
 
 (use-package drag-stuff
-  :ensure
+ 
   :config
   (progn
     (drag-stuff-global-mode 1)
@@ -138,7 +138,7 @@
     (global-set-key [(meta down)] 'drag-stuff-down)))
 
 (use-package projectile
-  :ensure
+ 
   :config
   (progn
     (projectile-mode +1)
@@ -146,7 +146,7 @@
     (setq projectile-sort-order 'recentf)))
 
 (use-package yasnippet
-  :ensure
+ 
   :config
   (progn
     (yas-reload-all)
@@ -154,7 +154,7 @@
     (yas-global-mode 1)))
 
 (use-package yasnippet-snippets
-  :ensure
+ 
   :after yasnippet
   :config
   (progn
@@ -168,13 +168,13 @@
             (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-linux/snippet-20130210.2315"))))))
 
 (use-package flycheck
-  :ensure
+ 
   :config
   (flycheck-mode t)
   (setq global-flycheck-mode t))
 
 (use-package helm
-  :ensure
+ 
   :config
   (progn
     (global-set-key (kbd "M-x") 'helm-M-x)
@@ -184,7 +184,7 @@
   (setq lsp-keymap-prefix "M-l")
 
   (use-package lsp-mode
-    :ensure
+   
     :hook
     ((js2-mode . lsp-mode)
      (lsp-mode . lsp-enable-which-key-integration))
@@ -244,7 +244,7 @@
 	      ))
   )
 (use-package lsp-ui
-  :ensure
+ 
   :after lsp-mode
   :config
   (progn
@@ -283,7 +283,7 @@
   )
 
 (use-package helm-lsp
-  :ensure
+ 
   :after helm
   :after lsp-mode
   :config
@@ -293,12 +293,12 @@
       #'helm-lsp-workspace-symbol)))
 
 (use-package helm-projectile
-  :ensure
+ 
   :config (progn
 	    (helm-projectile-on)))
 
 (use-package js2-mode
-  :ensure
+ 
   :config
   (progn
     (define-prefix-command 'js2-keys)
@@ -306,12 +306,12 @@
     (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode))))
 
 (use-package js2-refactor
-  :ensure
+ 
   :after js2-mode)
 
 (when (member system-type '(gnu/linux gnu x))
   (use-package xref-js2
-    :ensure
+   
     :config
     (progn
       (define-prefix-command 'xref-js2)
@@ -341,7 +341,7 @@
 				 (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t))))))
 
 (use-package json-mode
-  :ensure
+ 
   :after js2-mode
   :config
   (progn
@@ -364,12 +364,12 @@
     ))
 
 ;; (use-package spaceline
-;;   :ensure
+;;  
 ;;   :after s
 ;;   :after memoize
 ;;   :config
 ;;   (use-package powerline
-;;     :ensure)
+;;    )
 ;;   (use-package spaceline-config
 ;;     :config
 ;;     (spaceline-toggle-buffer-modified-on)
@@ -385,7 +385,7 @@
 ;;     (spaceline-toggle-time-on)
 ;;     (spaceline-emacs-theme 'date 'time)
 ;;     (use-package spaceline-all-the-icons
-;;       :ensure
+;;      
 ;;       :after spaceline
 ;;       :config
 ;;       (spaceline-all-the-icons-theme)
