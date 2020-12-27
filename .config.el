@@ -39,7 +39,9 @@
 	    (add-hook 'after-init-hook 'global-company-mode)))
 
 (use-package treemacs-projectile 
-  :after treemacs 
+  :after treemacs)
+
+(use-package treemacs-projectile 
   :after lsp-mode)
 
 (use-package company-box 
