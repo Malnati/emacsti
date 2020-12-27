@@ -50,6 +50,9 @@
   (add-to-list 'load-path "~/.emacs.d/libs/use-package-2.4.1/")
   (require 'use-package))
 
+(use-package eglot
+  :ensure)
+
 ;; (use-package spaceline
 ;;   :ensure
 ;;   :after s
