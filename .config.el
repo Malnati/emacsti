@@ -28,6 +28,7 @@
 	     (which-key-mode)))
 
 (use-package which-key
+  :disabled
   :after lsp-mode
   :config  (progn
 	     (with-eval-after-load 'lsp-mode
