@@ -69,9 +69,7 @@
   :ensure)
 
 (use-package avy
-  :ensure
-  :init
-  :bind ("M-s" . avy-goto-char))
+  :ensure)
 
 (use-package which-key
   :ensure
