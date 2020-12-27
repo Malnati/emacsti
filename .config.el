@@ -122,13 +122,12 @@
 (use-package yasnippet-snippets 
 :after yasnippet  
 :config (progn
-    (when (member window-system '(pc w32 ms-dos windows-nt cygwin)
-(setq yas-snippet-dirs
-	    (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-mswin/yasnippet-snippets-20201221.849/snippets"))))
+	  (when (member window-system '(pc w32 ms-dos windows-nt cygwin)
+			(setq yas-snippet-dirs (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-mswin/yasnippet-snippets-20201221.849/snippets")))))
     (when (member system-type '(gnu/linux gnu x)
 (setq yas-snippet-dirs
 	    (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-linux/yasnippet-classic-snippets-1.0.2"))
-(setq yas-snippet-dirs            (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-linux/snippet-20130210.2315"))))))
+(setq yas-snippet-dirs            (append yas-snippet-dirs '("~/.emacs.d/libs/elpa-linux/snippet-20130210.2315"))))))))
 
 (use-package flycheck  
 :config (progn
