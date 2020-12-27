@@ -29,6 +29,13 @@
 	     (with-eval-after-load 'lsp-mode
 	       (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))))
 
+(use-package which-key
+  :after lsp-mode
+  :config  (progn
+	     (which-key-mode)
+	     (with-eval-after-load 'lsp-mode
+	       (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))))
+
 (use-package company  
   :config (progn
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
