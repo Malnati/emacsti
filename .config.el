@@ -18,14 +18,10 @@
   (define-key mc  (kbd "p") 'mc/mark-previous-like-this)
   (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)))
 
-(use-package hydra
- 
-  )
+(use-package hydra)
 
 (use-package ivy
-  :after hydra
- 
-  )
+  :after hydra)
 
 (use-package avy
  
