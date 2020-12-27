@@ -35,9 +35,6 @@
 (use-package treemacs-projectile 
   :after treemacs)
 
-(use-package treemacs-projectile 
-  :after lsp-mode)
-
 (use-package company-box 
   :after company-mode 
   :hook (company-mode . company-box-mode)  
