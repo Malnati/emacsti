@@ -115,12 +115,7 @@
   :ensure)
 
 (use-package yasnippet
-  :ensure
-  :config
-  (progn
-    (yas-reload-all)
-    (add-hook 'prog-mode-hook #'yas-minor-mode)
-    (yas-global-mode 1)))
+  :ensure)
 
 (use-package yasnippet-snippets
   :ensure
