@@ -118,7 +118,7 @@
     (yas-reload-all)
     (add-hook 'prog-mode-hook #'yas-minor-mode)
     (yas-global-mode 1)))
-
+;;aqui
 (use-package yasnippet-snippets 
 :after yasnippet  
 :config (progn
