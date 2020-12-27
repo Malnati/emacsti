@@ -56,11 +56,13 @@
 (use-package eglot
   :init (add-hook 'foo-mode-hook 'eglot-ensure)
   :config (progn
+	    ;; (add-to-list 'eglot-server-programs
+	    ;; 		 '(foo-mode . ("foo-language-server" "--args")))
+	    ;; (add-to-list 'eglot-server-programs
+            ;;  `(python-mode . ("pyls" "-v" "--tcp" "--host"
+            ;;                   "localhost" "--port" :autoport)))
 	    (add-to-list 'eglot-server-programs
-			 '(foo-mode . ("foo-language-server" "--args")))
-	    (add-to-list 'eglot-server-programs
-             `(python-mode . ("pyls" "-v" "--tcp" "--host"
-                              "localhost" "--port" :autoport)))))
+			 '(foo-mode . ("foo-language-server" "--args")))))
 
 
 
