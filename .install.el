@@ -106,10 +106,7 @@
   :ensure)
 
 (use-package indent-guide
-  :ensure
-  :config
-  (indent-guide-global-mode)
-  (setq indent-guide-char "|"))
+  :ensure)
 
 (use-package drag-stuff
   :ensure
