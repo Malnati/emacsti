@@ -2,7 +2,7 @@
   (use-package exec-path-from-shell
    
     :config (progn
-    (exec-path-from-shell-initialize)))
+    (exec-path-from-shell-initialize))))
 
 (use-package expand-region
  
