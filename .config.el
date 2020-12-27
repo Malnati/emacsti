@@ -97,16 +97,16 @@
 	    (flycheck-mode t)
 	    (setq global-flycheck-mode t)))
 
-(use-package helm  
-  :config (progn
-	    (global-set-key (kbd "M-x") 'helm-M-x)
-	    (global-set-key (kbd "C-x C-f") #'helm-find-files)
-	    (defun helm-buffer-face-mode ()
+(defun helm-buffer-face-mode ()
 	      "Helm buffer face"
 	      (interactive)
 	      (with-helm-buffer
 		(setq line-spacing 2)
 		(buffer-face-set '(:height 87))))
+(use-package helm  
+  :config (progn
+	    (global-set-key (kbd "M-x") 'helm-M-x)
+	    (global-set-key (kbd "C-x C-f") #'helm-find-files)
 	    (add-hook 'helm-update-hook 'helm-buffer-face-mode)))
 
 (use-package helm-projectile  
