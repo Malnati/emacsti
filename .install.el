@@ -148,27 +148,7 @@
   :ensure)
 
 (use-package json-mode
-  :ensure
-  :after js2-mode
-  :config
-  (progn
-    (add-to-list 'auto-mode-alist '("\\.json\\'"   . json-mode))
-    (global-set-key (kbd "C-c C-j") 'js2-keys)
-    ;; format the region/buffer with json-reformat (https://github.com/gongo/json-reformat)
-    ;; (define-key js2-keys (kbd "f") 'json-mode-beautify)
-    ;; display a path to the object at point with json-snatcher (https://github.com/Sterlingg/json-snatcher)
-    (define-key js2-keys (kbd "p") 'json-mode-show-path)
-    ;; copy a path to the object at point to the kill ring with json-snatcher (https://github.com/Sterlingg/json-snatcher)
-    (define-key js2-keys (kbd "P") 'json-mode-kill-path)
-    ;; Toggle between true and false at point
-    ;; (define-key js2-keys (kbd "t") 'json-toggle-boolean)
-    ;; sexp Replace the at point with null
-    ;; (define-key js2-keys (kbd "k") 'json-nullify-sexp)
-    ;; Increment the number at point
-    ;; (define-key js2-keys (kbd "i") 'json-increment-number-at-point)
-    ;; Decrement the number at point
-    ;; (define-key js2-keys (kbd "d") 'json-decrement-number-at-point)
-    ))
+  :ensure)
 
 ;; (use-package spaceline
 ;;   :ensure
