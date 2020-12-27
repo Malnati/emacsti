@@ -233,8 +233,8 @@
   (use-package xref-js2     
 :config (progn
       (define-prefix-command 'xref-js2)
-(global-set-key (kbd "C-c x") 'xref-js2)
-(define-key xref-js2 (kbd "a")   'js2-mode-show-all) 
+ (global-set-key (kbd "C-c x") 'xref-js2)
+ (define-key xref-js2 (kbd "a")   'js2-mode-show-all) 
  (define-key xref-js2 (kbd "e")   'js2-mode-hide-element) 
  (define-key xref-js2 (kbd "f")   'js2-mode-toggle-hide-functions) 
  (define-key xref-js2 (kbd "g")   'xref-revert-buffer) 
@@ -251,7 +251,9 @@
  (define-key xref-js2 (kbd "w")   'js2-mode-toggle-warnings-and-errors) 
  (define-key xref-js2 (kbd "RET") 'xref-goto-xref) 
  (define-key xref-js2 (kbd "TAB") 'xref-quit-and-goto-xref) 
- (define-key xref-js2 (kbd ".")   'xref-next-line)   (define-key xref-js2 (kbd ",")   'xref-prev-line))   ;;(define-key xref-js2 [remap indent-new-comment-line] #'js2-line-break)
+ (define-key xref-js2 (kbd ".")   'xref-next-line)
+ (define-key xref-js2 (kbd ",")   'xref-prev-line))
+;;(define-key xref-js2 [remap indent-new-comment-line] #'js2-line-break)
   ;;(define-key xref-js2 [down-mouse-3] #'js2-down-mouse-3)
 (add-hook 'js2-mode-hook (lambda ()
 			   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
