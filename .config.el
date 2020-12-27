@@ -46,16 +46,6 @@
   (add-to-list 'custom-theme-load-path
 	       (expand-file-name "~/.emacs.d/themes/"))  (load-theme 'nord t)))
 
-(use-package s )
-
-(use-package memoize )
-
-(use-package dash )
-
-(use-package all-the-icons )
-
-(use-package all-the-icons-ibuffer )
-
 (use-package company-box 
 :after company-mode 
 :after lsp-mode 
