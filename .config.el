@@ -109,14 +109,12 @@
 
 (use-package projectile  
 :config (progn
-  (progn
     (projectile-mode +1)
     (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
     (setq projectile-sort-order 'recentf)))
 
 (use-package yasnippet  
 :config (progn
-  (progn
     (yas-reload-all)
     (add-hook 'prog-mode-hook #'yas-minor-mode)
     (yas-global-mode 1)))
