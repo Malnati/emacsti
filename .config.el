@@ -131,11 +131,10 @@
 (progn
   (setq lsp-keymap-prefix "M-l")
   (use-package lsp-mode    
-:hook    ((js2-mode . lsp-mode)     (lsp-mode . lsp-enable-which-key-integration)) 
+    :hook    ((js2-mode . lsp-mode)
+	      (lsp-mode . lsp-enable-which-key-integration)) 
 :commands lsp  
 :config (progn
- (progn
-
 	      ;; Enable/disable snippet completion support.
 	      (setq lsp-enable-snippet t)
 	      ;; Display all of the info returned by document/onHover.
