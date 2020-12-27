@@ -1,11 +1,12 @@
 (when (member window-system '(ns darwin))
   (use-package exec-path-from-shell
     :config
-    (exec-path-from-shell-initialize)))
+    (progn (exec-path-from-shell-initialize)))
 
 (use-package expand-region
   :ensure
-  :config (global-set-key (kbd "C-=") 'er/expand-region))
+  :config
+  (global-set-key (kbd "C-=") 'er/expand-region))
 
 (use-package multiple-cursors
   :ensure
@@ -183,7 +184,7 @@
   (setq lsp-keymap-prefix "M-l")
 
   (use-package lsp-mode
-    :hook
+    :ho(progn ok
     ((js2-mode . lsp-mode)
      (lsp-mode . lsp-enable-which-key-integration))
     :commands lsp
@@ -309,7 +310,7 @@
 
 (when (member system-type '(gnu/linux gnu x))
   (use-package xref-js2
-    :config
+    :conf(progn ig
     (progn
       (define-prefix-command 'xref-js2)
       (global-set-key (kbd "C-c x") 'xref-js2)
@@ -367,7 +368,7 @@
 ;;   :config
 ;;   (use-package powerline
 ;;)
-;;   (use-package spaceline-config
+;;   (use-package spaceline-conf(progn ig
 ;;     :config
 ;;     (spaceline-toggle-buffer-modified-on)
 ;;     (spaceline-toggle-line-column-on)
@@ -383,7 +384,7 @@
 ;;     (spaceline-emacs-theme 'date 'time)
 ;;     (use-package spaceline-all-the-icons
 ;;  
-;;       :after spaceline
+;;       :after spaceli(progn ne
 ;;       :config
 ;;       (spaceline-all-the-icons-theme)
 ;;       (spaceline-all-the-icons--setup-git-ahead))))
