@@ -1,7 +1,7 @@
 (when (member window-system '(ns darwin))
   (use-package exec-path-from-shell
     :ensure
-     :config
+    :config
     (exec-path-from-shell-initialize)))
 
 (use-package expand-region
