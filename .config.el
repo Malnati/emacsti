@@ -1,6 +1,7 @@
-(when (member window-system '(ns darwin))  (use-package exec-path-from-shell     
-					     :config (progn
-						       (exec-path-from-shell-initialize))))
+(when (member window-system '(ns darwin))
+  (use-package exec-path-from-shell
+    :config (progn
+	      (exec-path-from-shell-initialize))))
 
 (use-package expand-region 
   :config (progn
@@ -125,8 +126,8 @@
 
 (use-package helm  
   :config (progn
-	      (global-set-key (kbd "M-x") 'helm-M-x)
-	      (global-set-key (kbd "C-x C-f") #'helm-find-files)))
+	    (global-set-key (kbd "M-x") 'helm-M-x)
+	    (global-set-key (kbd "C-x C-f") #'helm-find-files)))
 
 (progn
   (setq lsp-keymap-prefix "M-l")
