@@ -127,7 +127,6 @@
 		    (append yas-snippet-dirs
 			    '("~/.emacs.d/libs/elpa-linux/snippet-20130210.2315"))))))
 
-
 (use-package flycheck  
   :config (progn
 	    (flycheck-mode t)
