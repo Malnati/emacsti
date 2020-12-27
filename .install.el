@@ -130,101 +130,22 @@
   :ensure)
   
 (use-package lsp-ui
-  :ensure
-  :after lsp-mode
-  :config
-  (progn
-    ;; show the directory of files
-    ;; (lsp-ui-peek-show-directory 1)
-    ;; enable ‘lsp-ui-peek’
-    (lsp-ui-peek-enable 1)
-    ;; enable lsp-ui-doc
-    (lsp-ui-doc-enable 1)
-    ;; Where to display the doc
-    (setq lsp-ui-doc-position 1)
-    ;; Number of seconds before showing the doc
-    (setq lsp-ui-doc-delay 1)
-    ;; show diagnostics messages in sideline
-    (setq lsp-ui-sideline-show-diagnostics 1)
-    ;; show hover messages in sideline
-    (setq lsp-ui-sideline-show-hover 1)
-    ;; show code actions in sideline
-    (setq lsp-ui-sideline-show-code-actions 1)
-    ;; When set to 'line' the information will be updated when
-    ;; user changes current line otherwise the information will
-    ;; be updated when user changes current point
-    (setq lsp-ui-sideline-update-mode t)
-    ;; seconds to wait before showing sideline
-    (setq lsp-ui-sideline-delay 0)
-    ;; keystrokes
-    (define-prefix-command 'lsp)
-    (global-set-key (kbd "M-l") 'lsp)
-    (define-key lsp (kbd "d") 'lsp-ui-peek-find-definitions)
-    (define-key lsp (kbd "r") 'lsp-ui-peek-find-references)
-    (define-key lsp (kbd "i") 'lsp-ui-peek-find-implementation)
-    (define-key lsp (kbd "w") 'lsp-ui-peek-find-workspace-symbol)
-    (define-key lsp (kbd "<left>") 'lsp-ui-peek-jump-backward)
-    (define-key lsp (kbd "<right>") 'lsp-ui-peek-jump-forward)
-    )
-  )
+  :ensure)
 
 (use-package helm-lsp
-  :ensure
-  :after helm
-  :after lsp-mode
-  :config
-  (progn
-    (define-key lsp-mode-map
-      [remap xref-find-apropos]
-      #'helm-lsp-workspace-symbol)))
+  :ensure)
 
 (use-package helm-projectile
-  :ensure
-  :config (progn
-	    (helm-projectile-on)))
+  :ensure)
 
 (use-package js2-mode
-  :ensure
-  :config
-  (progn
-    (define-prefix-command 'js2-keys)
-    (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
-    (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode))))
+  :ensure)
 
 (use-package js2-refactor
-  :ensure
-  :after js2-mode)
+  :ensure)
 
-(when (member system-type '(gnu/linux gnu x))
-  (use-package xref-js2
-    :ensure
-    :config
-    (progn
-      (define-prefix-command 'xref-js2)
-      (global-set-key (kbd "C-c x") 'xref-js2)
-      (define-key xref-js2 (kbd "a")   'js2-mode-show-all)
-      (define-key xref-js2 (kbd "e")   'js2-mode-hide-element)
-      (define-key xref-js2 (kbd "f")   'js2-mode-toggle-hide-functions)
-      (define-key xref-js2 (kbd "g")   'xref-revert-buffer)
-      (define-key xref-js2 (kbd "j")   'js2-jump-to-definition)
-      (define-key xref-js2 (kbd "n")   'xref-next-line)
-      (define-key xref-js2 (kbd "N")   'xref-next-group)
-      (define-key xref-js2 (kbd "o")   'js2-mode-toggle-element)
-      (define-key xref-js2 (kbd "C-o") 'xref-show-location-at-point)
-      (define-key xref-js2 (kbd "P")   'xref-prev-group)
-      (define-key xref-js2 (kbd "p")   'xref-prev-line)
-      (define-key xref-js2 (kbd "r")   'xref-query-replace-in-results)
-      (define-key xref-js2 (kbd "s")   'js2-mode-show-element)
-      (define-key xref-js2 (kbd "t")   'js2-mode-toggle-hide-comments)
-      (define-key xref-js2 (kbd "w")   'js2-mode-toggle-warnings-and-errors)
-      (define-key xref-js2 (kbd "RET") 'xref-goto-xref)
-      (define-key xref-js2 (kbd "TAB") 'xref-quit-and-goto-xref)
-      (define-key xref-js2 (kbd ".")   'xref-next-line)
-      (define-key xref-js2 (kbd ",")   'xref-prev-line)
-      ;;(define-key xref-js2 [remap indent-new-comment-line] #'js2-line-break)
-      ;;(define-key xref-js2 [down-mouse-3] #'js2-down-mouse-3)
-      (add-hook 'js2-mode-hook (lambda ()
-				 (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t))))))
+(use-package xref-js2
+  :ensure)
 
 (use-package json-mode
   :ensure
