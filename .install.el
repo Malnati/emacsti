@@ -82,9 +82,7 @@
 (use-package treemacs :ensure)
 
 (use-package treemacs-projectile
-  :ensure
-  :after treemacs
-  :after lsp-mode)
+  :ensure)
 
 (use-package nord-theme
   :ensure
