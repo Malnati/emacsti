@@ -239,7 +239,7 @@
   (use-package lsp-mode
     :ensure
     :hook
-    ( ;;(js2-mode . lsp)
+    ((js2-mode . lsp-mode)
      (lsp-mode . lsp-enable-which-key-integration))
     :commands lsp
     :config (progn
