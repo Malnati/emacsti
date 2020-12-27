@@ -62,7 +62,7 @@
             ;;  `(python-mode . ("pyls" "-v" "--tcp" "--host"
             ;;                   "localhost" "--port" :autoport)))
 	    (add-to-list 'eglot-server-programs
-			 '(js2-mode . ("javascript-typescript-langserver" "--args")))))
+			 '(js2-mode . ("javascript-typescript-langserver" "-v" "--tcp" "--host" "localhost" "--port" :autoport)))))
 
 
 
