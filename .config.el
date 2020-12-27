@@ -257,7 +257,7 @@
   ;;(define-key xref-js2 [down-mouse-3] #'js2-down-mouse-3)
 (add-hook 'js2-mode-hook (lambda ()
 			   (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t)))
-)))
+))
 
 (use-package json-mode 
 :after js2-mode  
