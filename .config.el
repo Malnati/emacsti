@@ -61,7 +61,6 @@
 :after lsp-mode 
 :hook (company-mode . company-box-mode)  
 :config (progn
-  (progn
     (setq company-box-icons-unknown 'fa_question_circle)    (setq company-box-icons-elisp
 	  '((fa_tag :face font-lock-function-name-face) ;; Function
 	    (fa_cog :face font-lock-variable-name-face) ;; Variable
