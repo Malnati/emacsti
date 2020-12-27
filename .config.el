@@ -52,8 +52,7 @@
 		    (fa_cog :face font-lock-variable-name-face) ;; Variable
 		    (fa_cube :face font-lock-constant-face) ;; Feature
 		    (md_color_lens :face font-lock-doc-face))) ;; Face
-	    (setq company-box-icons-yasnippet 'fa_bookmark)
-	    ))
+	    (setq company-box-icons-yasnippet 'fa_bookmark)))
 
 (use-package company-box 
   :after company-mode 
