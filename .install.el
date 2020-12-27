@@ -57,18 +57,10 @@
     (exec-path-from-shell-initialize)))
 
 (use-package expand-region
-  :ensure
-  :config (global-set-key (kbd "C-=") 'er/expand-region))
+  :ensure)
 
 (use-package multiple-cursors
-  :ensure
-  :config
-  (define-prefix-command 'mc)
-  (global-set-key (kbd "C-c m") 'mc)
-  (define-key mc  (kbd "a") 'mc/mark-all-like-this)
-  (define-key mc  (kbd "n") 'mc/mark-next-like-this)
-  (define-key mc  (kbd "p") 'mc/mark-previous-like-this)
-  (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click))
+  :ensure)
 
 (use-package hydra
   :ensure
