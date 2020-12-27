@@ -15,8 +15,6 @@
 	  (define-key mc  (kbd "p") 'mc/mark-previous-like-this)
 	  (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)))
 
-(use-package hydra)
-
 (use-package ivy 
 :after hydra)
 
@@ -24,12 +22,11 @@
 :init 
 :bind ("M-s" . avy-goto-char))
 
-(use-package which-key  
-:config)
+;;TODO config
+(use-package which-key)
     
 (use-package company  
 :config (progn
-    ;; default is 0.2
     (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
     (add-hook 'after-init-hook 'global-company-mode)))
 
