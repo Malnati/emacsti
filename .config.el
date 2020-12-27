@@ -143,18 +143,10 @@
 	      ;; Enable completion-at-point integration.
 	      (setq lsp-enable-completion-at-point t)
 	      ;; Specifies which package to use for diagnostics.
-	      ;; Choose from
-:auto,
-:flycheck,
-:flymake and
-:none.
-	      ;; Default is
-:auto which means use
-:flycheck if present and
-	      ;; fallback to
-:flymake.
-	      (setq lsp-diagnostics-provider
-:flycheck)
+	      ;; Choose from :auto, :flycheck, :flymake and :none.
+	      ;; Default is :auto which means use :flycheck if present and
+	      ;; fallback to :flymake.
+	      (setq lsp-diagnostics-provider :flycheck)
 	      ;; Indent regions using the file formatting functionality provided by
 	      ;; the language server.
 	      (setq lsp-enable-indentation nil)
