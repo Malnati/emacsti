@@ -119,14 +119,14 @@
 					      '("~/.emacs.d/libs/elpa-linux/snippet-20130210.2315"))))))))
 
 (use-package flycheck  
-:config (progn
-  (flycheck-mode t)  (setq global-flycheck-mode t))
+  :config (progn
+	    (flycheck-mode t)
+	    (setq global-flycheck-mode t)))
 
 (use-package helm  
-:config (progn
-  (progn
-    (global-set-key (kbd "M-x") 'helm-M-x)
-    (global-set-key (kbd "C-x C-f") #'helm-find-files)))
+  :config (progn
+	      (global-set-key (kbd "M-x") 'helm-M-x)
+	      (global-set-key (kbd "C-x C-f") #'helm-find-files)))
 
 (progn
   (setq lsp-keymap-prefix "M-l")
