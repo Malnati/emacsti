@@ -121,17 +121,10 @@
   :ensure)
 
 (use-package flycheck
-  :ensure
-  :config
-  (flycheck-mode t)
-  (setq global-flycheck-mode t))
+  :ensure)
 
 (use-package helm
-  :ensure
-  :config
-  (progn
-    (global-set-key (kbd "M-x") 'helm-M-x)
-    (global-set-key (kbd "C-x C-f") #'helm-find-files)))
+  :ensure)
 
 (progn
   (setq lsp-keymap-prefix "M-l")
