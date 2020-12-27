@@ -109,13 +109,7 @@
   :ensure)
 
 (use-package drag-stuff
-  :ensure
-  :config
-  (progn
-    (drag-stuff-global-mode 1)
-    (drag-stuff-define-keys)
-    (global-set-key [(meta up)]   'drag-stuff-up)
-    (global-set-key [(meta down)] 'drag-stuff-down)))
+  :ensure)
 
 (use-package projectile
   :ensure
