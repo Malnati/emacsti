@@ -75,12 +75,7 @@
   :ensure)
 
 (use-package company
-  :ensure
-  :config
-  (progn
-    ;; default is 0.2
-    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
-    (add-hook 'after-init-hook 'global-company-mode)))
+  :ensure)
 
 (use-package dap-mode :ensure)
 
