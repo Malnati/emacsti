@@ -54,7 +54,7 @@
   :ensure)
 
 (use-package eglot
-  :init' (add-hook 'foo-mode-hook 'eglot-ensure)
+  :init (add-hook 'foo-mode-hook 'eglot-ensure)
   :config (progn
 	    (add-to-list 'eglot-server-programs
 			 '(foo-mode . ("foo-language-server" "--args")))))
