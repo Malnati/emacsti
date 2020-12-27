@@ -23,8 +23,12 @@
   :init 
   :bind ("M-s" . avy-goto-char))
 
-;;TODO config
-(use-package which-key)
+(use-package which-key
+  :config  (progn
+	     (which-key-mode)
+	     ;;(which-key-setup-side-window-right-bottom)
+	     (with-eval-after-load 'lsp-mode
+	       (add-hook 'lsp-mode-hook #'lsp-enable-which-key-integration))))
 
 (use-package company  
   :config (progn
