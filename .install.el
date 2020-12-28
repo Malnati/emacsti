@@ -9,8 +9,8 @@
 (when (member window-system '(ns darwin))
   (use-package exec-path-from-shell
     :ensure
-    :config
-    (exec-path-from-shell-initialize)))
+    :config (progn
+	      (exec-path-from-shell-initialize))))
 
 (use-package expand-region
   :ensure)
@@ -84,7 +84,7 @@
 
 (use-package lsp-mode
   :ensure)
-  
+
 (use-package lsp-ui
   :ensure)
 
@@ -107,13 +107,13 @@
   :ensure)
 
 (use-package treemacs-projectile 
-:ensure)
+  :ensure)
 
 (use-package company-box 
   :ensure)
 
-  (use-package lsp-mode    
-    :ensure)
+(use-package lsp-mode    
+  :ensure)
 
 (use-package lsp-ui 
   :ensure)
