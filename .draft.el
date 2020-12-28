@@ -63,8 +63,6 @@
 	    (setcdr (assq 'java-mode eglot-server-programs) #'my-eglot-eclipse-jdt-contact)
 	    (add-hook 'java-mode-hook 'eglot-ensure)
 	    (add-to-list 'eglot-server-programs
-			 '(js2-mode . ("node" "~/.emacs.d/servers/typescript-language-server/lib/language-server-stdio")))
-	    (add-to-list 'eglot-server-programs
 			 '(js2-mode . ("node" "~/.emacs.d/servers/typescript-language-server/lib/language-server-stdio")))))
 
   
