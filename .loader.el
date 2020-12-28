@@ -26,7 +26,7 @@
   (require 'use-package))
 
 ;;(load-file "~/.emacs.d/.install.el")
-;;(load-file "~/.emacs.d/.draft.el")
+(load-file "~/.emacs.d/.draft.el")
 (load-file "~/.emacs.d/.config.el")
 (load-file "~/.emacs.d/.defer.el")
 (load-file "~/.emacs.d/.faces.el")
