@@ -56,7 +56,7 @@
 (use-package eglot
   :init (progn
 	  (add-hook 'js2-mode-hook 'eglot-ensure)
-	    (add-hook 'java-mode-hook 'eglot-ensure))
+	  (add-hook 'java-mode-hook 'eglot-ensure))
   :config (progn
 	    (let ((cp (getenv "CLASSPATH")))
 	      (setenv "CLASSPATH"
