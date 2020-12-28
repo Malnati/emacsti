@@ -51,4 +51,5 @@
 (use-package helm-lsp :ensure)
 (use-package lsp-java :ensure)
 (use-package eglot :ensure)
+(use-package lsp-java :ensure)
 ;;; .install.el ends here
