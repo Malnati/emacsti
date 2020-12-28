@@ -107,7 +107,7 @@
   :ensure)
 
 (use-package treemacs-projectile 
-  :after lsp-mode)
+:ensure)
 
 (use-package company-box 
   :ensure)
