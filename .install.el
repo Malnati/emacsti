@@ -47,8 +47,8 @@
 (use-package treemacs-projectile :ensure)
 (use-package company-box :ensure)
 (use-package lsp-mode :ensure)
-(use-package lsp-ui  :ensure)
+(use-package lsp-ui :ensure)
 (use-package helm-lsp :ensure)
 (use-package lsp-java :ensure)
-
+(use-package eglot :ensure)
 ;;; .install.el ends here
