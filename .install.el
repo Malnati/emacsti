@@ -38,7 +38,7 @@
      (package-install 'use-package)
      (require 'use-package))))
 
-(when (member window-system '(ns darwin))
+(when (member system-type '(ns darwin))
   (use-package exec-path-from-shell
     :ensure
     :config (progn
