@@ -61,7 +61,7 @@
 	    (add-to-list 'eglot-server-programs
 			 '(js2-mode . ("node" "~/.emacs.d/servers/typescript-language-server/lib/language-server-stdio")))))
 (defconst my-eclipse-jdt-home
-  "~/.emacs.d/.cache/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.800.v20200727-1323.jar")
+  "~/.emacs.d/servers/eclipse.jdt.ls-0.67.0/target")
 (defun my-eglot-eclipse-jdt-contact (interactive)
   "Contact with the jdt server input INTERACTIVE."
   (let ((cp (getenv "CLASSPATH")))
