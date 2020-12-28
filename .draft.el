@@ -55,6 +55,7 @@
 
 (use-package eglot
   :init (add-hook 'js2-mode-hook 'eglot-ensure)
+	    (add-hook 'java-mode-hook 'eglot-ensure)
   :config (progn
 	    (let ((cp (getenv "CLASSPATH")))
 	      (setenv "CLASSPATH"
@@ -62,7 +63,6 @@
 	      (unwind-protect (eglot--eclipse-jdt-contact nil)
 		(setenv "CLASSPATH" cp)))
 	    (setcdr (assq 'java-mode eglot-server-programs) #'my-eglot-eclipse-jdt-contact)
-	    (add-hook 'java-mode-hook 'eglot-ensure)
 	    (add-to-list 'eglot-server-programs
 			 '(js2-mode .
 				    ("node" "~/.emacs.d/servers/typescript-language-server/lib/language-server-stdio")))))
