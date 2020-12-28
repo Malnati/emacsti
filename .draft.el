@@ -41,8 +41,8 @@
 (require 'package)
 (package-initialize)
 
-;; (add-to-list 'package-archives '("unstable" . "https://melpa.org/packages/") t)
-;; (add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/") t)
+(add-to-list 'package-archives '("unstable" . "https://melpa.org/packages/") t)
+(add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/") t)
 (package-refresh-contents)
 
 (eval-when-compile

@@ -138,4 +138,5 @@
 
 (use-package lsp-java
   :ensure)
+
 ;;; .defer.el ends here
