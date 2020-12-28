@@ -60,7 +60,7 @@
   :config (progn
 	    (let ((cp (getenv "CLASSPATH")))
 	      (setenv "CLASSPATH"
-		      (concat cp ":" "~/.emacs.d/servers/eclipse.jdt.ls-0.67.0/target"))
+		      (concat cp ":" "~/.emacs.d/servers/eclipse.jdt.ls-0.67.0/org.eclipse.jdt.ls.core/target/org.eclipse.jdt.ls.core-0.67.0-SNAPSHOT.jar"))
 	      (unwind-protect (eglot--eclipse-jdt-contact nil)
 		(setenv "CLASSPATH" cp)))
 	    (setcdr (assq 'java-mode eglot-server-programs) #'my-eglot-eclipse-jdt-contact)
