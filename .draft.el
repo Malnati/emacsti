@@ -60,6 +60,16 @@
 			 '(js2-mode . ("node" "~/.emacs.d/servers/typescript-language-server/lib/language-server-stdio")))
 	    (add-to-list 'eglot-server-programs
 			 '(js2-mode . ("node" "~/.emacs.d/servers/typescript-language-server/lib/language-server-stdio")))))
+(defconst my-eclipse-jdt-home
+  "~/.emacs.d/.cache/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.800.v20200727-1323.jar")
+(defun my-eglot-eclipse-jdt-contact (interactive)
+  "Contact with the jdt server input INTERACTIVE."
+  (let ((cp (getenv "CLASSPATH")))
+    (setenv "CLASSPATH" (concat cp ":" my-eclipse-jdt-home))
+    (unwind-protect (eglot--eclipse-jdt-contact nil)
+      (setenv "CLASSPATH" cp))))
+(setcdr (assq 'java-mode eglot-server-programs) #'my-eglot-eclipse-jdt-contact)
+(add-hook 'java-mode-hook 'eglot-ensure)
 
 ;; java -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=1044 -Declipse.application=org.eclipse.jdt.ls.core.id1 -Dosgi.bundles.defaultStartLevel=4 -Declipse.product=org.eclipse.jdt.ls.core.product -Dlog.level=ALL -noverify -Xmx1G -jar ./plugins/org.eclipse.equinox.launcher_1.5.200.v20180922-1751.jar -configuration ./config_linux -data /path/to/data --add-modules=ALL-SYSTEM --add-opens java.base/java.util=ALL-UNNAMED --add-opens java.base/java.lang=ALL-UNNAMED
 
