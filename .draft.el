@@ -56,17 +56,16 @@
 (use-package eglot
   :init (add-hook 'js2-mode-hook 'eglot-ensure)
   :config (progn
+	    (let ((cp (getenv "CLASSPATH")))
+	      (setenv "CLASSPATH" (concat cp ":" "~/.emacs.d/servers/eclipse.jdt.ls-0.67.0/target"))
+	      (unwind-protect (eglot--eclipse-jdt-contact nil)
+		(setenv "CLASSPATH" cp)))
 	    (add-to-list 'eglot-server-programs
 			 '(js2-mode . ("node" "~/.emacs.d/servers/typescript-language-server/lib/language-server-stdio")))
 	    (add-to-list 'eglot-server-programs
 			 '(js2-mode . ("node" "~/.emacs.d/servers/typescript-language-server/lib/language-server-stdio")))))
 
-(progn
-  "Contact with the jdt server input INTERACTIVE."
-  (let ((cp (getenv "CLASSPATH")))
-    (setenv "CLASSPATH" (concat cp ":" "~/.emacs.d/servers/eclipse.jdt.ls-0.67.0/target"))
-    (unwind-protect (eglot--eclipse-jdt-contact nil)
-      (setenv "CLASSPATH" cp))))
+  
 (setcdr (assq 'java-mode eglot-server-programs) #'my-eglot-eclipse-jdt-contact)
 (add-hook 'java-mode-hook 'eglot-ensure)
 
