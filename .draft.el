@@ -53,6 +53,16 @@
 (use-package eglot
   :ensure)
 
+(defconst my-eclipse-jdt-home "~/.emacs.d/servers/eclipse.jdt.ls-0.67.0/org.eclipse.jdt.ls.product/target/repository//plugins/org.eclipse.equinox.launcher_1.6.0.v20200915-1508.jar")
+(defun my-eglot-eclipse-jdt-contact (interactive)
+  "Contact with the jdt server input INTERACTIVE."
+  (let ((cp (getenv "CLASSPATH")))
+    (setenv "CLASSPATH" (concat cp ":" my-eclipse-jdt-home))
+    (unwind-protect (eglot--eclipse-jdt-contact nil)
+      (setenv "CLASSPATH" cp))))
+(setcdr (assq 'java-mode eglot-server-programs) #'my-eglot-eclipse-jdt-contact)
+(add-hook 'java-mode-hook 'eglot-ensure)
+    
 (use-package eglot
   :init (progn
 	  ;;(add-hook 'js2-mode-hook 'eglot-ensure)
@@ -60,7 +70,7 @@
   :config (progn
 	    (let ((cp (getenv "CLASSPATH")))
 	      (setenv "CLASSPATH"
-		      (concat cp ":" "~/.emacs.d/servers/eclipse.jdt.ls-0.67.0/org.eclipse.jdt.ls.product/target/repository//plugins/org.eclipse.equinox.launcher_1.6.0.v20200915-1508.jar"))
+		      (concat cp ":" ))
 	      (unwind-protect (eglot--eclipse-jdt-contact nil)
 		(setenv "CLASSPATH" cp)))
 	    (setcdr (assq 'java-mode eglot-server-programs) #'my-eglot-eclipse-jdt-contact)
