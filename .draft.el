@@ -54,7 +54,7 @@
   :ensure)
 
 (progn
-  (defconst my-eclipse-jdt-home "~/.emacs.d/servers/eclipse.jdt.ls-0.67.0/org.eclipse.jdt.ls.product/target/repository//plugins/org.eclipse.equinox.launcher_1.6.0.v20200915-1508.jar")
+  (defconst my-eclipse-jdt-home "~/.emacs.d/servers/eclipse.jdt.ls-0.67.0/org.eclipse.jdt.ls.product/target/repository/plugins/org.eclipse.equinox.launcher_1.6.0.v20200915-1508.jar")
   (defun my-eglot-eclipse-jdt-contact (interactive)
     "Contact with the jdt server input INTERACTIVE."
     (let ((cp (getenv "CLASSPATH")))
