@@ -142,4 +142,4 @@
 ;; 	    (define-key lsp (kbd "<left>") 'lsp-ui-peek-jump-backward)
 ;; 	    (define-key lsp (kbd "<right>") 'lsp-ui-peek-jump-forward)))
 
-;;; .defer.el ends here
+;;; .lsp-java.el ends here
