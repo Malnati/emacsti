@@ -159,8 +159,6 @@
 ;; (load-file "~/.emacsti/libs/tide.el")
 ;; (load-file "~/.emacsti/libs/importjs.el")
 
-
-
 ;; (use-package js2-highlight-vars
 ;;   :config
 ;;   (js2-highlight-vars-mode t)
