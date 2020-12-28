@@ -60,12 +60,11 @@
 			 '(js2-mode . ("node" "~/.emacs.d/servers/typescript-language-server/lib/language-server-stdio")))
 	    (add-to-list 'eglot-server-programs
 			 '(js2-mode . ("node" "~/.emacs.d/servers/typescript-language-server/lib/language-server-stdio")))))
-(defconst my-eclipse-jdt-home
-  "~/.emacs.d/servers/eclipse.jdt.ls-0.67.0/target")
+
 (defun my-eglot-eclipse-jdt-contact (interactive)
   "Contact with the jdt server input INTERACTIVE."
   (let ((cp (getenv "CLASSPATH")))
-    (setenv "CLASSPATH" (concat cp ":" my-eclipse-jdt-home))
+    (setenv "CLASSPATH" (concat cp ":" "~/.emacs.d/servers/eclipse.jdt.ls-0.67.0/target"))
     (unwind-protect (eglot--eclipse-jdt-contact nil)
       (setenv "CLASSPATH" cp))))
 (setcdr (assq 'java-mode eglot-server-programs) #'my-eglot-eclipse-jdt-contact)
