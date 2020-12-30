@@ -2,6 +2,8 @@
 ;;; Commentary:
 ;;; Code:
 
+(require 'use-package)
+
 (defun packages-setup-melpa
     (interactive)    
   "Configuring of the package melpa repositore."

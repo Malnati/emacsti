@@ -6,6 +6,7 @@
 	beginning-of-visual-line
 	comment-dwim
 	end-of-visual-line
+	kill-visual-line
 	next-buffer
 	previous-buffer
 	))
