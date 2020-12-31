@@ -37,8 +37,8 @@ For installing by `use-package'"
   (use-package drag-stuff :ensure)
   (use-package expand-region :ensure)
   (use-package flycheck :ensure)
-  (use-package helm :ensure)
-  (use-package helm-projectile :ensure)
+  ;; (use-package helm :ensure)
+  ;; (use-package helm-projectile :ensure)
   (use-package hydra :ensure)
   (use-package indent-guide :ensure)
   (use-package ivy :ensure)
@@ -55,6 +55,9 @@ For installing by `use-package'"
   (use-package which-key :ensure)
   (use-package xref-js2 :ensure)
   (use-package yasnippet :ensure)
-  (use-package yasnippet-snippets :ensure))
+  (use-package yasnippet-snippets :ensure)
+  (use-package page-break-lines :ensure)
+  (use-package dashboard :ensure)
+  (use-package company-quickhelp :ensure))
 
 ;;; .install.el ends here

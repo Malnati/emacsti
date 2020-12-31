@@ -106,6 +106,8 @@
   (setq initial-buffer-choice t)
   (setq list-command-history-max 2048)
   (setq make-backup-files -1)
+  (setq backup-directory-alist '(("" . "~/.emacs.d/backup")))
+  (setq backup-by-copying t)
   (setq org-startup-with-beamer-mode t)
   (setq tab-always-indent 'complete)
   (setq undo-ask-before-discard t)
@@ -120,18 +122,38 @@
   (setq-default cursor-type 'bar)
   (show-paren-mode t)
   (tool-bar-mode -1)
-  (window-divider-mode -1))
+  (window-divider-mode -1)
+  (electric-pair-mode 1)
+  (desktop-save-mode 1)
+  (turn-on-page-break-lines-mode))
 
-(progn 
-  "Keytrokes settings"
-  (global-set-key (kbd "C-c c") 'copy-line)
-  (global-set-key (kbd "C-c d") 'duplicate-line)
-  (global-set-key (kbd "C-c e b") 'eval-buffer)
-  (global-set-key (kbd "C-c e r") 'eval-region)
-  (global-set-key (kbd "C-c m l") 'select-line)
-  (global-set-key (kbd "C-z")   'undo)
-  (global-set-key [(control shift meta up)]   'text-scale-increase)
-  (global-set-key [(control shift meta down)] 'text-scale-decrease))
+(progn
+  "Makes buffer switch command do suggestions, 
+also for find-file command"
+  :link "http://ergoemacs.org/emacs/emacs_ido_setup.html"
+  (require 'ido)
+  (ido-mode 1)
+
+  ;; show choices vertically
+  (if (version< emacs-version "25")
+      (progn
+        (make-local-variable 'ido-separator)
+        (setq ido-separator "\n"))
+    (progn
+      (make-local-variable 'ido-decorations)
+      (setf (nth 2 ido-decorations) "\n")))
+
+  ;; show any name that has the chars you typed
+  (setq ido-enable-flex-matching t)
+
+  ;; use current pane for newly opened file
+  (setq ido-default-file-method 'selected-window)
+
+  ;; use current pane for newly switched buffer
+  (setq ido-default-buffer-method 'selected-window)
+
+  ;; stop ido from suggesting when naming new file
+  (define-key (cdr ido-minor-mode-map-entry) [remap write-file] nil))
 
 (provide 'preferences )
 ;;; .preferences.el ends here
