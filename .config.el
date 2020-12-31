@@ -391,8 +391,13 @@
            (message (concat "Error during loading of `json-mode'... "
 			    (error-message-string err)))))
 
-(progn
-  "Pos-tip Clippy settings"
-  (load-file "~/.emacs.d/clippy.el"))
+(use-package clippy
+  :delight clippy
+  :preface (message "Using package `clippy'.")
+  :init (message "Starting `clippy'.")
+  :load-path "~/.emacs.d/clippy" 
+  :catch (lambda (keyword err)
+	   (message (concat "Error during loading of `clippy'... "
+			    (error-message-string err)))))
 
 ;;; .config.el ends here
