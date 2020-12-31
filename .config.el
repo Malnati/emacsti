@@ -1,5 +1,9 @@
 (use-package dashboard
+  :preface (message "Using package `dashboard'.")
+  :init (message "Starting `dashboard'.")
   :config (progn
+	    "Settings for `dashboard'"
+	    (message "Configuring `dashboard'.")
 	    (dashboard-setup-startup-hook)
 	    (setq dashboard-center-content t)
 	    (setq dashboard-items '((recents  . 5)
@@ -8,32 +12,51 @@
                         (registers . 5)))
 	    (setq dashboard-set-heading-icons t)
 	    (setq dashboard-set-file-icons t)
-	    (setq dashboard-set-navigator t)))
+	    (setq dashboard-set-navigator t)
+	    )
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `dashboard'... "
+			    (error-message-string err)))))
 
 (when (member system-type '(ns darwin))
   (use-package exec-path-from-shell
     :config (progn
-	      (exec-path-from-shell-initialize))))
+	      (exec-path-from-shell-initialize))
+    :catch (lambda (keyword err)
+	     (message (concat "Error during loading of `exec-path-from-shell'... "
+			      (error-message-string err))))))
 
-(use-package expand-region 
+(use-package expand-region
   :config (progn
-	    (global-set-key (kbd "C-=") 'er/expand-region)))
+	    (global-set-key (kbd "C-=") 'er/expand-region))
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `expand-region'... "
+			    (error-message-string err)))))
 
-(use-package multiple-cursors 
+(use-package multiple-cursors
   :config (progn
 	    (define-prefix-command 'mc)
 	    (global-set-key (kbd "C-c m") 'mc)
 	    (define-key mc  (kbd "a") 'mc/mark-all-like-this)
 	    (define-key mc  (kbd "n") 'mc/mark-next-like-this)
 	    (define-key mc  (kbd "p") 'mc/mark-previous-like-this)
-	    (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click)))
+	    (global-set-key (kbd "M-<mouse-1>") 'mc/add-cursor-on-click))
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `multiple-cursors'... "
+			    (error-message-string err)))))
 
-(use-package ivy 
-  :after hydra)
+(use-package ivy
+  :after hydra
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `ivy'... "
+			    (error-message-string err)))))
 
 (use-package avy
   :init 
-  :bind ("M-s" . avy-goto-char))
+  :bind ("M-s" . avy-goto-char)
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `avy'... "
+			    (error-message-string err)))))
 
 (use-package which-key
   :init (progn
@@ -97,15 +120,24 @@
 	       (which-key-add-key-based-replacements "C-c p" "project")
 	       (which-key-add-key-based-replacements "C-c m" "mark")
 	       (which-key-add-key-based-replacements "C-c m l" "mark line")
-	       (which-key-add-key-based-replacements "C-z" "undo") )))
+	       (which-key-add-key-based-replacements "C-z" "undo") ))
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `which-key'... "
+			    (error-message-string err)))))
 	     
 (use-package company  
   :config (progn
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
-	    (add-hook 'after-init-hook 'global-company-mode)))
+	    (add-hook 'after-init-hook 'global-company-mode))
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `company'... "
+			    (error-message-string err)))))
 
 (use-package treemacs-projectile 
-  :after treemacs)
+  :after treemacs
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `treemacs-projectile'... "
+			    (error-message-string err)))))
 
 (use-package company-box 
   :after company-mode 
@@ -117,38 +149,60 @@
 		    (fa_cog :face font-lock-variable-name-face) ;; Variable
 		    (fa_cube :face font-lock-constant-face) ;; Feature
 		    (md_color_lens :face font-lock-doc-face))) ;; Face
-	    (setq company-box-icons-yasnippet 'fa_bookmark)))
+	    (setq company-box-icons-yasnippet 'fa_bookmark))
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `company-box'... "
+			    (error-message-string err)))))
+
 ;; TODO FIX
 (use-package company-quickhelp
   :config (progn
 	    (company-quickhelp-mode)
-	    ))
+	    )
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `company-quickhelp'... "
+			    (error-message-string err)))))
 
 (use-package nord-theme  
   :config (progn
 	    (add-to-list 'custom-theme-load-path
 			 (expand-file-name "~/.emacs.d/themes/"))
-	    (load-theme 'nord t)))
+	    (load-theme 'nord t))
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `nord-theme'... "
+			    (error-message-string err)))))
 
 (use-package indent-guide  
   :config (progn
 	    (indent-guide-global-mode)
-	    (setq indent-guide-char "|")))
+	    (setq indent-guide-char "|"))
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `indent-guide'... "
+			    (error-message-string err)))))
 
 (use-package drag-stuff  
   :config (progn
-	    (drag-stuff-global-mode 1)))
+	    (drag-stuff-global-mode 1))
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `drag-stuff'... "
+			    (error-message-string err)))))
 
 (use-package projectile  
   :config (progn
 	    (projectile-mode +1)
-	    (setq projectile-sort-order 'recentf)))
+	    (setq projectile-sort-order 'recentf))
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `projectile'... "
+			    (error-message-string err)))))
 
 (use-package yasnippet
   :config (progn
 	    (yas-reload-all)
 	    (add-hook 'prog-mode-hook #'yas-minor-mode)
-	    (yas-global-mode 1)))
+	    (yas-global-mode 1))
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `yasnippet'... "
+			    (error-message-string err)))))
 
 (use-package yasnippet-snippets
   :after yasnippet
@@ -163,12 +217,18 @@
 			    '("~/.emacs.d/libs/elpa-linux/yasnippet-classic-snippets-1.0.2")))
 	      (setq yas-snippet-dirs
 		    (append yas-snippet-dirs
-			    '("~/.emacs.d/libs/elpa-linux/snippet-20130210.2315"))))))
+			    '("~/.emacs.d/libs/elpa-linux/snippet-20130210.2315")))))
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `yasnippet-snippets'... "
+			    (error-message-string err)))))
 
 (use-package flycheck  
   :config (progn
 	    (flycheck-mode t)
-	    (setq global-flycheck-mode t)))
+	    (setq global-flycheck-mode t))
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `flycheck'... "
+			    (error-message-string err)))))
 
 (progn
   (defun helm-buffer-face-mode ()
@@ -179,32 +239,50 @@
       (buffer-face-set '(:height 87))))
   (use-package helm  
     :config (progn
-	      (add-hook 'helm-update-hook 'helm-buffer-face-mode))))
+	      (add-hook 'helm-update-hook 'helm-buffer-face-mode))
+    :catch (lambda (keyword err)
+	     (message (concat "Error during loading of `helm'... "
+			      (error-message-string err))))))
 
-(use-package helm-projectile  
+(use-package helm-projectile
   :config (progn
-	    (helm-projectile-on)))
+	    (helm-projectile-on))
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `helm-projectile'... "
+			    (error-message-string err)))))
 
-(use-package js2-mode  
+(use-package js2-mode
   :config (progn
 	    (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
-	    (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode))))
+	    (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode)))
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `js2-mode'... "
+			    (error-message-string err)))))
 
-(use-package js2-refactor 
-  :after js2-mode)
+(use-package js2-refactor
+  :after js2-mode
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `js2-refactor'... "
+			    (error-message-string err)))))
 
 (when (member system-type '(gnu/linux gnu x))
   (use-package xref-js2
     :after js2-mode
     :config (progn
-	      (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t))))
+	      (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t))
+    :catch (lambda (keyword err)
+	     (message (concat "Error during loading of `xref-js2'... "
+			      (error-message-string err))))))
 
 (use-package json-mode 
   :after js2-mode  
   :config (progn
-	    (add-to-list 'auto-mode-alist '("\\.json\\'"   . json-mode))))
+	    (add-to-list 'auto-mode-alist '("\\.json\\'"   . json-mode)))
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `json-mode'... "
+			    (error-message-string err)))))
 
- (progn
+(progn
   "Pos-tip Clippy settings"
   (load-file "~/.emacs.d/clippy.el"))
 

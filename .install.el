@@ -2,11 +2,10 @@
 ;;; Commentary:
 ;;;
 
-(package-initialize)
-
 (progn
   "Setting stable and unstable Melpa's repositories.
 For installing `use-package'"
+  (package-initialize)
   (condition-case nil
       (require 'use-package)
     (file-error
@@ -15,7 +14,9 @@ For installing `use-package'"
      (add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/") t)
      (package-refresh-contents)
      (package-install 'use-package)
-     (require 'use-package))))
+     (require 'use-package)
+     (require 'use-package-ensure)
+     (setq use-package-always-ensure t))))
 
 (progn
   "Setting the exec-path-from-shell.
