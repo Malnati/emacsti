@@ -58,6 +58,7 @@ For installing by `use-package'"
   (use-package yasnippet-snippets :ensure)
   (use-package page-break-lines :ensure)
   (use-package dashboard :ensure)
-  (use-package company-quickhelp :ensure))
+  (use-package company-quickhelp :ensure)
+  (use-package smart-mode-line :ensure))
 
 ;;; .install.el ends here
