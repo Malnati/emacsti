@@ -33,6 +33,7 @@
 ;;; Code:
 
 (use-package dashboard
+  :delight Dashboard
   :preface (message "Using package `dashboard'.")
   :init (message "Starting `dashboard'.")
   :config (progn
@@ -53,6 +54,7 @@
 
 (when (member system-type '(ns darwin))
   (use-package exec-path-from-shell
+    :delight
     :preface (message "Using package `exec-path-from-shell'.")
     :init (message "Starting `exec-path-from-shell'.")
     :config (progn
@@ -62,6 +64,7 @@
 			      (error-message-string err))))))
 
 (use-package expand-region
+  :delight
   :preface (message "Using package `expand-region'.")
   :init (message "Starting `expand-region'.")
   :config (progn
@@ -71,6 +74,7 @@
 			    (error-message-string err)))))
 
 (use-package multiple-cursors
+  :delight "MagnarS Multiple Cursors"
   :preface (message "Using package `multiple-cursors'.")
   :init (message "Starting `multiple-cursors'.")
   :config (progn
@@ -85,6 +89,7 @@
 			    (error-message-string err)))))
 
 (use-package ivy
+  :delight ivy
   :preface (message "Using package `ivy'.")
   :init (message "Starting `ivy'.")
   :after hydra
@@ -94,6 +99,7 @@
 
 ;; TODO move bind to which-key
 (use-package avy
+  :delight avy
   :preface (message "Using package `avy'.")
   :init (message "Starting `avy'.")
   :bind ("M-s" . avy-goto-char)
@@ -102,6 +108,7 @@
 			    (error-message-string err)))))
 
 (use-package which-key
+  :delight whych-key
   :preface (message "Using package `which-key'.")
   :init (progn
 	  "Defaul settings for which-key mode."
@@ -171,6 +178,7 @@
 			    (error-message-string err)))))
 
 (use-package company
+  :delight company
   :preface (message "Using package `company'.")
   :init (message "Starting `company'.")
   :config (progn
@@ -181,6 +189,7 @@
 			    (error-message-string err)))))
 
 (use-package treemacs-projectile
+  :delight treemacs-projectile
   :preface (message "Using package `treemacs-projectile'.")
   :init (message "Starting `treemacs-projectile'.")
   :after treemacs
@@ -189,6 +198,7 @@
 			    (error-message-string err)))))
 
 (use-package company-box
+  :delight company-box
   :preface (message "Using package `company-box'.")
   :init (message "Starting `company-box'.")
   :after company-mode 
@@ -207,6 +217,7 @@
 
 ;; TODO FIX
 (use-package company-quickhelp
+  :delight company-quickhelp
   :preface (message "Using package `company-quickhelp'.")
   :init (message "Starting `company-quickhelp'.")
   :config (progn
@@ -217,6 +228,7 @@
 			    (error-message-string err)))))
 
 (use-package nord-theme
+  :delight nord-theme
   :preface (message "Using package `nord-theme'.")
   :init (message "Starting `nord-theme'.")
   :config (progn
@@ -228,6 +240,7 @@
 			    (error-message-string err)))))
 
 (use-package indent-guide
+  :delight indent-guide
   :preface (message "Using package `indent-guide'.")
   :init (message "Starting `indent-guide'.")
   :config (progn
@@ -238,6 +251,7 @@
 			    (error-message-string err)))))
 
 (use-package drag-stuff
+  :delight drag-stuff
   :preface (message "Using package `drag-stuff'.")
   :init (message "Starting `drag-stuff'.")
   :config (progn
@@ -247,8 +261,10 @@
 			    (error-message-string err)))))
 
 (use-package projectile
+  :delight projectile
   :preface (message "Using package `projectile'.")
   :init (message "Starting `projectile'.")
+  :delight '(:eval (concat " " (projectile-project-name)))
   :config (progn
 	    (projectile-mode +1)
 	    (setq projectile-sort-order 'recentf))
@@ -257,6 +273,7 @@
 			    (error-message-string err)))))
 
 (use-package yasnippet
+  :delight yasnippet
   :preface (message "Using package `dashboard'.")
   :init (message "Starting `dashboard'.")
   :config (progn
@@ -268,6 +285,7 @@
 			    (error-message-string err)))))
 
 (use-package yasnippet-snippets
+  :delight yasnippet-snippets
   :preface (message "Using package `yasnippet-snippets'.")
   :init (message "Starting `yasnippet-snippets'.")
   :after yasnippet
@@ -288,6 +306,7 @@
 			    (error-message-string err)))))
 
 (use-package flycheck
+  :delight flycheck
   :preface (message "Using package `flycheck'.")
   :init (message "Starting `flycheck'.")
   :config (progn
@@ -305,6 +324,7 @@
       (setq line-spacing 2)
       (buffer-face-set '(:height 87))))
   (use-package helm
+    :delight helm
     :preface (message "Using package `helm'.")
     :init (message "Starting `helm'.")
     :config (progn
@@ -314,6 +334,7 @@
 			      (error-message-string err))))))
 
 (use-package helm-projectile
+  :delight helm-projectile
   :preface (message "Using package `helm-projectile'.")
   :init (message "Starting `helm-projectile'.")
   :config (progn
@@ -323,6 +344,7 @@
 			    (error-message-string err)))))
 
 (use-package js2-mode
+  :delight js2-mode
   :preface (message "Using package `js2-mode'.")
   :init (message "Starting `js2-mode'.")
   :config (progn
@@ -333,6 +355,7 @@
 			    (error-message-string err)))))
 
 (use-package js2-refactor
+  :delight js2-refactor
   :preface (message "Using package `dashboard'.")
   :init (message "Starting `dashboard'.")
   :after js2-mode
@@ -342,6 +365,7 @@
 
 (when (member system-type '(gnu/linux gnu x))
   (use-package xref-js2
+    :delight xref-js2
     :preface (message "Using package `xref-js2'.")
     :init (message "Starting `xref-js2'.")
     :after js2-mode
@@ -352,6 +376,7 @@
 			      (error-message-string err))))))
 
 (use-package json-mode
+  :delight json-mode
   :preface (message "Using package `json-mode'.")
   :init (message "Starting `json-mode'.")
   :after js2-mode  
