@@ -1,3 +1,37 @@
+;;; .config --- Setup packages
+
+;; Copyright (C) 2020 Ricardo Malnati Rosa Lima
+
+;; Author: Ricardo Malanti <ricardomalnati@gmail.com>
+;; Maintainer: Ricardo Malanti <ricardomalnati@gmail.com>
+;; Created: Dez 2020
+;; Keywords: evironment
+;; Version: 1.0
+;; URL: https://github.com/Malnati
+
+;; This file is not part of GNU Emacs.
+
+;;; License:
+
+;; This program is free software; you can redistribute it and/or
+;; modify it under the terms of the GNU General Public License
+;; as published by the Free Software Foundation; either version 3
+;; of the License, or (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program. If not, see <http://www.gnu.org/licenses/>.
+
+;;; Commentary:
+
+;; This library implements a set of configurations and preferencies.
+
+;;; Code:
+
 (use-package dashboard
   :preface (message "Using package `dashboard'.")
   :init (message "Starting `dashboard'.")
@@ -7,19 +41,20 @@
 	    (dashboard-setup-startup-hook)
 	    (setq dashboard-center-content t)
 	    (setq dashboard-items '((recents  . 5)
-                        (bookmarks . 5)
-                        (projects . 5)
-                        (registers . 5)))
+				    (bookmarks . 5)
+				    (projects . 5)
+				    (registers . 5)))
 	    (setq dashboard-set-heading-icons t)
 	    (setq dashboard-set-file-icons t)
-	    (setq dashboard-set-navigator t)
-	    )
+	    (setq dashboard-set-navigator t))
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `dashboard'... "
 			    (error-message-string err)))))
 
 (when (member system-type '(ns darwin))
   (use-package exec-path-from-shell
+    :preface (message "Using package `exec-path-from-shell'.")
+    :init (message "Starting `exec-path-from-shell'.")
     :config (progn
 	      (exec-path-from-shell-initialize))
     :catch (lambda (keyword err)
@@ -27,6 +62,8 @@
 			      (error-message-string err))))))
 
 (use-package expand-region
+  :preface (message "Using package `expand-region'.")
+  :init (message "Starting `expand-region'.")
   :config (progn
 	    (global-set-key (kbd "C-=") 'er/expand-region))
   :catch (lambda (keyword err)
@@ -34,6 +71,8 @@
 			    (error-message-string err)))))
 
 (use-package multiple-cursors
+  :preface (message "Using package `multiple-cursors'.")
+  :init (message "Starting `multiple-cursors'.")
   :config (progn
 	    (define-prefix-command 'mc)
 	    (global-set-key (kbd "C-c m") 'mc)
@@ -46,21 +85,27 @@
 			    (error-message-string err)))))
 
 (use-package ivy
+  :preface (message "Using package `ivy'.")
+  :init (message "Starting `ivy'.")
   :after hydra
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `ivy'... "
 			    (error-message-string err)))))
 
+;; TODO move bind to which-key
 (use-package avy
-  :init 
+  :preface (message "Using package `avy'.")
+  :init (message "Starting `avy'.")
   :bind ("M-s" . avy-goto-char)
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `avy'... "
 			    (error-message-string err)))))
 
 (use-package which-key
+  :preface (message "Using package `which-key'.")
   :init (progn
 	  "Defaul settings for which-key mode."
+	  (message "Starting `which-key'.")
 	  (which-key-mode)
 	  (which-key-setup-side-window-right-bottom)
 	  ;; max width of which-key window, when displayed at left or right.
@@ -124,8 +169,10 @@
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `which-key'... "
 			    (error-message-string err)))))
-	     
-(use-package company  
+
+(use-package company
+  :preface (message "Using package `company'.")
+  :init (message "Starting `company'.")
   :config (progn
 	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
 	    (add-hook 'after-init-hook 'global-company-mode))
@@ -133,13 +180,17 @@
            (message (concat "Error during loading of `company'... "
 			    (error-message-string err)))))
 
-(use-package treemacs-projectile 
+(use-package treemacs-projectile
+  :preface (message "Using package `treemacs-projectile'.")
+  :init (message "Starting `treemacs-projectile'.")
   :after treemacs
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `treemacs-projectile'... "
 			    (error-message-string err)))))
 
-(use-package company-box 
+(use-package company-box
+  :preface (message "Using package `company-box'.")
+  :init (message "Starting `company-box'.")
   :after company-mode 
   :hook (company-mode . company-box-mode)  
   :config (progn
@@ -156,6 +207,8 @@
 
 ;; TODO FIX
 (use-package company-quickhelp
+  :preface (message "Using package `company-quickhelp'.")
+  :init (message "Starting `company-quickhelp'.")
   :config (progn
 	    (company-quickhelp-mode)
 	    )
@@ -163,7 +216,9 @@
            (message (concat "Error during loading of `company-quickhelp'... "
 			    (error-message-string err)))))
 
-(use-package nord-theme  
+(use-package nord-theme
+  :preface (message "Using package `nord-theme'.")
+  :init (message "Starting `nord-theme'.")
   :config (progn
 	    (add-to-list 'custom-theme-load-path
 			 (expand-file-name "~/.emacs.d/themes/"))
@@ -172,7 +227,9 @@
            (message (concat "Error during loading of `nord-theme'... "
 			    (error-message-string err)))))
 
-(use-package indent-guide  
+(use-package indent-guide
+  :preface (message "Using package `indent-guide'.")
+  :init (message "Starting `indent-guide'.")
   :config (progn
 	    (indent-guide-global-mode)
 	    (setq indent-guide-char "|"))
@@ -180,14 +237,18 @@
            (message (concat "Error during loading of `indent-guide'... "
 			    (error-message-string err)))))
 
-(use-package drag-stuff  
+(use-package drag-stuff
+  :preface (message "Using package `drag-stuff'.")
+  :init (message "Starting `drag-stuff'.")
   :config (progn
 	    (drag-stuff-global-mode 1))
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `drag-stuff'... "
 			    (error-message-string err)))))
 
-(use-package projectile  
+(use-package projectile
+  :preface (message "Using package `projectile'.")
+  :init (message "Starting `projectile'.")
   :config (progn
 	    (projectile-mode +1)
 	    (setq projectile-sort-order 'recentf))
@@ -196,6 +257,8 @@
 			    (error-message-string err)))))
 
 (use-package yasnippet
+  :preface (message "Using package `dashboard'.")
+  :init (message "Starting `dashboard'.")
   :config (progn
 	    (yas-reload-all)
 	    (add-hook 'prog-mode-hook #'yas-minor-mode)
@@ -205,6 +268,8 @@
 			    (error-message-string err)))))
 
 (use-package yasnippet-snippets
+  :preface (message "Using package `yasnippet-snippets'.")
+  :init (message "Starting `yasnippet-snippets'.")
   :after yasnippet
   :config (progn
 	    (when (member system-type '(pc w32 ms-dos windows-nt cygwin))
@@ -222,7 +287,9 @@
            (message (concat "Error during loading of `yasnippet-snippets'... "
 			    (error-message-string err)))))
 
-(use-package flycheck  
+(use-package flycheck
+  :preface (message "Using package `flycheck'.")
+  :init (message "Starting `flycheck'.")
   :config (progn
 	    (flycheck-mode t)
 	    (setq global-flycheck-mode t))
@@ -237,7 +304,9 @@
     (with-helm-buffer
       (setq line-spacing 2)
       (buffer-face-set '(:height 87))))
-  (use-package helm  
+  (use-package helm
+    :preface (message "Using package `helm'.")
+    :init (message "Starting `helm'.")
     :config (progn
 	      (add-hook 'helm-update-hook 'helm-buffer-face-mode))
     :catch (lambda (keyword err)
@@ -245,6 +314,8 @@
 			      (error-message-string err))))))
 
 (use-package helm-projectile
+  :preface (message "Using package `helm-projectile'.")
+  :init (message "Starting `helm-projectile'.")
   :config (progn
 	    (helm-projectile-on))
   :catch (lambda (keyword err)
@@ -252,6 +323,8 @@
 			    (error-message-string err)))))
 
 (use-package js2-mode
+  :preface (message "Using package `js2-mode'.")
+  :init (message "Starting `js2-mode'.")
   :config (progn
 	    (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
 	    (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode)))
@@ -260,6 +333,8 @@
 			    (error-message-string err)))))
 
 (use-package js2-refactor
+  :preface (message "Using package `dashboard'.")
+  :init (message "Starting `dashboard'.")
   :after js2-mode
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `js2-refactor'... "
@@ -267,6 +342,8 @@
 
 (when (member system-type '(gnu/linux gnu x))
   (use-package xref-js2
+    :preface (message "Using package `xref-js2'.")
+    :init (message "Starting `xref-js2'.")
     :after js2-mode
     :config (progn
 	      (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t))
@@ -274,7 +351,9 @@
 	     (message (concat "Error during loading of `xref-js2'... "
 			      (error-message-string err))))))
 
-(use-package json-mode 
+(use-package json-mode
+  :preface (message "Using package `json-mode'.")
+  :init (message "Starting `json-mode'.")
   :after js2-mode  
   :config (progn
 	    (add-to-list 'auto-mode-alist '("\\.json\\'"   . json-mode)))
@@ -286,4 +365,4 @@
   "Pos-tip Clippy settings"
   (load-file "~/.emacs.d/clippy.el"))
 
-;;; .packages.el ends here
+;;; .config.el ends here
