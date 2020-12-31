@@ -62,6 +62,7 @@ For installing by `use-package'"
   (use-package page-break-lines)
   (use-package dashboard)
   (use-package company-quickhelp)
-  (use-package smart-mode-line))
+  (use-package smart-mode-line)
+  (setq use-package-always-ensure nil))
 
 ;;; .install.el ends here

@@ -32,8 +32,13 @@
 
 ;;; Code:
 
+(progn
+  "Avoiding for installing packages here."
+  (setq use-package-always-ensure nil))
+  
+
 (use-package dashboard
-  :delight Dashboard
+  :delight dashboard
   :preface (message "Using package `dashboard'.")
   :init (message "Starting `dashboard'.")
   :config (progn
