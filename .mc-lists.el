@@ -13,6 +13,7 @@
 
 (setq mc/cmds-to-run-once
       '(
+	drag-stuff-down
 	drag-stuff-right
 	duplicate-line
 	eval-region
