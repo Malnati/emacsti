@@ -3,16 +3,30 @@
 ;;;
 
 (progn
+    "Configuring elpa dirs by `system-type'"
+  (require 'package)
+  (when
+      (member system-type '(pc w32 ms-dos windows-nt cygwin))
+    (setq package-user-dir "~/.emacs.d/elpa/mswin"))
+  (when
+      (member system-type '(ns darwin))
+    (setq package-user-dir "~/.emacs.d/elpa/macos"))
+  (when
+      (member system-type '(gnu/linux gnu x))
+    (setq package-user-dir "~/.emacs.d/elpa/linux")))
+
+
+(progn
   "Setting stable and unstable Melpa's repositories.
 For installing `use-package'"
   (setq custom-file "~/.emacs.d/.emacs-save-options.el")
-  (package-initialize)
   (condition-case nil
       (require 'use-package)
     (file-error
      (progn
        "Initializing setup for one time installing...
         It will install `use-pachage' for providing the listed packages."
+       (setq warning-minimum-level :emergency)
        (desktop-save-mode -1)
        (package-initialize)
        (add-to-list 'package-archives '("unstable" . "https://melpa.org/packages/") t)
@@ -48,8 +62,8 @@ For installing `use-package'"
 	   (use-package drag-stuff)
 	   (use-package expand-region)
 	   (use-package flycheck)
-	   (use-package helm)
-	   (use-package helm-projectile :after helm)
+;;	   (use-package helm)
+;;	   (use-package helm-projectile :after helm)
 	   (use-package hydra)
 	   (use-package indent-guide)
 	   (use-package ivy)

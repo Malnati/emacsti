@@ -157,35 +157,11 @@
   :delight '(:eval (concat " " (projectile-project-name)))
   :config (progn
 	    (projectile-mode +1)
-	    (setq projectile-sort-order 'recentf))
+	    (setq projectile-completion-system 'ivy)
+	    (setq projectile-sort-order 'recentf)
+	    (setq projectile-project-search-path '("~/git/" "~/lab/" "~/hub/")))
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `projectile'... "
-			    (error-message-string err)))))
-(progn
-  (defun helm-buffer-face-mode ()
-    "Helm buffer face"
-    (interactive)
-    (with-helm-buffer
-      (setq line-spacing 2)
-      (buffer-face-set '(:height 87))))
-  (use-package helm
-    :delight helm
-    :preface (message "Using package `helm'.")
-    :init (message "Starting `helm'.")
-    :config (progn
-	      (add-hook 'helm-update-hook 'helm-buffer-face-mode))
-    :catch (lambda (keyword err)
-	     (message (concat "Error during loading of `helm'... "
-			      (error-message-string err))))))
-
-(use-package helm-projectile
-  :delight helm-projectile
-  :preface (message "Using package `helm-projectile'.")
-  :init (message "Starting `helm-projectile'.")
-  :config (progn
-	    (helm-projectile-on))
-  :catch (lambda (keyword err)
-           (message (concat "Error during loading of `helm-projectile'... "
 			    (error-message-string err)))))
 
 (use-package treemacs-projectile
@@ -199,8 +175,8 @@
 
 (use-package yasnippet
   :delight yasnippet
-  :preface (message "Using package `dashboard'.")
-  :init (message "Starting `dashboard'.")
+  :preface (message "Using package `yasnippet'.")
+  :init (message "Starting `yasnippet'.")
   :config (progn
 	    (yas-reload-all)
 	    (add-hook 'prog-mode-hook #'yas-minor-mode)
@@ -218,14 +194,14 @@
 	    (when (member system-type '(pc w32 ms-dos windows-nt cygwin))
 	      (setq yas-snippet-dirs
 		    (append yas-snippet-dirs
-			    '("~/.emacs.d/libs/elpa-mswin/yasnippet-snippets-20201221.849/snippets"))))
+			    '("~/.emacs.d/elpa/mswin/yasnippets"))))
 	    (when (member system-type '(gnu/linux gnu x))
 	      (setq yas-snippet-dirs
 		    (append yas-snippet-dirs
-			    '("~/.emacs.d/libs/elpa-linux/yasnippet-classic-snippets-1.0.2")))
+			    '("~/.emacs.d/elpa/linux/yasnippets")))
 	      (setq yas-snippet-dirs
 		    (append yas-snippet-dirs
-			    '("~/.emacs.d/libs/elpa-linux/snippet-20130210.2315")))))
+			    '("~/.emacs.d/elpa/linux/snippets")))))
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `yasnippet-snippets'... "
 			    (error-message-string err)))))
@@ -241,7 +217,7 @@
 	    (setq dashboard-center-content t)
 	    (setq dashboard-items '((recents  . 5)
 				    (bookmarks . 5)
-				    (projects . 5)
+				    (projects . 10)
 				    (registers . 5)))
 	    (setq dashboard-set-heading-icons t)
 	    (setq dashboard-set-file-icons t)
@@ -303,7 +279,5 @@
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `json-mode'... "
 			    (error-message-string err)))))
-
-
 
 ;;; .config.el ends here
