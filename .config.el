@@ -208,21 +208,11 @@
   :demand
   :diminish (dashboard-mode page-break-lines-mode)
   :custom
-  (dashboard-banner-logo-title "Close the world. Open the Emacs.")
+  (dashboard-banner-logo-title "Malnati's Emacs configuration.")
   (dashboard-startup-banner (expand-file-name "avatar.png" user-emacs-directory))
   (initial-buffer-choice (lambda () (get-buffer dashboard-buffer-name)))
   (dashboard-set-heading-icons t)
   (dashboard-set-navigator t)
-  (dashboard-navigator-buttons
-   (if (featurep 'all-the-icons)
-       `(((,(all-the-icons-octicon "mark-github" :height 1.1 :v-adjust -0.05)
-	   "Malnati's Homepage"
-	   (lambda (&rest _) (browse-url "https://github.com/Malnati")))
-	  (,(all-the-icons-fileicon "elisp" :height 1.0 :v-adjust -0.1)
-	   "Configuration" "" (lambda (&rest _) (edit-configs)))
-	  (,(all-the-icons-faicon "cogs" :height 1.0 :v-adjust -0.1)
-	   "Update" "" (lambda (&rest _) (auto-package-update-now)))))
-     `((( "" "Malnati's Homepage" (lambda (&rest _) (browse-url "https://github.com/Malnati")))))))
   :custom-face
   (dashboard-banner-logo-title ((t (:family "Love LetterTW" :height 123))))
   :config
