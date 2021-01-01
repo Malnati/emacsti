@@ -56,7 +56,6 @@
 		 '(define-key company-active-map (kbd "C-c h") #'company-quickhelp-manual-begin))
 	       (drag-stuff-define-keys)
 	       (global-set-key [(meta up)]   'drag-stuff-up)
-	       (global-set-key (kbd "M-x") 'helm-M-x)
 	       (global-set-key [(meta down)] 'drag-stuff-down)
 	       (define-prefix-command 'js2-keys)
 	       (global-set-key (kbd "C-c C-j") 'js2-keys)

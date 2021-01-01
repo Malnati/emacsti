@@ -20,4 +20,5 @@
 	helm-M-x
 	lsp-ui-doc--handle-mouse-movement
 	mouse-drag-vertical-line
+	mouse-set-region
 	))

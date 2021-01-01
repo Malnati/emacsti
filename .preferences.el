@@ -38,41 +38,9 @@
 ;;
 ;;; Code:
 
-(defun emacsti-commit-after-save ()
-  "Commit all buffers to git after save C-x C-s."
-  (interactive)
-  (shell-command-to-string
-   "git add . && git commit -m \"Auto-commited by emacsti-commit-after-save\""))
-
-(defun duplicate-line()
-  (interactive)
-  (move-beginning-of-line 1)
-  (kill-line)
-  (yank)
-  (open-line 1)
-  (next-line 1)
-  (yank))
-
-(defun copy-line()
-  (interactive)
-  (move-beginning-of-line 1)
-  (kill-line)
-  (yank)
-  (open-line 1)
-  (next-line 1))
-
-(defun select-line ()
-  "Select current line."
-  (interactive)
-  (let (p1 p2)
-    (setq p1 (line-beginning-position))
-    (setq p2 (line-end-position))
-    (goto-char p1)
-    (push-mark p2)
-    (setq mark-active t)))
-
 (progn
   "Preferences settings"
+  (setq custom-file "~/.emacs.d/.emacs-save-options.el")
   (column-number-mode t)
   (delete-selection-mode 1)
   (fringe-mode 8)
@@ -124,8 +92,42 @@
   (tool-bar-mode -1)
   (window-divider-mode -1)
   (electric-pair-mode 1)
-  (desktop-save-mode 1)
-  (turn-on-page-break-lines-mode))
+;;  (desktop-save-mode 1)
+  ;;(turn-on-page-break-lines-mode)
+  )
+
+(defun emacsti-commit-after-save ()
+  "Commit all buffers to git after save C-x C-s."
+  (interactive)
+  (shell-command-to-string
+   "git add . && git commit -m \"Auto-commited by emacsti-commit-after-save\""))
+
+(defun duplicate-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1)
+  (yank))
+
+(defun copy-line()
+  (interactive)
+  (move-beginning-of-line 1)
+  (kill-line)
+  (yank)
+  (open-line 1)
+  (next-line 1))
+
+(defun select-line ()
+  "Select current line."
+  (interactive)
+  (let (p1 p2)
+    (setq p1 (line-beginning-position))
+    (setq p2 (line-end-position))
+    (goto-char p1)
+    (push-mark p2)
+    (setq mark-active t)))
 
 (progn
   "Makes buffer switch command do suggestions, 

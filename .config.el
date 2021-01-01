@@ -32,9 +32,7 @@
 
 ;;; Code:
 
-(progn
-  "Avoiding for installing packages here."
-  (setq use-package-always-ensure nil))
+(setq use-package-always-ensure nil) ;; "Avoiding for installing from here."
 
 (use-package expand-region
   :delight
@@ -207,6 +205,7 @@
 			    (error-message-string err)))))
 
 (use-package dashboard
+  ;; "https://docs.projectile.mx/projectile/configuration.html"
   :delight dashboard
   :preface (message "Using package `dashboard'.")
   :init (message "Starting `dashboard'.")
@@ -221,21 +220,44 @@
 				    (registers . 5)))
 	    (setq dashboard-set-heading-icons t)
 	    (setq dashboard-set-file-icons t)
-	    (setq dashboard-set-navigator t))
+	    (setq dashboard-set-navigator t)
+	    (setq dashboard-banner-official-png nil))
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `dashboard'... "
 			    (error-message-string err)))))
 
 (use-package flycheck
-  :delight flycheck
-  :preface (message "Using package `flycheck'.")
-  :init (message "Starting `flycheck'.")
+  :hook ((prog-mode markdown-mode) . flycheck-mode)
+  :custom (progn
+	    "Customizations for flycheck package."
+	    (flycheck-global-modes
+	     '(not text-mode outline-mode fundamental-mode org-mode
+		   diff-mode shell-mode eshell-mode term-mode))
+	    (flycheck-emacs-lisp-load-path 'inherit)
+	    (flycheck-indication-mode 'right-fringe))
+  :init (progn
+	  "Flycheck inicialization."
+	  (use-package flycheck-grammarly)
+	  (if (display-graphic-p)
+	      (use-package flycheck-posframe
+		:custom-face (flycheck-posframe-border-face ((t (:inherit default))))
+		:hook (flycheck-mode . flycheck-posframe-mode)
+		:custom
+		(flycheck-posframe-border-width 1)
+		(flycheck-posframe-inhibit-functions
+		 '((lambda (&rest _) (bound-and-true-p company-backend)))))
+	    (use-package flycheck-pos-tip
+	      :defines flycheck-pos-tip-timeout
+	      :hook (flycheck-mode . flycheck-pos-tip-mode)
+	      :custom (flycheck-pos-tip-timeout 30))))
   :config (progn
-	    (flycheck-mode t)
-	    (setq global-flycheck-mode t))
-  :catch (lambda (keyword err)
-           (message (concat "Error during loading of `flycheck'... "
-			    (error-message-string err)))))
+	    "Flycheck pos-loading configurations."
+	    (when (fboundp 'define-fringe-bitmap)
+	      (define-fringe-bitmap 'flycheck-fringe-bitmap-double-arrow
+		[16 48 112 240 112 48 16] nil nil 'center))
+	    ;;  (flycheck-add-mode 'javascript-eslint 'js-mode)
+	    ;;  (flycheck-add-mode 'typescript-tslint 'rjsx-mode)
+	    ))
 
 (use-package js2-mode
   :delight js2-mode

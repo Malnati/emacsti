@@ -2,9 +2,33 @@
 ;;; Commentary:
 ;;; Code:
 
-(load-file "~/.emacs.d/.install.el")
-(load-file "~/.emacs.d/.config.el")
+(when
+    (member system-type '(pc w32 ms-dos windows-nt cygwin))
+  (setq package-user-dir "~/.emacs.d/elpa/mswin"))
+(when
+    (member system-type '(ns darwin))
+  (setq package-user-dir "~/.emacs.d/elpa/macos"))
+(when
+    (member system-type '(gnu/linux gnu x))
+  (setq package-user-dir "~/.emacs.d/elpa/linux"))
+
+(if (not (file-directory-p package-user-dir))
+    (progn
+      "To prevent for calling melpa at starting.
+It should be only if the user wants to install a new package, but not every time."
+      (message "The `package-user-dir' is not there!" )
+      (package-initialize)
+      (add-to-list 'package-archives '("unstable" . "https://melpa.org/packages/") t)
+      (add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/") t)
+      (package-refresh-contents)
+      (package-install 'use-package)
+      (load-file "~/.emacs.d/.install.el")
+      (message (concat "The `package-user-dir' was created at:" package-user-dir))))
+
+(package-initialize)
+
 (load-file "~/.emacs.d/.preferences.el")
+(load-file "~/.emacs.d/.config.el")
 (load-file "~/.emacs.d/.keybindings.el")
 
 ;;(load-file "~/.emacs.d/.defer.el")
