@@ -35,38 +35,6 @@
 (progn
   "Avoiding for installing packages here."
   (setq use-package-always-ensure nil))
-  
-
-(use-package dashboard
-  :delight dashboard
-  :preface (message "Using package `dashboard'.")
-  :init (message "Starting `dashboard'.")
-  :config (progn
-	    "Settings for `dashboard'"
-	    (message "Configuring `dashboard'.")
-	    (dashboard-setup-startup-hook)
-	    (setq dashboard-center-content t)
-	    (setq dashboard-items '((recents  . 5)
-				    (bookmarks . 5)
-				    (projects . 5)
-				    (registers . 5)))
-	    (setq dashboard-set-heading-icons t)
-	    (setq dashboard-set-file-icons t)
-	    (setq dashboard-set-navigator t))
-  :catch (lambda (keyword err)
-           (message (concat "Error during loading of `dashboard'... "
-			    (error-message-string err)))))
-
-(when (member system-type '(ns darwin))
-  (use-package exec-path-from-shell
-    :delight
-    :preface (message "Using package `exec-path-from-shell'.")
-    :init (message "Starting `exec-path-from-shell'.")
-    :config (progn
-	      (exec-path-from-shell-initialize))
-    :catch (lambda (keyword err)
-	     (message (concat "Error during loading of `exec-path-from-shell'... "
-			      (error-message-string err))))))
 
 (use-package expand-region
   :delight
@@ -102,84 +70,12 @@
            (message (concat "Error during loading of `ivy'... "
 			    (error-message-string err)))))
 
-;; TODO move bind to which-key
 (use-package avy
   :delight avy
   :preface (message "Using package `avy'.")
   :init (message "Starting `avy'.")
-  :bind ("M-s" . avy-goto-char)
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `avy'... "
-			    (error-message-string err)))))
-
-(use-package which-key
-  :delight whych-key
-  :preface (message "Using package `which-key'.")
-  :init (progn
-	  "Defaul settings for which-key mode."
-	  (message "Starting `which-key'.")
-	  (which-key-mode)
-	  (which-key-setup-side-window-right-bottom)
-	  ;; max width of which-key window, when displayed at left or right.
-	  ;; valid values: number of columns (integer), or percentage out of current
-	  ;; frame's width (float larger than 0 and smaller than 1)
-	  (setq which-key-side-window-max-width 0.4)
-	  ;; max height of which-key window, when displayed at top or bottom.
-	  ;; valid values: number of lines (integer), or percentage out of current
-	  ;; frame's height (float larger than 0 and smaller than 1)
-	  (setq which-key-side-window-max-height 0.25))
-  :config  (progn
-	     "Keytrokes settings" 
-	     (progn 
-	       "Keytrokes definitions"
-	       (global-set-key (kbd "C-c c") 'copy-line)
-	       (global-set-key (kbd "C-c d") 'duplicate-line)
-	       (global-set-key (kbd "C-c e b") 'eval-buffer)
-	       (global-set-key (kbd "C-c e r") 'eval-region)
-	       (global-set-key (kbd "C-c f i") 'indent-region)
-	       (global-set-key (kbd "C-c m l") 'select-line)
-	       (global-set-key (kbd "C-z")   'undo)
-	       (global-set-key [(control shift meta up)]   'text-scale-increase)
-	       (global-set-key [(control shift meta down)] 'text-scale-decrease)
-	       (define-key projectile-mode-map (kbd "C-c p") 'projectile-command-map)
-	       (eval-after-load 'company
-		 '(define-key company-active-map (kbd "C-c h") #'company-quickhelp-manual-begin))
-	       (drag-stuff-define-keys)
-	       (global-set-key [(meta up)]   'drag-stuff-up)
-	       (global-set-key (kbd "M-x") 'helm-M-x)
-	       (global-set-key [(meta down)] 'drag-stuff-down)
-	       (define-prefix-command 'js2-keys)
-	       (global-set-key (kbd "C-c C-j") 'js2-keys)
-	       ;; display a path to the object at point with json-snatcher (https://github.com/Sterlingg/json-snatcher)
-	       (define-key js2-keys (kbd "p") 'json-mode-show-path)
-	       ;; copy a path to the object at point to the kill ring with json-snatcher (https://github.com/Sterlingg/json-snatcher)
-	       (define-key js2-keys (kbd "P") 'json-mode-kill-path)
-	       (progn
-		 "xref-js2 keytrokes definitions"
-		 (define-prefix-command 'xref-js2)
-		 (global-set-key (kbd "C-c x") 'xref-js2)
-		 (define-key xref-js2 (kbd "a")   'js2-mode-show-all) 
-		 (define-key xref-js2 (kbd "g")   'xref-revert-buffer) 
-		 (define-key xref-js2 (kbd "j")   'js2-jump-to-definition) 
-		 (define-key xref-js2 (kbd "C-o") 'xref-show-location-at-point) 
-		 (define-key xref-js2 (kbd "s")   'js2-mode-show-element)
-		 )
-	       )
-	     (progn 
-	       "Keytrokes descriptions"
-	       (which-key-add-key-based-replacements "C-c c" "copy line")
-	       (which-key-add-key-based-replacements "C-c d" "duplicate line")
-	       (which-key-add-key-based-replacements "C-c e" "eval")
-	       (which-key-add-key-based-replacements "C-c e b" "eval buffer")
-	       (which-key-add-key-based-replacements "C-c e r" "eval region")
-	       (which-key-add-key-based-replacements "C-c f" "format")
-	       (which-key-add-key-based-replacements "C-c f i" "indent region")
-	       (which-key-add-key-based-replacements "C-c p" "project")
-	       (which-key-add-key-based-replacements "C-c m" "mark")
-	       (which-key-add-key-based-replacements "C-c m l" "mark line")
-	       (which-key-add-key-based-replacements "C-z" "undo") ))
-  :catch (lambda (keyword err)
-           (message (concat "Error during loading of `which-key'... "
 			    (error-message-string err)))))
 
 (use-package company
@@ -193,21 +89,12 @@
            (message (concat "Error during loading of `company'... "
 			    (error-message-string err)))))
 
-(use-package treemacs-projectile
-  :delight treemacs-projectile
-  :preface (message "Using package `treemacs-projectile'.")
-  :init (message "Starting `treemacs-projectile'.")
-  :after treemacs
-  :catch (lambda (keyword err)
-           (message (concat "Error during loading of `treemacs-projectile'... "
-			    (error-message-string err)))))
-
 (use-package company-box
   :delight company-box
   :preface (message "Using package `company-box'.")
   :init (message "Starting `company-box'.")
-  :after company-mode 
-  :hook (company-mode . company-box-mode)  
+  :after company-mode
+  :hook (company-mode . company-box-mode)
   :config (progn
 	    (setq company-box-icons-unknown 'fa_question_circle)
 	    (setq company-box-icons-elisp
@@ -220,14 +107,12 @@
            (message (concat "Error during loading of `company-box'... "
 			    (error-message-string err)))))
 
-;; TODO FIX
 (use-package company-quickhelp
   :delight company-quickhelp
   :preface (message "Using package `company-quickhelp'.")
   :init (message "Starting `company-quickhelp'.")
   :config (progn
-	    (company-quickhelp-mode)
-	    )
+	    (company-quickhelp-mode))
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `company-quickhelp'... "
 			    (error-message-string err)))))
@@ -276,6 +161,41 @@
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `projectile'... "
 			    (error-message-string err)))))
+(progn
+  (defun helm-buffer-face-mode ()
+    "Helm buffer face"
+    (interactive)
+    (with-helm-buffer
+      (setq line-spacing 2)
+      (buffer-face-set '(:height 87))))
+  (use-package helm
+    :delight helm
+    :preface (message "Using package `helm'.")
+    :init (message "Starting `helm'.")
+    :config (progn
+	      (add-hook 'helm-update-hook 'helm-buffer-face-mode))
+    :catch (lambda (keyword err)
+	     (message (concat "Error during loading of `helm'... "
+			      (error-message-string err))))))
+
+(use-package helm-projectile
+  :delight helm-projectile
+  :preface (message "Using package `helm-projectile'.")
+  :init (message "Starting `helm-projectile'.")
+  :config (progn
+	    (helm-projectile-on))
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `helm-projectile'... "
+			    (error-message-string err)))))
+
+(use-package treemacs-projectile
+  :delight treemacs-projectile
+  :preface (message "Using package `treemacs-projectile'.")
+  :init (message "Starting `treemacs-projectile'.")
+  :after treemacs
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `treemacs-projectile'... "
+			    (error-message-string err)))))
 
 (use-package yasnippet
   :delight yasnippet
@@ -310,6 +230,26 @@
            (message (concat "Error during loading of `yasnippet-snippets'... "
 			    (error-message-string err)))))
 
+(use-package dashboard
+  :delight dashboard
+  :preface (message "Using package `dashboard'.")
+  :init (message "Starting `dashboard'.")
+  :config (progn
+	    "Settings for `dashboard'"
+	    (message "Configuring `dashboard'.")
+	    (dashboard-setup-startup-hook)
+	    (setq dashboard-center-content t)
+	    (setq dashboard-items '((recents  . 5)
+				    (bookmarks . 5)
+				    (projects . 5)
+				    (registers . 5)))
+	    (setq dashboard-set-heading-icons t)
+	    (setq dashboard-set-file-icons t)
+	    (setq dashboard-set-navigator t))
+  :catch (lambda (keyword err)
+           (message (concat "Error during loading of `dashboard'... "
+			    (error-message-string err)))))
+
 (use-package flycheck
   :delight flycheck
   :preface (message "Using package `flycheck'.")
@@ -319,33 +259,6 @@
 	    (setq global-flycheck-mode t))
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `flycheck'... "
-			    (error-message-string err)))))
-
-(progn
-  (defun helm-buffer-face-mode ()
-    "Helm buffer face"
-    (interactive)
-    (with-helm-buffer
-      (setq line-spacing 2)
-      (buffer-face-set '(:height 87))))
-  (use-package helm
-    :delight helm
-    :preface (message "Using package `helm'.")
-    :init (message "Starting `helm'.")
-    :config (progn
-	      (add-hook 'helm-update-hook 'helm-buffer-face-mode))
-    :catch (lambda (keyword err)
-	     (message (concat "Error during loading of `helm'... "
-			      (error-message-string err))))))
-
-(use-package helm-projectile
-  :delight helm-projectile
-  :preface (message "Using package `helm-projectile'.")
-  :init (message "Starting `helm-projectile'.")
-  :config (progn
-	    (helm-projectile-on))
-  :catch (lambda (keyword err)
-           (message (concat "Error during loading of `helm-projectile'... "
 			    (error-message-string err)))))
 
 (use-package js2-mode
@@ -384,11 +297,13 @@
   :delight json-mode
   :preface (message "Using package `json-mode'.")
   :init (message "Starting `json-mode'.")
-  :after js2-mode  
+  :after js2-mode
   :config (progn
 	    (add-to-list 'auto-mode-alist '("\\.json\\'"   . json-mode)))
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `json-mode'... "
 			    (error-message-string err)))))
+
+
 
 ;;; .config.el ends here

@@ -5,6 +5,7 @@
 (load-file "~/.emacs.d/.install.el")
 (load-file "~/.emacs.d/.config.el")
 (load-file "~/.emacs.d/.preferences.el")
+(load-file "~/.emacs.d/.keybindings.el")
 
 ;;(load-file "~/.emacs.d/.defer.el")
 ;;(load-file "~/.emacs.d/.lsp-java.el")
