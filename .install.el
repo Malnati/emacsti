@@ -13,6 +13,7 @@ For installing `use-package'"
      (progn
        "Initializing setup for one time installing...
         It will install `use-pachage' for providing the listed packages."
+       (desktop-save-mode -1)
        (package-initialize)
        (add-to-list 'package-archives '("unstable" . "https://melpa.org/packages/") t)
        (add-to-list 'package-archives '("stable" . "https://stable.melpa.org/packages/") t)
