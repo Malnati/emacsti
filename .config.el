@@ -205,26 +205,44 @@
 			    (error-message-string err)))))
 
 (use-package dashboard
-  ;; "https://docs.projectile.mx/projectile/configuration.html"
-  :delight dashboard
-  :preface (message "Using package `dashboard'.")
-  :init (message "Starting `dashboard'.")
-  :config (progn
-	    "Settings for `dashboard'"
-	    (message "Configuring `dashboard'.")
-	    (dashboard-setup-startup-hook)
-	    (setq dashboard-center-content t)
-	    (setq dashboard-items '((recents  . 5)
+  :demand
+  :diminish (dashboard-mode page-break-lines-mode)
+  :custom
+  (dashboard-banner-logo-title "Close the world. Open the Emacs.")
+  (dashboard-startup-banner (expand-file-name "avatar.png" user-emacs-directory))
+  (initial-buffer-choice (lambda () (get-buffer dashboard-buffer-name)))
+  (dashboard-set-heading-icons t)
+  (dashboard-set-navigator t)
+  (dashboard-navigator-buttons
+   (if (featurep 'all-the-icons)
+       `(((,(all-the-icons-octicon "mark-github" :height 1.1 :v-adjust -0.05)
+	   "Malnati's Homepage"
+	   (lambda (&rest _) (browse-url "https://github.com/Malnati")))
+	  (,(all-the-icons-fileicon "elisp" :height 1.0 :v-adjust -0.1)
+	   "Configuration" "" (lambda (&rest _) (edit-configs)))
+	  (,(all-the-icons-faicon "cogs" :height 1.0 :v-adjust -0.1)
+	   "Update" "" (lambda (&rest _) (auto-package-update-now)))))
+     `((( "" "Malnati's Homepage" (lambda (&rest _) (browse-url "https://github.com/Malnati")))))))
+  :custom-face
+  (dashboard-banner-logo-title ((t (:family "Love LetterTW" :height 123))))
+  :config
+  (setq dashboard-items '((recents  . 5)
 				    (bookmarks . 5)
-				    (projects . 10)
-				    (registers . 5)))
-	    (setq dashboard-set-heading-icons t)
-	    (setq dashboard-set-file-icons t)
-	    (setq dashboard-set-navigator t)
-	    (setq dashboard-banner-official-png nil))
-  :catch (lambda (keyword err)
-           (message (concat "Error during loading of `dashboard'... "
-			    (error-message-string err)))))
+				    (projects . 10)))
+  (setq dashboard-center-content t)
+  (dashboard-modify-heading-icons '((recents . "file-text")
+                                    (bookmarks . "book")))
+  (dashboard-setup-startup-hook)
+  ;; Open Dashboard function
+  (defun open-dashboard ()
+    "Open the *dashboard* buffer and jump to the first widget."
+    (interactive)
+    (if (get-buffer dashboard-buffer-name)
+        (kill-buffer dashboard-buffer-name))
+    (dashboard-insert-startupify-lists)
+    (switch-to-buffer dashboard-buffer-name)
+    (goto-char (point-min))
+    (delete-other-windows)))
 
 (use-package flycheck
   :hook ((prog-mode markdown-mode) . flycheck-mode)
