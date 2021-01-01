@@ -73,12 +73,6 @@ For installing `use-package'"
 	     "Loading clippy from path." 
 	     (message "Loading `clippy'...")
 	     (load-file "~/.emacs.d/clippy/clippy.el"))
-	   (setq use-package-always-ensure nil)
-	   (progn
-	     "Installing and running a pachage for restarting."
-	     (use-package restart-emacs
-	       :ensure
-	       :config (restart-emacs)))
-	   ))))))
+	   (setq use-package-always-ensure nil)))))))
 
 ;;; .install.el ends here
