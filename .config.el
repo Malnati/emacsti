@@ -131,7 +131,12 @@
     (call-interactively #'load-theme)))
 
 (use-package doom-modeline
-  :init (doom-modeline-mode 1))
+  :init (doom-modeline-mode 1)
+  :config (progn
+	    "modeline configurations."
+	    (setq doom-modeline-height 1)
+	    (set-face-attribute 'mode-line nil :height 90))
+  )
 
 (use-package indent-guide
   :delight indent-guide

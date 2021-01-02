@@ -5,7 +5,6 @@
 ;; Author: Ricardo Malnati <ricardomalnati@gmail.com>
 ;; Version: 1.0.0
 ;; Package-Version:
-;; Package-Commit: 
 ;; Package-Requires: ((emacs "24.4") (package))
 ;; Keywords: package
 ;;
@@ -53,7 +52,7 @@
   (save-place-mode t)
   (scroll-bar-mode -1)
   (set-cursor-color "yellow")
-  (set-face-attribute 'default nil :height 110)
+  (set-face-attribute 'default nil :height 100)
   (set-face-foreground 'fringe "orange")
   (setq auto-save-default t)
   (setq auto-save-interval 5)
