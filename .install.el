@@ -60,7 +60,7 @@ For installing `use-package'"
 	    (use-package dashboard)
 	    (use-package smart-mode-line)
 	    (progn
-	      "Loading clippy from path." 
+	      "Loading clippy from path."
 	      (message "Loading `clippy'...")
 	      (load-file "~/.emacs.d/clippy/clippy.el"))
 	    (setq use-package-always-ensure nil)

@@ -17,6 +17,17 @@
   :config  (progn
 	     "Keytrokes settings"
 	     (progn
+	       "bookmark keytrokes definitions"
+	       (define-prefix-command 'bookmark)
+	       (global-set-key (kbd "C-c b") 'bookmark)
+	       (which-key-add-key-based-replacements "C-c b" "bookmark")
+	       (global-set-key (kbd "C-c b c") 'bookmark-set)
+	       (which-key-add-key-based-replacements "C-c b c" "create bookmark")
+	       (global-set-key (kbd "C-c b d") 'bookmark-delete)
+	       (which-key-add-key-based-replacements "C-c b d" "delete bookmark")
+	       (global-set-key (kbd "C-c b l") 'list-bookmarks)
+	       (which-key-add-key-based-replacements "C-c b l" "list bookmarks"))
+	     (progn
 	       "yasnippet keytrokes definitions"
 	       (define-prefix-command 'auto-yasnippet)
 	       (global-set-key (kbd "C-c y") 'auto-yasnippet)
