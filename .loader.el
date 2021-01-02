@@ -35,6 +35,10 @@ It should be only if the user wants to install a new package, but not every time
 ;;(load-file "~/.emacs.d/.lsp-java.el")
 ;;(load-file "~/.emacs.d/.draft.el")
 
-(provide 'loader)
+;; (use-package powerline
+;;   :config (powerline-nano-theme)
+;;   (powerline-raw mode-line-mule-info nil 'l))
 
-;;; loader.el ends here
+(provide '.loader)
+
+;;; .loader.el ends here

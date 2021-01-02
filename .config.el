@@ -115,17 +115,23 @@
            (message (concat "Error during loading of `company-quickhelp'... "
 			    (error-message-string err)))))
 
-(use-package nord-theme
-  :delight nord-theme
-  :preface (message "Using package `nord-theme'.")
-  :init (message "Starting `nord-theme'.")
-  :config (progn
-	    (add-to-list 'custom-theme-load-path
-			 (expand-file-name "~/.emacs.d/themes/"))
-	    (load-theme 'nord t))
-  :catch (lambda (keyword err)
-           (message (concat "Error during loading of `nord-theme'... "
-			    (error-message-string err)))))
+(use-package doom-themes
+  :custom-face
+  (cursor ((t (:background "BlanchedAlmond"))))
+  :config
+  ;; flashing mode-line on errors
+  (doom-themes-visual-bell-config)
+  ;; Corrects (and improves) org-mode's native fontification.
+  (doom-themes-org-config)
+  (load-theme 'doom-dracula t)
+  (defun switch-theme ()
+    "An interactive funtion to switch themes."
+    (interactive)
+    (disable-theme (intern (car (mapcar #'symbol-name custom-enabled-themes))))
+    (call-interactively #'load-theme)))
+
+(use-package doom-modeline
+  :init (doom-modeline-mode 1))
 
 (use-package indent-guide
   :delight indent-guide

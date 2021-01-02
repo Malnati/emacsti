@@ -59,6 +59,8 @@ For installing `use-package'"
 	    (use-package page-break-lines)
 	    (use-package dashboard)
 	    (use-package smart-mode-line)
+	    (use-package doom-themes)
+	    (use-package doom-modeline)
 	    (progn
 	      "Loading clippy from path."
 	      (message "Loading `clippy'...")

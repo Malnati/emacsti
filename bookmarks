@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-((".keybindings.el"
+((".loader.el"
+ (filename . "~/git/hub/Malnati/emacsti/.loader.el")
+ (front-context-string . ";; (use-package ")
+ (rear-context-string . ".d/.draft.el\")\n\n")
+ (position . 1273))
+(".keybindings.el"
  (filename . "~/git/hub/Malnati/emacsti/.keybindings.el")
  (front-context-string . "(progn\n	       \"")
  (rear-context-string . "settings\"\n	     ")
