@@ -2,7 +2,8 @@
 (package-initialize)
 
 (load-file "~/.emacsti/libs/execpathfromshell.el")
-(load-file "~/.emacsti/libs/solarizedemacs.el")
+(load-file "~/.emacsti/libs/nordtheme.el")
+(load-file "~/.emacsti/libs/color-identifiers-mode.el")
 (load-file "~/.emacsti/libs/powerline.el")
 (load-file "~/.emacsti/libs/expandregion.el")
 (load-file "~/.emacsti/libs/multiplecursors.el")
@@ -11,6 +12,7 @@
 (load-file "~/.emacsti/libs/company.el")
 (load-file "~/.emacsti/libs/indent-guide.el")
 (load-file "~/.emacsti/libs/yasnippet.el")
+(load-file "~/.emacsti/libs/drag-stuff.el")
 ;; Starting block for Javascript support
 (load-file "~/.emacsti/libs/js2-mode.el")
 (load-file "~/.emacsti/libs/s.el")

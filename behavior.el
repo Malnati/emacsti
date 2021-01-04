@@ -13,7 +13,8 @@
 (delete-selection-mode 1)
 (message "→ completedelete-selection-mode ON!")
 
-(fset (quote yes-or-no-p) t)
+(fset 'yes-or-no-p 'y-or-n-p)
+;;(fset (quote yes-or-no-p) t)
 (message "→ yes-or-no-p ON!")
 
 (defun duplicate-line()
@@ -73,6 +74,9 @@
 (global-set-key (kbd "C-c l")  'select-line)
 (message "→ C-c l for select-line!")
 
+(global-set-key (kbd "C-c m") 'mc/mark-next-like-this)
+(message "→ C-c m for selecting next like this!")
+
 ;; (defun eval-line ()
 ;;   "Select current line."
 ;;   (interactive)
@@ -84,16 +88,17 @@
 ;;     (setq mark-active t)
 ;;     (eval-region p1 p2)))
 
-;; (global-set-key (kbd "C-c e")  'eval-line)
-;; (message "→ C-c l for eval-line!")
+(global-set-key (kbd "C-c e")  'eval-region)
+(message "→ C-c l for eval-region!")
 
 ;; references
 ;; http://ergoemacs.org/emacs/emacs_region.html
 
 ;; You can also edit plain js, jsx, css, scss, xml files.
-;; (add-to-list 'auto-mode-alist '("\\.js\\'" . javascript-mode))
-;; (add-to-list 'auto-mode-alist '("\\.jsx\\'" . javascript-mode))
-;; (add-to-list 'auto-mode-alist '("\\.rjsx\\'" . javascript-mode))
-;; (add-to-list 'auto-mode-alist '("\\.json\\'" . javascript-mode))
-;; (add-to-list 'auto-mode-alist '("\\.ts\\'" . javascript-mode))
-;; (add-to-list 'auto-mode-alist '("\\.tsx\\'" . javascript-mode))
+
+(add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.jsx\\'"  . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.rjsx\\'" . js2-mode))
+(add-to-list 'auto-mode-alist '("\\.json\\'" . json-mode))
+(add-to-list 'auto-mode-alist '("\\.ts\\'"   . typescript-mode))
+(add-to-list 'auto-mode-alist '("\\.tsx\\'"  . typescript-mode))
