@@ -170,7 +170,7 @@
   :delight '(:eval (concat " " (projectile-project-name)))
   :config (progn
 	    (projectile-mode +1)
-	    (setq projectile-completion-system 'ivy)
+;;	    (setq projectile-completion-system 'ivy)
 	    (setq projectile-sort-order 'recentf)
 	    (setq projectile-project-search-path '("~/git/" "~/lab/" "~/hub/")))
   :catch (lambda (keyword err)
@@ -356,24 +356,7 @@
   :preface (message "Using package `lsp-java'.")
   :init (message "Starting `lsp-java' as stand by.")
   :config (progn
-	    (setq lsp-java-vmargs
-		  (list
-		   "-noverify"
-		   "-Xmx3G"
-		   "-XX:+UseG1GC"
-		   "-XX:+UseStringDeduplication"
-		   "-javaagent:/home/malnati/.m2/repository/org/projectlombok/lombok/1.18.12/lombok-1.18.12.jar"
-		   )
-		  ;; Don't organise imports on save
-		  lsp-java-save-action-organize-imports nil
-		  ;; Fetch less results from the Eclipse server
-		  lsp-java-completion-max-results 20
-		  ;; Currently (2019-04-24), dap-mode works best with Oracle
-		  ;; JDK, see https://github.com/emacs-lsp/dap-mode/issues/31
-		  ;;
-		  ;; lsp-java-java-path "~/.emacs.d/oracle-jdk-12.0.1/bin/java"
-		  lsp-java-java-path "/usr/lib/jvm/java-11-openjdk-amd64/bin/java")
-	    (add-to-list 'auto-mode-alist '("\\.java\\'"   . java-mode))
+            (add-to-list 'auto-mode-alist '("\\.java\\'"   . java-mode))
 	    (add-hook 'java-mode-hook 'lsp)))
 
 (use-package lsp-ui
@@ -401,19 +384,7 @@
 		   :request "attach"
 		   :hostName "localhost"
 		   :port 5005))
-	    (dap-register-debug-template
-	     "localhost:5005"
-	     (list :type "java"
-		   :request "attach"
-		   :hostName "localhost"
-		   :port 5005))
-	    (dap-register-debug-template
-	     "lxd"
-	     (list :type "java"
-		   :request "attach"
-		   :hostName "10.152.112.168"
-		   :port 5005))
-	    (add-hook 'dap-stopped-hook
+            (add-hook 'dap-stopped-hook
 		      (lambda (arg) (call-interactively #'dap-hydra)))))
 
 (use-package dap-java
