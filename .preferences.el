@@ -46,7 +46,6 @@
   (delete-selection-mode 1)
   (fringe-mode 8)
   (fset 'yes-or-no-p 'y-or-n-p)
-  (fset (quote yes-or-no-p) t)
   (global-auto-revert-mode t)
   (global-display-line-numbers-mode t)
   (global-visual-line-mode t)
