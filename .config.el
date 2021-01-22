@@ -119,20 +119,20 @@
            (message (concat "Error during loading of `company-quickhelp'... "
 			    (error-message-string err)))))
 
-(use-package doom-themes
-  :custom-face
-  (cursor ((t (:background "BlanchedAlmond"))))
-  :config
-  ;; flashing mode-line on errors
-  (doom-themes-visual-bell-config)
-  ;; Corrects (and improves) org-mode's native fontification.
-  (doom-themes-org-config)
-  (load-theme 'doom-dracula t)
-  (defun switch-theme ()
-    "An interactive funtion to switch themes."
-    (interactive)
-    (disable-theme (intern (car (mapcar #'symbol-name custom-enabled-themes))))
-    (call-interactively #'load-theme)))
+;; (use-package doom-themes
+;;   :custom-face
+;;   (cursor ((t (:background "BlanchedAlmond"))))
+;;   :config
+;;   ;; flashing mode-line on errors
+;;   (doom-themes-visual-bell-config)
+;;   ;; Corrects (and improves) org-mode's native fontification.
+;;   (doom-themes-org-config)
+;;   (load-theme 'doom-dracula t)
+;;   (defun switch-theme ()
+;;     "An interactive funtion to switch themes."
+;;     (interactive)
+;;     (disable-theme (intern (car (mapcar #'symbol-name custom-enabled-themes))))
+;;     (call-interactively #'load-theme)))
 
 (use-package doom-modeline
   :init (doom-modeline-mode 1)
@@ -287,8 +287,8 @@
   :preface (message "Using package `js2-mode'.")
   :init (message "Starting `js2-mode'.")
   :config (progn
-	    (add-to-list 'interpreter-mode-alist '("node" . js2-mode))
-	    (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode)))
+	    (add-to-list 'auto-mode-alist '("\\.js\\'"   . js2-mode))
+	    (add-to-list 'auto-mode-alist '("\\.ts\\'"   . js2-mode)))
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `js2-mode'... "
 			    (error-message-string err)))))
@@ -298,57 +298,37 @@
   :preface (message "Using package `dashboard'.")
   :init (message "Starting `dashboard'.")
   :after js2-mode
+  :config (progn
+            (add-hook 'js2-mode-hook #'js2-refactor-mode)
+            (setq js2-skip-preprocessor-directives t))
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `js2-refactor'... "
 			    (error-message-string err)))))
 
-(when (member system-type '(gnu/linux gnu x))
-  (use-package xref-js2
-    :delight xref-js2
-    :preface (message "Using package `xref-js2'.")
-    :init (message "Starting `xref-js2'.")
-    :after js2-mode
-    :config (progn
-	      (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t))
-    :catch (lambda (keyword err)
-	     (message (concat "Error during loading of `xref-js2'... "
-			      (error-message-string err))))))
-
-(use-package json-mode
-  :delight json-mode
-  :preface (message "Using package `json-mode'.")
-  :init (message "Starting `json-mode'.")
-  :after js2-mode
+(use-package nord-theme
+  :preface (message "Using package `nord'.")
+  :init (message "Starting `nord'.")
   :config (progn
-	    (add-to-list 'auto-mode-alist '("\\.json\\'"   . json-mode)))
-  :catch (lambda (keyword err)
-           (message (concat "Error during loading of `json-mode'... "
-			    (error-message-string err)))))
+            (load-theme 'nord t)))
 
-(use-package typescript-mode
-  :delight typescript-mode
-  :preface (message "Using package `typescript-mode'.")
-  :init (message "Starting `typescript-mode'.")
-  :after js2-mode
-  :mode "\\.ts\\'"
-  :config (progn
-            (setq typescript-indent-level 2)))
-
-(use-package prettier-js
-  :delight prettier-js
-  :preface (message "Using package `prettier-js'.")
-  :init (message "Starting `prettier-js'.")
-  :after js2-mode
-  :hook ((js2-mode . prettier-js-mode)
-         (typescript-mode . prettier-js-mode))
-  :config (progn
-            (setq prettier-js-show-errors nil)))
+;; (when (member system-type '(gnu/linux gnu x))
+;;   (use-package xref-js2
+;;     :delight xref-js2
+;;     :preface (message "Using package `xref-js2'.")
+;;     :init (message "Starting `xref-js2'.")
+;;     :after js2-mode
+;;     :config (progn
+;; 	      (add-hook 'xref-backend-functions #'xref-js2-xref-backend nil t))
+;;     :catch (lambda (keyword err)
+;; 	     (message (concat "Error during loading of `xref-js2'... "
+;; 			      (error-message-string err))))))
 
 ;; https://gitlab.com/skybert/my-little-friends/blob/master/emacs/.emacs
 (use-package lsp-mode
   :preface (message "Using package `lsp-mode'.")
   :init (message "Starting `lsp-mode' as stand by.")
-  :hook ((lsp-mode . lsp-enable-which-key-integration))
+  :commands lsp
+  :hook ((js2-mode web-mode lsp-enable-which-key-integration) . lsp)
   :config (progn
 	    (setq lsp-completion-enable-additional-text-edit nil)))
 
@@ -364,8 +344,9 @@
   :config
   (setq lsp-ui-sideline-enable t)
   (setq lsp-ui-sideline-show-hover nil)
-  (setq lsp-ui-doc-position 'bottom)
-  (lsp-ui-doc-show))
+;;  (setq lsp-ui-doc-position 'bottom)
+;;  (lsp-ui-doc-show)
+  )
 
 (use-package dap-mode
   :after lsp-mode
@@ -394,7 +375,6 @@
   :config (progn
 	    (global-set-key (kbd "<f7>") 'dap-step-in)
 	    (global-set-key (kbd "<f8>") 'dap-next)
-	    (global-set-key (kbd "<f9>") 'dap-continue)
-	    ))
+	    (global-set-key (kbd "<f9>") 'dap-continue)))
 
 ;;; .config.el ends here
