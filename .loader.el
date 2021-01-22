@@ -36,6 +36,7 @@ It should be only if the user wants to install a new package, but not every time
 
 (load-file "~/.emacs.d/.config.el")
 (load-file "~/.emacs.d/.keybindings.el")
+(load-file "~/.emacs.d/.hydra-settings.el")
 
 ;;(load-file "~/.emacs.d/.defer.el")
 ;;(load-file "~/.emacs.d/.lsp-java.el")
