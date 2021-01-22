@@ -224,7 +224,7 @@
   :diminish (dashboard-mode page-break-lines-mode)
   :custom
   (dashboard-banner-logo-title "Malnati's Emacs configuration.")
-  (dashboard-startup-banner (expand-file-name "avatar.png" user-emacs-directory))
+  (dashboard-startup-banner (expand-file-name "emacs.png" user-emacs-directory))
   (initial-buffer-choice (lambda () (get-buffer dashboard-buffer-name)))
   (dashboard-set-heading-icons t)
   (dashboard-set-navigator t)
