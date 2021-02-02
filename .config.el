@@ -85,8 +85,13 @@
   :preface (message "Using package `company'.")
   :init (message "Starting `company'.")
   :config (progn
-	    (setq company-minimum-prefix-length 1 company-idle-delay 0.0)
-	    (add-hook 'after-init-hook 'global-company-mode))
+	    (setq company-minimum-prefix-length 1)
+            ;; Trigger completion immediately.
+            (setq company-idle-delay 0)
+            ;; Number the candidates (use M-1, M-2 etc to select completions).
+            (setq company-show-numbers t)
+	    (add-hook 'after-init-hook 'global-company-mode)
+            (add-to-list 'company-backends #'company-tabnine))
   :catch (lambda (keyword err)
            (message (concat "Error during loading of `company'... "
 			    (error-message-string err)))))
@@ -377,4 +382,9 @@
 	    (global-set-key (kbd "<f8>") 'dap-next)
 	    (global-set-key (kbd "<f9>") 'dap-continue)))
 
+(use-package yaml-mode
+  :preface (message "Using package `yaml-java'.")
+  :init (message "Starting `yaml-java' as stand by.")
+  :config (progn
+	    (add-to-list 'auto-mode-alist '("\\.yml\\'" . yaml-mode))))
 ;;; .config.el ends here

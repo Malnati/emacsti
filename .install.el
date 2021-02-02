@@ -31,6 +31,7 @@ For installing `use-package'"
         (use-package company)
         (use-package company-box :after company)
         (use-package company-quickhelp :after company)
+        (use-package company-tabnine :after company)
         (use-package dap-mode)
         (use-package drag-stuff)
         (use-package expand-region)
@@ -62,7 +63,8 @@ For installing `use-package'"
         (use-package lsp-mode)
         (use-package lsp-ui :after lsp-mode)
         (use-package lsp-java :after lsp-mode)
-        (use-package dap-java :after lsp-java))))
+        (use-package dap-java :after lsp-java)
+        (use-package yaml-mode))))
           (progn
             "Loading clippy from path."
             (message "Loading `clippy'...")
