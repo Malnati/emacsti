@@ -255,36 +255,44 @@
     (delete-other-windows)))
 
 (use-package flycheck
-  :hook ((prog-mode markdown-mode) . flycheck-mode)
+  :hook ((prog-mode markdown-mode js-mode) . flycheck-mode)
   :custom (progn
 	    "Customizations for flycheck package."
 	    (flycheck-global-modes
 	     '(not text-mode outline-mode fundamental-mode org-mode
 		   diff-mode shell-mode eshell-mode term-mode))
 	    (flycheck-emacs-lisp-load-path 'inherit)
-	    (flycheck-indication-mode 'right-fringe))
-  :init (progn
-	  "Flycheck inicialization."
-	  (use-package flycheck-grammarly)
-	  (if (display-graphic-p)
-	      (use-package flycheck-posframe
-		:custom-face (flycheck-posframe-border-face ((t (:inherit default))))
-		:hook (flycheck-mode . flycheck-posframe-mode)
-		:custom
-		(flycheck-posframe-border-width 1)
-		(flycheck-posframe-inhibit-functions
-		 '((lambda (&rest _) (bound-and-true-p company-backend)))))
-	    (use-package flycheck-pos-tip
-	      :defines flycheck-pos-tip-timeout
-	      :hook (flycheck-mode . flycheck-pos-tip-mode)
-	      :custom (flycheck-pos-tip-timeout 30))))
+            
+	    ;; (flycheck-indication-mode 'right-fringe)
+            (setq-default flycheck-temp-prefix ".flycheck")
+            )
+  ;; :init  (progn
+	;;   "Flycheck inicialization."
+	;;   (use-package flycheck-grammarly)
+	;;   (if (display-graphic-p)
+	;;       (use-package flycheck-posframe
+	;; 	:custom-face (flycheck-posframe-border-face ((t (:inherit default))))
+	;; 	:hook (flycheck-mode . flycheck-posframe-mode)
+	;; 	:custom
+	;; 	(flycheck-posframe-border-width 1)
+	;; 	(flycheck-posframe-inhibit-functions
+	;; 	 '((lambda (&rest _) (bound-and-true-p company-backend)))))
+	;;     (use-package flycheck-pos-tip
+	;;       :defines flycheck-pos-tip-timeout
+	;;       :hook (flycheck-mode . flycheck-pos-tip-mode)
+	;;       :custom (flycheck-pos-tip-timeout 30))))
   :config (progn
 	    "Flycheck pos-loading configurations."
-	    (when (fboundp 'define-fringe-bitmap)
-	      (define-fringe-bitmap 'flycheck-fringe-bitmap-double-arrow
-		[16 48 112 240 112 48 16] nil nil 'center))
+	    ;; (when (fboundp 'define-fringe-bitmap)
+	    ;;   (define-fringe-bitmap 'flycheck-fringe-bitmap-double-arrow
+	    ;;     [16 48 112 240 112 48 16] nil nil 'center))
 	    ;;  (flycheck-add-mode 'javascript-eslint 'js-mode)
 	    ;;  (flycheck-add-mode 'typescript-tslint 'rjsx-mode)
+            (setq-default flycheck-disabled-checkers
+                          (append flycheck-disabled-checkers
+                                  '(json-jsonlist)))
+            (add-hook 'after-init-hook #'global-flycheck-mode)
+            (flycheck-add-mode 'javascript-eslint 'js-mode)
 	    ))
 
 (use-package js2-mode
@@ -310,6 +318,19 @@
            (message (concat "Error during loading of `js2-refactor'... "
 			    (error-message-string err)))))
 
+(use-package typescript-mode
+  :mode "\\.ts\\'"
+  :commands (typescript-mode))
+
+(use-package prettier
+  :config (progn
+            (setq prettier-js-args '(
+                                     "--trailing-comma" "all"
+                                     "--bracket-spacing" "false"
+                                     )))
+  :hook ((typescript-mode . prettier-mode)
+         (js-mode . prettier-mode)))
+
 (use-package nord-theme
   :preface (message "Using package `nord'.")
   :init (message "Starting `nord'.")
@@ -333,7 +354,7 @@
   :preface (message "Using package `lsp-mode'.")
   :init (message "Starting `lsp-mode' as stand by.")
   :commands lsp
-  :hook ((js2-mode web-mode lsp-enable-which-key-integration) . lsp)
+  ;; :hook ((js2-mode web-mode lsp-enable-which-key-integration) . lsp)
   :config (progn
 	    (setq lsp-completion-enable-additional-text-edit nil)))
 
@@ -341,8 +362,9 @@
   :preface (message "Using package `lsp-java'.")
   :init (message "Starting `lsp-java' as stand by.")
   :config (progn
-            (add-to-list 'auto-mode-alist '("\\.java\\'"   . java-mode))
-	    (add-hook 'java-mode-hook 'lsp)))
+            ;; (add-to-list 'auto-mode-alist '("\\.java\\'"   . java-mode))
+	    ;; (add-hook 'java-mode-hook 'lsp)
+            ))
 
 (use-package lsp-ui
   :hook (lsp-mode . lsp-ui-mode)
