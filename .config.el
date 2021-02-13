@@ -295,6 +295,16 @@
             (flycheck-add-mode 'javascript-eslint 'js-mode)
 	    ))
 
+(use-package web-mode
+  :preface (message "Using package `web-mode'.")
+  :init (message "Starting `web-mode'.")
+  :hook ((js-mode . web-mode))
+  :config (progn
+            (setq web-mode-content-types-alist
+                  '(("json" . ".*\\.json\\'")
+                    ("xml"  . ".*\\.xml\\'")
+                    ("jsx"  . ".*\\.js[x]?\\'")))))
+
 (use-package js2-mode
   :delight js2-mode
   :preface (message "Using package `js2-mode'.")
@@ -329,6 +339,7 @@
                                      "--bracket-spacing" "false"
                                      )))
   :hook ((typescript-mode . prettier-mode)
+         (web-mode . prettier-mode)
          (js-mode . prettier-mode)))
 
 (use-package nord-theme
