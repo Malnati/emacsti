@@ -266,39 +266,55 @@
 	    ;; (flycheck-indication-mode 'right-fringe)
             (setq-default flycheck-temp-prefix ".flycheck")
             )
-  ;; :init  (progn
-	;;   "Flycheck inicialization."
-	;;   (use-package flycheck-grammarly)
-	;;   (if (display-graphic-p)
-	;;       (use-package flycheck-posframe
-	;; 	:custom-face (flycheck-posframe-border-face ((t (:inherit default))))
-	;; 	:hook (flycheck-mode . flycheck-posframe-mode)
-	;; 	:custom
-	;; 	(flycheck-posframe-border-width 1)
-	;; 	(flycheck-posframe-inhibit-functions
-	;; 	 '((lambda (&rest _) (bound-and-true-p company-backend)))))
-	;;     (use-package flycheck-pos-tip
-	;;       :defines flycheck-pos-tip-timeout
-	;;       :hook (flycheck-mode . flycheck-pos-tip-mode)
-	;;       :custom (flycheck-pos-tip-timeout 30))))
+  :init  (message "Initializing `Flycheck")
   :config (progn
 	    "Flycheck pos-loading configurations."
-	    ;; (when (fboundp 'define-fringe-bitmap)
-	    ;;   (define-fringe-bitmap 'flycheck-fringe-bitmap-double-arrow
-	    ;;     [16 48 112 240 112 48 16] nil nil 'center))
-	    ;;  (flycheck-add-mode 'javascript-eslint 'js-mode)
-	    ;;  (flycheck-add-mode 'typescript-tslint 'rjsx-mode)
+	    (when (fboundp 'define-fringe-bitmap)
+	      (define-fringe-bitmap 'flycheck-fringe-bitmap-double-arrow
+	        [16 48 112 240 112 48 16] nil nil 'center))
+            (flycheck-add-mode 'javascript-eslint 'js-mode)
+            (flycheck-add-mode 'typescript-tslint 'rjsx-mode)
             (setq-default flycheck-disabled-checkers
                           (append flycheck-disabled-checkers
                                   '(json-jsonlist)))
             (add-hook 'after-init-hook #'global-flycheck-mode)
-            (flycheck-add-mode 'javascript-eslint 'js-mode)
-	    ))
+            (defun parse-prettier-warning (warning)
+              (flycheck-error-new
+               :line (1+ (cdr (assoc 'line warning)))
+               :column (1+ (cdr (assoc 'column warning)))
+               :message (cdr (assoc 'message warning))
+               :level 'error
+               :buffer (current-buffer)
+               :checker prettier-prettify))
+
+            (defun prettier-error-parser (output checker buffer)
+              (mapcar 'parse-prettier-warning
+                      (cdr (assoc 'warnings (aref (json-read-from-string output) 0)))))
+
+            (flycheck-define-checker prettier-prettify
+              "A JavaScript syntax and style checker based on JSLinter."
+              :command ("prettier" "--write" source)
+              :error-parser prettier-error-parser
+              :modes (web-mode js-mode js2-mode js3-mode))))
+
+(use-package flycheck-posframe
+  :custom-face (flycheck-posframe-border-face ((t (:inherit default))))
+  :hook (flycheck-mode . flycheck-posframe-mode)
+  :custom
+  (flycheck-posframe-border-width 1)
+  (flycheck-posframe-inhibit-functions
+   '((lambda (&rest _) (bound-and-true-p company-backend)))))
+
+(use-package flycheck-pos-tip
+  :defines flycheck-pos-tip-timeout
+  :hook (flycheck-mode . flycheck-pos-tip-mode)
+  :custom (flycheck-pos-tip-timeout 30))
 
 (use-package web-mode
   :preface (message "Using package `web-mode'.")
   :init (message "Starting `web-mode'.")
-  :hook ((js-mode . web-mode))
+  :hook ((web-mode . prettier-mode)
+         (js-mode . web-mode))
   :config (progn
             (setq web-mode-content-types-alist
                   '(("json" . ".*\\.json\\'")
@@ -334,6 +350,7 @@
 
 (use-package prettier
   :config (progn
+            (setq prettier-inline-errors-flag t)
             (setq prettier-js-args '(
                                      "--trailing-comma" "all"
                                      "--bracket-spacing" "false"
