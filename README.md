@@ -77,3 +77,7 @@ Add your projects paths to ~/.emacsti/custom.el as below.
 (add-hook 'after-save-hook #'emacsti-commit-after-save)
 ```
 
+#### TabNine
+
+ref: (https://github.com/TommyX12/company-tabnine)[https://github.com/TommyX12/company-tabnine]
+Run M-x ```company-tabnine-install-binary``` to install the TabNine binary for your system.

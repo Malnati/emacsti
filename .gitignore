@@ -15,53 +15,8 @@ places
 recentf
 network-security.data
 
-# Org-mode
-.org-id-locations
-*_archive
-
-# flymake-mode
-#*_flymake.*
-
-# eshell files
-/eshell/history
-/eshell/lastdir
-
-# elpa packages
-/elpa/
-elpa/
-elpa/**
-
-# reftex files
-*.rel
-
-# AUCTeX auto folder
-/auto/
-
-# cask packages
-.cask/
-dist/
-
-# Flycheck
-flycheck_*.el
-
-# server auth directory
-/server/
-
 # projectiles files
-*projectile*
 projectile-bookmarks.eld
 
 # directory configuration
 .dir-locals.el
-.emacs.d
-.emacs.*
-
-# custom
-*custom*
-*custom.el
-custom.*
-/custom.el
-custom.el
-custom
-**/custom.*
-*/custom**.el
